@@ -1,0 +1,15 @@
+@import './styleResources/variables';
+@import '~bootstrap/scss/bootstrap-reboot';
+
+body {
+  font-feature-settings: "palt";
+  //字間調整
+  line-height: 1.7;
+  color: $color;
+  padding-top: $global-header-height;
+}
+
+strong,
+b {
+  font-weight: bold;
+}

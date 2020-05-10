@@ -1,0 +1,52 @@
+// $theme-font: kings-caslon-display, ten-mincho, serif;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$theme-font: vdl-linegr, sans-serif;//テーマフォント
+$sub-font: vdl-logona, sans-serif;//サブフォント
+$theme-color: #97c031;//テーマカラー
+
+$color: #3b3636;
+$muted: lighten($color, 30);
+$blue: #8ed0e3;
+$yellow: #e9d431;
+$cream: #f8e994;
+$brown: #612615;
+
+$global-header-height: 3.8rem;
+
+$container-padding: 1rem;
+$row-gutter: 0.5rem; // = $container-padding / 2
+
+// WaveSection
+$wave-height: 4rem;
+$wave-height-sm: 2rem;
+
+// z-index
+$z-index-home-slideshow: 10;  // スライドショーは廃止したので、この変数は使用されていない
+$z-index-home-header: 10;
+$z-index-home-infobar: 20;
+$z-index-wave-section: 90;
+$z-index-global-footer: 100;
+$z-index-error: 200; // フッターを隠したいので、フッターより大きな値にする
+$z-index-global-header: 9200;
+$z-index-global-nav-bg: 9300;
+$z-index-global-nav-body: 9400;
+$z-index-global-nav-toggle: 9500;
+$z-index-map-booths-list-bg: 9600;
+$z-index-map-booths-list-content: 9700;
+$z-index-map-booths-list-header: 9800;
+
+// ブースカラー
+$booth-color-g: #c13648;
+$booth-color-s: #e9e33f;
+$booth-color-c: #4fa936;
+$booth-color-w: #3365a8;
+$booth-color-e: #db5b85;
+$booth-color-y: #43b4e1;
+
+// EventInfo
+$event-info-max-width: 800px;
+
+// Bootstrap
+$link-color: #43b4e1;
+$grid-gutter-width: 1rem;
