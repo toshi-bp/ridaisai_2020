@@ -3,10 +3,10 @@
     <TheContainer>
       <div class="footer__row">
         <div class="footer__head">
-          <img src="~/assets/image/symbol.svg" class="footer__logo" />
+          <img src="~/assets/image/symbol.svg" class="footer__logo">
           <p class="footer__copyright">
             2020年度 東京理科大学野田地区
-            <br>新入生歓迎ガイダンス実行委員会
+            <br>理大祭実行委員会
           </p>
         </div>
         <div class="footer__ridaisai">
@@ -15,18 +15,18 @@
           </p>
           <div class="footer__list">
             <ul>
-              <!-- <li class="footer__list__item">
-                <fa icon="desktop" fixed-width /><a href="" target="blank">理大祭新歓ウェブサイト</a>
-              </li> -->
               <li class="footer__list__item">
-                <!-- <fa :icon="['fab', 'twitter']" fixed-width /> -->
+                <fa icon="desktop" fixed-width /><a href="" target="blank">理大祭新歓ウェブサイト</a>
+              </li>
+              <li class="footer__list__item">
+                <fa :icon="['fab', 'twitter']" fixed-width />
                 <a
                   href="https://twitter.com/noda_ridaisai"
                   target="blank"
                 >理大祭公式Twitter</a>
               </li>
               <li class="footer__list__item">
-                <!-- <fa icon="envelope" fixed-width /> -->
+                <fa icon="envelope" fixed-width />
                 <a
                   href="mailto:festival@ed.tus.ac.jp"
                 >festival@ed.tus.ac.jp</a>
