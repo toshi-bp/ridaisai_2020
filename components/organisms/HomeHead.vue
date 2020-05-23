@@ -1,33 +1,44 @@
 }<template>
   <div class="head">
-    <TheContainer>
-      <div class="head__header" >
-        <img src="~/assets/icons/Line.png" class="head__header__logo">
-        <img src="~/assets/icons/Twitter.svg" class="head__header__logo">
-        <img src="~/assets/icons/Instagram.svg" class="head__header__logo">
-      </div>
-      <div class="head__flex">
-        <img src="~/assets/image/symbol.svg" class="head__logo">
-        <div class="head__main">
-          <p class="head__main__lead">
-            <span>2020年度東京理科大学</span>
-            <span>野田地区理大祭</span>
-          </p>
-          <p class="head__main__lead">
-            11月 21日11:00 〜 16:00
-          </p>
+    <div class ="backpanel">
+      <TheContainer class="container">
+        <div class="head__header" >
+          <a href="https://line.me/R/ti/p/%40065bhskt" target="_blank"><img src="~/assets/icons/Line.png" class="head__header__logo"></a>
+          <a href="https://twitter.com/noda_ridaisai" target="_blank" ><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
+          <a href="https://instagram.com/noda_ridaisai"><img src="~/assets/icons/Instagram.svg" class="head__header__logo"></a>
         </div>
-      </div>
-    </TheContainer>
+        <div class="head__flex">
+          <img src="~/assets/image/symbol.svg" class="head__logo">
+          <div class="head__main">
+            <p class="head__main__lead">
+              <span>2020年度東京理科大学</span>
+              <span>野田地区理大祭</span>
+            </p>
+            <p class="head__main__lead">
+              11月 21日11:00 〜 16:00
+            </p>
+          </div>
+          <div class="button">
+            <LinkButton to="/">参加団体向け情報</LinkButton>
+          </div>
+        </div>
+        <span class="head__tooltip">下にスクロール</span>
+        <HomeUpdate />
+      </TheContainer>
+    </div>
   </div>
 </template>
 
 <script>
 import TheContainer from '~/components/atoms/TheContainer.vue'
+import LinkButton from '~/components/atoms/LinkButton.vue'
+import HomeUpdate from '~/components/molecules/HomeUpdate.vue'
 
 export default {
   components: {
-    TheContainer
+    TheContainer,
+    LinkButton,
+    HomeUpdate
   }
 }
 </script>
@@ -35,7 +46,7 @@ export default {
 <style lang="scss" scoped>
 .head {
   $logo-width: 45rem;
-  $header-height: 10rem;
+  $header-height: 5rem;
   &__header{
     display: flex;
     align-items: center;
@@ -51,7 +62,7 @@ export default {
         margin-right: 1rem;
     }
       &:last-child{
-        margin: 0;
+        // margin: 0;
       }
     }
   }
@@ -64,7 +75,7 @@ export default {
     flex-direction: column;
     padding: 5rem 0 15rem;
     @include media-breakpoint-down(sm) {
-      padding: 3rem 0 17rem;
+      padding: 5rem 0 12rem;
     }
   }
 
@@ -77,7 +88,7 @@ export default {
     margin: 0 0 auto;
     @include media-breakpoint-down(sm) {
       flex: none;
-      max-width: 20rem;
+      max-width: 25rem;
     }
   }
 
@@ -93,12 +104,41 @@ export default {
       font-size: 1.5rem;
       margin: 0 0 0.5rem;
       @include media-breakpoint-down(sm) {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
       &__text {
         display: inline-block;
       }
     }
   }
+  &__tooltip {
+    $font-size: 0.9rem;
+    $translate-x: translate(-50%);
+    position: absolute;
+    line-height: 1;
+    font-size: $font-size;
+    top: calc(-#{$font-size} - 1.5rem);
+    left: 50%;
+    white-space: nowrap;
+    color: $color;
+    background: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 18px;
+    border: 1px solid #{$theme-color};
+  }
+}
+
+.backpanel{
+ background-color: $theme-color;
+background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 100%);
+}
+
+.container{
+  background-color: rgba(#fff,0.9);
+}
+
+.button {
+  text-align: center;
+  margin-top: 2rem;
 }
 </style>

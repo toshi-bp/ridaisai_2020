@@ -10,31 +10,92 @@
           </p>
         </div>
         <div class="footer__ridaisai">
-          <p class="footer__welcome">
+          <!-- <p class="footer__welcome">
             一緒に理大祭を作りませんか？
-          </p>
+          </p> -->
           <div class="footer__list">
             <ul>
               <li class="footer__list__item">
-                <fa icon="desktop" fixed-width /><a href="" target="blank">理大祭新歓ウェブサイト</a>
+                <a href="" target="blank" class="footer__list__link"><fa icon="desktop" />理大祭新歓ウェブサイト</a>
               </li>
               <li class="footer__list__item">
-                <fa :icon="['fab', 'twitter']" fixed-width />
                 <a
                   href="https://twitter.com/noda_ridaisai"
                   target="blank"
-                >理大祭公式Twitter</a>
+                  class="footer__list__link"
+                ><fa :icon="['fab', 'twitter']" />
+                理大祭公式Twitter</a>
               </li>
               <li class="footer__list__item">
-                <fa icon="envelope" fixed-width />
                 <a
                   href="mailto:festival@ed.tus.ac.jp"
-                >festival@ed.tus.ac.jp</a>
+                  class="footer__list__link"
+                ><fa icon="envelope" />
+                festival@ed.tus.ac.jp</a>
+              </li>
+            </ul>
+            <ul>
+              <li class="footer__list__item">
+                <a href="" target="blank" class="footer__list__link">ホーム</a>
+              </li>
+              <li class="footer__list__item">
+                <a
+                  href="https://twitter.com/noda_ridaisai"
+                  target="blank"
+                  class="footer__list__link"
+                >実行委員会企画</a>
+              </li>
+              <li class="footer__list__item">
+                <a
+                  href="mailto:festival@ed.tus.ac.jp"
+                  class="footer__list__link"
+                >模擬店・団体企画</a>
+              </li>
+              <li class="footer__list__item">
+                <a
+                  href="mailto:festival@ed.tus.ac.jp"
+                  class="footer__list__link"
+                >ご来場の皆様へ</a>
+              </li>
+              <li class="footer__list__item">
+                <a
+                  href="mailto:festival@ed.tus.ac.jp"
+                  class="footer__list__link"
+                >団体インタビュー</a>
+              </li>
+              <li class="footer__list__item">
+                <a
+                  href="mailto:festival@ed.tus.ac.jp"
+                  class="footer__list__link"
+                >キャンパスマップ</a>
+              </li>
+              <li class="footer__list__item">
+                <a
+                  href="mailto:festival@ed.tus.ac.jp"
+                  class="footer__list__link"
+                >プライバシーポリシー</a>
+              </li>
+              <li class="footer__list__item">
+                <a
+                  href="mailto:festival@ed.tus.ac.jp"
+                  class="footer__list__link"
+                >リンク</a>
+              </li>
+              <li class="footer__list__item">
+                <a
+                  href="mailto:festival@ed.tus.ac.jp"
+                  class="footer__list__link"
+                >協賛企業一覧</a>
+              </li>
+            </ul>
+            <ul>
+              <li class="footer__list__item">
+                <a href="" target="blank" class="footer__list__link">過去の理大祭公式サイト</a>
               </li>
             </ul>
           </div>
         </div>
-      </div>
+       </div>
     </TheContainer>
   </footer>
 </template>
@@ -54,10 +115,13 @@ export default {
   position: relative;
   background: $color;
   padding: 2rem 0;
-
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
   &__row {
     display: flex;
-
+    text-align: left;
+    justify-content: center;
     @include media-breakpoint-down(md) {
       flex-direction: column;
     }
@@ -65,11 +129,13 @@ export default {
 
   &__head {
     flex: 0 0 8rem;
+    display: flex;
+    flex-direction: column;
   }
 
   &__logo {
     display: block;
-    width: 7rem;
+    height: 8rem;
     margin: 0 auto 1rem;
   }
 
@@ -80,41 +146,30 @@ export default {
     font-size: 0.75rem;
     text-align: center;
   }
-  &__welcome {
-    color: #fff;
-    font-family: $theme-font;
-    font-size: 30px;
 
-    @include media-breakpoint-down(md) {
-      font-size: 20px;
-      top: 1.4rem;
-      left: 23rem;
-    }
-
-    @include media-breakpoint-down(sm) {
-      font-size: 18px;
-      display: block;
-      position: static;
-      text-align: center;
-      margin-top: 0.5rem;
-    }
-  }
   &__list {
+    display: flex;
+    flex-direction: column;
     &__item {
+      display: inline-block;
+      text-align:left;
       list-style: none;
-      color: #fff;
       margin-bottom: 1rem;
+    }
+    &__item:last-child{
+      margin: 0;
+    }
+    &__link{
+      text-decoration: none;
+      color: #fff;
     }
   }
 
   @include media-breakpoint-down(md) {
     &__list {
-      display: inline-block;
-
       &__item {
         list-style: none;
         color: #fff;
-        margin-bottom: 0.3rem;
         font-size: 14px;
       }
     }
