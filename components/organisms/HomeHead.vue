@@ -19,10 +19,10 @@
             </p>
           </div>
           <div class="button">
-            <LinkButton to="/">参加団体向け情報</LinkButton>
+            <LinkButton to="/groups/">参加団体向け情報</LinkButton>
+            <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
           </div>
         </div>
-        <span class="head__tooltip">下にスクロール</span>
         <HomeUpdate />
       </TheContainer>
     </div>
@@ -114,17 +114,40 @@ export default {
   &__tooltip {
     $font-size: 0.9rem;
     $translate-x: translate(-50%);
-    position: absolute;
+    margin-top: 2rem;
+    display: block;
     line-height: 1;
     font-size: $font-size;
-    top: calc(-#{$font-size} - 1.5rem);
-    left: 50%;
     white-space: nowrap;
     color: $color;
-    background: #fff;
     padding: 0.25rem 0.75rem;
-    border-radius: 18px;
+    border-radius: 9px;
     border: 1px solid #{$theme-color};
+    position: relative;
+    left: 50%;
+
+    animation: 10s ease tooltip both;
+    @keyframes tooltip {
+      from {
+        transform: #{$translate-x} translateY(-0.5rem);
+      }
+      25% {
+        transform: #{$translate-x} translateY(0);
+      }
+      50% {
+        transform: #{$translate-x} translateY(-0.5rem);
+      }
+      75% {
+        transform: #{$translate-x} translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      to {
+        transform: #{$translate-x} translateY(-0.5rem);
+        opacity: 0;
+        visibility: visible;
+      }
+    }
   }
 }
 
@@ -139,6 +162,6 @@ background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 
 
 .button {
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem;
 }
 </style>
