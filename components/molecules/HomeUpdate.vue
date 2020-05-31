@@ -1,17 +1,27 @@
 <template>
-    <div class="update">
-      <TheSection>
-        <div>
-        <h1 class="update__title">更新情報</h1>
+  <div class="update">
+    <TheSection>
+      <div>
+        <h1 class="update__title">
+          更新情報
+        </h1>
         <dl class="update__list">
-            <dt class="update__list__date">2020/06/15</dt>
-            <dd class="update__list__content">ウェブサイトを公開しました。</dd>
-            <dt class="update__list__date">2020/11/26</dt>
-            <dd class="update__list__content">団体情報ページを公開しました。</dd>
+          <dt class="update__list__date">
+            2020/06/15
+          </dt>
+          <dd class="update__list__content">
+            ウェブサイトを公開しました。
+          </dd>
+          <dt class="update__list__date">
+            2020/11/26
+          </dt>
+          <dd class="update__list__content">
+            団体情報ページを公開しました。
+          </dd>
         </dl>
-        </div>
-      </TheSection>
-    </div>
+      </div>
+    </TheSection>
+  </div>
 </template>
 
 <script>

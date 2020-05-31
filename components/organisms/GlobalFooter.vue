@@ -14,88 +14,99 @@
             一緒に理大祭を作りませんか？
           </p> -->
           <div class="footer__list">
-            <ul>
+            <ul class="footer__list__ul">
               <li class="footer__list__item">
-                <a href="" target="blank" class="footer__list__link"><fa icon="desktop" />理大祭新歓ウェブサイト</a>
+                <a href="" target="blank" class="footer__list__link">
+                  <fa icon="desktop" fixed-width />理大祭新歓ウェブサイト</a>
               </li>
               <li class="footer__list__item">
                 <a
                   href="https://twitter.com/noda_ridaisai"
                   target="blank"
                   class="footer__list__link"
-                ><fa :icon="['fab', 'twitter']" />
-                理大祭公式Twitter</a>
+                ><fa :icon="['fab', 'twitter']" fixed-width />
+                  理大祭公式Twitter</a>
               </li>
               <li class="footer__list__item">
                 <a
                   href="mailto:festival@ed.tus.ac.jp"
                   class="footer__list__link"
-                ><fa icon="envelope" />
-                festival@ed.tus.ac.jp</a>
+                ><fa icon="envelope" fixed-width />
+                  festival@ed.tus.ac.jp</a>
               </li>
             </ul>
-            <ul>
+            <ul class="footer__list__ul">
               <li class="footer__list__item">
-                <a href="" target="blank" class="footer__list__link">ホーム</a>
+                <nuxt-link to="/" target="blank" class="footer__list__link">
+                  ホーム
+                </nuxt-link>
               </li>
               <li class="footer__list__item">
-                <a
-                  href="https://twitter.com/noda_ridaisai"
+                <nuxt-link
+                  to="/"
                   target="blank"
                   class="footer__list__link"
-                >実行委員会企画</a>
+                >
+                  実行委員会企画
+                </nuxt-link>
               </li>
               <li class="footer__list__item">
-                <a
-                  href="mailto:festival@ed.tus.ac.jp"
+                <nuxt-link
+                  to="/"
                   class="footer__list__link"
-                >模擬店・団体企画</a>
+                >
+                  模擬店・団体企画
+                </nuxt-link>
               </li>
               <li class="footer__list__item">
-                <a
-                  href="mailto:festival@ed.tus.ac.jp"
+                <nuxt-link
+                  to="/"
                   class="footer__list__link"
-                >ご来場の皆様へ</a>
+                >
+                  ご来場の皆様へ
+                </nuxt-link>
               </li>
               <li class="footer__list__item">
-                <a
-                  href="mailto:festival@ed.tus.ac.jp"
+                <nuxt-link
+                  to="/"
                   class="footer__list__link"
-                >団体インタビュー</a>
+                >
+                  団体インタビュー
+                </nuxt-link>
               </li>
               <li class="footer__list__item">
-                <a
-                  href="mailto:festival@ed.tus.ac.jp"
+                <nuxt-link
+                  to="/"
                   class="footer__list__link"
-                >キャンパスマップ</a>
+                >
+                  キャンパスマップ
+                </nuxt-link>
               </li>
               <li class="footer__list__item">
-                <a
-                  href="mailto:festival@ed.tus.ac.jp"
+                <nuxt-link
+                  to="/"
                   class="footer__list__link"
-                >プライバシーポリシー</a>
+                >
+                  プライバシーポリシー
+                </nuxt-link>
               </li>
               <li class="footer__list__item">
-                <a
-                  href="mailto:festival@ed.tus.ac.jp"
+                <nuxt-link
+                  to="/"
                   class="footer__list__link"
-                >リンク</a>
-              </li>
-              <li class="footer__list__item">
-                <a
-                  href="mailto:festival@ed.tus.ac.jp"
-                  class="footer__list__link"
-                >協賛企業一覧</a>
+                >
+                  協賛企業一覧
+                </nuxt-link>
               </li>
             </ul>
-            <ul>
+            <ul class="footer__list__ul">
               <li class="footer__list__item">
                 <a href="" target="blank" class="footer__list__link">過去の理大祭公式サイト</a>
               </li>
             </ul>
           </div>
         </div>
-       </div>
+      </div>
     </TheContainer>
   </footer>
 </template>
@@ -115,7 +126,7 @@ export default {
   position: relative;
   background: $color;
   padding: 2rem 0;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     text-align: center;
   }
   &__row {
@@ -150,11 +161,17 @@ export default {
   &__list {
     display: flex;
     flex-direction: column;
+    &__ul {
+      margin-bottom: 1.5rem;
+      &:last-child{
+        margin: 0;
+      }
+    }
     &__item {
       display: inline-block;
       text-align:left;
       list-style: none;
-      margin-bottom: 1rem;
+      margin: 0 0.4rem 0.5rem 0;
     }
     &__item:last-child{
       margin: 0;
@@ -162,20 +179,16 @@ export default {
     &__link{
       text-decoration: none;
       color: #fff;
-    }
-  }
-
-  @include media-breakpoint-down(md) {
-    &__list {
-      &__item {
-        list-style: none;
-        color: #fff;
-        font-size: 14px;
+      &:hover{
+        color: $theme-color;
+      }
+      &:action{
+        font-weight: bold;
       }
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     &__list {
       margin: 0 auto 0 auto;
       padding-right: 2rem;
@@ -185,9 +198,10 @@ export default {
 
       &__item {
         list-style: none;
-        color: #fff;
         display: block;
         text-align: center;
+        font-size: 14px;
+        margin: 0 0 0.5rem;
       }
     }
   }

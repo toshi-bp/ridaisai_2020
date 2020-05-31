@@ -13,7 +13,7 @@ export default {}
   margin: 0 auto;
   width: 960px;
   padding: 0 $container-padding;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     margin: 0 0;
     max-width: 100%;
   }

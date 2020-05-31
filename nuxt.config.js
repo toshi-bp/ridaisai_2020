@@ -42,9 +42,9 @@ export default {
   */
   modules: [
     [
-      "@nuxtjs/google-gtag",
+      '@nuxtjs/google-gtag',
       {
-        id: "",
+        id: '',
         config: {
           anonymize_ip: true // anonymize IP
         }
@@ -52,27 +52,27 @@ export default {
       }
     ],
     [
-      "nuxt-fontawesome",
+      'nuxt-fontawesome',
       {
-        component: "fa",
+        component: 'fa',
         imports: [
           {
-            set: "@fortawesome/free-solid-svg-icons",
-            icons: ["fas"]
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas']
           },
           {
-            set: "@fortawesome/free-regular-svg-icons",
-            icons: ["far"]
+            set: '@fortawesome/free-regular-svg-icons',
+            icons: ['far']
           },
           {
-            set: "@fortawesome/free-brands-svg-icons",
-            icons: ["fab"]
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['fab']
           }
         ]
       }
     ],
     '@nuxtjs/style-resources',
-    "@nuxtjs/markdownit"
+    '@nuxtjs/markdownit'
   ],
   styleResources: {
     scss: ['./assets/style/styleResources/*.scss']

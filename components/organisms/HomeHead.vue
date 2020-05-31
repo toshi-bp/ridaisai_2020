@@ -1,29 +1,33 @@
-}<template>
-  <div class="head">
-    <div class ="backpanel">
+<template>
+  <div class="backpanel">
+    <div class="head">
       <TheContainer class="container">
-        <div class="head__header" >
+        <div class="head__header">
           <a href="https://line.me/R/ti/p/%40065bhskt" target="_blank"><img src="~/assets/icons/Line.png" class="head__header__logo"></a>
-          <a href="https://twitter.com/noda_ridaisai" target="_blank" ><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
-          <a href="https://instagram.com/noda_ridaisai"><img src="~/assets/icons/Instagram.svg" class="head__header__logo"></a>
+          <a href="https://twitter.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
+          <a href="https://instagram.com/noda_ridaisai"><img src="~/assets/icons/Instagram.svg" class="head__header__logo__insta"></a>
         </div>
         <div class="head__flex">
           <img src="~/assets/image/symbol.svg" class="head__logo">
           <div class="head__main">
             <p class="head__main__lead">
-              <span>2020年度東京理科大学</span>
-              <span>野田地区理大祭</span>
+              <span>Tokyo University of Science</span>
+              <span>TUS festival @ Noda</span>
             </p>
             <p class="head__main__lead">
-              11月 21日11:00 〜 16:00
+              2020 November 21st,22nd 10:00～17:00
             </p>
           </div>
           <div class="button">
-            <LinkButton to="/groups/">参加団体向け情報</LinkButton>
+            <LinkButton to="/groups/">
+              参加団体向け情報
+            </LinkButton>
             <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
           </div>
         </div>
-        <HomeUpdate />
+        <div>
+          <HomeUpdate />
+        </div>
       </TheContainer>
     </div>
   </div>
@@ -57,13 +61,19 @@ export default {
     &__logo{
       width: 3rem;
       margin-right: 2rem;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         width: 2rem;
         margin-right: 1rem;
     }
       &:last-child{
         // margin: 0;
       }
+    &__insta {
+      width: 4rem;
+      @include media-breakpoint-down(md) {
+        width: 2.7rem;
+      }
+    }
     }
   }
 
@@ -74,7 +84,7 @@ export default {
     justify-content: center;
     flex-direction: column;
     padding: 5rem 0 15rem;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding: 5rem 0 12rem;
     }
   }
@@ -86,7 +96,7 @@ export default {
     width: 100%;
     height: auto;
     margin: 0 0 auto;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       flex: none;
       max-width: 25rem;
     }
@@ -94,7 +104,7 @@ export default {
 
   &__main {
     max-width: $logo-width;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       flex: none;
       padding: 0;
       max-width: 100%;
@@ -103,7 +113,7 @@ export default {
       font-family: $sub-font;
       font-size: 1.5rem;
       margin: 0 0 0.5rem;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         font-size: 0.9rem;
     }
       &__text {
@@ -121,8 +131,8 @@ export default {
     white-space: nowrap;
     color: $color;
     padding: 0.25rem 0.75rem;
-    border-radius: 9px;
-    border: 1px solid #{$theme-color};
+    // border-radius: 9px;
+    // border: 1px solid #{$theme-color};
     position: relative;
     left: 50%;
 
@@ -152,8 +162,8 @@ export default {
 }
 
 .backpanel{
- background-color: $theme-color;
-background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 100%);
+  background-color: $theme-color;
+  background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 100%);
 }
 
 .container{

@@ -27,11 +27,6 @@ export default {
       default: 'nuxt-link'
     }
   },
-  methods: {
-    onClick (e) {
-      this.$emit('click', e)
-    }
-  },
   computed: {
     linkComponentIs () {
       switch (true) {
@@ -42,6 +37,11 @@ export default {
         default:
           return 'div'
       }
+    }
+  },
+  methods: {
+    onClick (e) {
+      this.$emit('click', e)
     }
   }
 }
