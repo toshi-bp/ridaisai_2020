@@ -1,21 +1,19 @@
 <template>
   <div class="backpanel">
-    <div class="head">
-      <TheContainer class="container">
+    <TheContainer class="container">
+      <div class="head">
         <div class="head__header">
           <a href="https://line.me/R/ti/p/%40065bhskt" target="_blank"><img src="~/assets/icons/Line.png" class="head__header__logo"></a>
           <a href="https://twitter.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
           <a href="https://instagram.com/noda_ridaisai"><img src="~/assets/icons/Instagram.svg" class="head__header__logo__insta"></a>
         </div>
-        <div class="head__flex">
+        <div class="head__box">
           <img src="~/assets/image/symbol.svg" class="head__logo">
           <div class="head__main">
             <p class="head__main__lead">
-              <span>Tokyo University of Science</span>
-              <span>TUS festival @ Noda</span>
-            </p>
-            <p class="head__main__lead">
-              2020 November 21st,22nd 10:00～17:00
+              <span>Tokyo University of Science</span><br />
+              <span>TUS festival @ Noda</span><br />
+              <span>2020 November 21st,22nd 10:00～17:00</span>
             </p>
           </div>
           <div class="button">
@@ -25,11 +23,11 @@
             <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
           </div>
         </div>
+       </div>
         <div>
           <HomeUpdate />
         </div>
-      </TheContainer>
-    </div>
+    </TheContainer>
   </div>
 </template>
 
@@ -49,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 .head {
-  $logo-width: 45rem;
+  height: 100vh;
   $header-height: 5rem;
   &__header{
     display: flex;
@@ -77,45 +75,28 @@ export default {
     }
   }
 
-  &__flex {
-    display: flex;
-    height: calc(100vh - #{$header-height});
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 5rem 0 15rem;
-    @include media-breakpoint-down(md) {
-      padding: 5rem 0 12rem;
-    }
-  }
-
   &__logo {
-    // flex-basisはflew-direction方向のアイテムの長さ
-    max-width: $logo-width;
+    width: 45rem;
     display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 0 auto;
+    margin: 5rem auto 0;
     @include media-breakpoint-down(md) {
-      flex: none;
-      max-width: 25rem;
+      width: 38rem;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 20rem;
     }
   }
 
   &__main {
-    max-width: $logo-width;
-    @include media-breakpoint-down(md) {
-      flex: none;
-      padding: 0;
-      max-width: 100%;
-    }
+    margin: 0 auto;
     &__lead {
       font-family: $sub-font;
       font-size: 1.5rem;
-      margin: 0 0 0.5rem;
-      @include media-breakpoint-down(md) {
+      margin-top: 5rem;
+      text-align: center;
+       @include media-breakpoint-down(sm) {
         font-size: 0.9rem;
-    }
+       }
       &__text {
         display: inline-block;
       }
@@ -172,6 +153,6 @@ export default {
 
 .button {
   text-align: center;
-  margin: 2rem;
+  margin-top: 5rem;
 }
 </style>

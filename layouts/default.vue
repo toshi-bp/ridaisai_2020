@@ -1,18 +1,19 @@
 <template>
   <div>
+    <GlobalHeader />
     <nuxt />
     <GlobalFooter />
   </div>
 </template>
 
 <script>
-// import GlobalHeader from "~/components/organisms/GlobalHeader.vue"
+import GlobalHeader from '~/components/organisms/GlobalHeader.vue'
 import GlobalFooter from '~/components/organisms/GlobalFooter.vue'
 // import GlobalBaum from "~/components/organisms/GlobalBaum.vue"
 
 export default {
   components: {
-    // GlobalHeader,
+    GlobalHeader,
     GlobalFooter
     // GlobalBaum
   }
