@@ -12,7 +12,7 @@
           </div>
         </TheSection>
         <div class="linkbutton">
-          <LinkButton to="/">topページへ</LinkButton>
+          <LinkButton to="/">topページへ →</LinkButton>
         </div>
       </div>
     </TheContainer>
