@@ -8,7 +8,7 @@
     @click="onClick"
   >
     <div class="link-button__inner">
-      <slot />
+        <slot />
     </div>
   </component>
 </template>
@@ -65,13 +65,18 @@ export default {
         @include media-breakpoint-down(sm) {
             font-size: 0.8rem;
         }
+        &:hover {
+          transform: translateX(100%);
+          opacity: 0;
+          transition: 3s ease all;
+        }
     }
 
     &:hover {
       text-decoration: none;
       color: #fff;
       background: $theme-color;
-      transition: 0.3s ease all;
+      transition: 0.5s ease all;
     }
     &:focus{
       text-decoration: none;
