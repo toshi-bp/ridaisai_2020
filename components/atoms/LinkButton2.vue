@@ -4,11 +4,6 @@
     :to="to"
     :href="href"
     class="link-button"
-    tabindex="0"
-    :class="{
-      'link-button--is-blue' : type === 'blue',
-      'link-button--is-orange' : type === 'orange'
-    }"
     @click="onClick"
   >
     <div class="link-button__inner">
@@ -56,59 +51,55 @@ export default {
     display:inline-block;
     position:relative;
     background: #fff;
-    border: 2px solid $accent-color;
+    border: 2px solid $theme-color;
     font-family: $sub-font;
     font-weight: bold;
     border-radius: 9px;
-    color: $accent-color;
-    transition: 0.5s ease all;
+    color: $theme-color;
+    transition: 0.4s ease all;
     overflow: hidden;
 
-    &::before{
-      content: "";
+     &::before{
+      content: "take off!!";
       display: block;
       position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      z-index: 1;
-      width: 0;
-      background-color: rgba($accent-color,0.7);
-      transition: 0.15s ease all;
-    }
-
-     &::after{
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      z-index: 1;
-      width: 0;
-      background-color: $accent-color;
-      transition: 0.45s ease all;
+      top: 1rem;
+      left: -100%;
+      bottom: 0.5rem;
+      width: 100%;
+      background-color: transparent;
+      color: $theme-color;
+      text-transform: uppercase;
+      transition: all 0.4s ease-in-out;
+      @include media-breakpoint-down(md) {
+        top: 0.5rem;
+      }
     }
 
     &__inner {
-        position:relative;
+        position: relative;
         padding: 0.85rem 2.3rem 1rem;
         text-align: center;
         font-size: 1.2rem;
         z-index: 2;
+        transform: translateX(0);
+        transition: all 0.4s ease-in-out;
         @include media-breakpoint-down(sm) {
             font-size: 0.8rem;
+        }
+
+        &:hover {
+          transform: translateX(100%);
         }
     }
 
     &:hover,&:focus{
       text-decoration: none;
-      color: #fff;
+      color: transparent;
+      transition: all 0s ease-in-out;
       &::before{
-        width: 100%;
-      }
-      &::after{
-        width: 100%;
+      left: 0;
+
       }
     }
 }

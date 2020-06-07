@@ -34,6 +34,7 @@ export default {
   right: 0;
   z-index: $z-index-global-header;
   background: $theme-color;
+  box-shadow: 0 3px 0 rgba(#000, 0.2);
 
   &__container {
     display: flex;

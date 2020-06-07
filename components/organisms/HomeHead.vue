@@ -17,9 +17,9 @@
             </p>
           </div>
           <div class="button">
-            <LinkButton to="/groups/">
+            <LinkButton2 to="/groups/">
               参加団体向け情報
-            </LinkButton>
+            </LinkButton2>
             <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
           </div>
         </div>
@@ -33,13 +33,13 @@
 
 <script>
 import TheContainer from '~/components/atoms/TheContainer.vue'
-import LinkButton from '~/components/atoms/LinkButton.vue'
+import LinkButton2 from '~/components/atoms/LinkButton2.vue'
 import HomeUpdate from '~/components/molecules/HomeUpdate.vue'
 
 export default {
   components: {
     TheContainer,
-    LinkButton,
+    LinkButton2,
     HomeUpdate
   }
 }
