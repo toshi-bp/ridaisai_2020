@@ -15,6 +15,13 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  router: {
+    base: '/2020/',
+    trailingSlash: true
+  },
+  generate: {
+    routes: ['404']
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -28,7 +35,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/webfonts.js'
+  plugins: ['~/plugins/webfonts.js', '~/plugins/emptyTouchHandler.js'
   ],
   /*
   ** Nuxt.js dev-modules
