@@ -2,7 +2,7 @@
   <div class="sub-header">
     <TheContainer>
       <div class="sub-header__body">
-        <img src="~/assets/image/dodecagon_orange.svg" class="sub-header__dodecagon"/>
+        <img src="~/assets/image/airship.svg" class="sub-header__dodecagon">
         <h1 class="sub-header__title">
           <slot name="title" />
         </h1>
@@ -30,6 +30,14 @@ export default {
 <style lang="scss" scoped>
 .sub-header {
   margin: 3rem 0 2rem 0;
+
+  @include media-breakpoint-down(sm) {
+    margin: 1.7rem 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin: 1.4rem 0;
+  }
 
   &__body {
     display: flex;
@@ -59,8 +67,16 @@ export default {
     text-align: left;
     font-size: 2rem;
     font-family: $sub-font;
-    color: #fff;
+    // color: #fff;
     margin-left: 0.5rem;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.8rem;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 1.5rem;
+    }
   }
 
 }

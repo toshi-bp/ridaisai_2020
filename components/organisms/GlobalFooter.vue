@@ -148,6 +148,9 @@ export default {
     display: block;
     height: 8rem;
     margin: 0 auto 1rem;
+    @include media-breakpoint-down(xs) {
+      width: 15rem;
+      }
   }
 
   &__copyright {

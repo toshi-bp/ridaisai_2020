@@ -20,10 +20,11 @@
               </li> -->
               <li class="footer__list__item">
                 <!-- <fa :icon="['fab', 'twitter']" fixed-width />
-                <a -->
-                href="https://twitter.com/noda_ridaisai"
-                target="blank"
-                >理大祭公式Twitter</a>
+                --><a
+                 href="https://twitter.com/noda_ridaisai"
+                 target="_blank"
+                >
+                  理大祭公式Twitter</a>
               </li>
               <li class="footer__list__item">
                 <fa icon="envelope" fixed-width /><a
@@ -71,6 +72,9 @@ export default {
     display: block;
     width: 7rem;
     margin: 0 auto 1rem;
+    @include media-breakpoint-down(xs) {
+      width: 2rem;
+      }
   }
 
   &__copyright {

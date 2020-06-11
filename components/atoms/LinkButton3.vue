@@ -8,7 +8,7 @@
     @click="onClick"
   >
     <div class="link-button__inner">
-        <slot />
+      <slot />
     </div>
   </component>
 </template>

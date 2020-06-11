@@ -7,7 +7,7 @@
     @click="onClick"
   >
     <div class="link-button__inner">
-        <slot />
+      <slot />
     </div>
   </component>
 </template>
@@ -72,7 +72,10 @@ export default {
       text-transform: uppercase;
       transition: all 0.4s ease-in-out;
       @include media-breakpoint-down(md) {
-        top: 0.5rem;
+        top: 0.85rem;
+      }
+      @include media-breakpoint-down(sm) {
+        top: 0.6rem;
       }
     }
 

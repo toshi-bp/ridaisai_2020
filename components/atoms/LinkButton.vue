@@ -12,7 +12,7 @@
     @click="onClick"
   >
     <div class="link-button__inner">
-        <slot />
+      <slot />
     </div>
   </component>
 </template>
@@ -56,7 +56,7 @@ export default {
     display:inline-block;
     position:relative;
     background: #fff;
-    border: 2px solid $accent-color;
+    border: 2px solid rgba($accent-color, 0.8);
     font-family: $sub-font;
     font-weight: bold;
     border-radius: 9px;

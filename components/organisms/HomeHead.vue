@@ -5,7 +5,7 @@
         <div class="head__header">
           <a href="https://line.me/R/ti/p/%40065bhskt" target="_blank"><img src="~/assets/icons/Line.png" class="head__header__logo"></a>
           <a href="https://twitter.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
-          <a href="https://instagram.com/noda_ridaisai"><img src="~/assets/icons/Instagram.svg" class="head__header__logo__insta"></a>
+          <a href="https://instagram.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Instagram.svg" class="head__header__logo__insta"></a>
         </div>
         <div class="head__box">
           <img src="~/assets/image/symbol.svg" class="head__logo">
@@ -16,14 +16,19 @@
               <span>2020 November 21st,22nd 10:00～17:00</span>
             </p>
           </div>
-          <div class="button">
+          <div class="button__group">
             <LinkButton2 to="/groups/">
               参加団体向け情報
             </LinkButton2>
-            <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
           </div>
+          <div class="button__company">
+            <LinkButton2 to="/companies/">
+              企業協賛に関して
+            </LinkButton2>
+          </div>
+           <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
         </div>
-       </div>
+      </div>
         <div>
           <HomeUpdate />
         </div>
@@ -59,16 +64,14 @@ export default {
     &__logo{
       width: 3rem;
       margin-right: 2rem;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(sm) {
         width: 2rem;
         margin-right: 1rem;
-    }
-      &:last-child{
-        // margin: 0;
       }
+
     &__insta {
       width: 4rem;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(sm) {
         width: 2.7rem;
       }
     }
@@ -81,9 +84,15 @@ export default {
     margin: 5rem auto 0;
     @include media-breakpoint-down(md) {
       width: 38rem;
+      margin: 5rem auto 0;
     }
     @include media-breakpoint-down(sm) {
       width: 20rem;
+      margin: 3rem auto 0;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 18rem;
+      margin: 2rem auto 0;
     }
   }
 
@@ -92,16 +101,24 @@ export default {
     &__lead {
       font-family: $sub-font;
       font-size: 1.5rem;
-      margin-top: 5rem;
+      margin-top: 3rem;
+      @include media-breakpoint-down(xs) {
+        margin-top: 2rem;
+       }
+      margin-bottom: 0;
       text-align: center;
        @include media-breakpoint-down(sm) {
         font-size: 0.9rem;
+       }
+       @include media-breakpoint-down(xs) {
+        font-size: 0.8rem;
        }
       &__text {
         display: inline-block;
       }
     }
   }
+
   &__tooltip {
     $font-size: 0.9rem;
     $translate-x: translate(-50%);
@@ -116,6 +133,7 @@ export default {
     // border: 1px solid #{$theme-color};
     position: relative;
     left: 50%;
+    text-align: center;
 
     animation: 10s ease tooltip both;
     @keyframes tooltip {
@@ -151,8 +169,16 @@ export default {
   background-color: rgba(#fff,0.9);
 }
 
-.button {
+.button__group {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 4rem;
+  @include media-breakpoint-down(xs) {
+    margin-top: 3rem;
+    }
+}
+
+.button__company {
+  text-align: center;
+  margin-top: 1rem;
 }
 </style>
