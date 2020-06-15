@@ -30,7 +30,7 @@
             <p class="groups__description">
               理大祭への積極的なご参加をよろしくお願いいたします。
             </p>
-            <h3>2020年度野田地区理大祭実行委員 委員長<br>村上 岳</h3>
+            <h3>2020年度野田地区理大祭実行委員会 委員長<br>村上 岳</h3>
           </div>
           <div class="groups__document">
             <h2 class="groups__title">
