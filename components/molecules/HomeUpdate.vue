@@ -36,6 +36,10 @@ export default {
 
 <style lang="scss" scoped>
 .update {
+  margin-top: 8rem;
+  @include media-breakpoint-down(sm) {
+    margin-top: 0rem;;
+  }
   padding-bottom: 5rem;
   &__title {
     padding: 0 1rem 0;
