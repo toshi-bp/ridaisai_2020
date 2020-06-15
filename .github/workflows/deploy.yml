@@ -21,10 +21,10 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Install SSh Key
-      uses:  shimataro/ssh-key-action@v2.0.3
+      uses: shimataro/ssh-key-action@v2.0.3
       with:
         # SSH key file name (default: id_rsa)
-        private-key: ${{ secrets.SSH_KEY }}
+        key: ${{ secrets.SSH_KEY }}
         public-key: ${{ secrets.SSH_KEY_PUBLIC }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
