@@ -24,7 +24,8 @@ jobs:
       uses:  shimataro/ssh-key-action@v2.0.3
       with:
         # SSH key file name (default: id_rsa)
-        key: ${{ secrets.SSH_KEY }}
+        private-key: ${{ secrets.SSH_KEY }}
+        public-key: ${{ secrets.SSH_KEY_PUBLIC }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
     - name: Setup Node.js
@@ -39,4 +40,4 @@ jobs:
       run: yarn generate
 
     - name: RUN deploy script
-      run: rsync -avz --update --delete -e "ssh -o 'StrictHostKeyChecking no' -i ~/.ssh/id_rsa" ./dist/ ridaisai@ridaisai.sakura.ne.jp:/home/ridaisai/www/nodaridaisai/
+      run: rsync -avz --update --delete -e "ssh -o 'StrictHostKeyChecking no' -i ~/.ssh/id_rsa" ./dist/ ridaisai@ridaisai.sakura.ne.jp:/home/ridaisai/www/nodaridaisai/2020
