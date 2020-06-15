@@ -41,7 +41,7 @@
                   ホーム
                 </nuxt-link>
               </li>
-              <li class="footer__list__item">
+              <!-- <li class="footer__list__item">
                 <nuxt-link
                   to="/"
                   target="blank"
@@ -81,27 +81,28 @@
                 >
                   キャンパスマップ
                 </nuxt-link>
-              </li>
+              </li> -->
               <li class="footer__list__item">
                 <nuxt-link
-                  to="/"
+                  to="/privacy/"
                   class="footer__list__link"
                 >
                   プライバシーポリシー
                 </nuxt-link>
               </li>
-              <li class="footer__list__item">
+              <!-- <li class="footer__list__item">
                 <nuxt-link
                   to="/"
                   class="footer__list__link"
                 >
                   協賛企業一覧
                 </nuxt-link>
-              </li>
+              </li> -->
             </ul>
             <ul class="footer__list__ul">
               <li class="footer__list__item">
-                <a href="" target="blank" class="footer__list__link">過去の理大祭公式サイト</a>
+                <a href="https://nodaridaisai.com/archives/" target="_blank" class="footer__list__link">
+                <fa icon="external-link-alt" fixed-width />過去の理大祭公式サイト</a>
               </li>
             </ul>
           </div>
