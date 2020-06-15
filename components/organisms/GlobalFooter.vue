@@ -2,108 +2,110 @@
   <footer class="footer">
     <TheContainer>
       <div class="footer__row">
-        <div class="footer__head">
-          <img src="~/assets/image/symbol.svg" class="footer__logo">
-          <p class="footer__copyright">
-            2020年度 東京理科大学野田地区
-            <br>理大祭実行委員会
-          </p>
-        </div>
-        <div class="footer__ridaisai">
-          <div class="footer__list">
-            <ul class="footer__list__ul">
-              <!-- <li class="footer__list__item">
-                <a href="https://join.nodaridaisai.com" target="_blank" class="footer__list__link">
-                  <fa icon="desktop" fixed-width />理大祭新歓ウェブサイト</a>
-              </li> -->
-              <li class="footer__list__item">
-                <a
-                  href="https://twitter.com/noda_ridaisai"
-                  target="blank"
-                  class="footer__list__link"
-                ><fa :icon="['fab', 'twitter']" fixed-width />
-                  理大祭公式Twitter</a>
-              </li>
-              <li class="footer__list__item">
-                <a
-                  href="mailto:festival@ed.tus.ac.jp"
-                  class="footer__list__link"
-                ><fa icon="envelope" fixed-width />
-                  festival@ed.tus.ac.jp</a>
-              </li>
-            </ul>
-            <ul class="footer__list__ul">
-              <li class="footer__list__item">
-                <nuxt-link to="/" target="blank" class="footer__list__link">
-                  ホーム
-                </nuxt-link>
-              </li>
-              <!-- <li class="footer__list__item">
-                <nuxt-link
-                  to="/"
-                  target="blank"
-                  class="footer__list__link"
-                >
-                  実行委員会企画
-                </nuxt-link>
-              </li>
-              <li class="footer__list__item">
-                <nuxt-link
-                  to="/"
-                  class="footer__list__link"
-                >
-                  模擬店・団体企画
-                </nuxt-link>
-              </li>
-              <li class="footer__list__item">
-                <nuxt-link
-                  to="/"
-                  class="footer__list__link"
-                >
-                  ご来場の皆様へ
-                </nuxt-link>
-              </li>
-              <li class="footer__list__item">
-                <nuxt-link
-                  to="/"
-                  class="footer__list__link"
-                >
-                  団体インタビュー
-                </nuxt-link>
-              </li>
-              <li class="footer__list__item">
-                <nuxt-link
-                  to="/"
-                  class="footer__list__link"
-                >
-                  キャンパスマップ
-                </nuxt-link>
-              </li> -->
-              <li class="footer__list__item">
-                <nuxt-link
-                  to="/privacy/"
-                  class="footer__list__link"
-                >
-                  プライバシーポリシー
-                </nuxt-link>
-              </li>
-              <!-- <li class="footer__list__item">
-                <nuxt-link
-                  to="/"
-                  class="footer__list__link"
-                >
-                  協賛企業一覧
-                </nuxt-link>
-              </li> -->
-            </ul>
-            <ul class="footer__list__ul">
-              <li class="footer__list__item">
-                <a href="https://nodaridaisai.com/archives/" target="_blank" class="footer__list__link">
-                <fa icon="external-link-alt" fixed-width />過去の理大祭公式サイト</a>
-              </li>
-            </ul>
+        <div>
+          <div class="footer__head">
+            <img src="~/assets/image/symbol.svg" class="footer__logo">
+            <p class="footer__copyright">
+              2020年度 東京理科大学野田地区
+              <br>理大祭実行委員会
+            </p>
           </div>
-        </div>
+          <div class="footer__ridaisai">
+            <div class="footer__list">
+              <ul class="footer__list__ul">
+                <li class="footer__list__item">
+                  <a href="https://join.nodaridaisai.com" target="_blank" class="footer__list__link">
+                    <fa icon="desktop" fixed-width />理大祭新歓ウェブサイト</a>
+                </li>
+                <li class="footer__list__item">
+                  <a
+                    href="https://twitter.com/noda_ridaisai"
+                    target="blank"
+                    class="footer__list__link"
+                  ><fa :icon="['fab', 'twitter']" fixed-width />
+                    理大祭公式Twitter</a>
+                </li>
+                <li class="footer__list__item">
+                  <a
+                    href="mailto:festival@ed.tus.ac.jp"
+                    class="footer__list__link"
+                  ><fa icon="envelope" fixed-width />
+                    festival@ed.tus.ac.jp</a>
+                </li>
+              </ul>
+              <ul class="footer__list__ul">
+                <li class="footer__list__item">
+                  <nuxt-link to="/" target="blank" class="footer__list__link">
+                    ホーム
+                  </nuxt-link>
+                </li>
+                <!-- <li class="footer__list__item">
+                  <nuxt-link
+                    to="/"
+                    target="blank"
+                    class="footer__list__link"
+                  >
+                    実行委員会企画
+                  </nuxt-link>
+                </li>
+                <li class="footer__list__item">
+                  <nuxt-link
+                    to="/"
+                    class="footer__list__link"
+                  >
+                    模擬店・団体企画
+                  </nuxt-link>
+                </li>
+                <li class="footer__list__item">
+                  <nuxt-link
+                    to="/"
+                    class="footer__list__link"
+                  >
+                    ご来場の皆様へ
+                  </nuxt-link>
+                </li>
+                <li class="footer__list__item">
+                  <nuxt-link
+                    to="/"
+                    class="footer__list__link"
+                  >
+                    団体インタビュー
+                  </nuxt-link>
+                </li>
+                <li class="footer__list__item">
+                  <nuxt-link
+                    to="/"
+                    class="footer__list__link"
+                  >
+                    キャンパスマップ
+                  </nuxt-link>
+                </li> -->
+                <li class="footer__list__item">
+                  <nuxt-link
+                    to="/privacy/"
+                    class="footer__list__link"
+                  >
+                    プライバシーポリシー
+                  </nuxt-link>
+                </li>
+                <!-- <li class="footer__list__item">
+                  <nuxt-link
+                    to="/"
+                    class="footer__list__link"
+                  >
+                    協賛企業一覧
+                  </nuxt-link>
+                </li> -->
+              </ul>
+              <ul class="footer__list__ul">
+                <li class="footer__list__item">
+                  <a href="https://nodaridaisai.com/archives/" target="_blank" class="footer__list__link">
+                  <fa icon="external-link-alt" fixed-width />過去の理大祭公式サイト</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+       </div>
       </div>
     </TheContainer>
   </footer>
@@ -123,7 +125,7 @@ export default {
 .footer {
   position: relative;
   background: $color;
-  padding: 2rem 0;
+  padding: 3rem 0;
   @include media-breakpoint-down(md) {
     text-align: center;
   }
@@ -183,7 +185,7 @@ export default {
       &:hover{
         color: $theme-color;
       }
-      &:action{
+      &:active{
         font-weight: bold;
       }
     }
