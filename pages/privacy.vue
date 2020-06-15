@@ -78,7 +78,7 @@ import SubHeader from '~/components/organisms/SubHeader.vue'
 
 export default {
   head () {
-    return makeHead()
+    return makeHead('プライバシーポリシー', 'プライバシーポリシー')
   },
   components: {
     TheContainer,

@@ -16,7 +16,7 @@
           <div class="footer__list">
             <ul class="footer__list__ul">
               <li class="footer__list__item">
-                <a href="" target="blank" class="footer__list__link">
+                <a href="https://join.nodaridaisai.com" target="_blank" class="footer__list__link">
                   <fa icon="desktop" fixed-width />理大祭新歓ウェブサイト</a>
               </li>
               <li class="footer__list__item">

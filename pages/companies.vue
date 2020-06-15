@@ -51,7 +51,7 @@ import SubHeader from '~/components/organisms/SubHeader.vue'
 
 export default {
   head () {
-    return makeHead()
+    return makeHead('企業協賛に関して', '企業協賛に関する情報はこちら')
   },
   components: {
     TheSection,

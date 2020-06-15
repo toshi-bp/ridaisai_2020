@@ -12,12 +12,12 @@
           <dd class="update__list__content">
             ウェブサイトを公開しました。
           </dd>
-          <dt class="update__list__date">
+          <!-- <dt class="update__list__date">
             2020/11/26
           </dt>
           <dd class="update__list__content">
             団体情報ページを公開しました。
-          </dd>
+          </dd> -->
         </dl>
       </div>
     </TheSection>
