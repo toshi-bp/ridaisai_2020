@@ -57,12 +57,16 @@
 </template>
 
 <script>
+import makeHead from '~/utils/makeHead.js'
 import TheSection from '~/components/atoms/TheSection.vue'
 import TheContainer from '~/components/atoms/TheContainer.vue'
 import LinkButton from '~/components/atoms/LinkButton.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
 
 export default {
+  head () {
+    return makeHead()
+  },
   components: {
     TheSection,
     TheContainer,

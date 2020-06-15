@@ -9,11 +9,11 @@ import makeHead from '~/utils/makeHead.js'
 import HomeHead from '~/components/organisms/HomeHead.vue'
 
 export default {
+  head () {
+    return makeHead()
+  },
   components: {
     HomeHead
-  },
-  makeHead () {
-    return makeHead
   }
 }
 </script>
