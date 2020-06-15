@@ -160,6 +160,9 @@ export default {
     display: block;
     font-size: 0.75rem;
     text-align: center;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__list {
