@@ -51,7 +51,7 @@ export default {
     [
       '@nuxtjs/google-gtag',
       {
-        id: '',
+        id: 'UA-107703960-5',
         config: {
           anonymize_ip: true // anonymize IP
         }
