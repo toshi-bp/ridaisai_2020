@@ -3,7 +3,7 @@ export default function (title, description, image) {
   if (typeof image === 'string' && imageAbsoluteUrl.slice(0, 1) === '/') {
     imageAbsoluteUrl = 'https://nodaridaisai.com' + imageAbsoluteUrl
   }
-  const defaultImageUrl = 'https://nodaridaisai.com' + require('~/assets/image/symbol.svg')
+  const defaultImageUrl = 'https://nodaridaisai.com' + require('~/assets/image/symbol.png')
   const imageUrl = imageAbsoluteUrl || defaultImageUrl
 
   return {

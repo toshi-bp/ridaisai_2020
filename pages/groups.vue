@@ -38,12 +38,13 @@
             </h2>
             <ul>
               <li> <a href="2020前期配布資料.pdf" target="_blank">2020年度前期配布資料(PDF版)</a></li>
-              <li> <a href="2020規約書.pdf" target="_blank">2020年度参加団体規約書(PDF版)</a></li>
+              <li> <a href="2020規約書.pdf" target="_blank">2020年度規約書(PDF版)</a></li>
             </ul>
             <h2 class="groups__title">
               理大祭ウェブポータルのURLはこちら
             </h2>
             <a href="https://portal.nodaridaisai.com" target="_blank">https://portal.nodaridaisai.com/</a>
+            <h2 class="groups__title"></h2>
           </div>
         </TheSection>
         <div class="linkbutton">
