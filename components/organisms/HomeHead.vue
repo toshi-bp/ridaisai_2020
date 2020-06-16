@@ -3,7 +3,7 @@
     <TheContainer class="container">
       <div class="head">
         <div class="head__header">
-          <a href="https://line.ee/UHWwtCc" target="_blank"><img src="~/assets/icons/LINE.png" class="head__header__logo"></a>
+          <a href="https://lin.ee/UHWwtCc" target="_blank"><img src="~/assets/icons/LINE.png" class="head__header__logo"></a>
           <a href="https://twitter.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
           <a href="https://instagram.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Instagram.svg" class="head__header__logo__insta"></a>
         </div>
