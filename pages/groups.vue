@@ -37,7 +37,7 @@
               参加団体向け資料<small>（6月15日更新）</small>
             </h2>
             <ul>
-              <li> <a href="2020前期配布資料.pdf" target="_blank">2020年度前期配布資料(PDF版)</a></li>
+              <li> <a href="2020前期配布資料.pdf" target="_blank">2020年度前期配布資料(PDF版)</a><br />(6/24追記：P.28に記載されている『理大祭期間中に使用できない特殊場所』について変更を行いました。)</li>
               <li> <a href="2020規約書.pdf" target="_blank">2020年度規約書(PDF版)</a></li>
             </ul>
             <h2 class="groups__title">
