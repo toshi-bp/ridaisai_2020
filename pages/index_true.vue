@@ -1,19 +1,31 @@
 <template>
   <div>
-    <HomeHead />
+    <HomeHeadTrue />
+    <HomeVisitors />
+    <HomeEventsEat />
+    <HomeUpdateTrue />
+    <Section />
   </div>
 </template>
 
 <script>
 import makeHead from '~/utils/makeHead.js'
-import HomeHead from '~/components/organisms/HomeHead.vue'
+import HomeHeadTrue from '~/components/organisms/HomeHeadTrue.vue'
+import HomeVisitors from '~/components/organisms/HomeVisitors.vue'
+import HomeEventsEat from '~/components/organisms/HomeEventsEat.vue'
+import HomeUpdateTrue from '~/components/molecules/HomeUpdateTrue.vue'
+import Section from '~/components/molecules/Section.vue'
 
 export default {
   components: {
-    HomeHead
+    HomeHeadTrue,
+    HomeVisitors,
+    HomeEventsEat,
+    HomeUpdateTrue,
+    Section
   },
-  makeHead () {
-    return makeHead
+  head () {
+    return makeHead()
   }
 }
 </script>
