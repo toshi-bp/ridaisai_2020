@@ -27,10 +27,10 @@
                 </li>
                 <li class="footer__list__item">
                   <a
-                    href="mailto:festival@ed.tus.ac.jp"
+                    href="mailto:festival@nodaridaisai.com"
                     class="footer__list__link"
                   ><fa icon="envelope" fixed-width />
-                    festival@ed.tus.ac.jp</a>
+                    festival@nodaridaisai.com</a>
                 </li>
               </ul>
               <ul class="footer__list__ul">
