@@ -100,12 +100,12 @@
               <ul class="footer__list__ul">
                 <li class="footer__list__item">
                   <a href="https://nodaridaisai.com/archives/" target="_blank" class="footer__list__link">
-                  <fa icon="external-link-alt" fixed-width />過去の理大祭公式サイト</a>
+                    <fa icon="external-link-alt" fixed-width />過去の理大祭公式サイト</a>
                 </li>
               </ul>
             </div>
           </div>
-       </div>
+        </div>
       </div>
     </TheContainer>
   </footer>

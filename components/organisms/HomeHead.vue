@@ -11,8 +11,8 @@
           <img src="~/assets/image/symbol.svg" class="head__logo">
           <div class="head__main">
             <p class="head__main__lead">
-              <span>Tokyo University of Science</span><br />
-              <span>TUS festival @ Noda</span><br />
+              <span>Tokyo University of Science</span><br>
+              <span>TUS festival @ Noda</span><br>
               <span>2020 November 21st,22nd 10:00～17:00</span>
             </p>
           </div>
@@ -26,12 +26,12 @@
               企業協賛に関して
             </LinkButton2>
           </div>
-           <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
+          <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
         </div>
       </div>
-        <div>
-          <HomeUpdate />
-        </div>
+      <div>
+        <HomeUpdate />
+      </div>
     </TheContainer>
   </div>
 </template>
