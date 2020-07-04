@@ -76,13 +76,23 @@ export default {
   margin-bottom: 2rem;
   text-decoration: none;
   transition: 0.15s ease all;
-  z-index: 8900;
+  box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.1);
+  border-radius: 1rem;
+  padding: 1rem;
 
   &__img {
     background: center center / cover no-repeat;
     background-color: rgba($theme-color , $alpha: 0.8);
     width: 100%;
     margin-bottom: 1rem;
+    position: relative;
+    border-radius: 1rem;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: calc(100% * (2 / 3));
+    }
   }
 
   &__title {

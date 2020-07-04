@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheContainer>
-      理大祭を食べて楽しむ
+      <h2>理大祭を食べて楽しむ</h2>
        <ul class="horizontal-list">
         <li class="item">
           <ItemCard
@@ -71,6 +71,6 @@ export default {
       height: 200px;
       margin: 16px;
       font-size: 20px;
-      background: rgba(255, 0, 0, 0.4);
+      background: rgba($theme-color, 0.5);
     }
 </style>
