@@ -44,6 +44,7 @@
               理大祭ウェブポータルのURLはこちら
             </h2>
             <a href="https://portal.nodaridaisai.com" target="_blank">https://portal.nodaridaisai.com/</a>
+            <p>(※注意：PCのブラウザの動作環境によっては、正常に動作しないことがあります。あらかじめご了承ください。なお、Google Chrome及びSafariでの動作は確認しているので、PCで動作しない方はこれらのブラウザで上記URLから再度アクセスをよろしくお願いいたします。)</p>
             <h2 class="groups__title"></h2>
           </div>
         </TheSection>
