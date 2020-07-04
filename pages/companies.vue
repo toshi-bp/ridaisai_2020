@@ -3,39 +3,58 @@
     <TheContainer>
       <div class="companies">
         <SubHeader type="orange">
-          <template #title>企業協賛に関して</template>
+          <template #title>
+            企業協賛に関して
+          </template>
         </SubHeader>
         <TheSection>
           <div class="companies__text">
-            <h2 class="companies__title">協賛のお願い</h2>
-            <p class="companies__description">今年度、東京理科大学野田キャンパスでは11月21日(土),22日(日)に理大祭を開催いたします。</p>
-            <p class="companies__description">我々東京理科大学野田地区理大祭実行委員会は、理大祭開催にあたり、協賛のお願いを行っております。協賛方法につきましては下記の二つがございます。</p>
+            <h2 class="companies__title">
+              協賛のお願い
+            </h2>
+            <p class="companies__description">
+              今年度、東京理科大学野田キャンパスでは11月21日(土),22日(日)に理大祭を開催いたします。
+            </p>
+            <p class="companies__description">
+              我々東京理科大学野田地区理大祭実行委員会は、理大祭開催にあたり、協賛のお願いを行っております。協賛方法につきましては下記の二つがございます。
+            </p>
             <ul class="companies__list">
               <li>実行委員会作成の理大祭公式パンフレット・ウェブサイトへの広告協賛</li>
               <li>イベント時に配布する玩具や飲食物、チケット等の物品協賛</li>
             </ul>
-            <p class="companies__description">詳しくは以下の資料をご確認下さい。</p>
+            <p class="companies__description">
+              詳しくは以下の資料をご確認下さい。
+            </p>
             <ul class="companies__list">
               <li><a href="kikakusho.pdf" target="_blank">2020年度野田地区理大祭企画書</a></li>
               <li><a href="brochure.pdf" target="_blank">2019年度野田地区理大祭パンフレット</a></li>
             </ul>
-            <p class="companies__description">また、上記以外の協賛形式のご提案を承っております。下記お問い合わせアドレスにご連絡下さい。</p>
-            <h2 class="companies__title">お問い合わせ</h2>
-            <p class="companies__description">協賛にご協力いただける方や何かご不明な点がある際には下記の連絡先にご連絡下さい。</p>
+            <p class="companies__description">
+              また、上記以外の協賛形式のご提案を承っております。下記お問い合わせアドレスにご連絡下さい。
+            </p>
+            <h2 class="companies__title">
+              お問い合わせ
+            </h2>
+            <p class="companies__description">
+              協賛にご協力いただける方や何かご不明な点がある際には下記の連絡先にご連絡下さい。
+            </p>
             <ul>
               <li><a href="tel:04-7124-9880">Tel/Fax：04-7124-9880(実行委員会本部/野田学生会本部)</a></li>
-              <li><a
-                   href="mailto:syougaibu@nodaridaisai.com"
-                   @click="$ga.event('link', 'click', 'email', 1)">
+              <li>
+                <a
+                  href="mailto:syougaibu@nodaridaisai.com"
+                  @click="$ga.event('link', 'click', 'email', 1)"
+                >
                   syougaibu@nodaridaisai.com</a>
-                </li>
+              </li>
             </ul>
           </div>
-          <div class="companies__text">
-          </div>
+          <div class="companies__text" />
         </TheSection>
         <div class="linkbutton">
-          <LinkButton to="/">topページへ →</LinkButton>
+          <LinkButton to="/">
+            topページへ →
+          </LinkButton>
         </div>
       </div>
     </TheContainer>
@@ -50,14 +69,14 @@ import LinkButton from '~/components/atoms/LinkButton.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
 
 export default {
-  head () {
-    return makeHead('企業協賛に関して', '企業協賛に関する情報はこちら')
-  },
   components: {
     TheSection,
     TheContainer,
     LinkButton,
     SubHeader
+  },
+  head () {
+    return makeHead('企業協賛に関して', '企業協賛に関する情報はこちら')
   }
 }
 </script>

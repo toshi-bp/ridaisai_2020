@@ -37,14 +37,15 @@
               参加団体向け資料<small>（6月15日更新）</small>
             </h2>
             <ul>
-              <li> <a href="2020前期配布資料.pdf" target="_blank">2020年度前期配布資料(PDF版)</a><br />(6/24追記：P.28に記載されている『理大祭期間中に使用できない特殊場所』について変更を行いました。)</li>
+              <li> <a href="2020前期配布資料.pdf" target="_blank">2020年度前期配布資料(PDF版)</a><br>(6/24追記：P.28に記載されている『理大祭期間中に使用できない特殊場所』について変更を行いました。)</li>
               <li> <a href="2020規約書.pdf" target="_blank">2020年度規約書(PDF版)</a></li>
             </ul>
             <h2 class="groups__title">
               理大祭ウェブポータルのURLはこちら
             </h2>
             <a href="https://portal.nodaridaisai.com" target="_blank">https://portal.nodaridaisai.com/</a>
-            <h2 class="groups__title"></h2>
+            <p>(※注意：PCのブラウザの動作環境によっては、正常に動作しないことがあります。あらかじめご了承ください。なお、Google Chrome及びSafariでの動作は確認しているので、PCで動作しない方はこれらのブラウザで上記URLから再度アクセスをよろしくお願いいたします。)</p>
+            <h2 class="groups__title" />
           </div>
         </TheSection>
         <div class="linkbutton">
@@ -65,14 +66,14 @@ import LinkButton from '~/components/atoms/LinkButton.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
 
 export default {
-  head () {
-    return makeHead('参加団体向け情報', '団体向け情報はこちら')
-  },
   components: {
     TheSection,
     TheContainer,
     LinkButton,
     SubHeader
+  },
+  head () {
+    return makeHead('参加団体向け情報', '団体向け情報はこちら')
   }
 }
 </script>
