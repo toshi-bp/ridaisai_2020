@@ -68,9 +68,9 @@ export default {
       width: 45%;
 
       /* 見た目調整 */
-      height: 200px;
+      height: 25rem;
       margin: 16px;
       font-size: 20px;
-      background: rgba($theme-color, 0.5);
+      // background: rgba($theme-color, 0.5);
     }
 </style>
