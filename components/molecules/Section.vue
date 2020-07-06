@@ -1,19 +1,14 @@
 <template>
-    <component
-        :is="component"
-        class="section"
-    >
-        <TheContainer class="containerClass">
-            <div class="section__main">
-                <h2 class="section__title">
-                    <slot name="title" />
-                </h2>
-                <h2 class="section__text">
-                    <slot name="text" />
-                </h2>
-            </div>
-        </TheContainer>
-    </component>
+    <TheContainer class="containerClass">
+        <div class="section__main">
+            <h2 class="section__title">
+                <slot name="title" />
+            </h2>
+            <h2 class="section__text">
+                <slot name="text" />
+            </h2>
+        </div>
+    </TheContainer>
 </template>
 
 <script>
@@ -31,6 +26,7 @@ export default {
 <style lang="scss" scoped>
 .section{
     position: relative;
+    height: 3rem;
     background: blue;
     &__main{
         padding: 2rem;

@@ -73,4 +73,22 @@ export default {
       font-size: 20px;
       // background: rgba($theme-color, 0.5);
     }
+
+  .horizontal-list::-webkit-scrollbar {
+    height: 5px;;
+}
+
+.horizontal-list::-webkit-scrollbar-track {
+  background: #eee;
+}
+/*スクロールバーの動く部分*/
+.horizontal-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border: none;
+}
+/*スクロールバーの動く部分のホバー（マウスオーバー）*/
+.horizontal-list::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
 </style>
