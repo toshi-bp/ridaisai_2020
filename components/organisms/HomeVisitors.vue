@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="visitor">
     <TheContainer class="container">
       <div class="visitor__itembox">
         <div class="visitor__itembox__item">
@@ -14,31 +14,34 @@
 </template>
 
 <script>
-// import TheContainer from '~/components/atoms/TheContainer.vue'
+import TheContainer from '~/components/atoms/TheContainer.vue'
 // import LinkButton2 from '~/components/atoms/LinkButton2.vue'
 
-// export default {
-//   components: {
-//     TheContainer,
-//     LinkButton2
-//   }
-// }
+export default {
+  components: {
+    TheContainer
+  }
+}
+
 </script>
 
 <style lang="scss" scoped>
 .background{
-  background-color: $sub-color;
+  // background-color: rgba($sub-color, $alpha: 0.1);
 }
 
 .visitor{
+  margin-top: 5rem;
+  background-color: rgba($sub-color, $alpha: 0.15);
   &__itembox{
     display: flex;
 
       &__item{
-        height: 15rem;
-        width: 15rem;
-        background-color: $theme-color;
+        height: 20rem;
+        width: 100%;
+        background-color: rgba($sub-color, $alpha: 0.15);
       }
   }
 }
+
 </style>

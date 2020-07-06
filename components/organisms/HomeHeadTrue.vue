@@ -157,7 +157,7 @@ export default {
 
 .backpanel{
   background-color: $theme-color;
-  background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 100%);
+  background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 100%);
 }
 
 .container{

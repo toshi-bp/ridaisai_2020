@@ -1,7 +1,7 @@
 <template>
   <div>
-    <TheContainer>
-      <h2>理大祭を食べて楽しむ</h2>
+    <TheContainer class="container">
+      <h2 class="title">理大祭を食べて楽しむ</h2>
        <ul class="horizontal-list">
         <li class="item">
           <ItemCard
@@ -56,7 +56,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .title{
+    text-align: center;
+    font-family: $sub-font;
+    margin: 0;
+    font-size: 2rem;
+      @include media-breakpoint-down(sm) {
+        font-size: 1.7rem;
+      }
+  }
+
  .horizontal-list {
+      margin: 0 0 7rem;
+      padding: 0;
       overflow-x: auto;
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
@@ -65,17 +77,18 @@ export default {
     .item {
       /* 横スクロール用 */
       display: inline-block;
-      width: 45%;
-
+      width: 40%;
+        @include media-breakpoint-down(sm) {
+        width: 35%;
+      }
       /* 見た目調整 */
-      height: 25rem;
       margin: 16px;
       font-size: 20px;
       // background: rgba($theme-color, 0.5);
     }
 
   .horizontal-list::-webkit-scrollbar {
-    height: 5px;;
+    height: 7px;;
 }
 
 .horizontal-list::-webkit-scrollbar-track {
@@ -83,12 +96,15 @@ export default {
 }
 /*スクロールバーの動く部分*/
 .horizontal-list::-webkit-scrollbar-thumb {
-  background: #aaa;
+  background-color: rgba($sub-color,10%);;
   border: none;
 }
 /*スクロールバーの動く部分のホバー（マウスオーバー）*/
 .horizontal-list::-webkit-scrollbar-thumb:hover {
-  background: #999;
+  background: rgba($theme-color,10%);;
 }
 
+.container{
+  background-color: rgba(#fff,0.9);
+}
 </style>

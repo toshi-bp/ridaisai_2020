@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <HomeHeadTrue />
-    <HomeVisitors />
-    <HomeEventsEat />
-    <HomeUpdateTrue />
-    <Section />
+  <div class="index">
+    <div class="index__bg">
+      <HomeHeadTrue />
+      <HomeVisitors />
+      <HomeEventsEat />
+      <HomeUpdateTrue />
+    </div>
   </div>
 </template>
 
@@ -14,15 +15,13 @@ import HomeHeadTrue from '~/components/organisms/HomeHeadTrue.vue'
 import HomeVisitors from '~/components/organisms/HomeVisitors.vue'
 import HomeEventsEat from '~/components/organisms/HomeEventsEat.vue'
 import HomeUpdateTrue from '~/components/molecules/HomeUpdateTrue.vue'
-import Section from '~/components/molecules/Section.vue'
 
 export default {
   components: {
     HomeHeadTrue,
     HomeVisitors,
     HomeEventsEat,
-    HomeUpdateTrue,
-    Section
+    HomeUpdateTrue
   },
   head () {
     return makeHead()
@@ -30,5 +29,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.index {
+  // &__bg {
+  //   background-color: $theme-color;
+  //   background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 100%);
+  // }
+}
 </style>

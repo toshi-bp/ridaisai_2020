@@ -72,13 +72,12 @@ export default {
 <style lang="scss" scoped>
 .item-card {
   display: block;
-  border: $accent-color 1px solid;
-  margin-bottom: 2rem;
-  text-decoration: none;
+  // border: $accent-color 1px solid;
   transition: 0.15s ease all;
   box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.1);
-  border-radius: 1rem;
-  padding: 1rem;
+  // border-radius: 1rem;
+  // padding: 1rem;
+  background-color: #fff;
 
   &__img {
     background: center center / cover no-repeat;
@@ -86,7 +85,7 @@ export default {
     width: 100%;
     margin-bottom: 1rem;
     position: relative;
-    border-radius: 1rem;
+    // border-radius: 1rem;
 
     &::before {
       content: "";
@@ -99,6 +98,9 @@ export default {
     font-size: 1.25rem;
     font-family: $sub-font;
     margin-bottom: 0;
+    color: #000;
+    padding: 0 0 1rem 1rem;
+    text-decoration: none;
   }
 }
 </style>
