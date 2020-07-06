@@ -1,14 +1,16 @@
 <template>
-    <TheContainer class="containerClass">
-        <div class="section__main">
-            <h2 class="section__title">
-                <slot name="title" />
-            </h2>
-            <h2 class="section__text">
-                <slot name="text" />
-            </h2>
-        </div>
-    </TheContainer>
+    <div>
+        <TheContainer class="containerClass">
+            <div class="section__main">
+                <h2 class="section__title">
+                    <slot name="title" />
+                </h2>
+                <h2 class="section__text">
+                    <slot name="text" />
+                </h2>
+            </div>
+        </TheContainer>
+    </div>
 </template>
 
 <script>
