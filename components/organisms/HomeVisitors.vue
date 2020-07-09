@@ -2,12 +2,9 @@
   <div class="visitor">
     <TheContainer class="container">
       <div class="visitor__itembox">
-        <div class="visitor__itembox__item">
-        </div>
-        <div class="visitor__itembox__item">
-        </div>
-        <div class="visitor__itembox__item">
-        </div>
+        <h2 class="visitor__title">
+          ご来場者の皆様へ(別になくてもよさそう？)
+        </h2>
       </div>
     </TheContainer>
   </div>
@@ -41,6 +38,10 @@ export default {
         width: 100%;
         background-color: rgba($sub-color, $alpha: 0.15);
       }
+  }
+
+  &__title {
+
   }
 }
 

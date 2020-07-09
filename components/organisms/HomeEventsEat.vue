@@ -1,44 +1,46 @@
 <template>
   <div>
     <TheContainer class="container">
-      <h2 class="title">理大祭を食べて楽しむ</h2>
-       <ul class="horizontal-list">
-        <li class="item">
-          <ItemCard
-            to="/"
-            :imageUrl="require(`~/assets/image/broccolitime.png`)"
-            title="金村の会"
-          />
-        </li>
-        <li class="item">
-          <ItemCard
-            to="/"
-            :imageUrl="require(`~/assets/image/symbol.png`)"
-            title="金村の会"
-          />
-        </li>
-        <li class="item">
-          <ItemCard
-            to="/"
-            :imageUrl="require(`~/assets/image/symbol.png`)"
-            title="キムタククラブ"
-          />
-        </li>
-        <li class="item">
-          <ItemCard
-            to="/"
-            :imageUrl="require(`~/assets/image/symbol.png`)"
-            title="霊波の光のタピオカバーガー"
-          />
-        </li>
-        <li class="item">
-          <ItemCard
-            to="/"
-            :imageUrl="require(`~/assets/image/symbol.png`)"
-            title="フル単よろしく"
-          />
-        </li>
-      </ul>
+      <div>
+        <h2 class="title">理大祭を食べて楽しむ</h2>
+        <ul class="horizontal-list">
+          <li class="item">
+            <ItemCard
+              to="/"
+              :imageUrl="require(`~/assets/image/broccolitime.png`)"
+              title="金村の会"
+            />
+          </li>
+          <li class="item">
+            <ItemCard
+              to="/"
+              :imageUrl="require(`~/assets/image/symbol.png`)"
+              title="金村の会"
+            />
+          </li>
+          <li class="item">
+            <ItemCard
+              to="/"
+              :imageUrl="require(`~/assets/image/symbol.png`)"
+              title="キムタククラブ"
+            />
+          </li>
+          <li class="item">
+            <ItemCard
+              to="/"
+              :imageUrl="require(`~/assets/image/symbol.png`)"
+              title="霊波の光のタピオカバーガー"
+            />
+          </li>
+          <li class="item">
+            <ItemCard
+              to="/"
+              :imageUrl="require(`~/assets/image/symbol.png`)"
+              title="フル単よろしく"
+            />
+          </li>
+        </ul>
+      </div>
     </TheContainer>
   </div>
 </template>
