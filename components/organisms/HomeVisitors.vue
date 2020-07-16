@@ -6,15 +6,19 @@
       </h2>
       <div class="visitor__colorbox">
         <div class="visitor__colorbox__item access">
+          <img src="~/assets/icons/visitor/map_icon.svg" class="visitor__colorbox__item access"/>
           アクセス
         </div>
         <div class="visitor__colorbox__item map">
+          <img src="~/assets/icons/visitor/map_icon.svg" class="visitor__colorbox__item map"/>
           キャンパスマップ
         </div>
         <div class="visitor__colorbox__item trouble">
+          <img src="~/assets/icons/visitor/map_icon.svg" class="visitor__colorbox__item trouble"/>
           お困りの際は
         </div>
         <div class="visitor__colorbox__item question">
+          <img src="~/assets/icons/visitor/map_icon.svg" class="visitor__colorbox__item question"/>
           よくあるご質問
         </div>
         <div class="visitor__colorbox__item ban">
@@ -60,7 +64,7 @@ export default {
 
     &__item{
       width: 22.75%;
-      height: 5rem;
+      height: 6rem;
       margin-right: 3%;
       margin-bottom: 1rem;
       background-color: $theme-color;
