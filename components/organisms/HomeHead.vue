@@ -13,7 +13,7 @@
             <p class="head__main__lead">
               <span>Tokyo University of Science</span><br>
               <span>TUS festival @ Noda</span><br>
-              <span>2020 November 21st,22nd 10:00～17:00</span>
+              <span>November 21st and 22nd, 2020 <br />from 10:00 to 17:00</span>
             </p>
           </div>
           <div class="button__group">
