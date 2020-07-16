@@ -5,7 +5,6 @@
         <div>
           <h1 class="update__title">
             更新情報
-
           </h1>
           <dl class="update__list">
             <dt class="update__list__date">

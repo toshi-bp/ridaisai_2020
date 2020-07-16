@@ -3,15 +3,15 @@
     <component
       :is="linkComponentIs"
       :to="to || undefined"
-      :href='href || undefined'
+      :href="href || undefined"
       class="item-card__main"
       :target="linkTarget"
     >
       <figure
-        class='item-card__img'
+        class="item-card__img"
         :style="{ backgroundImage: imageUrl ? `url(${imageUrl})` : '',
                   backgroundSize: isImageContain ? 'contain' : 'cover'
-                }"
+        }"
       />
       <div class="item-card__body">
         <h3 class="item-card__title">

@@ -1,25 +1,25 @@
 <template>
-    <div class="section">
-        <TheContainer class="containerClass">
-            <div class="section__main">
-                <h2 class="section__title">
-                    <slot name="title" />
-                </h2>
-                <h2 class="section__text">
-                    <slot name="text" />
-                </h2>
-            </div>
-        </TheContainer>
-    </div>
+  <div class="section">
+    <TheContainer class="containerClass">
+      <div class="section__main">
+        <h2 class="section__title">
+          <slot name="title" />
+        </h2>
+        <h2 class="section__text">
+          <slot name="text" />
+        </h2>
+      </div>
+    </TheContainer>
+  </div>
 </template>
 
 <script>
 import TheContainer from '~/components/atoms/TheContainer.vue'
 export default {
-  props: {
-  },
   components: {
     TheContainer
+  },
+  props: {
   }
 }
 

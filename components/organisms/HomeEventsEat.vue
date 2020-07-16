@@ -1,41 +1,45 @@
 <template>
-  <div>
+  <div class="eat">
     <TheContainer class="container">
       <div>
-        <h2 class="title">理大祭を食べて楽しむ</h2>
+        <LinkLabel type="eat" to="/events/eat/">
+          <template>
+            理大祭を食べて楽しむ
+          </template>
+        </LinkLabel>
         <ul class="horizontal-list">
           <li class="item">
             <ItemCard
               to="/"
-              :imageUrl="require(`~/assets/image/broccolitime.png`)"
+              :image-url="require(`~/assets/image/broccolitime.png`)"
               title="金村の会"
             />
           </li>
           <li class="item">
             <ItemCard
               to="/"
-              :imageUrl="require(`~/assets/image/symbol.png`)"
+              :image-url="require(`~/assets/image/symbol.png`)"
               title="金村の会"
             />
           </li>
           <li class="item">
             <ItemCard
               to="/"
-              :imageUrl="require(`~/assets/image/symbol.png`)"
+              :image-url="require(`~/assets/image/symbol.png`)"
               title="キムタククラブ"
             />
           </li>
           <li class="item">
             <ItemCard
               to="/"
-              :imageUrl="require(`~/assets/image/symbol.png`)"
+              :image-url="require(`~/assets/image/symbol.png`)"
               title="霊波の光のタピオカバーガー"
             />
           </li>
           <li class="item">
             <ItemCard
               to="/"
-              :imageUrl="require(`~/assets/image/symbol.png`)"
+              :image-url="require(`~/assets/image/symbol.png`)"
               title="フル単よろしく"
             />
           </li>
@@ -48,16 +52,21 @@
 <script>
 import TheContainer from '~/components/atoms/TheContainer.vue'
 import ItemCard from '~/components/molecules/ItemCard.vue'
+import LinkLabel from '~/components/atoms/LinkLabel.vue'
 
 export default {
   components: {
     TheContainer,
-    ItemCard
+    ItemCard,
+    LinkLabel
   }
 }
 </script>
 
 <style lang="scss" scoped>
+  .eat {
+    margin-bottom: 5rem;
+  }
   .title{
     text-align: center;
     font-family: $sub-font;

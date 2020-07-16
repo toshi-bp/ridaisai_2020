@@ -4,8 +4,7 @@
       <h2 class="title">
         概要
       </h2>
-      <ul class="list">
-      </ul>
+      <ul class="list" />
     </TheContainer>
   </div>
 </template>
