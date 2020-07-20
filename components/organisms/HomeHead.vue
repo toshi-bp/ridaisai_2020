@@ -52,7 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 .head {
-  height: 100vh;
+  // height: 100vh;
   $header-height: 5rem;
   &__header{
     display: flex;

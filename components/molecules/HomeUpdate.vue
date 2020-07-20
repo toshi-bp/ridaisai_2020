@@ -18,6 +18,12 @@
           <dd class="update__list__content">
             団体情報ページを公開しました。
           </dd> -->
+          <dt class="update__list__date">
+            2020/07/20
+          </dt>
+          <dd class="update__list__content">
+            <nuxt-link to="/groups/">参加団体向け情報</nuxt-link>と<nuxt-link to="/companies/">企業協賛に関して</nuxt-link>を更新
+          </dd>
         </dl>
       </div>
     </TheSection>
