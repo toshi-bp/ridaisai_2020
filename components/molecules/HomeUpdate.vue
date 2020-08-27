@@ -22,7 +22,11 @@
             2020/07/20
           </dt>
           <dd class="update__list__content">
-            <nuxt-link to="/groups/">参加団体向け情報</nuxt-link>と<nuxt-link to="/companies/">企業協賛に関して</nuxt-link>を更新
+            <nuxt-link to="/groups/">参加団体向け情報</nuxt-link>と<nuxt-link to="/companies/">企業協賛に関して</nuxt-link>を更新しました。
+          </dd>
+          <dt class="update__list__date">2020/08/27</dt>
+          <dd class="update__list__content">
+            <nuxt-link to="/groups/">参加団体向け情報</nuxt-link>に参加団体募集要項を掲載しました。
           </dd>
         </dl>
       </div>
