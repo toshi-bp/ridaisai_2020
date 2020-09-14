@@ -35,7 +35,9 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/webfonts.js', '~/plugins/emptyTouchHandler.js'
+  plugins: ['~/plugins/webfonts.js',
+            '~/plugins/emptyTouchHandler.js',
+            '~/plugins/vue-youtube.js'
   ],
   /*
   ** Nuxt.js dev-modules
