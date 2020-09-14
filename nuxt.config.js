@@ -80,6 +80,7 @@ export default {
         ]
       }
     ],
+    '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@nuxtjs/markdownit'
   ],
@@ -94,6 +95,13 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+  pwa: {
+    manifest: {
+      name: 'ridaisai_2020',
+      lang: 'ja',
+      useWebmanifestExtension: false
     }
   }
 }
