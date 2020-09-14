@@ -100,6 +100,9 @@ export default {
       name: 'ridaisai_2020',
       lang: 'ja',
       useWebmanifestExtension: false
+    },
+    workbox: {
+      dev: true //開発環境でもPWA
     }
   }
 }
