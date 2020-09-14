@@ -11,11 +11,14 @@
         <div class="sample__information">
           <p class="sample__information__title">キムタク先輩</p>
           <p class="sample__information__text">20生は見たことないのでイケメンかすら知りません.</p>
-          <youtube
-            ref="youtube"
-            :video-id="videoId"
-            width="100%"
-          />
+          <div class="sample__youtube">
+            <youtube
+              ref="youtube"
+              :video-id="videoId"
+              :fitParent="true"
+              :resize="true"
+            />
+          </div>
           <div class="sample__img">
             <p class="sample__img__text">ここに動画を埋め込みたい人生だった</p>
           </div>
@@ -104,6 +107,9 @@ export default {
       font-size: 1.2rem;
       background-color: $sub-color;
       }
+  }
+  &__youtube {
+    width: 100%;
   }
   &__text {
     position: absolute;
