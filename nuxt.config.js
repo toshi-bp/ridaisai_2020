@@ -97,7 +97,7 @@ export default {
   },
   pwa: {
     manifest: {
-      name: 'ridaisai_2020',
+      name: '2020年度野田地区理大祭',
       lang: 'ja',
       useWebmanifestExtension: false
     },
