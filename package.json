@@ -20,6 +20,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/markdownit": "^1.2.7",
+    "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/style-resources": "^1.0.0",
     "bootstrap": "^4.4.1",
     "node-sass": "^4.14.1",
