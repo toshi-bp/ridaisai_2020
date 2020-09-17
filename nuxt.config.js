@@ -36,8 +36,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: ['~/plugins/webfonts.js',
-            '~/plugins/emptyTouchHandler.js',
-            '~/plugins/vue-youtube.js'
+    '~/plugins/emptyTouchHandler.js',
+    '~/plugins/vue-youtube.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -104,7 +104,7 @@ export default {
       useWebmanifestExtension: false
     },
     workbox: {
-      dev: true //開発環境でもPWA
+      dev: true // 開発環境でもPWA
     }
   }
 }

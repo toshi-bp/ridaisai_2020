@@ -7,59 +7,89 @@
             金村の会
           </template>
         </SubHeader>
-      <TheSection>
-        <div class="sample__information">
-          <p class="sample__information__title">キムタク先輩</p>
-          <p class="sample__information__text">20生は見たことないのでイケメンかすら知りません.</p>
-          <div class="sample__youtube">
-            <youtube
-              ref="youtube"
-              :video-id="videoId"
-              :fitParent="true"
-              :resize="true"
-            />
+        <TheSection>
+          <div class="sample__information">
+            <p class="sample__information__title">
+              キムタク先輩
+            </p>
+            <p class="sample__information__text">
+              20生は見たことないのでイケメンかすら知りません.
+            </p>
+            <div class="sample__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
+            <div class="sample__img">
+              <p class="sample__img__text">
+                ここに動画を埋め込みたい人生だった
+              </p>
+            </div>
           </div>
-          <div class="sample__img">
-            <p class="sample__img__text">ここに動画を埋め込みたい人生だった</p>
+        </TheSection>
+        <TheSection>
+          <div class="sample__information">
+            <p class="sample__information__title">
+              キムタクFC
+            </p>
+            <p class="sample__information__text">
+              金村先輩はキムタクと言われたいそうです。
+            </p>
           </div>
-        </div>
-      </TheSection>
-      <TheSection>
-        <div class="sample__information">
-          <p class="sample__information__title">キムタクFC</p>
-          <p class="sample__information__text">金村先輩はキムタクと言われたいそうです。</p>
-        </div>
-      </TheSection>
-      <TheSection>
-        <div class="sample__information">
-          <p class="sample__information__title">キムタク先輩</p>
-          <p class="sample__information__text">20生は見たことないのでイケメンかすら知りません.</p>
-        </div>
-      </TheSection>
-      <TheSection>
-        <div class="sample__information">
-          <p class="sample__information__title">キムタク先輩</p>
-          <p class="sample__information__text">20生は見たことないのでイケメンかすら知りません.</p>
-        </div>
-      </TheSection>
-      <TheSection>
-        <div class="sample__information">
-          <p class="sample__information__title">キムタク先輩</p>
-          <p class="sample__information__text">20生は見たことないのでイケメンかすら知りません.</p>
-        </div>
-      </TheSection>
-      <TheSection>
-        <div class="sample__information">
-          <p class="sample__information__title">キムタク先輩</p>
-          <p class="sample__information__text">20生は見たことないのでイケメンかすら知りません.</p>
-        </div>
-      </TheSection>
-      <TheSection>
-        <div class="sample__information">
-          <p class="sample__information__title">キムタク先輩</p>
-          <p class="sample__information__text">20生は見たことないのでイケメンかすら知りません.</p>
-        </div>
-      </TheSection>
+        </TheSection>
+        <TheSection>
+          <div class="sample__information">
+            <p class="sample__information__title">
+              キムタク先輩
+            </p>
+            <p class="sample__information__text">
+              20生は見たことないのでイケメンかすら知りません.
+            </p>
+          </div>
+        </TheSection>
+        <TheSection>
+          <div class="sample__information">
+            <p class="sample__information__title">
+              キムタク先輩
+            </p>
+            <p class="sample__information__text">
+              20生は見たことないのでイケメンかすら知りません.
+            </p>
+          </div>
+        </TheSection>
+        <TheSection>
+          <div class="sample__information">
+            <p class="sample__information__title">
+              キムタク先輩
+            </p>
+            <p class="sample__information__text">
+              20生は見たことないのでイケメンかすら知りません.
+            </p>
+          </div>
+        </TheSection>
+        <TheSection>
+          <div class="sample__information">
+            <p class="sample__information__title">
+              キムタク先輩
+            </p>
+            <p class="sample__information__text">
+              20生は見たことないのでイケメンかすら知りません.
+            </p>
+          </div>
+        </TheSection>
+        <TheSection>
+          <div class="sample__information">
+            <p class="sample__information__title">
+              キムタク先輩
+            </p>
+            <p class="sample__information__text">
+              20生は見たことないのでイケメンかすら知りません.
+            </p>
+          </div>
+        </TheSection>
       </TheContainer>
     </div>
   </div>
@@ -71,15 +101,15 @@ import TheContainer from '~/components/atoms/TheContainer.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
 
 export default {
-  data () {
-    return {
-      videoId: '29nSdJtFiCo'
-    }
-  },
   components: {
     TheSection,
     TheContainer,
     SubHeader
+  },
+  data () {
+    return {
+      videoId: '29nSdJtFiCo'
+    }
   }
 }
 </script>
