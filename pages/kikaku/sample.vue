@@ -21,12 +21,12 @@
                @click="playVideo"
                class="sample__youtube__img"
               />
-              <youtube
+              <!-- <youtube
                 ref="youtube"
                 :video-id="videoId"
                 :fit-parent="true"
                 :resize="true"
-              />
+              /> -->
             </div>
             <!-- <div class="sample__img">
               <p class="sample__img__text">

@@ -17,6 +17,9 @@
         <h3 class="item-card__title">
           {{ title }}
         </h3>
+        <h3 class="item-card__title">
+          {{ name }}
+        </h3>
       </div>
     </component>
   </div>
@@ -52,6 +55,10 @@ export default {
     target: {
       type: String,
       default: ''
+    },
+    name: {
+      type: String,
+      default: 'キムタクFC'
     }
   },
   computed: {

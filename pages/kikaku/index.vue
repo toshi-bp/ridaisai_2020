@@ -12,6 +12,13 @@
         GroupName="カブトボーグを愛でる会"
       >
       </KikakuCard>
+      <ItemCard
+        to="/kikaku/sample/"
+        title="金村の会"
+        name="キムタクFC"
+        :imageUrl="require(`~/assets/image/symbol.png`)"
+      >
+      </ItemCard>
     </TheContainer>
   </div>
 </template>
@@ -21,13 +28,15 @@ import TheContainer from '~/components/atoms/TheContainer.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
 import Search from '~/components/atoms/Search.vue'
 import KikakuCard from '~/components/molecules/Kikakucard.vue'
+import ItemCard from '~/components/molecules/ItemCard'
 
 export default {
   components: {
     TheContainer,
     SubHeader,
     KikakuCard,
-    Search
+    Search,
+    ItemCard
   }
 }
 </script>
