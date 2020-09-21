@@ -1,38 +1,42 @@
 <template>
   <div class="kikaku">
-    <!-- <Background> -->
     <TheContainer>
       <SubHeader>
         <template #title>
           企画一覧
         </template>
       </SubHeader>
+      <Search />
       <KikakuCard
         KikakuName="トムキャットレッドビートル"
         GroupName="カブトボーグを愛でる会"
       >
       </KikakuCard>
     </TheContainer>
-    <!-- </Background> -->
   </div>
 </template>
 
 <script>
-// import Background from '~/components/atoms/Background.vue'
 import TheContainer from '~/components/atoms/TheContainer.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
+import Search from '~/components/atoms/Search.vue'
 import KikakuCard from '~/components/molecules/Kikakucard.vue'
 
 export default {
   components: {
-    // Background,
     TheContainer,
     SubHeader,
-    KikakuCard
+    KikakuCard,
+    Search
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+.kikaku {
+  padding-top: $global-header-height;
+  padding-bottom: 2rem;
+  background-image: url('~@/assets/image/bg.svg');
+  background-size: repeat;
+}
 </style>

@@ -16,6 +16,11 @@
               20生は見たことないのでイケメンかすら知りません.
             </p>
             <div class="sample__youtube">
+              <img
+               :src="`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`"
+               @click="playVideo"
+               class="sample__youtube__img"
+              />
               <youtube
                 ref="youtube"
                 :video-id="videoId"
@@ -23,11 +28,11 @@
                 :resize="true"
               />
             </div>
-            <div class="sample__img">
+            <!-- <div class="sample__img">
               <p class="sample__img__text">
                 ここに動画を埋め込みたい人生だった
               </p>
-            </div>
+            </div> -->
           </div>
         </TheSection>
         <TheSection>
@@ -40,7 +45,7 @@
             </p>
           </div>
         </TheSection>
-        <TheSection>
+        <!-- <TheSection>
           <div class="sample__information">
             <p class="sample__information__title">
               キムタク先輩
@@ -89,7 +94,10 @@
               20生は見たことないのでイケメンかすら知りません.
             </p>
           </div>
-        </TheSection>
+        </TheSection> -->
+        <div class="sample__button">
+          <LinkButton to="/kikaku/">企画一覧に戻る</LinkButton>
+        </div>
       </TheContainer>
     </div>
   </div>
@@ -99,16 +107,32 @@
 import TheSection from '~/components/atoms/TheSection.vue'
 import TheContainer from '~/components/atoms/TheContainer.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
+import LinkButton from '~/components/atoms/LinkButton.vue'
 
 export default {
   components: {
     TheSection,
     TheContainer,
-    SubHeader
+    SubHeader,
+    LinkButton
   },
   data () {
     return {
       videoId: '29nSdJtFiCo'
+    }
+  },
+  computed: {
+    player () {
+      return this.$refs.youtube.player
+    }
+  },
+  methods: {
+    loadVideo () {
+      const video = '<youtube ref="youtube" :video-id="videoId" :fit-parent="true" :resize="true" />'
+      this.replace(video)
+    },
+    playVideo () {
+      this.player.playVideo()
     }
   }
 }
@@ -140,6 +164,12 @@ export default {
   }
   &__youtube {
     width: 100%;
+    &__img {
+      width: 100%;
+    }
+  }
+  &__button {
+    text-align: center;
   }
   &__text {
     position: absolute;

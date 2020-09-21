@@ -95,6 +95,16 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    },
+    extend: ({ module, output }) => {
+      // rulesの先頭に追加
+      module.rules.unshift({
+        test: /\.worker\.js$/,
+        loader: 'worker-loader'
+      })
+
+      // HMR時にWebWorkerでWindow is not definedになる問題対策らしい(参考文献:qiita)
+      output.globalObject = 'this'
     }
   },
   pwa: {

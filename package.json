@@ -28,7 +28,9 @@
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
     "sass-loader": "^8.0.2",
-    "vue-youtube": "^1.4.0"
+    "vue-pre-youtube": "^0.2.0",
+    "vue-youtube": "^1.4.0",
+    "worker-loader": "^3.0.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
