@@ -20,6 +20,9 @@
         <h3 class="item-card__title">
           {{ name }}
         </h3>
+        <h3 class="item-card__title">
+          {{ id }}
+        </h3>
       </div>
     </component>
   </div>
@@ -59,6 +62,9 @@ export default {
     name: {
       type: String,
       default: 'キムタクFC'
+    },
+    id: {
+      type: String
     }
   },
   computed: {
@@ -85,6 +91,7 @@ export default {
   // border-radius: 1rem;
   // padding: 1rem;
   background-color: #fff;
+  margin-bottom: 2rem;
   &__img {
     background: center center / cover no-repeat;
     background-color: rgba($theme-color , $alpha: 0.8);

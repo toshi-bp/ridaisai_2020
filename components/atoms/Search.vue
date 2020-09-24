@@ -2,10 +2,10 @@
   <div class="search">
     <div class="search__box">
       <input
-      type="text"
-      valuename="keyword"
-      placeholder="検索キーワード"
-      class="search__text"
+        type="text"
+        valuename="keyword"
+        placeholder="検索キーワード"
+        class="search__text"
       >
     </div>
     <button class="search__button">検索</button>
@@ -21,13 +21,20 @@ export default {
 
 <style lang="scss" scoped>
 .search {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  @include media-breakpoint-down(sm) {
+    margin-right: 0rem;
+  }
   &__box {
     display: inline-flex;
     align-items: center;
     padding: 3px 5px;
     background: #fff;
-    width: 80%;
+    width: 90%;
+    @include media-breakpoint-down(sm) {
+      // width: 70%;
+    }
   }
   &__text {
     width: 100%;
@@ -42,7 +49,7 @@ export default {
     background: $theme-color;
     border: none;
     font-family: $sub-font;
-    height: 2rem;
+    height: 35px;
     width: 4rem;
   }
 }

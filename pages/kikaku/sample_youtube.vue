@@ -45,56 +45,6 @@
             </p>
           </div>
         </TheSection>
-        <!-- <TheSection>
-          <div class="sample__information">
-            <p class="sample__information__title">
-              キムタク先輩
-            </p>
-            <p class="sample__information__text">
-              20生は見たことないのでイケメンかすら知りません.
-            </p>
-          </div>
-        </TheSection>
-        <TheSection>
-          <div class="sample__information">
-            <p class="sample__information__title">
-              キムタク先輩
-            </p>
-            <p class="sample__information__text">
-              20生は見たことないのでイケメンかすら知りません.
-            </p>
-          </div>
-        </TheSection>
-        <TheSection>
-          <div class="sample__information">
-            <p class="sample__information__title">
-              キムタク先輩
-            </p>
-            <p class="sample__information__text">
-              20生は見たことないのでイケメンかすら知りません.
-            </p>
-          </div>
-        </TheSection>
-        <TheSection>
-          <div class="sample__information">
-            <p class="sample__information__title">
-              キムタク先輩
-            </p>
-            <p class="sample__information__text">
-              20生は見たことないのでイケメンかすら知りません.
-            </p>
-          </div>
-        </TheSection>
-        <TheSection>
-          <div class="sample__information">
-            <p class="sample__information__title">
-              キムタク先輩
-            </p>
-            <p class="sample__information__text">
-              20生は見たことないのでイケメンかすら知りません.
-            </p>
-          </div>
-        </TheSection> -->
         <div class="sample__button">
           <LinkButton to="/kikaku/">企画一覧に戻る</LinkButton>
         </div>
