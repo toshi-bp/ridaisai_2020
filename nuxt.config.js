@@ -116,5 +116,15 @@ export default {
     workbox: {
       dev: true // 開発環境でもPWA
     }
+  },
+  pwa: {
+    manifest: {
+      name: '2020年度野田地区理大祭',
+      lang: 'ja',
+      useWebmanifestExtension: false
+    },
+    workbox: {
+      dev: true // 開発環境でもPWA
+    }
   }
 }
