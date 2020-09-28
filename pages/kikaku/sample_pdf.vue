@@ -4,19 +4,19 @@
       <TheContainer>
         <SubHeader>
           <template #title>
-            金村の会
+            企画名
           </template>
         </SubHeader>
         <TheSection>
           <div class="sample__information">
             <p class="sample__information__title">
-              キムタク先輩
+              企画概要
             </p>
             <p class="sample__information__text">
-              20生は見たことないのでイケメンかすら知りません.
+              企画説明
             </p>
             <div class="sample__pdf">
-              <iframe src="2020前期配布資料.pdf"></iframe>
+              <iframe src="2020前期配布資料.pdf" class="sample__pdf__body"></iframe>
               <!-- <vuePdf src="./static/2020前期配布資料.pdf"></vuePdf> -->
               <pdf src="./static/2020前期配布資料.pdf"></pdf>
             </div>
@@ -25,10 +25,10 @@
         <TheSection>
           <div class="sample__information">
             <p class="sample__information__title">
-              キムタクFC
+              団体名
             </p>
             <p class="sample__information__text">
-              金村先輩はキムタクと言われたいそうです。
+              団体説明
             </p>
           </div>
         </TheSection>
@@ -85,6 +85,15 @@ export default {
   }
   &__pdf {
     width: 100%;
+    &__body {
+      height: 50rem;
+      @include media-breakpoint-down(md) {
+        height: 40rem;
+      }
+      @include media-breakpoint-down(sm) {
+        height: 30rem;
+      }
+    }
   }
   &__button {
     text-align: center;

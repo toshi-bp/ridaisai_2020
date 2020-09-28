@@ -49,7 +49,7 @@ export default {
     },
     title: {
       type: String,
-      default: '金村の会'
+      default: '企画名'
     },
     linkTarget: {
       type: String,
@@ -61,7 +61,7 @@ export default {
     },
     name: {
       type: String,
-      default: 'キムタクFC'
+      default: '団体名'
     },
     id: {
       type: String

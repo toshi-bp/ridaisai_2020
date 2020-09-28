@@ -17,8 +17,8 @@
           <TheColumn v-for="i in 20 " :key="i">
             <ItemCard
               to="/kikaku/sample_youtube/"
-              title="金村の会"
-              name="キムタクFC"
+              title="企画名"
+              name="団体名"
               :imageUrl="require(`~/assets/image/symbol.png`)"
               :id="i"
             >

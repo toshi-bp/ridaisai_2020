@@ -4,29 +4,29 @@
       <TheContainer>
         <SubHeader>
           <template #title>
-            金村の会
+            企画名
           </template>
         </SubHeader>
         <TheSection>
           <div class="sample__information">
             <p class="sample__information__title">
-              キムタク先輩
+              企画概要
             </p>
             <p class="sample__information__text">
-              20生は見たことないのでイケメンかすら知りません.
+              企画説明
             </p>
             <div class="sample__youtube">
-              <img
+              <!-- <img
                :src="`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`"
                @click="playVideo"
                class="sample__youtube__img"
-              />
-              <!-- <youtube
+              /> -->
+              <youtube
                 ref="youtube"
                 :video-id="videoId"
                 :fit-parent="true"
                 :resize="true"
-              /> -->
+              />
             </div>
             <!-- <div class="sample__img">
               <p class="sample__img__text">
@@ -38,10 +38,10 @@
         <TheSection>
           <div class="sample__information">
             <p class="sample__information__title">
-              キムタクFC
+              団体名
             </p>
             <p class="sample__information__text">
-              金村先輩はキムタクと言われたいそうです。
+              団体紹介
             </p>
           </div>
         </TheSection>
