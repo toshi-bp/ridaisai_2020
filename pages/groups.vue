@@ -26,7 +26,7 @@
           <div class="groups__document">
             <h2 class="groups__title">
               参加団体向け資料<!--small>（6月15日更新）(7月20日更新)</small-->
-              <small>(8月27日更新)</small>
+              <small>(9月29日更新)</small>
             </h2>
             <ul>
               <!-- <li> <a href="2020前期配布資料.pdf" target="_blank">2020年度前期配布資料(PDF版)</a><br>(6/24追記：P.28に記載されている『理大祭期間中に使用できない特殊場所』について変更を行いました。)</li>
@@ -34,6 +34,7 @@
               <li><a href="場所希望申請.pdf" target="_blank">場所希望申請における新型コロナウイルス感染症対策について(PDF版)</a><br>(新型コロナウイルス感染症対策のため、各ブースの収容人数の上限を規定します。)</li> -->
               <li><a href="対面中止とオンライン告知.pdf" target="_blank">対面での開催中止のお知らせ及びオンライン開催の告知</a></li>
               <li><a href="参加団体募集要項.pdf" target="_blank">参加団体募集要項</a></li>
+              <li><a href="後期配布資料その１.pdf" target="_blank">後期配布資料</a></li>
             </ul>
             <h2 class="groups__title">
               理大祭ウェブポータルのURLはこちら

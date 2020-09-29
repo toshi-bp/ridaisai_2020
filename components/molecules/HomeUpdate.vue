@@ -36,6 +36,14 @@
               参加団体向け情報
             </nuxt-link>に参加団体募集要項を掲載しました。
           </dd>
+          <dt class="update__list__date">
+            2020/09/29
+          </dt>
+          <dd class="update__list__content">
+            <nuxt-link to="/groups/">
+              参加団体向け情報
+            </nuxt-link>に後期配布資料を掲載しました。
+          </dd>
         </dl>
       </div>
     </TheSection>
