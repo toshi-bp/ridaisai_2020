@@ -5,10 +5,6 @@
     :href="href"
     class="link-button"
     tabindex="0"
-    :class="{
-      'link-button--is-blue' : type === 'blue',
-      'link-button--is-orange' : type === 'orange'
-    }"
     @click="onClick"
   >
     <div class="link-button__inner">

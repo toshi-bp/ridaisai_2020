@@ -41,7 +41,7 @@ export default {
     width: 100%;
     height: 100vh;
     background: #000;
-    z-index: 1;
+    z-index: 9900;
     &__img {
       position: absolute;
       top: 0;
@@ -55,8 +55,8 @@ export default {
   }
   &__button {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    top: 1rem;
+    left: 1rem;
     width: 10rem;
     height: 5rem;
     background: #fff;
