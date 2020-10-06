@@ -2,6 +2,14 @@
   <div class="full-screen">
     <div>
       <img :src="src" @click="ImageFullScreen" class="full-screen__img">
+      <div>
+        <p class="full-screen__title">
+          作品名：{{ title }}
+        </p>
+        <p class="full-screen__description">
+          説明：{{ description }}
+        </p>
+      </div>
     </div>
     <div v-if="showFullScreen" class="full-screen__on">
       <img :src="src" class="full-screen__on__img">
@@ -17,6 +25,12 @@ export default {
   }),
   props: {
     src: {
+      type: String
+    },
+    title: {
+      type: String
+    },
+    description: {
       type: String
     }
   },

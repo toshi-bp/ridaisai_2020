@@ -16,7 +16,11 @@
               企画説明
             </p>
             <div class="sample__image" v-for="i in 3" :key="i">
-              <ImageFullScreen :src="require(`~/assets/image/symbol.png`)"></ImageFullScreen>
+              <ImageFullScreen
+               :src="require(`~/assets/image/symbol.png`)"
+               title="感謝の正拳突き"
+               description="己の肉体と武術に限界を感じ悩みに悩み抜いた結果辿り着いたもの"
+              ></ImageFullScreen>
             </div>
           </div>
         </TheSection>

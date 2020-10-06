@@ -27,6 +27,7 @@
                frameborder="0"
                :src="`https://www.youtube.com/live_chat?v=${videoId_1}&embed_domain=localhost`"
                allowfullscreen>
+               <!--チャットの高さについては要調整(特にスマホ版)あとURLも-->
               </iframe>
               <youtube
                 ref="youtube"
