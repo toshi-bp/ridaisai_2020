@@ -1,13 +1,13 @@
 <template>
   <!-- 企画のジャンルによってラベルを変えるように設定するよ -->
-  <div
+  <span
     class="label"
     :style="{
       backgroundcolor: labelColor
     }"
   >
     <slot />
-  </div>
+  </span>
 </template>
 
 <script>

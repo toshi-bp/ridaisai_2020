@@ -67,6 +67,10 @@ export default {
       type: String,
       default: ''
     },
+    labelType: {
+      type: String,
+      default: ''
+    },
     linkTarget: {
       type: String,
       default: ''
@@ -101,7 +105,7 @@ export default {
   // border: $accent-color 1px solid;
   transition: 0.15s ease all;
   box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.1);
-  // border-radius: 1rem;
+  border-radius: 1rem;
   // padding: 1rem;
   background-color: #fff;
   margin-bottom: 2rem;
@@ -111,7 +115,7 @@ export default {
     width: 100%;
     margin-bottom: 1rem;
     position: relative;
-    // border-radius: 1rem;
+    border-radius: 1rem;
     &::before {
       content: "";
       display: block;

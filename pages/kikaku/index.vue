@@ -12,11 +12,11 @@
           <TheColumn v-for="item in KikakuList" :key="item.Kikaku_id">
             <ItemCard
               to="/kikaku/sample_youtube/"
+              :labelType="item.type"
+              :labelText="item.type"
               :title="item.kikaku_title"
               :name="item.name"
               :image-url="require(`~/assets/image/symbol.png`)"
-              :label-type="item.type"
-              :label-text="item.type"
             />
           </TheColumn>
         </TheRow>
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+/* eslint-disabel-line no-alert, no-console */
 import TheContainer from '~/components/atoms/TheContainer.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
 import Search from '~/components/atoms/Search.vue'
@@ -44,6 +45,11 @@ export default {
     ItemCard,
     TheRow,
     TheColumn
+  },
+  computed: {
+    KikakuList () {
+      return KikakuList
+    }
   }
 }
 </script>
