@@ -5,12 +5,12 @@ if(typeof window === "undefined") {
   const JSON_FILE_PATH = 'KikakuList.json'
 
   const TITLES = {}
-  TITLES['企画ID'] = 'kikaku_id'
-  TITLES['企画を出店する団体の名称'] = 'circle_name'
-  TITLES['企画名'] = 'kikaku_name'
+  TITLES["企画ID"] = 'kikaku_id'
+  TITLES['企画を出店する団体の名称'] = 'name'
+  TITLES['企画名'] = 'kikaku_title'
   TITLES['ジャンル'] = 'type'
-  TITLES['説明文'] = 'description'
-  TITLES['団体紹介'] = 'introduction'
+  TITLES['説明文(字数制限なし)'] = 'description'
+  TITLES['団体紹介(字数制限なし)'] = 'introduction'
   TITLES['団体公式HP'] = 'url'
   TITLES['団体公式Twitter'] = 'twitter_ids'
   TITLES['画像'] = 'image_filename'
