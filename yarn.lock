@@ -2849,6 +2849,11 @@ content-type@~1.0.4:
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
+convert-csv-to-json@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/convert-csv-to-json/-/convert-csv-to-json-1.0.0.tgz#ff8cd9ae4e9873c1c802a4b3d80b51010d3afc25"
+  integrity sha512-I4RfEq1MvRzE4nZAeWkZV/vl3LG/+EPdGcPQk+lom51eG8v0qKTWTtYPBP+Vq311T1Nc+sEI1LuyC1pX7mFoIA==
+
 convert-source-map@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.7.0.tgz#17a2cb882d7f77d3490585e2ce6c524424a3a442"
@@ -6592,6 +6597,11 @@ pako@~1.0.5:
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
 
+papaparse@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/papaparse/-/papaparse-5.3.0.tgz#ab1702feb96e79ab4309652f36db9536563ad05a"
+  integrity sha512-Lb7jN/4bTpiuGPrYy4tkKoUS8sTki8zacB5ke1p5zolhcSE4TlWgrlsxjrDTbG/dFVh07ck7X36hUf/b5V68pg==
+
 parallel-transform@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/parallel-transform/-/parallel-transform-1.2.0.tgz#9049ca37d6cb2182c3b1d2c720be94d14a5814fc"
@@ -9400,6 +9410,14 @@ vue-no-ssr@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/vue-no-ssr/-/vue-no-ssr-1.1.1.tgz#875f3be6fb0ae41568a837f3ac1a80eaa137b998"
   integrity sha512-ZMjqRpWabMPqPc7gIrG0Nw6vRf1+itwf0Itft7LbMXs2g3Zs/NFmevjZGN1x7K3Q95GmIjWbQZTVerxiBxI+0g==
+
+vue-papa-parse@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-papa-parse/-/vue-papa-parse-2.0.0.tgz#861f32a903b75f9028c10f77bf3d58086ded2600"
+  integrity sha512-2Tn4C+enBTmg6Rh87ZQedzM/dGBm/cvwAa7Ct0yXwFBN4scd31Eybd4YOBrmTGg1Mid2maQ6Sh1PFitmCpvKQg==
+  dependencies:
+    papaparse "^5.3.0"
+    vue "^2.6.12"
 
 vue-pdf@^4.1.0:
   version "4.1.0"

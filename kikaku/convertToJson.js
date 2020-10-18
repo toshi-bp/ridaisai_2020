@@ -1,5 +1,3 @@
-// const { title } = require('process')
-
 if(typeof window === "undefined") {
   const fs = require('fs')
 
@@ -11,8 +9,8 @@ if(typeof window === "undefined") {
   TITLES['企画を出店する団体の名称'] = 'circle_name'
   TITLES['企画名'] = 'kikaku_name'
   TITLES['ジャンル'] = 'type'
-  TITLES['説明文(字数制限なし)'] = 'description'
-  TITLES['団体紹介(字数制限なし)'] = 'introduction'
+  TITLES['説明文'] = 'description'
+  TITLES['団体紹介'] = 'introduction'
   TITLES['団体公式HP'] = 'url'
   TITLES['団体公式Twitter'] = 'twitter_ids'
   TITLES['画像'] = 'image_filename'
@@ -28,7 +26,7 @@ if(typeof window === "undefined") {
 
   //0行目はタイトル行なのでi=0ではなくi=1からループを始める
   for (let i = 1; i < array_data.length; ++i) {
-    const line = array_data[i].split(/, (?=(?:[^"]*"){2})*[^"]*$/) || []
+    const line = array_data[i].split(/,(?=(?:[^"]*"){2})*[^"]*$/) || []
     for (let j = 0; j < line.length; ++j) {
       if (typeof return_data[i - 1] !== "object") {
         return_data[i - 1] = {}
@@ -49,7 +47,7 @@ if(typeof window === "undefined") {
           学術: 'academic',
           音楽: 'musical',
           カルチャー: 'cultual',
-          展示企画: 'showing'
+          展示企画: 'exhibition'
         }[item]
       }
 
