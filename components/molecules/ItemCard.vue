@@ -14,22 +14,34 @@
         }"
       />
       <div class="item-card__body">
+        <ItemCardLabel
+          v-if="labelText"
+          class="item-card__label"
+          :type="labelType"
+        >
+          {{ labelText }}
+        </ItemCardLabel>
         <h3 class="item-card__title">
           {{ title }}
         </h3>
         <h3 class="item-card__title">
           {{ name }}
         </h3>
-        <h3 class="item-card__title">
+        <!-- <h3 class="item-card__title">
           {{ id }}
-        </h3>
+        </h3> -->
       </div>
     </component>
   </div>
 </template>
 
 <script>
+import ItemCardLabel from '~/components/atoms/ItemCardLabel'
+
 export default {
+  components: {
+    ItemCardLabel
+  },
   props: {
     to: {
       type: String,
@@ -51,6 +63,10 @@ export default {
       type: String,
       default: '企画名'
     },
+    labelText: {
+      type: String,
+      default: ''
+    },
     linkTarget: {
       type: String,
       default: ''
@@ -62,9 +78,6 @@ export default {
     name: {
       type: String,
       default: '団体名'
-    },
-    id: {
-      type: String
     }
   },
   computed: {

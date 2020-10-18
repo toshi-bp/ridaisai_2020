@@ -1,5 +1,6 @@
 <template>
-  <div class="favorite" />
+  <!-- 各企画の共通部分をここで設定する -->
+  <div />
 </template>
 
 <script>

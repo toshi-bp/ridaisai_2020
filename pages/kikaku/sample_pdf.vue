@@ -18,7 +18,7 @@
             <div class="sample__pdf">
               <!-- <iframe src="2020前期配布資料.pdf" class="sample__pdf__body"></iframe> 操作が重くなるためコメント化した-->
               <!-- <vuePdf src="./static/2020前期配布資料.pdf"></vuePdf> -->
-              <pdf src="./static/2020前期配布資料.pdf"></pdf>
+              <pdf src="./static/2020前期配布資料.pdf" />
             </div>
           </div>
         </TheSection>
@@ -33,7 +33,9 @@
           </div>
         </TheSection>
         <div class="sample__button">
-          <LinkButton to="/kikaku/">企画一覧に戻る</LinkButton>
+          <LinkButton to="/kikaku/">
+            企画一覧に戻る
+          </LinkButton>
         </div>
       </TheContainer>
     </div>

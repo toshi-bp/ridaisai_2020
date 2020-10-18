@@ -15,12 +15,12 @@
             <p class="sample__information__text">
               企画説明
             </p>
-            <div class="sample__image" v-for="i in 3" :key="i">
+            <div v-for="i in 3" :key="i" class="sample__image">
               <ImageFullScreen
-               :src="require(`~/assets/image/symbol.png`)"
-               title="感謝の正拳突き"
-               description="己の肉体と武術に限界を感じ悩みに悩み抜いた結果辿り着いたもの"
-              ></ImageFullScreen>
+                :src="require(`~/assets/image/symbol.png`)"
+                title="感謝の正拳突き"
+                description="己の肉体と武術に限界を感じ悩みに悩み抜いた結果辿り着いたもの"
+              />
             </div>
           </div>
         </TheSection>
@@ -35,7 +35,9 @@
           </div>
         </TheSection>
         <div class="sample__button">
-          <LinkButton to="/kikaku/">企画一覧に戻る</LinkButton>
+          <LinkButton to="/kikaku/">
+            企画一覧に戻る
+          </LinkButton>
         </div>
       </TheContainer>
     </div>

@@ -1,15 +1,14 @@
 <template>
   <div LoadFavorite>
     <TheRow>
-      <TheColumn v-for="item in favoriteKikaku" :key="item.id">
+      <TheColumn v-for="item in favoriteKikaku" :key="item.kikaku_id">
         <ItemCard
-          :to="`/kikaku/${item.id}`"
-          :title="item.kikaku_name"
-          :name="item.circle_name"
-          :imageUrl="require(`~/assets/kikaku/${item.imageUrl}`)"
           :id="item.id"
-        >
-        </ItemCard>
+          :to="`/kikaku/${item.id}`"
+          :title="item.kikaku_title"
+          :name="item.name"
+          :image-url="require(`~/assets/kikaku/${item.image_filename}`)"
+        />
       </TheColumn>
     </TheRow>
   </div>
@@ -33,9 +32,9 @@ export default {
       let favoriteKikaku = localStorage.getItem('favoriteKikaku')
       favoriteKikaku = JSON.parse(favoriteKikaku)
       let favoriteKikakuId = ''
-      for (let k = 0; k < favoriteKikaku.length;k++) {
+      for (let k = 0; k < favoriteKikaku.length; k++) {
         favoriteKikakuId.replace('', favoriteKikaku[k])
-        if(k != favoriteKikaku.length - 1) {
+        if (k != favoriteKikaku.length - 1) {
           favoriteKikakuId += ','
         }
       }

@@ -7,22 +7,17 @@
         </template>
       </SubHeader>
       <Search />
-      <!-- <KikakuCard
-        KikakuName="トムキャットレッドビートル"
-        GroupName="カブトボーグを愛でる会"
-      >
-      </KikakuCard> -->
       <div>
         <TheRow>
-          <TheColumn v-for="i in 20 " :key="i">
+          <TheColumn v-for="item in KikakuList" :key="item.Kikaku_id">
             <ItemCard
               to="/kikaku/sample_youtube/"
-              title="企画名"
-              name="団体名"
-              :imageUrl="require(`~/assets/image/symbol.png`)"
-              :id="i"
-            >
-            </ItemCard>
+              :title="item.kikaku_title"
+              :name="item.name"
+              :image-url="require(`~/assets/image/symbol.png`)"
+              :label-type="item.type"
+              :label-text="item.type"
+            />
           </TheColumn>
         </TheRow>
       </div>
@@ -34,10 +29,11 @@
 import TheContainer from '~/components/atoms/TheContainer.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
 import Search from '~/components/atoms/Search.vue'
-// import KikakuCard from '~/components/molecules/Kikakucard.vue'
 import ItemCard from '~/components/molecules/ItemCard'
 import TheRow from '~/components/atoms/TheRow.vue'
 import TheColumn from '~/components/atoms/TheColumn.vue'
+
+import KikakuList from '~/kikaku/KikakuList.json'
 
 export default {
   components: {

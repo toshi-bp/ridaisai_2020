@@ -3,13 +3,12 @@
     <TheRow>
       <TheColumn v-for="item in KikakuHistory" :key="item.id">
         <ItemCard
+          :id="item.id"
           :to="`/kikaku/${item.id}`"
           :title="item.kikaku_name"
           :name="item.circle_name"
-          :imageUrl="require(`~/assets/kikaku/${item.imageUrl}`)"
-          :id="item.id"
-        >
-        </ItemCard>
+          :image-url="require(`~/assets/kikaku/${item.imageUrl}`)"
+        />
       </TheColumn>
     </TheRow>
   </div>
@@ -33,9 +32,9 @@ export default {
       let KikakuHistory = localStorage.getItem('KikakuHistory')
       KikakuHistory = JSON.parse(KikakuHistory)
       let KikakuHistoryId = ''
-      for (let k = 0; k < KikakuHistory.length;k++) {
+      for (let k = 0; k < KikakuHistory.length; k++) {
         KikakuHistoryId.replace('', KikakuHistory[k])
-        if(k != KikakuHistory.length - 1) {
+        if (k != KikakuHistory.length - 1) {
           KikakuHistoryId += ','
         }
       }

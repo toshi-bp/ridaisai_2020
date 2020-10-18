@@ -17,10 +17,10 @@
             </p>
             <div class="sample__youtube">
               <img
-               :src="`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`"
-               @click="playVideo"
-               class="sample__youtube__img"
-              />
+                :src="`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`"
+                class="sample__youtube__img"
+                @click="playVideo"
+              >
               <!-- <youtube
                 ref="youtube"
                 :video-id="videoId"
@@ -46,7 +46,9 @@
           </div>
         </TheSection>
         <div class="sample__button">
-          <LinkButton to="/kikaku/">企画一覧に戻る</LinkButton>
+          <LinkButton to="/kikaku/">
+            企画一覧に戻る
+          </LinkButton>
         </div>
       </TheContainer>
     </div>

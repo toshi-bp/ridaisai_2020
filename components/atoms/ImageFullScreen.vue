@@ -1,7 +1,7 @@
 <template>
   <div class="full-screen">
     <div>
-      <img :src="src" @click="ImageFullScreen" class="full-screen__img">
+      <img :src="src" class="full-screen__img" @click="ImageFullScreen">
       <div>
         <p class="full-screen__title">
           作品名：{{ title }}
@@ -13,16 +13,15 @@
     </div>
     <div v-if="showFullScreen" class="full-screen__on">
       <img :src="src" class="full-screen__on__img">
-      <button type="button" @click="close" class="full-screen__button">戻る</button>
+      <button type="button" class="full-screen__button" @click="close">
+        戻る
+      </button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    showFullScreen: false
-  }),
   props: {
     src: {
       type: String
@@ -34,6 +33,9 @@ export default {
       type: String
     }
   },
+  data: () => ({
+    showFullScreen: false
+  }),
   methods: {
     ImageFullScreen () {
       this.showFullScreen = true

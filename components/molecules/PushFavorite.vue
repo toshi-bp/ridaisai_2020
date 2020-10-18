@@ -1,6 +1,8 @@
 <template>
   <div>
-    <LinkButton @click="PushFavorite">お気に入り</LinkButton>
+    <LinkButton @click="PushFavorite">
+      お気に入り
+    </LinkButton>
   </div>
 </template>
 
@@ -13,7 +15,7 @@ export default {
   },
   methods: {
     PushFavorite () {
-      let favoriteKikaku = []
+      const favoriteKikaku = []
       favoriteKikaku.push(this.id)
       localStorage.setItem('favoriteKikaku', JSON.stringify(favoriteKikaku))
     }

@@ -16,18 +16,19 @@
               企画説明
             </p>
             <div class="sample__live">
-               <youtube
+              <youtube
                 ref="youtube"
                 :video-id="videoId_1"
                 :fit-parent="true"
                 :resize="true"
               />
               <iframe
-               height="400"
-               frameborder="0"
-               :src="`https://www.youtube.com/live_chat?v=${videoId_1}&embed_domain=localhost`"
-               allowfullscreen>
-               <!--チャットの高さについては要調整(特にスマホ版)あとURLも-->
+                height="400"
+                frameborder="0"
+                :src="`https://www.youtube.com/live_chat?v=${videoId_1}&embed_domain=localhost`"
+                allowfullscreen
+              >
+                <!--チャットの高さについては要調整(特にスマホ版)あとURLも-->
               </iframe>
               <youtube
                 ref="youtube"
@@ -36,11 +37,11 @@
                 :resize="true"
               />
               <iframe
-               height="400"
-               frameborder="0"
-               :src="`https://www.youtube.com/live_chat?v=${videoId_2}&embed_domain=localhost`"
-               allowfullscreen>
-              </iframe>
+                height="400"
+                frameborder="0"
+                :src="`https://www.youtube.com/live_chat?v=${videoId_2}&embed_domain=localhost`"
+                allowfullscreen
+              />
             </div>
           </div>
         </TheSection>
@@ -58,7 +59,9 @@
           </div>
         </TheSection>
         <div class="sample__button">
-          <LinkButton to="/kikaku/">企画一覧に戻る</LinkButton>
+          <LinkButton to="/kikaku/">
+            企画一覧に戻る
+          </LinkButton>
         </div>
       </TheContainer>
     </div>
@@ -74,18 +77,18 @@ import SubHeader from '~/components/organisms/SubHeader.vue'
 import LinkButton from '~/components/atoms/LinkButton.vue'
 
 export default {
-  data () {
-    return {
-      videoId_1: 'YAdpFRgXjh0',
-      videoId_2: 'CiEzaiFuz9E'
-    }
-  },
   components: {
     // vuePdf,
     TheSection,
     TheContainer,
     SubHeader,
     LinkButton
+  },
+  data () {
+    return {
+      videoId_1: 'YAdpFRgXjh0',
+      videoId_2: 'CiEzaiFuz9E'
+    }
   }
 }
 </script>

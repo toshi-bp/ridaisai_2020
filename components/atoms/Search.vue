@@ -8,7 +8,9 @@
         class="search__text"
       >
     </div>
-    <button class="search__button">検索</button>
+    <button class="search__button" @click="Searching">
+      検索
+    </button>
   </div>
 </template>
 
