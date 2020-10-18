@@ -26,7 +26,7 @@ if(typeof window === "undefined") {
 
   //0行目はタイトル行なのでi=0ではなくi=1からループを始める
   for (let i = 1; i < array_data.length; ++i) {
-    const line = array_data[i].split(/,(?=(?:[^"]*"){2})*[^"]*$/) || []
+    const line = array_data[i].split(",")
     for (let j = 0; j < line.length; ++j) {
       if (typeof return_data[i - 1] !== "object") {
         return_data[i - 1] = {}
