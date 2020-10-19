@@ -16,8 +16,11 @@ export default {
     KikakuInfo
   },
   computed: {
+    KikakuList () {
+      return KikakuList
+    },
     kikaku: function () {
-      return kikakuList.find(kikaku => parseInt(this.$route.params.id, 10) === parseInt(kikaku.kikaku_id, 10))
+      return kikakuList.find(kikaku => parseInt(this.$route.params.id, 10) === parseInt(KikakuList.kikaku_id, 10))
     }
   },
   validate ({ params }) {
