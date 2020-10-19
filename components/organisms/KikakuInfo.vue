@@ -3,7 +3,7 @@
   <div class="info">
     <KikakuInfoBody
      :name="name"
-     :introduce="intro"
+     :introduce="introduce"
     ></KikakuInfoBody>
   </div>
 </template>
@@ -14,6 +14,14 @@ import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 export default {
   components: {
     KikakuInfoBody
+  },
+  props: {
+    name: {
+      type: String
+    },
+    introduce: {
+      type: String
+    }
   }
 }
 </script>

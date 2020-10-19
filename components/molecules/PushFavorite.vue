@@ -16,7 +16,7 @@ export default {
   methods: {
     PushFavorite () {
       const favoriteKikaku = []
-      favoriteKikaku.push(this.id)
+      favoriteKikaku.push(this.kikaku_id)
       localStorage.setItem('favoriteKikaku', JSON.stringify(favoriteKikaku))
     }
   }

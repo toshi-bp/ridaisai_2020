@@ -4,7 +4,7 @@
       <TheColumn v-for="item in favoriteKikaku" :key="item.kikaku_id">
         <ItemCard
           :id="item.id"
-          :to="`/kikaku/${item.id}`"
+          :to="`/kikaku/${item.kikaku_id}`"
           :title="item.kikaku_title"
           :name="item.name"
           :image-url="require(`~/assets/kikaku/${item.image_filename}`)"

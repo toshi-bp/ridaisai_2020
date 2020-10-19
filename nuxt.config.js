@@ -20,7 +20,14 @@ export default {
     trailingSlash: true
   },
   generate: {
-    routes: ['404']
+    // routes: ['404']
+    routes () {
+      return KikakuList.filter(kikaku => kikaku.kikaku_id).map((kikaku) => {
+        return {
+          route: '/kikaku/' + kikaku.kikaku_id + '/'
+        }
+      })
+    }
   },
   /*
   ** Customize the progress-bar color
