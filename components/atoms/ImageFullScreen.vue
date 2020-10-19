@@ -1,4 +1,5 @@
 <template>
+  <!-- 画像を全画面表示するためのコンポーネント -->
   <div class="full-screen">
     <div>
       <img :src="src" class="full-screen__img" @click="ImageFullScreen">

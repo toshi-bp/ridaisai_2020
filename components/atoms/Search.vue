@@ -6,6 +6,7 @@
         valuename="keyword"
         placeholder="検索キーワード"
         class="search__text"
+        v-model="keyword"
       >
     </div>
     <button class="search__button" @click="Searching">
@@ -17,7 +18,10 @@
 <script>
 
 export default {
-
+  computed: {
+    // Searching () {
+    // }
+  }
 }
 </script>
 
