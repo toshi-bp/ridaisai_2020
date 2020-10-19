@@ -19,7 +19,7 @@
           class="item-card__label"
           :type="labelType"
         >
-          {{ labelText }}
+          {{ labelTextChanged }}
         </ItemCardLabel>
         <h3 class="item-card__title">
           {{ title }}
@@ -94,6 +94,15 @@ export default {
         default:
           return 'div'
       }
+    },
+    labelTextChanged () {
+      const typeDict = {
+        academic: '学術系',
+        musical: '音楽系',
+        cultual: '文化系',
+        exhibition: '展示系'
+      }
+      return typeDict[this.labelType]
     }
   }
 }
@@ -104,7 +113,7 @@ export default {
   display: block;
   // border: $accent-color 1px solid;
   transition: 0.15s ease all;
-  box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.1);
+  box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.3);
   border-radius: 1rem;
   // padding: 1rem;
   background-color: #fff;
@@ -115,11 +124,12 @@ export default {
     width: 100%;
     margin-bottom: 1rem;
     position: relative;
-    border-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     &::before {
       content: "";
       display: block;
-      padding-top: calc(100% * (2 / 3));
+      padding-top: calc(100% * (3 / 4));
     }
   }
   &__title {
@@ -129,6 +139,12 @@ export default {
     color: #000;
     padding: 0 0 1rem 1rem;
     text-decoration: none;
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
+  }
+  &__label {
+    margin: 0 0 0.5rem 1rem;
   }
 }
 </style>

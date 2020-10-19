@@ -16,7 +16,7 @@
               :labelText="item.type"
               :title="item.kikaku_title"
               :name="item.name"
-              :image-url="require(`~/assets/image/symbol.png`)"
+              :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
             />
           </TheColumn>
         </TheRow>
