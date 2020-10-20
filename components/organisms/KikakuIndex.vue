@@ -6,7 +6,7 @@
           企画一覧
         </template>
       </SubHeader>
-      <div class="kikaku__search">
+      <!-- <div class="kikaku__search">
         <div class="kikaku__search__box">
           <input
             type="text"
@@ -19,9 +19,12 @@
         <button class="kikaku__search__button" @click="Searching">
           検索
         </button>
-      </div>
+      </div> -->
       <div>
         <TheSection>
+          <div>
+            ジャンルで探す
+          </div>
           <TheRow>
             <TheColumn v-for="item in KikakuList" :key="item.kikaku_id" :spsize="12">
               <ItemCard

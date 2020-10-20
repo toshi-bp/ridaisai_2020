@@ -3,16 +3,24 @@
   <div>
     <TheContainer>
       <TheSection>
-        <h3 class="kikaku-info__name">
-          {{ name }} <!-- 団体名をここに入れる -->
-        </h3>
-        <p class="kikaku-info__intro">
-          {{ introduce }} <!-- 団体紹介をここに入れる -->
-        </p>
+        <div>
+          <h3 class="kikaku-info__name">
+            団体名
+          </h3>
+          <h4>
+            {{ name }} <!-- 団体名をここに入れる -->
+          </h4>
+          <h3 class="kikaku-info__name">
+            団体紹介
+          </h3>
+          <p class="kikaku-info__intro">
+            {{ introduce }} <!-- 団体紹介をここに入れる -->
+          </p>
+        </div>
       </TheSection>
       <div class="kikaku-info__button">
         <LinkButton to='/kikaku/'>
-          企画一覧
+          企画一覧へ
         </LinkButton>
       </div>
     </TheContainer>
@@ -42,5 +50,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.kikaku-info {
+  &__button {
+    text-align: center
+  }
+}
 </style>

@@ -1,16 +1,31 @@
 <template>
   <!-- ここにはタイトルとコンテンツのテンプレートを作成 -->
-  <div></div>
+  <div>
+    <TheContainer>
+      <SubHeader>
+        <template #title>
+          {{ kikaku_name }}
+        </template>
+      </SubHeader>
+    </TheContainer>
+  </div>
 </template>
 
 <script>
+import SubHeader from '~/components/organisms/SubHeader'
 import TheContainer from '~/components/atoms/TheContainer'
-import TheSection from '~/components/atoms/TheSection'
+// import TheSection from '~/components/atoms/TheSection'
 
 export default {
   components: {
-    TheContainer,
-    TheSection
+    SubHeader,
+    TheContainer
+    // TheSection
+  },
+  props: {
+    kikaku_name: {
+      type: String
+    }
   }
 }
 </script>
