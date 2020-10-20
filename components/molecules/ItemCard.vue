@@ -24,7 +24,7 @@
         <h3 class="item-card__title">
           {{ title }}
         </h3>
-        <h3 class="item-card__title">
+        <h3 class="item-card__name">
           {{ name }}
         </h3>
         <!-- <h3 class="item-card__title">
@@ -136,11 +136,21 @@ export default {
     font-size: 1.25rem;
     font-family: $sub-font;
     margin-bottom: 0;
-    color: #000;
-    padding: 0 0 1rem 1rem;
+    color: $color;
+    padding: 0 1rem 1rem 1rem;
     text-decoration: none;
     @include media-breakpoint-down(sm) {
-      font-size: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  &__name {
+    font-family: $sub-font;
+    font-size: 1rem;
+    text-decoration: none;
+    color: $color;
+    padding: 0 1rem 1rem 1rem;
+    @include media-breakpoint-down(sm) {
+      font-size: 0.7rem;
     }
   }
   &__label {

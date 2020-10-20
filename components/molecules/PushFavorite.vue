@@ -13,6 +13,11 @@ export default {
   components: {
     LinkButton
   },
+  props: {
+    kikaku_id : {
+      type: String
+    }
+  },
   methods: {
     PushFavorite () {
       const favoriteKikaku = []

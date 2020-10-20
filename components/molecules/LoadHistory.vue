@@ -1,13 +1,13 @@
 <template>
-  <div LoadHistory>
+  <div>
     <TheRow>
-      <TheColumn v-for="item in KikakuHistory" :key="item.id">
+      <TheColumn v-for="item in KikakuHistory" :key="item.kikaku_id">
         <ItemCard
-          :id="item.id"
-          :to="`/kikaku/${item.id}`"
-          :title="item.kikaku_name"
-          :name="item.circle_name"
-          :image-url="require(`~/assets/kikaku/${item.imageUrl}`)"
+          :id="item.kikaku_id"
+          :to="`/kikaku/${item.kikaku_id}`"
+          :title="item.kikaku_title"
+          :name="item.name"
+          :image-url="require(`~/assets/kikaku/${item.image_filename}`)"
         />
       </TheColumn>
     </TheRow>
@@ -38,6 +38,11 @@ export default {
           KikakuHistoryId += ','
         }
       }
+    }
+  },
+  computed: {
+    KikakuHistory () {
+      return this.KikakuHistory
     }
   }
 }

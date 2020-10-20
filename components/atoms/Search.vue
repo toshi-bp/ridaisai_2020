@@ -16,11 +16,14 @@
 </template>
 
 <script>
+import KikakuList from '~/kikaku/KikakuList.json'
 
 export default {
   computed: {
-    // Searching () {
-    // }
+    Searching () {
+      const keyword = this.keyword
+      return KikakuList.filter(item => item.kikaku_title.includes(keyword) !== -1)
+    }
   }
 }
 </script>
