@@ -113,11 +113,15 @@ export default {
   display: block;
   // border: $accent-color 1px solid;
   transition: 0.15s ease all;
-  box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.3);
+  box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.1);
   border-radius: 1rem;
   // padding: 1rem;
   background-color: #fff;
   margin-bottom: 2rem;
+  &:hover {
+    transform: translateY(8px);
+    box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.3);
+  }
   &__img {
     background: center center / cover no-repeat;
     background-color: rgba($theme-color , $alpha: 0.8);

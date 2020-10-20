@@ -22,21 +22,67 @@
       </div> -->
       <div>
         <TheSection>
+          <p>このページでは理大祭に参加している団体の企画をみることができます。</p>
+        </TheSection>
+      </div>
+      <div>
+        <TheSection>
           <div>
-            ジャンルで探す
+            企画のジャンルで選ぶ
           </div>
-          <TheRow>
-            <TheColumn v-for="item in KikakuList" :key="item.kikaku_id" :spsize="12">
-              <ItemCard
-                :to="`/kikaku/${item.kikaku_id}/`"
-                :labelType="item.type"
-                :labelText="item.type"
-                :title="item.kikaku_title"
-                :name="item.name"
-                :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-              />
-            </TheColumn>
-          </TheRow>
+          <div class="kikaku__label">
+            <KikakuLabel
+             class="kikaku__label__main"
+             v-for="type in types"
+             :key="type"
+             :type="type"
+             @click="typeFilter"
+            >
+              {{
+                {
+                  academic: '学術系',
+                  musical: '音楽系',
+                  cultual: '文化系',
+                  exhibition: '展示系'
+                }[type]
+               }}
+            </KikakuLabel>
+          </div>
+          <div
+           v-for="(KikakuList, type) in {
+             academic: academicKikaku,
+             musical: musicalKikaku,
+             cultual: cultualKikaku,
+             exhibition: exhibitionKikaku
+             }"
+             :key="type"
+          >
+          <KikakuLabel
+           :type="type"
+           class="kikaku__label"
+          >
+            {{
+              {
+                academic: '学術系',
+                musical: '音楽系',
+                cultual: '文化系',
+                exhibition: '展示系'
+              }[type]
+            }}
+          </KikakuLabel>
+            <TheRow>
+              <TheColumn v-for="item in KikakuList" :key="item.kikaku_id" :spsize="12">
+                <ItemCard
+                  :to="`/kikaku/${item.kikaku_id}/`"
+                  :labelType="item.type"
+                  :labelText="item.type"
+                  :title="item.kikaku_title"
+                  :name="item.name"
+                  :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
+                />
+              </TheColumn>
+            </TheRow>
+          </div>
         </TheSection>
       </div>
       <div class="kikaku__button">
@@ -58,13 +104,15 @@ import TheRow from '~/components/atoms/TheRow.vue'
 import TheColumn from '~/components/atoms/TheColumn.vue'
 import TheSection from '~/components/atoms/TheSection'
 import LinkButton from '~/components/atoms/LinkButton'
+import KikakuLabel from '~/components/atoms/KikakuLabel'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 
 export default {
   data () {
     return {
-      keyword: ''
+      keyword: '',
+      types: ['academic', 'musical', 'cultual', 'exhibition']
     }
   },
   components: {
@@ -75,11 +123,29 @@ export default {
     TheRow,
     TheColumn,
     TheSection,
-    LinkButton
+    LinkButton,
+    KikakuLabel
+  },
+  props: {
+    type: {
+      type: String
+    }
   },
   computed: {
     KikakuList () {
       return KikakuList
+    },
+    academicKikaku () {
+      return KikakuList.filter(item => item.type === 'academic')
+    },
+    musicalKikaku () {
+      return KikakuList.filter(item => item.type === 'musical')
+    },
+    cultualKikaku () {
+      return KikakuList.filter(item => item.type === 'cultual')
+    },
+    exhibitionKikaku () {
+      return KikakuList.filter(item => item.type === 'exhibition')
     },
     Searching () {
       const SearchedKikaku = []
@@ -104,6 +170,13 @@ export default {
   background-size: repeat;
   &__button {
     text-align: center;
+  }
+  &__label {
+    margin: 1rem 0 1.5rem 0;
+    &__main {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
   &__search {
     margin-bottom: 2rem;
