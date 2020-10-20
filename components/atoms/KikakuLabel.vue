@@ -49,7 +49,7 @@ export default {
     color: #fff;
     font-family: $sub-font;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 0.5rem 1.5rem;
   }
 }

@@ -1,3 +1,5 @@
+const { TRUE } = require('node-sass')
+
 if (typeof window === 'undefined') {
   const fs = require('fs')
 
@@ -14,6 +16,7 @@ if (typeof window === 'undefined') {
   TITLES['団体公式HP'] = 'url'
   TITLES['団体公式Twitter'] = 'twitter_ids'
   TITLES['画像'] = 'image_filename'
+  TITLES['ライブ配信'] = 'live'
 
   const raw_data = fs.readFileSync(CSV_FILE_PATH, 'utf-8')
   const array_data = raw_data.split('\n')
@@ -49,6 +52,14 @@ if (typeof window === 'undefined') {
           カルチャー: 'cultual',
           展示企画: 'exhibition'
         }[item]
+      }
+
+      if (titles[j] === 'ライブ配信') {
+        if (item === 'true') {
+          item = true
+        } else {
+          item = false
+        }
       }
 
       return_data[i - 1][TITLES[titles[j]]] = item

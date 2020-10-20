@@ -2,20 +2,38 @@
   <!-- ここにはコンテンツの下に掲載する団体紹介と企画トップページへのリンクを貼る(できればおすすめ企画とか載せたいよね) -->
   <div>
     <TheContainer>
+      <h2>団体情報</h2>
       <TheSection>
         <div>
+          <figure
+           :style="{backgroundImage: imageUrl ? `url(${imageUrl})` : ''
+           }"
+           class="kikaku-info__img"
+          />
           <h3 class="kikaku-info__name">
             団体名
           </h3>
-          <h4>
+          <p>
             {{ name }} <!-- 団体名をここに入れる -->
-          </h4>
+          </p>
           <h3 class="kikaku-info__name">
             団体紹介
           </h3>
           <p class="kikaku-info__intro">
             {{ introduce }} <!-- 団体紹介をここに入れる -->
           </p>
+          <h3 class="kikaku-info__name" v-if="url">
+            ホームページ
+          </h3>
+          <a :href="url">
+            {{ url }} <!-- urlをここに入れる -->
+          </a>
+          <h3 class="kikaku-info__name" v-if="twitter">
+            Twitter
+          </h3>
+          <a :href="url">
+            {{ twitter }} <!-- twitterのidをここに入れる -->
+          </a>
         </div>
       </TheSection>
       <div class="kikaku-info__button">
@@ -39,10 +57,19 @@ export default {
     LinkButton
   },
   props: {
+    imageUrl: {
+      type: String
+    },
     name: {
       type: String
     },
     introduce: {
+      type: String
+    },
+    url: {
+      type: String
+    },
+    twitter: {
       type: String
     }
   }
@@ -51,6 +78,16 @@ export default {
 
 <style lang="scss" scoped>
 .kikaku-info {
+  &__img {
+    width: 15rem;
+    height: 15rem;
+    background: center center / contain no-repeat;
+    border: 1px solid $muted;
+    margin-bottom: 1rem;
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto 1rem;
+    }
+  }
   &__button {
     text-align: center
   }

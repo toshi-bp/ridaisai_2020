@@ -27,9 +27,14 @@
         <h3 class="item-card__name">
           {{ name }}
         </h3>
-        <!-- <h3 class="item-card__title">
-          {{ id }}
-        </h3> -->
+        <div v-if="live" class="item-card__live">
+          <span>
+            <!-- ライブ配信をする企画はこのラベルをつけて告知 -->
+            ライブ配信
+          </span>
+          <!-- {{ startTime }} 〜 {{ endTime }} -->
+          <!-- ↑開始時刻と終了時刻を入力するかもしれない -->
+        </div>
       </div>
     </component>
   </div>
@@ -82,6 +87,16 @@ export default {
     name: {
       type: String,
       default: '団体名'
+    },
+    live: {
+      type: Boolean,
+      default: false
+    },
+    startTime: {
+      type: String
+    },
+    endTime: {
+      type: String
     }
   },
   computed: {
@@ -152,13 +167,22 @@ export default {
     font-size: 1rem;
     text-decoration: none;
     color: $color;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem 0.5rem 1rem;
     @include media-breakpoint-down(sm) {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
   }
   &__label {
     margin: 0 0 0.5rem 1rem;
+  }
+  &__live {
+    display: inline-block;
+    color: #fff;
+    margin: 0 0 1rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    padding: 0 0.5rem;
+    background-color: $sub-color;
   }
 }
 </style>

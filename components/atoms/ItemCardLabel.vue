@@ -40,7 +40,7 @@ export default {
   font-size: 0.7rem;
   line-height: 2;
   padding: 0 0.5rem;
-  border-radius: 999px;
+  border-radius: 5px;
   // background-color: $theme-color;
 }
 </style>

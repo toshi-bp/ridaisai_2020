@@ -1,25 +1,60 @@
 <template>
   <!-- 電気工学研究会 -->
   <div class="kikaku-info">
-    <KikakuInfoHeader
-     kikaku_name="電気工学研究会展示"
-    ></KikakuInfoHeader>
-    <!-- ここにコンテンツを掲載するよ -->
-    <KikakuInfoBody
-     name="電気工学研究会"
-     introduce="週に一回現在はzoomで部会を行っています。"
-    ></KikakuInfoBody>
+    <div
+     v-for="(KikakuList, id) in Kikaku"
+     :key="id"
+    >
+      <div KikakuList>
+        <KikakuInfoHeader
+         :kikaku_name="KikakuList.kikaku_title"
+         :type="KikakuList.type"
+        ></KikakuInfoHeader>
+        <!-- ここにコンテンツを掲載するよ -->
+        <TheContainer>
+          <TheSection>
+            <h3>企画紹介</h3>
+            {{ KikakuList.description  }}
+          </TheSection>
+        </TheContainer>
+        <KikakuInfoBody
+         :imageUrl="require(`@/assets/kikaku/${KikakuList.image_filename}`)"
+         :name="KikakuList.name"
+         :introduce="KikakuList.introduction"
+         :url="KikakuList.url"
+         :twitter="KikakuList.twitter_ids"
+        ></KikakuInfoBody>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
+import TheSection from '~/components/atoms/TheSection'
+import TheContainer from '~/components/atoms/TheContainer'
+
+import KikakuList from '~/kikaku/KikakuList.json'
 
 export default {
   components: {
     KikakuInfoHeader,
-    KikakuInfoBody
+    KikakuInfoBody,
+    TheSection,
+    TheContainer
+  },
+  props: {
+    id: {
+      type: Number,
+      default: 107
+    }
+  },
+  computed: {
+    Kikaku () {
+      const id = 107 // kikaku_idの値をjsonから調べて直接入力
+      return KikakuList.filter(item => item.kikaku_id === id)
+    }
   }
 }
 </script>

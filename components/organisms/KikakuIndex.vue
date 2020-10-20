@@ -79,6 +79,7 @@
                   :title="item.kikaku_title"
                   :name="item.name"
                   :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
+                  :live="item.live"
                 />
               </TheColumn>
             </TheRow>
