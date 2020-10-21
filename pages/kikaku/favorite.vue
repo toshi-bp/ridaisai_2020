@@ -6,16 +6,19 @@
       </template>
     </SubHeader>
     <!-- <LoadFavorite></LoadFavorite> -->
+    <LoadHistory></LoadHistory>
   </div>
 </template>
 
 <script>
 import SubHeader from '~/components/organisms/SubHeader.vue'
+import LoadHistory from '~/components/molecules/LoadHistory'
 // import LoadFavorite from '~/components/molecules/LoadFavorite'
 
 export default {
   components: {
-    SubHeader
+    SubHeader,
+    LoadHistory
     // LoadFavorite
   }
 }

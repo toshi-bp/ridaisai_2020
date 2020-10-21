@@ -1,5 +1,5 @@
 <template>
-  <!-- 電気工学研究会 -->
+  <!-- VOICE TRAINING部 -->
   <div class="kikaku-info">
     <div
      v-for="(KikakuList, id) in Kikaku"
@@ -49,12 +49,12 @@ export default {
   props: {
     id: {
       type: Number,
-      default: 107
+      default: 124
     }
   },
   computed: {
     Kikaku () {
-      const id = 107 // kikaku_idの値をjsonから調べて直接入力
+      const id = 124 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
   }

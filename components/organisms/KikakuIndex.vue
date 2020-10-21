@@ -23,6 +23,37 @@
       <div>
         <TheSection>
           <p>このページでは理大祭に参加している団体の企画をみることができます。</p>
+          <div>
+            企画は以下の4つのジャンルに分類されています。
+          </div>
+          <div class="kikaku__label">
+            <KikakuLabel
+             class="kikaku__label__main"
+             v-for="type in types"
+             :key="type"
+             :type="type"
+             @click="typeFilter"
+            >
+              {{
+                {
+                  academic: '学術系',
+                  musical: '音楽系',
+                  cultual: '文化系',
+                  exhibition: '展示系'
+                }[type]
+               }}
+            </KikakuLabel>
+          </div>
+          <div>
+            <p>
+              ライブ配信をする企画については各企画のページに以下のようなラベルがついておりそのページからライブ配信の企画へとアクセスできます。
+            </p>
+            <KikakuLabel
+             type="live"
+            >
+              ライブ配信
+            </KikakuLabel>
+          </div>
         </TheSection>
       </div>
       <div>
@@ -30,9 +61,9 @@
           <div>
             企画のジャンルで選ぶ
           </div>
-          <div class="kikaku__label">
+          <div class="kikaku__index">
             <KikakuLabel
-             class="kikaku__label__main"
+             class="kikaku__index__main"
              v-for="type in types"
              :key="type"
              :type="type"
@@ -59,7 +90,7 @@
           >
           <KikakuLabel
            :type="type"
-           class="kikaku__label"
+           class="kikaku__index"
           >
             {{
               {
@@ -173,6 +204,21 @@ export default {
     text-align: center;
   }
   &__label {
+    margin: 1rem 0rem 1.5rem 0;
+    display: flex;
+    flex-direction: row;
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+    &__main {
+      margin-right: 0.5rem;
+      @include media-breakpoint-down(sm) {
+      margin-bottom: 1rem;
+    }
+    }
+  }
+  &__index {
     margin: 1rem 0 1.5rem 0;
     &__main {
       display: flex;

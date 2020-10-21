@@ -5,6 +5,11 @@
 
 <script>
 export default {
+  props: {
+    id: {
+      type: Number
+    }
+  },
   methods: {
     PushHistory () {
       const KikakuHistory = []
