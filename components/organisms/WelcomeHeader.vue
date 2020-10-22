@@ -37,25 +37,28 @@ export default {
   &__body {
     display: inline-block;
     background-color: $theme-color;
-
-    ::before {
-      content: '';
-      position: relative;
-      bottom: 0;
-      right: 1rem;
-      // margin: 0 1rem;
-      height: 2rem;
-      width: 0.5rem;
-      background-color: #fff;
-    }
   }
 
   &__title {
+    position: relative;
+    display: inline-block;
     font-size: 2rem;
     font-family: $sub-font;
     color: #fff;
-    padding-left: 0.5rem;
+    padding: 0 1rem;
     margin-right: 1rem;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      right: -1rem;
+      // margin: 0 1rem;
+      height: 3rem;
+      width: 0.5rem;
+      background-color: #fff;
+    }
   }
 
 }
