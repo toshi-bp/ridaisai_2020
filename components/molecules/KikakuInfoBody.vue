@@ -16,22 +16,25 @@
           <p>
             {{ name }} <!-- 団体名をここに入れる -->
           </p>
-          <h3 class="kikaku-info__name">
+          <h3
+            v-if="introduce"
+            class="kikaku-info__name"
+          >
             団体紹介
           </h3>
           <p class="kikaku-info__intro">
             {{ introduce }} <!-- 団体紹介をここに入れる -->
           </p>
           <h3
-            v-if="url"
             class="kikaku-info__name"
+            v-if="url"
           >
             ホームページ
           </h3>
           <a :href="url">
             {{ url }} <!-- urlをここに入れる -->
           </a>
-          <h3 v-if="twitter" class="kikaku-info__name">
+          <h3 class="kikaku-info__name" v-if="twitter">
             Twitter
           </h3>
           <a :href="url">
@@ -40,7 +43,7 @@
         </div>
       </TheSection>
       <div class="kikaku-info__button">
-        <LinkButton to="/kikaku/">
+        <LinkButton to='/kikaku/'>
           企画一覧へ
         </LinkButton>
       </div>

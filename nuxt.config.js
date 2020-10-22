@@ -21,13 +21,14 @@ export default {
   },
   generate: {
     // routes: ['404']
-    routes () {
-      return KikakuList.filter(kikaku => kikaku.kikaku_id).map((kikaku) => {
-        return {
-          route: '/kikaku/' + kikaku.kikaku_id + '/'
-        }
-      })
-    }
+    // ↓ページの自動生成を試みたがその場合個別で編集ができなくなるため今回は使わない。
+    // routes () {
+    //   return KikakuList.filter(kikaku => kikaku.kikaku_id).map((kikaku) => {
+    //     return {
+    //       route: '/kikaku/' + kikaku.kikaku_id + '/'
+    //     }
+    //   })
+    // }
   },
   /*
   ** Customize the progress-bar color
@@ -44,8 +45,7 @@ export default {
   */
   plugins: ['~/plugins/webfonts.js',
     '~/plugins/emptyTouchHandler.js',
-    '~/plugins/vue-youtube.js',
-    { src: '~/plugins/persistedstate.js', ssr: false }
+    '~/plugins/vue-youtube.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -88,6 +88,7 @@ export default {
         ]
       }
     ],
+    'nuxt-vuex-localstorage',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@nuxtjs/markdownit'

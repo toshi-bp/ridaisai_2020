@@ -211,13 +211,10 @@ export default {
     Searching () {
       const SearchedKikaku = []
       const keyword = this.keyword
-      for (const i in this.KikakuList) {
-        const item = this.KikakuList[i]
-        if (item.kikaku_title.includes(keyword) !== -1 || item.name.includes(keyword) !== -1) {
-          SearchedKikaku.push(item)
-        }
+      if (this.KikakuList.kikaku_title.includes(keyword) !== -1 || this.KikakuList.name.includes(keyword) !== -1) {
+        SearchedKikaku.push(this.KikakuList.kikaku_id)
       }
-      return SearchedKikaku
+      return KikakuList.filter(SearchedKikaku => SearchedKikaku.kikaku_id === this.KikakuList.kikaku_id)
     }
   }
 }
