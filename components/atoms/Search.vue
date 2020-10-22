@@ -2,11 +2,11 @@
   <div class="search">
     <div class="search__box">
       <input
+        v-model="keyword"
         type="text"
         valuename="keyword"
         placeholder="検索キーワード"
         class="search__text"
-        v-model="keyword"
       >
     </div>
     <button class="search__button" @click="Searching">

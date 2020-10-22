@@ -6,7 +6,7 @@
       </template>
     </SubHeader>
     <!-- <LoadFavorite></LoadFavorite> -->
-    <LoadHistory></LoadHistory>
+    <LoadHistory />
   </div>
 </template>
 

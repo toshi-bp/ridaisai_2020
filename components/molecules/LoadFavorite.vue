@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheRow>
-      <TheColumn v-for="item in favoriteKikaku" :key="item.kikaku_id">
+      <TheColumn v-for="item in KikakuList" :key="item.kikaku_id">
         <ItemCard
           :id="item.kikaku_id"
           :to="`/kikaku/${item.kikaku_id}`"
@@ -20,12 +20,19 @@ import TheRow from '~/components/atoms/TheRow.vue'
 import TheColumn from '~/components/atoms/TheColumn.vue'
 import ItemCard from '~/components/molecules/ItemCard.vue'
 
+import KikakuList from '~/kikaku/KikakuList.json'
+
 export default {
   components: {
     // TheContainer,
     TheRow,
     TheColumn,
     ItemCard
+  },
+  computed: {
+    favoriteKikaku () {
+      return KikakuList.filter(item => item.kikaku_id === this.favoriteKikaku)
+    }
   },
   methods: {
     LoadFavorite () {
@@ -39,11 +46,6 @@ export default {
         }
       }
       console.log(favoriteKikaku)
-    }
-  },
-  computed: {
-    favoriteKikaku () {
-      return this.favoriteKikaku
     }
   }
 }

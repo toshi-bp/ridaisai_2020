@@ -28,11 +28,11 @@
           </div>
           <div class="kikaku__label">
             <KikakuLabel
-             class="kikaku__label__main"
-             v-for="type in types"
-             :key="type"
-             :type="type"
-             @click="typeFilter"
+              v-for="type in types"
+              :key="type"
+              class="kikaku__label__main"
+              :type="type"
+              @click="typeFilter"
             >
               {{
                 {
@@ -41,7 +41,7 @@
                   cultual: '文化系',
                   exhibition: '展示系'
                 }[type]
-               }}
+              }}
             </KikakuLabel>
           </div>
           <div>
@@ -49,7 +49,7 @@
               ライブ配信をする企画については各企画のページに以下のようなラベルがついておりそのページからライブ配信の企画へとアクセスできます。
             </p>
             <KikakuLabel
-             type="live"
+              type="live"
             >
               ライブ配信
             </KikakuLabel>
@@ -63,11 +63,11 @@
           </div>
           <div class="kikaku__index">
             <KikakuLabel
-             class="kikaku__index__main"
-             v-for="type in types"
-             :key="type"
-             :type="type"
-             @click="typeFilter"
+              v-for="type in types"
+              :key="type"
+              class="kikaku__index__main"
+              :type="type"
+              @click="tab = type"
             >
               {{
                 {
@@ -76,37 +76,63 @@
                   cultual: '文化系',
                   exhibition: '展示系'
                 }[type]
-               }}
+              }}
             </KikakuLabel>
           </div>
           <div
-           v-for="(KikakuList, type) in {
-             academic: academicKikaku,
-             musical: musicalKikaku,
-             cultual: cultualKikaku,
-             exhibition: exhibitionKikaku
-             }"
-             :key="type"
+            v-for="(KikakuList, type) in {
+              academic: academicKikaku,
+              musical: musicalKikaku,
+              cultual: cultualKikaku,
+              exhibition: exhibitionKikaku
+            }"
+            :key="type"
           >
-          <KikakuLabel
-           :type="type"
-           class="kikaku__index"
-          >
-            {{
-              {
-                academic: '学術系',
-                musical: '音楽系',
-                cultual: '文化系',
-                exhibition: '展示系'
-              }[type]
-            }}
-          </KikakuLabel>
+            <KikakuLabel
+              :type="type"
+              class="kikaku__index"
+            >
+              {{
+                {
+                  academic: '学術系',
+                  musical: '音楽系',
+                  cultual: '文化系',
+                  exhibition: '展示系'
+                }[type]
+              }}
+            </KikakuLabel>
             <TheRow>
-              <TheColumn v-for="item in KikakuList" :key="item.kikaku_id" :spsize="12">
+              <TheColumn
+                v-for="item in KikakuList"
+                :key="item.kikaku_id"
+                :spsize="12"
+              >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
-                  :labelType="item.type"
-                  :labelText="item.type"
+                  :label-type="item.type"
+                  :label-text="item.type"
+                  :title="item.kikaku_title"
+                  :name="item.name"
+                  :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
+                  :live="item.live"
+                />
+              </TheColumn>
+            </TheRow>
+          </div>
+          <div>
+            <!-- ライブ配信企画をまとめたもの -->
+            <KikakuLabel
+              class="kikaku__index"
+              type="live"
+            >
+              ライブ配信
+            </KikakuLabel>
+            <TheRow>
+              <TheColumn v-for="item in liveKikaku" :key="item.kikaku_id" :spsize="12">
+                <ItemCard
+                  :to="`/kikaku/${item.kikaku_id}/`"
+                  :label-type="item.type"
+                  :label-text="item.type"
                   :title="item.kikaku_title"
                   :name="item.name"
                   :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
@@ -141,12 +167,6 @@ import KikakuLabel from '~/components/atoms/KikakuLabel'
 import KikakuList from '~/kikaku/KikakuList.json'
 
 export default {
-  data () {
-    return {
-      keyword: '',
-      types: ['academic', 'musical', 'cultual', 'exhibition']
-    }
-  },
   components: {
     TheContainer,
     SubHeader,
@@ -161,6 +181,12 @@ export default {
   props: {
     type: {
       type: String
+    }
+  },
+  data () {
+    return {
+      keyword: '',
+      types: ['academic', 'musical', 'cultual', 'exhibition']
     }
   },
   computed: {
@@ -178,6 +204,9 @@ export default {
     },
     exhibitionKikaku () {
       return KikakuList.filter(item => item.type === 'exhibition')
+    },
+    liveKikaku () {
+      return KikakuList.filter(item => item.live === true)
     },
     Searching () {
       const SearchedKikaku = []

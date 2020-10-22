@@ -2,30 +2,31 @@
   <!-- VOICE TRAINING部 -->
   <div class="kikaku-info">
     <div
-     v-for="(KikakuList, id) in Kikaku"
-     :key="id"
+      v-for="(KikakuList, id) in Kikaku"
+      :key="id"
     >
       <div KikakuList>
         <KikakuInfoHeader
-         :id="KikakuList.kikaku_id"
-         :kikaku_name="KikakuList.kikaku_title"
-         :type="KikakuList.type"
-         :live="KikakuList.live"
-        ></KikakuInfoHeader>
+          :id="KikakuList.kikaku_id"
+          :kikaku_name="KikakuList.kikaku_title"
+          :circle_name="KikakuList.name"
+          :type="KikakuList.type"
+          :live="KikakuList.live"
+        />
         <!-- ここにコンテンツを掲載するよ -->
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description  }}
+            {{ KikakuList.description }}
           </TheSection>
         </TheContainer>
         <KikakuInfoBody
-         :imageUrl="require(`@/assets/kikaku/${KikakuList.image_filename}`)"
-         :name="KikakuList.name"
-         :introduce="KikakuList.introduction"
-         :url="KikakuList.url"
-         :twitter="KikakuList.twitter_ids"
-        ></KikakuInfoBody>
+          :image-url="require(`@/assets/kikaku/${KikakuList.image_filename}`)"
+          :name="KikakuList.name"
+          :introduce="KikakuList.introduction"
+          :url="KikakuList.url"
+          :twitter="KikakuList.twitter_ids"
+        />
       </div>
     </div>
   </div>

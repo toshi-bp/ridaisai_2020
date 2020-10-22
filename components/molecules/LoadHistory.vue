@@ -1,17 +1,23 @@
 <template>
   <div>
     <TheContainer>
-      <TheRow>
-        <TheColumn v-for="item in KikakuHistory" :key="item.kikaku_id">
-          <ItemCard
-            :id="item.kikaku_id"
-            :to="`/kikaku/${item.kikaku_id}`"
-            :title="item.kikaku_title"
-            :name="item.name"
-            :image-url="require(`~/assets/kikaku/${item.image_filename}`)"
-          />
-        </TheColumn>
-      </TheRow>
+      <div
+        v-for="(KikakuList, kikaku_id) in KikakuHistory"
+        ref="push"
+        :key="kikaku_id"
+      >
+        <TheRow>
+          <TheColumn v-for="item in KikakuList" :key="item.kikaku_id">
+            <ItemCard
+              :id="item.kikaku_id"
+              :to="`/kikaku/${item.kikaku_id}`"
+              :title="item.kikaku_title"
+              :name="item.name"
+              :image-url="require(`~/assets/kikaku/${item.image_filename}`)"
+            />
+          </TheColumn>
+        </TheRow>
+      </div>
     </TheContainer>
   </div>
 </template>
@@ -21,6 +27,7 @@ import TheContainer from '~/components/atoms/TheContainer.vue'
 import TheRow from '~/components/atoms/TheRow.vue'
 import TheColumn from '~/components/atoms/TheColumn.vue'
 import ItemCard from '~/components/molecules/ItemCard.vue'
+// import PushHistory from '~/components/molecules/PushHistory'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 
@@ -31,7 +38,15 @@ export default {
     TheColumn,
     ItemCard
   },
+  computed: {
+    KikakuHistory () {
+      return KikakuList.filter(item => item.kikaku_id === this.LoadHistory())
+    }
+  },
   methods: {
+    callLocalStorage () {
+      this.$refs.push.PushHistory()
+    },
     LoadHistory () {
       let KikakuHistory = localStorage.getItem('KikakuHistory')
       KikakuHistory = JSON.parse(KikakuHistory)
@@ -42,11 +57,7 @@ export default {
           KikakuHistoryId += ','
         }
       }
-    }
-  },
-  computed: {
-    KikakuHistory () {
-      return KikakuList.filter(item => item.kikaku_id === this.KikakuHistory)
+      return KikakuHistoryId
     }
   }
 }

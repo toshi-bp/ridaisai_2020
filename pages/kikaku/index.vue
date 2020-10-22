@@ -1,6 +1,6 @@
 <template>
   <div class="kikaku">
-    <KikakuIndex></KikakuIndex>
+    <KikakuIndex />
   </div>
 </template>
 

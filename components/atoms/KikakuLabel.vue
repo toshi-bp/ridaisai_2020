@@ -1,13 +1,13 @@
 <template>
   <div
-   class="label"
-   :class="{
-     'label--is-academic': type === 'academic',
-     'label--is-musical': type === 'musical',
-     'label--is-cultual': type === 'cultual',
-     'label--is-exhibition': type === 'exhibition',
-     'label--is-live': type === 'live'
-   }"
+    class="label"
+    :class="{
+      'label--is-academic': type === 'academic',
+      'label--is-musical': type === 'musical',
+      'label--is-cultual': type === 'cultual',
+      'label--is-exhibition': type === 'exhibition',
+      'label--is-live': type === 'live'
+    }"
   >
     <div class="label__inner">
       <slot />

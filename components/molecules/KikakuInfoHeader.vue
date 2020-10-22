@@ -7,31 +7,34 @@
           {{ kikaku_name }}
         </template>
       </SubHeader>
+      <h3 class="kikaku-info__name">
+        {{ circle_name }}
+      </h3>
       <div class="kikaku-info__label">
         <KikakuLabel
-         class="kikaku-info__label__main"
-         :type="type"
+          class="kikaku-info__label__main"
+          :type="type"
         >
-        {{
-          {
-            academic: '学術系',
-            musical: '音楽系',
-            cultual: '文化系',
-            exhibition: '展示系'
-          }[type]
-        }}
+          {{
+            {
+              academic: '学術系',
+              musical: '音楽系',
+              cultual: '文化系',
+              exhibition: '展示系'
+            }[type]
+          }}
         </KikakuLabel>
         <KikakuLabel
-         class="kikaku-info__label__main"
-         v-if="live"
-         type="live"
+          v-if="live"
+          class="kikaku-info__label__main"
+          type="live"
         >
-        ライブ配信
+          ライブ配信
         </KikakuLabel>
       </div>
       <PushHistory
-       :id="id"
-      ></PushHistory>
+        :id="id"
+      />
     </TheContainer>
   </div>
 </template>
@@ -53,6 +56,9 @@ export default {
   },
   props: {
     kikaku_name: {
+      type: String
+    },
+    circle_name: {
       type: String
     },
     type: {

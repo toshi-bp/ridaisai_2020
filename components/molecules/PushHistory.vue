@@ -1,6 +1,6 @@
 <!--企画の閲覧履歴を作成する-->
 <template>
-  <div PushHistory />
+  <div KikakuList />
 </template>
 
 <script>
@@ -15,6 +15,7 @@ export default {
       const KikakuHistory = []
       KikakuHistory.push(this.id)
       localStorage.setItem('KikakuHistory', JSON.stringify(KikakuHistory))
+      return KikakuHistory
     }
   }
 }

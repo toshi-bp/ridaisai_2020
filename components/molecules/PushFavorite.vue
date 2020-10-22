@@ -14,7 +14,7 @@ export default {
     LinkButton
   },
   props: {
-    kikaku_id : {
+    kikaku_id: {
       type: String
     }
   },
