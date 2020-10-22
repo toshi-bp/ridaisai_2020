@@ -6,7 +6,9 @@
       'label--is-musical': type === 'musical',
       'label--is-cultual': type === 'cultual',
       'label--is-exhibition': type === 'exhibition',
-      'label--is-live': type === 'live'
+      'label--is-live': type === 'live',
+      'label--is-youtube': type === 'youtube',
+      'label--is-website': type === 'website'
     }"
   >
     <div class="label__inner">
@@ -45,8 +47,14 @@ export default {
   &--is-exhibition {
     background-color: $exhibition-color;
   }
+  &--is-youtube {
+    background-color: $youtube-color;
+  }
   &--is-live {
-    background-color: $sub-color;
+    background-color: $live-color;
+  }
+  &--is-website {
+    background-color: $website-color;
   }
 
   &__inner {

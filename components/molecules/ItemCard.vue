@@ -27,14 +27,13 @@
         <h3 class="item-card__name">
           {{ name }}
         </h3>
-        <div v-if="live" class="item-card__live">
-          <span>
-            <!-- ライブ配信をする企画はこのラベルをつけて告知 -->
-            ライブ配信
-          </span>
-          <!-- {{ startTime }} 〜 {{ endTime }} -->
-          <!-- ↑開始時刻と終了時刻を入力するかもしれない -->
-        </div>
+        <ItemCardLabel2
+          v-if="labelText"
+          class="item-card__label"
+          :type="labelType2"
+        >
+          {{ labelTextChanged2 }}
+        </ItemCardLabel2>
       </div>
     </component>
   </div>
@@ -42,10 +41,12 @@
 
 <script>
 import ItemCardLabel from '~/components/atoms/ItemCardLabel'
+import ItemCardLabel2 from '~/components/atoms/ItemCardLabel2'
 
 export default {
   components: {
-    ItemCardLabel
+    ItemCardLabel,
+    ItemCardLabel2
   },
   props: {
     to: {
@@ -76,6 +77,14 @@ export default {
       type: String,
       default: ''
     },
+    labelText2: {
+      type: String,
+      default: ''
+    },
+    labelType2: {
+      type: String,
+      default: ''
+    },
     linkTarget: {
       type: String,
       default: ''
@@ -87,16 +96,6 @@ export default {
     name: {
       type: String,
       default: '団体名'
-    },
-    live: {
-      type: Boolean,
-      default: false
-    },
-    startTime: {
-      type: String
-    },
-    endTime: {
-      type: String
     }
   },
   computed: {

@@ -53,6 +53,16 @@
             >
               ライブ配信
             </KikakuLabel>
+            <KikakuLabel
+              type="youtube"
+            >
+              Youtube
+            </KikakuLabel>
+            <KikakuLabel
+              type="website"
+            >
+             Webサイト
+            </KikakuLabel>
           </div>
         </TheSection>
       </div>
