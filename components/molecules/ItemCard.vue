@@ -28,9 +28,9 @@
           {{ name }}
         </h3>
         <ItemCardLabel2
-          v-if="labelText"
+          v-if="labelText2"
           class="item-card__label"
-          :type="labelType2"
+          :form="labelType2"
         >
           {{ labelTextChanged2 }}
         </ItemCardLabel2>
@@ -117,6 +117,14 @@ export default {
         exhibition: '展示系'
       }
       return typeDict[this.labelType]
+    },
+    labelTextChanged2 () {
+      const formDict = {
+        live: 'ライブ配信',
+        youtube: 'YouTube',
+        website: 'Webサイト'
+      }
+      return formDict[this.labelType2]
     }
   }
 }

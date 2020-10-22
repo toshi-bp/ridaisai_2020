@@ -1,7 +1,7 @@
 <template>
   <!-- 企画の形態によってラベルを変えるように設定するよ -->
   <span
-    class="label2"
+    class="form-label"
     :style="{
       backgroundColor: labelColor
     }"
@@ -13,8 +13,8 @@
 <script>
 export default {
   props: {
-    type: {
-      type: String
+    form: {
+      form: String
     }
   },
   computed: {
@@ -24,14 +24,14 @@ export default {
         youtube: '#f8acac',
         website: '#37ab9d'
       }
-      return typesColorDict[this.type]
+      return typesColorDict[this.form]
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.label2 {
+.form-label {
   display: inline-block;
   color: #fff;
   font-size: 0.8rem;

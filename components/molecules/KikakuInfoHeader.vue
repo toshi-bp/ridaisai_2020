@@ -25,11 +25,16 @@
           }}
         </KikakuLabel>
         <KikakuLabel
-          v-if="live"
           class="kikaku-info__label__main"
-          type="live"
+          :type="form"
         >
-          ライブ配信
+          {{
+            {
+              live: 'ライブ配信',
+              youtube: 'YouTube',
+              website: 'Webサイト'
+            }[type]
+          }}
         </KikakuLabel>
       </div>
       <PushHistory
@@ -67,9 +72,8 @@ export default {
     id: {
       type: Number
     },
-    live: {
-      type: Boolean,
-      default: false
+    form: {
+      type: String
     }
   }
 }

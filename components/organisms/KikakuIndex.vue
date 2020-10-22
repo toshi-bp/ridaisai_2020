@@ -49,19 +49,19 @@
               ライブ配信をする企画については各企画のページに以下のようなラベルがついておりそのページからライブ配信の企画へとアクセスできます。
             </p>
             <KikakuLabel
-              type="live"
+              v-for="form in forms"
+              :key="form"
+              class="kikaku__label__main"
+              :type="form"
+              @click="formFilter"
             >
-              ライブ配信
-            </KikakuLabel>
-            <KikakuLabel
-              type="youtube"
-            >
-              Youtube
-            </KikakuLabel>
-            <KikakuLabel
-              type="website"
-            >
-             Webサイト
+              {{
+                {
+                  live: 'ライブ配信',
+                  youtube: 'YouTube',
+                  website: 'Webサイト'
+                }[form]
+              }}
             </KikakuLabel>
           </div>
         </TheSection>
@@ -89,6 +89,7 @@
               }}
             </KikakuLabel>
           </div>
+          <!-- 企画のジャンルごとに分類した部分 -->
           <div
             v-for="(KikakuList, type) in {
               academic: academicKikaku,
@@ -124,21 +125,39 @@
                   :title="item.kikaku_title"
                   :name="item.name"
                   :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-                  :live="item.live"
+                  :label-type2="form"
+                  :label-text2="form"
                 />
               </TheColumn>
             </TheRow>
           </div>
-          <div>
-            <!-- ライブ配信企画をまとめたもの -->
+          <!-- 企画の形態ごとにまとめた部分 -->
+          <div
+            v-for="(KikakuList, form) in {
+              live: liveKikaku,
+              youtube: youtubeKikaku,
+              website: websiteKikaku
+            }"
+            :key="form"
+          >
             <KikakuLabel
+              :type="form"
               class="kikaku__index"
-              type="live"
             >
-              ライブ配信
+              {{
+                {
+                  live: 'ライブ配信',
+                  youtube: 'YouTube',
+                  website: 'Webサイト'
+                }[form]
+              }}
             </KikakuLabel>
             <TheRow>
-              <TheColumn v-for="item in liveKikaku" :key="item.kikaku_id" :spsize="12">
+              <TheColumn
+                v-for="item in KikakuList"
+                :key="item.kikaku_id"
+                :spsize="12"
+              >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
                   :label-type="item.type"
@@ -146,7 +165,8 @@
                   :title="item.kikaku_title"
                   :name="item.name"
                   :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-                  :live="item.live"
+                  :label-type2="form"
+                  :label-text2="form"
                 />
               </TheColumn>
             </TheRow>
@@ -196,7 +216,8 @@ export default {
   data () {
     return {
       keyword: '',
-      types: ['academic', 'musical', 'cultual', 'exhibition']
+      types: ['academic', 'musical', 'cultual', 'exhibition'],
+      forms: ['live', 'youtube', 'website']
     }
   },
   computed: {
@@ -217,6 +238,12 @@ export default {
     },
     liveKikaku () {
       return KikakuList.filter(item => item.live === true)
+    },
+    youtubeKikaku () {
+      return KikakuList.filter(item => item.youtube === true)
+    },
+    websiteKikaku () {
+      return KikakuList.filter(item => item.website === true)
     },
     Searching () {
       const SearchedKikaku = []
