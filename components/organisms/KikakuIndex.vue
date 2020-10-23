@@ -125,8 +125,9 @@
                   :title="item.kikaku_title"
                   :name="item.name"
                   :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-                  :label-type2="form"
-                  :label-text2="form"
+                  :live="item.live"
+                  :youtube="item.youtube"
+                  :website="item.website"
                 />
               </TheColumn>
             </TheRow>
@@ -165,8 +166,9 @@
                   :title="item.kikaku_title"
                   :name="item.name"
                   :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-                  :label-type2="form"
-                  :label-text2="form"
+                  :live="item.live"
+                  :youtube="item.youtube"
+                  :website="item.website"
                 />
               </TheColumn>
             </TheRow>

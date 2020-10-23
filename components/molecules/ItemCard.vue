@@ -27,13 +27,29 @@
         <h3 class="item-card__name">
           {{ name }}
         </h3>
-        <ItemCardLabel2
-          v-if="labelText2"
-          class="item-card__label"
-          :form="labelType2"
-        >
-          {{ labelTextChanged2 }}
-        </ItemCardLabel2>
+        <div class="item-card__label2">
+          <ItemCardLabel2
+            v-if="live"
+            :live="live"
+            class="item-card__label2__main"
+          >
+            ライブ配信
+          </ItemCardLabel2>
+          <ItemCardLabel2
+            v-if="youtube"
+            :youtube="youtube"
+            class="item-card__label2__main"
+          >
+            YouTube
+          </ItemCardLabel2>
+          <ItemCardLabel2
+            v-if="website"
+            :website="website"
+            class="item-card__label2__main"
+          >
+            Webサイト
+          </ItemCardLabel2>
+        </div>
       </div>
     </component>
   </div>
@@ -77,14 +93,6 @@ export default {
       type: String,
       default: ''
     },
-    labelText2: {
-      type: String,
-      default: ''
-    },
-    labelType2: {
-      type: String,
-      default: ''
-    },
     linkTarget: {
       type: String,
       default: ''
@@ -96,6 +104,18 @@ export default {
     name: {
       type: String,
       default: '団体名'
+    },
+    live: {
+      type: Boolean,
+      default: false
+    },
+    youtube: {
+      type: Boolean,
+      default: false
+    },
+    website: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -117,14 +137,6 @@ export default {
         exhibition: '展示系'
       }
       return typeDict[this.labelType]
-    },
-    labelTextChanged2 () {
-      const formDict = {
-        live: 'ライブ配信',
-        youtube: 'YouTube',
-        website: 'Webサイト'
-      }
-      return formDict[this.labelType2]
     }
   }
 }
@@ -182,14 +194,12 @@ export default {
   &__label {
     margin: 0 0 0.5rem 1rem;
   }
-  &__live {
-    display: inline-block;
-    color: #fff;
-    margin: 0 0 1rem 1rem;
-    font-size: 0.8rem;
-    border-radius: 5px;
-    padding: 0 0.5rem;
-    background-color: $sub-color;
+  &__label2 {
+    display: flex;
+    flex-direction: row;
+    &__main {
+      margin: 0 0 1rem 1rem;
+    }
   }
 }
 </style>

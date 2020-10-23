@@ -1,31 +1,50 @@
 <template>
   <!-- 企画の形態によってラベルを変えるように設定するよ -->
-  <span
-    class="form-label"
-    :style="{
-      backgroundColor: labelColor
-    }"
-  >
-    <slot />
-  </span>
+  <div>
+    <span
+      v-if="live"
+      class="form-label--is-live"
+      :style="{
+        backgroundColor: labelColor
+      }"
+    >
+      <slot />
+    </span>
+    <span
+      v-if="youtube"
+      class="form-label--is-youtube"
+      :style="{
+        backgroundColor: labelColor
+      }"
+    >
+      <slot />
+    </span>
+    <span
+      v-if="website"
+      class="form-label--is-website"
+    >
+      <slot />
+    </span>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
-    form: {
-      form: String
+    live: {
+      type: Boolean,
+      default: false
+    },
+    youtube: {
+      type: Boolean,
+      default: false
+    },
+    website: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
-    labelColor () {
-      const typesColorDict = {
-        live: '#665990',
-        youtube: '#f8acac',
-        website: '#37ab9d'
-      }
-      return typesColorDict[this.form]
-    }
   }
 }
 </script>
@@ -40,5 +59,32 @@ export default {
   border-radius: 5px;
   // background-color: $theme-color;
 
+  &--is-live {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 2;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    background-color: $live-color;
+  }
+  &--is-youtube {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 2;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    background-color: $youtube-color;
+  }
+  &--is-website {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 2;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    background-color: $website-color;
+  }
 }
 </style>
