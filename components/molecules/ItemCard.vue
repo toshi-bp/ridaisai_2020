@@ -198,7 +198,7 @@ export default {
     display: flex;
     flex-direction: row;
     &__main {
-      margin: 0 0 1rem 1rem;
+      margin: 0 -0.5rem 1rem 1rem;
     }
   }
 }

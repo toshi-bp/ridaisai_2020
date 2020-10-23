@@ -46,7 +46,7 @@
           </div>
           <div>
             <p>
-              ライブ配信をする企画については各企画のページに以下のようなラベルがついておりそのページからライブ配信の企画へとアクセスできます。
+              また、各企画の開催形態は以下の3種類であり、ライブ配信をする企画については各企画のページに以下のようなラベルがついておりそのページからライブ配信の企画へとアクセスできます。
             </p>
             <KikakuLabel
               v-for="form in forms"
@@ -69,25 +69,45 @@
       <div>
         <TheSection>
           <div>
-            企画のジャンルで選ぶ
+            <p>企画のジャンルで選ぶ</p>
+            <div class="kikaku__index">
+              <KikakuLabel
+                v-for="type in types"
+                :key="type"
+                class="kikaku__index__main"
+                :type="type"
+                @click="tab = type"
+              >
+                {{
+                  {
+                    academic: '学術系',
+                    musical: '音楽系',
+                    cultual: '文化系',
+                    exhibition: '展示系'
+                  }[type]
+                }}
+              </KikakuLabel>
+            </div>
           </div>
-          <div class="kikaku__index">
-            <KikakuLabel
-              v-for="type in types"
-              :key="type"
-              class="kikaku__index__main"
-              :type="type"
-              @click="tab = type"
-            >
-              {{
-                {
-                  academic: '学術系',
-                  musical: '音楽系',
-                  cultual: '文化系',
-                  exhibition: '展示系'
-                }[type]
-              }}
-            </KikakuLabel>
+          <div>
+            <p>企画の形態で選ぶ</p>
+            <div class="kikaku__index">
+              <KikakuLabel
+                v-for="type in forms"
+                :key="type"
+                class="kikaku__index__main"
+                :type="type"
+                @click="tab = type"
+              >
+                {{
+                  {
+                    live: 'ライブ配信',
+                    youtube: 'YouTube',
+                    website: 'Webサイト'
+                  }[type]
+                }}
+              </KikakuLabel>
+            </div>
           </div>
           <!-- 企画のジャンルごとに分類した部分 -->
           <div

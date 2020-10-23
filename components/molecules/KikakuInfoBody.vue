@@ -37,7 +37,7 @@
           <h3 class="kikaku-info__name" v-if="twitter">
             Twitter
           </h3>
-          <a :href="twitter">
+          <a :href="`https://twitter.com/${twitter}`">
             {{ twitter }} <!-- twitterのidをここに入れる -->
           </a>
         </div>

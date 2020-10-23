@@ -26,21 +26,27 @@
         </KikakuLabel>
         <KikakuLabel
           v-if="live"
+          :live="live"
           class="kikaku-info__label__main"
           type="live"
         >
+          ライブ配信
         </KikakuLabel>
         <KikakuLabel
           v-if="youtube"
+          :youtube="youtube"
           class="kikaku-info__label__main"
           type="youtube"
         >
+          YouTube
         </KikakuLabel>
         <KikakuLabel
           v-if="website"
+          :website="website"
           class="kikaku-info__label__main"
           type="website"
         >
+          Webサイト
         </KikakuLabel>
       </div>
       <PushHistory
