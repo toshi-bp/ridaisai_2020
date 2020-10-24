@@ -1,10 +1,16 @@
 <template>
-  <div />
+  <div>
+    <TimeTable />
+  </div>
 </template>
 
 <script>
-export default {
+import TimeTable from '~/components/molecules/TimeTable'
 
+export default {
+  components: {
+    TimeTable
+  }
 }
 </script>
 

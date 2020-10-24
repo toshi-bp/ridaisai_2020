@@ -4,18 +4,12 @@
     <span
       v-if="live"
       class="form-label--is-live"
-      :style="{
-        backgroundColor: labelColor
-      }"
     >
       <slot />
     </span>
     <span
       v-if="youtube"
       class="form-label--is-youtube"
-      :style="{
-        backgroundColor: labelColor
-      }"
     >
       <slot />
     </span>

@@ -1,4 +1,5 @@
 <template>
+<!-- ライブ配信用のリンクにしようと思ったけどZoomとかの他のコンテンツでも使えそうだから一応LinkToContentsという名前にした。 -->
   <div class="link">
     <div class="link__card">
       <nuxt-link to="/live/">
