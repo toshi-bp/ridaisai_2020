@@ -2,7 +2,7 @@
   <div class="sub-header">
     <TheContainer>
       <div class="sub-header__body">
-        <img src="~/assets/image/airship.svg" class="sub-header__dodecagon">
+        <img src="~/assets/image/airship.svg" class="sub-header__airship">
         <h1 class="sub-header__title">
           <slot name="title" />
         </h1>
@@ -44,7 +44,7 @@ export default {
     align-items: center;
   }
 
-  &__dodecagon {
+  &__airship {
     // background-color: $accent-color;
     position: relative;
     width: 4rem;

@@ -32,7 +32,6 @@
               :key="type"
               class="kikaku__label__main"
               :type="type"
-              @click="typeFilter"
             >
               {{
                 {
@@ -53,7 +52,6 @@
               :key="form"
               class="kikaku__label__main"
               :type="form"
-              @click="formFilter"
             >
               {{
                 {
@@ -122,6 +120,7 @@
             <KikakuLabel
               :type="type"
               class="kikaku__index"
+              :id="type"
             >
               {{
                 {
@@ -164,6 +163,7 @@
             <KikakuLabel
               :type="form"
               class="kikaku__index"
+              :id="form"
             >
               {{
                 {
