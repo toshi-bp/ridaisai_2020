@@ -23,9 +23,10 @@
       <div>
         <TheSection>
           <p>このページでは理大祭に参加している団体の企画をみることができます。</p>
-          <div>
-            企画は以下の4つのジャンルに分類されています。
-          </div>
+          <p>
+            企画は以下の4つのジャンルに分類されています。それぞれのラベルをクリックするとそれぞれの開催形態の部分に移動できます。
+          </p>
+          <h3>ジャンルから選ぶ</h3>
           <div class="kikaku__label">
             <KikakuLabel
               v-for="type in types"
@@ -47,75 +48,32 @@
           </div>
           <div>
             <p>
-              また、各企画の開催形態は以下の3種類であり、ライブ配信をする企画については各企画のページに以下のようなラベルがついておりそのページからライブ配信の企画へとアクセスできます。
+              また、各企画の開催形態は以下の3種類であり、それぞれのラベルをクリックするとそれぞれの開催形態の部分に移動できます。
             </p>
-            <KikakuLabel
-              v-for="form in forms"
-              :key="form"
-              class="kikaku__label__main"
-              :type="form"
-              linkComponentIs='a'
-              :href="`/2020/kikaku/#${form}`"
-            >
-              {{
-                {
-                  live: 'ライブ配信',
-                  youtube: 'YouTube',
-                  website: 'Webサイト'
-                }[form]
-              }}
-            </KikakuLabel>
-          </div>
-        </TheSection>
-      </div>
-      <div>
-        <TheSection>
-          <div>
-            <p>企画のジャンルで選ぶ</p>
-            <div class="kikaku__index">
+            <h3>開催形態から選ぶ</h3>
+            <div class="kikaku__label">
               <KikakuLabel
-                v-for="type in types"
-                :key="type"
-                class="kikaku__index__main"
-                :type="type"
+                v-for="form in forms"
+                :key="form"
+                class="kikaku__label__main"
+                :type="form"
                 linkComponentIs='a'
-                :href="`/2020/kikaku/#${type}`"
-                @click="tab = type"
-              >
-                {{
-                  {
-                    academic: '学術系',
-                    musical: '音楽系',
-                    cultual: '文化系',
-                    exhibition: '展示系'
-                  }[type]
-                }}
-              </KikakuLabel>
-            </div>
-          </div>
-          <div>
-            <p>企画の形態で選ぶ</p>
-            <div class="kikaku__index">
-              <KikakuLabel
-                v-for="type in forms"
-                :key="type"
-                class="kikaku__index__main"
-                :type="type"
-                @click="tab = type"
-                linkComponentIs='a'
-                :href="`/2020/kikaku/#${type}`"
+                :href="`/2020/kikaku/#${form}`"
               >
                 {{
                   {
                     live: 'ライブ配信',
                     youtube: 'YouTube',
                     website: 'Webサイト'
-                  }[type]
+                  }[form]
                 }}
               </KikakuLabel>
             </div>
           </div>
-          <!-- 企画のジャンルごとに分類した部分 -->
+        </TheSection>
+      </div>
+      <div>
+        <TheSection>
           <div
             v-for="(KikakuList, type) in {
               academic: academicKikaku,
@@ -318,8 +276,9 @@ export default {
   &__index {
     margin: 1rem 0 1.5rem 0;
     &__main {
+      margin-bottom: 1rem;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
     }
   }
   &__search {

@@ -12,6 +12,8 @@
           :circle_name="KikakuList.name"
           :type="KikakuList.type"
           :live="KikakuList.live"
+          :youtube="KikakuList.youtube"
+          :website="KikakuList.website"
         />
 
         <!-- ここにコンテンツを掲載するよ -->

@@ -1,5 +1,5 @@
 <template>
-  <!-- 書道展2020 ー彩ー -->
+  <!-- 漫画読会 -->
   <div class="kikaku-info">
     <div
       v-for="(KikakuList, id) in Kikaku"
@@ -54,12 +54,12 @@ export default {
   props: {
     id: {
       type: Number,
-      default: 119
+      default: 208
     }
   },
   computed: {
     Kikaku () {
-      const id = 119 // kikaku_idの値をjsonから調べて直接入力
+      const id = 208 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
   }
