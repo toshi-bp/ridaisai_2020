@@ -26,9 +26,14 @@
                 </div>
               </div>
             </div>
-            <div class="welcome__article__title">
+            <WelcomeHeader>
+              <template #title>
+                ライブ配信で理大祭を楽しむ
+              </template>
+            </WelcomeHeader>
+            <!-- <div class="welcome__article__title">
               Live配信で理大祭を楽しむ
-            </div>
+            </div> -->
             <div class="welcome__article__main">
               <img src="~@/assets/image/symbol.svg" class="welcome__article__image">
               <div class="welcome__article__right">
@@ -38,13 +43,18 @@
                   </p>
                 </div>
                 <div class="welcome__article__button">
-                  <LinkButton to="/">Live配信の企画はこちら</LinkButton>
+                  <LinkButton to="/">ライブ配信の企画はこちら</LinkButton>
                 </div>
               </div>
             </div>
-            <div class="welcome__article__title">
+            <WelcomeHeader>
+              <template #title>
+                Webサイトで理大祭を楽しむ
+              </template>
+            </WelcomeHeader>
+            <!-- <div class="welcome__article__title">
               Webサイトで理大祭を楽しむ
-            </div>
+            </div> -->
             <div class="welcome__article__main">
               <img src="~@/assets/image/symbol.svg" class="welcome__article__image">
               <div class="welcome__article__right">
@@ -103,17 +113,28 @@ export default {
   &__article {
     &__main {
       margin-bottom: 5rem;
+      @include media-breakpoint-down(sm) {
+        display: flex;
+        flex-direction: column;
+      };
     }
     &__title {
       font-size: 2rem;
     }
     &__image {
+      position: relative;
       width: 50%;
       z-index: 1;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
     }
     &__right {
       display: inline-block;
       width: 40%;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
     }
     &__section {
       display: inline-block;
@@ -127,6 +148,12 @@ export default {
       display: inline-block;
       text-align: right;
       vertical-align: middle;
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 0.5rem;
+        display: block;
+        text-align: center;
+      }
     }
   }
 }

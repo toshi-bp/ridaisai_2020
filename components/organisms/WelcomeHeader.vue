@@ -14,10 +14,6 @@ export default {
   components: {
   },
   props: {
-    type: {
-      type: String,
-      default: 'blue'
-    }
   }
 }
 </script>
@@ -57,9 +53,15 @@ export default {
       // margin: 0 1rem;
       height: 3rem;
       width: 0.5rem;
-      background-color: #fff;
+      background-color: rgba($color: #fff, $alpha: 0.9);
+      @include media-breakpoint-down(sm) {
+        height: 2.5rem;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
     }
   }
-
 }
 </style>
