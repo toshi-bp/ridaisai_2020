@@ -44,6 +44,7 @@
         </div>
       </TheSection>
       <div class="kikaku-info__button">
+        <p class="kikaku-info__ad">他の企画も見てみよう</p>
         <LinkButton to='/kikaku/'>
           企画一覧へ
         </LinkButton>
@@ -99,6 +100,11 @@ export default {
   }
   &__button {
     text-align: center
+  }
+  &__ad {
+    font-family: $sub-font;
+    font-weight: bold;
+    font-size: 1.2rem;
   }
 }
 </style>

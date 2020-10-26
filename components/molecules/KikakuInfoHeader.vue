@@ -14,6 +14,8 @@
         <KikakuLabel
           class="kikaku-info__label__main"
           :type="type"
+          linkComponentIs='a'
+          :href="`/2020/kikaku/#${type}`"
         >
           {{
             {
@@ -29,6 +31,8 @@
           :live="live"
           class="kikaku-info__label__main"
           type="live"
+          linkComponentIs='a'
+          href="kikaku/#live"
         >
           ライブ配信
         </KikakuLabel>
@@ -37,6 +41,8 @@
           :youtube="youtube"
           class="kikaku-info__label__main"
           type="youtube"
+          linkComponentIs='a'
+          href="kikaku/#youtube"
         >
           YouTube
         </KikakuLabel>
@@ -45,6 +51,8 @@
           :website="website"
           class="kikaku-info__label__main"
           type="website"
+          linkComponentIs='a'
+          href="kikaku/#website"
         >
           Webサイト
         </KikakuLabel>
@@ -104,8 +112,14 @@ export default {
 .kikaku-info {
   &__label {
     margin-bottom: 1rem;
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 0.5rem;
+      }
     &__main {
       margin-right: 0.5rem;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 1rem;
+      }
     }
   }
 }

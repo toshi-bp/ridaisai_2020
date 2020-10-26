@@ -32,6 +32,8 @@
               :key="type"
               class="kikaku__label__main"
               :type="type"
+              linkComponentIs='a'
+              :href="`/2020/kikaku/#${type}`"
             >
               {{
                 {
@@ -52,6 +54,8 @@
               :key="form"
               class="kikaku__label__main"
               :type="form"
+              linkComponentIs='a'
+              :href="`/2020/kikaku/#${form}`"
             >
               {{
                 {
@@ -74,6 +78,8 @@
                 :key="type"
                 class="kikaku__index__main"
                 :type="type"
+                linkComponentIs='a'
+                :href="`/2020/kikaku/#${type}`"
                 @click="tab = type"
               >
                 {{
@@ -96,6 +102,8 @@
                 class="kikaku__index__main"
                 :type="type"
                 @click="tab = type"
+                linkComponentIs='a'
+                :href="`/2020/kikaku/#${type}`"
               >
                 {{
                   {
@@ -121,6 +129,8 @@
               :type="type"
               class="kikaku__index"
               :id="type"
+              linkComponentIs='nuxt-link'
+              to="/kikaku/"
             >
               {{
                 {
@@ -164,6 +174,8 @@
               :type="form"
               class="kikaku__index"
               :id="form"
+              linkComponentIs='nuxt-link'
+              to="/kikaku/"
             >
               {{
                 {

@@ -1,5 +1,8 @@
 <template>
-  <div
+  <component
+    :is="linkComponentIs"
+    :href="href"
+    :to="to"
     class="label"
     :class="{
       'label--is-academic': type === 'academic',
@@ -14,7 +17,7 @@
     <div class="label__inner">
       <slot />
     </div>
-  </div>
+  </component>
 </template>
 
 <script>
@@ -22,6 +25,24 @@ export default {
   props: {
     type: {
       type: String
+    },
+    href: {
+      type: String
+    },
+    to: {
+      type: String
+    }
+  },
+  computed: {
+    linkComponentIs () {
+      switch (true) {
+        case !!this.href:
+          return 'a'
+        case !!this.to:
+          return 'nuxt-link'
+        default:
+          return 'div'
+      }
     }
   }
 }
