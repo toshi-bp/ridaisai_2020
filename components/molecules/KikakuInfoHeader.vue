@@ -110,6 +110,10 @@ export default {
 
 <style lang="scss" scoped>
 .kikaku-info {
+  &__name {
+    font-family: $sub-font;
+    margin-bottom: 1rem;
+  }
   &__label {
     margin-bottom: 1rem;
     @include media-breakpoint-down(sm) {

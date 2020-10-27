@@ -3,7 +3,7 @@
   <div>
     <ComingSoon></ComingSoon>
     <TheContainer>
-      <h2>団体情報</h2>
+      <h2 class="kikaku-info__title">団体情報</h2>
       <TheSection>
         <div>
           <figure
@@ -32,13 +32,19 @@
           >
             ホームページ
           </h3>
-          <a :href="url">
+          <a
+            :href="url"
+            target="_blank"
+          >
             {{ url }} <!-- urlをここに入れる -->
           </a>
           <h3 class="kikaku-info__name" v-if="twitter">
             Twitter
           </h3>
-          <a :href="`https://twitter.com/${twitter}`">
+          <a
+            :href="`https://twitter.com/${twitter}`"
+            target="_blank"
+          >
             {{ twitter }} <!-- twitterのidをここに入れる -->
           </a>
         </div>
@@ -88,6 +94,12 @@ export default {
 
 <style lang="scss" scoped>
 .kikaku-info {
+  &__title {
+    font-family: $sub-font;
+  }
+  &__name {
+    font-family: $sub-font;
+  }
   &__img {
     width: 15rem;
     height: 15rem;
