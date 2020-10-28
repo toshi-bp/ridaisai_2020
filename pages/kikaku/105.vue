@@ -65,7 +65,11 @@ export default {
     }
   },
   head () {
-    return makeHead(KikakuList.kikaku_title, KikakuList.name, require(KikakuList.image_filename))
+    return makeHead(
+      'Beauty and the Beast＜ESS理大祭ドラマ＞',
+      '英語研究会',
+      require('~/assets/kikaku/FDpCNsRfJvy3oYNBawGZPJI9xkxhahoxosiHVnKG.jpeg')
+    )
   }
 }
 </script>

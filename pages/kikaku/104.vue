@@ -66,7 +66,11 @@ export default {
     }
   },
   head () {
-    return makeHead(KikakuList.kikaku_title, KikakuList.name, require(KikakuList.image_filename))
+    return makeHead(
+      'ピアノ演奏動画',
+      '東京理科大学ピアノの会',
+      require('~/assets/kikaku/9JcqRQHBWJ0fld4j9fMsduKWDby8B9BWBfoaS8Oz.jpeg')
+    )
   }
 }
 </script>

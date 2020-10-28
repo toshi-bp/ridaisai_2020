@@ -65,7 +65,11 @@ export default {
     }
   },
   head () {
-    return makeHead(KikakuList.kikaku_title, KikakuList.name, require(KikakuList.image_filename))
+    return makeHead(
+      '①あつまれ理系！～実用的な理系グッズ～②高校生何でも相談所',
+      '野田国際コミュニティハウス',
+      require('~/assets/kikaku/uGMskxmnkO7v2Gs06yxo9e1jdH3Ml6swu8inJUSx.jpeg')
+    )
   }
 }
 </script>

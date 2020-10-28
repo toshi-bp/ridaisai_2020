@@ -60,13 +60,17 @@ export default {
     }
   },
   computed: {
-    Kikaku () {
+    Kikaku: () => {
       const id = 103 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
   },
   head () {
-    return makeHead(KikakuList.kikaku_title, KikakuList.name, require(KikakuList.image_filename))
+    return makeHead(
+      'ジャグリングパフォーマンス',
+      '東京理科大学野田同好会ジャグリング部DOMINUS SOMNI',
+      require('~/assets/kikaku/airship.png')
+    )
   }
 }
 </script>
