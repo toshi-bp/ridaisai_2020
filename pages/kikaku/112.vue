@@ -43,6 +43,7 @@ import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {
@@ -62,6 +63,13 @@ export default {
       const id = 112 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
+  },
+  head () {
+    return makeHead(
+      '漫画公開',
+      '野田漫画研究会',
+      require('~/assets/kikaku/uxaC8dci2QQuCRIxphFQnr20qLKi9QQe7HFSqnY6.jpeg')
+    )
   }
 }
 </script>

@@ -43,6 +43,7 @@ import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {
@@ -62,6 +63,13 @@ export default {
       const id = 115 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
+  },
+  head () {
+    return makeHead(
+      '音楽研究会理大祭ライブ',
+      '音楽研究会',
+      require('~/assets/kikaku/tJOfht3yf6YZUjPajkDzW6Vggvo3FTkFk0zCCmUM.jpeg')
+    )
   }
 }
 </script>

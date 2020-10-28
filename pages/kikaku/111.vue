@@ -66,8 +66,8 @@ export default {
   },
   head () {
     return makeHead(
-      'Space Delivery',
-      '建築サークルDOC',
+      '鉄道研究会',
+      '鉄道研究会',
       require('~/assets/kikaku/GD0DcS7jHCVS5fr7t9p83BGU4q3Wxfg7Wvjju40V.jpeg')
     )
   }
