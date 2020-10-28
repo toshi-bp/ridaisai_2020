@@ -41,6 +41,7 @@ import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {
@@ -60,6 +61,13 @@ export default {
       const id = 124 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
+  },
+  head () {
+    return makeHead(
+      'あ！か！ぺ！ら！',
+      'VOICE TRAINING部',
+      require('~/assets/kikaku/72EY8Rs4ZPK5DSgoB0Ei5NwoDc0mNVV8OTark6df.jpeg')
+    )
   }
 }
 </script>

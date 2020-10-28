@@ -1,5 +1,5 @@
 <template>
-  <!-- ライブ -->
+  <!-- 軽音楽部ロック研究会 -->
   <div class="kikaku-info">
     <div
       v-for="(KikakuList, id) in Kikaku"
@@ -43,6 +43,7 @@ import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {
@@ -62,6 +63,13 @@ export default {
       const id = 150 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
+  },
+  head () {
+    return makeHead(
+      'Enter Rockman',
+      '軽音楽部ロック研究会',
+      require('~/assets/kikaku/7jiYi2zKMQGmvqnw1CzKzYO9oNletdgGejcxxtD7.jpeg')
+    )
   }
 }
 </script>

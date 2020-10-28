@@ -43,6 +43,7 @@ import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {
@@ -62,6 +63,13 @@ export default {
       const id = 151 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
+  },
+  head () {
+    return makeHead(
+      '吹奏楽部onステージ～音符と休符の化学反応～',
+      '東京理科大学Ⅰ部体育局吹奏楽部',
+      require('~/assets/kikaku/lP2zzhqPmakF0sBh8airwVogsL0RftO8XrIHcjJg.png')
+    )
   }
 }
 </script>

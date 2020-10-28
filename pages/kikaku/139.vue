@@ -43,6 +43,7 @@ import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {
@@ -62,6 +63,13 @@ export default {
       const id = 139 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
+  },
+  head () {
+    return makeHead(
+      "C4's 制作展 ～風が吹けば桶屋が儲かる～",
+      "メディアアートサークル C4's",
+      require('~/assets/kikaku/BgPExZWi3SncWOQRGwcjkE90V3ZbQM6Mo2NFRCmi.png')
+    )
   }
 }
 </script>

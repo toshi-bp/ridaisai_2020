@@ -43,6 +43,7 @@ import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {
@@ -62,6 +63,13 @@ export default {
       const id = 123 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
+  },
+  head () {
+    return makeHead(
+      'よさこいステージ',
+      '東京理科大学Yosakoiソーラン部',
+      require('~/assets/kikaku/CDnIjXBwAjdEVvsLC4lw5262OIhptA4yahgjoZPU.jpeg')
+    )
   }
 }
 </script>
