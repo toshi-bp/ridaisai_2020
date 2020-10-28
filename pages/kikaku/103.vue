@@ -42,6 +42,8 @@ import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 // import TheSection from '~/components/atoms/TheSection'
 // import TheContainer from '~/components/atoms/TheContainer'
 
+import makeHead from '~/utils/makeHead.js'
+
 import KikakuList from '~/kikaku/KikakuList.json'
 
 export default {
@@ -62,6 +64,9 @@ export default {
       const id = 103 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
+  },
+  head () {
+    return makeHead(KikakuList.kikaku_title, KikakuList.name, require(KikakuList.image_filename))
   }
 }
 </script>

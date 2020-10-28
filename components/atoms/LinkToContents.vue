@@ -5,7 +5,7 @@
       v-if="live"
       class="link__live"
     >
-      <nuxt-link to="/kikaku/Live/">
+      <nuxt-link to="/Live/">
         <p>ライブ配信会場はこちら</p>
         <!-- 開始時間と終了時間を入れる部分 -->
         {{ startTime }} 〜 {{ endTime }}
