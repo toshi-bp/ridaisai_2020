@@ -27,16 +27,21 @@
                   </LinkButton>
                 </div>
               </div>
-              <div class="welcome__article__imagebox">
-                <div class="welcome__article__imagebox__item">
-                  <img src="~@/assets/image/symbol.svg">
-                </div>
-                <div class="welcome__article__imagebox__item">
-                  <img src="~@/assets/image/symbol.svg">
-                  </div>
-                <div class="welcome__article__imagebox__item">
-                  <img src="~@/assets/image/symbol.svg">
-                </div>
+              <div
+                class="welcome__imgbox"
+              >
+                <img
+                  src="~@/assets/image/symbol.png"
+                  class="welcome__imgbox__item"
+                />
+                <img
+                  src="~@/assets/image/symbol.png"
+                  class="welcome__imgbox__item"
+                />
+                <img
+                  src="~@/assets/image/symbol.png"
+                  class="welcome__imgbox__item"
+                />
               </div>
             </div>
             <WelcomeHeader>
@@ -190,6 +195,16 @@ export default {
         display: block;
         text-align: center;
       }
+    }
+  }
+
+  &__imgbox {
+    display: flex;
+    &__item {
+      display: flex;
+      width: calc(100% / 3);
+      flex-direction: row;
+      position: relative;
     }
   }
 }
