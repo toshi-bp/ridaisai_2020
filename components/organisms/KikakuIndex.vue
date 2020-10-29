@@ -296,7 +296,7 @@ export default {
   }
   &__index {
     padding-top: #{$global-header-height + 1rem};
-    margin: -#{$global-header-height + 1rem} 0 1.5rem;
+    margin: -#{$global-header-height + 0.8rem} 0 1.5rem;
     // margin: 1rem 0 1.5rem;
     &__main {
       margin-bottom: 1rem;
