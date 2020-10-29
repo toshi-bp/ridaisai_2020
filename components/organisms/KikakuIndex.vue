@@ -83,22 +83,26 @@
             }"
             :key="type"
           >
-            <KikakuLabel
-              :type="type"
-              class="kikaku__index"
+            <!-- 企画のジャンル毎にまとめた部分 -->
+            <div
               :id="type"
-              linkComponentIs='nuxt-link'
-              to="/kikaku/"
+              class="kikaku__index"
             >
-              {{
-                {
-                  academic: '学術系',
-                  musical: '音楽系',
-                  cultual: '文化系',
-                  exhibition: '展示系'
-                }[type]
-              }}
-            </KikakuLabel>
+              <KikakuLabel
+                :type="type"
+                linkComponentIs='nuxt-link'
+                to="/kikaku/"
+              >
+                {{
+                  {
+                    academic: '学術系',
+                    musical: '音楽系',
+                    cultual: '文化系',
+                    exhibition: '展示系'
+                  }[type]
+                }}
+              </KikakuLabel>
+            </div>
             <TheRow>
               <TheColumn
                 v-for="item in KikakuList"
@@ -128,21 +132,24 @@
             }"
             :key="form"
           >
-            <KikakuLabel
-              :type="form"
-              class="kikaku__index"
+            <div
               :id="form"
-              linkComponentIs='nuxt-link'
-              to="/kikaku/"
+              class="kikaku__index"
             >
-              {{
-                {
-                  live: 'ライブ配信',
-                  youtube: 'YouTube',
-                  website: 'Webサイト'
-                }[form]
-              }}
-            </KikakuLabel>
+              <KikakuLabel
+                :type="form"
+                linkComponentIs='nuxt-link'
+                to="/kikaku/"
+              >
+                {{
+                  {
+                    live: 'ライブ配信',
+                    youtube: 'YouTube',
+                    website: 'Webサイト'
+                  }[form]
+                }}
+              </KikakuLabel>
+            </div>
             <TheRow>
               <TheColumn
                 v-for="item in KikakuList"
@@ -274,7 +281,9 @@ export default {
     }
   }
   &__index {
-    margin: 1rem 0 1.5rem 0;
+    padding-top: #{$global-header-height + 1rem};
+    margin: -#{$global-header-height + 1rem} 0 1.5rem;
+    // margin: 1rem 0 1.5rem;
     &__main {
       margin-bottom: 1rem;
       display: flex;
