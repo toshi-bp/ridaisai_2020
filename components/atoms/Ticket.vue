@@ -15,9 +15,15 @@
           企画一覧はこちら
         </p>
         <div class="ticket__button">
-          <LinkButton to="/" class="ticket__button">YouTubeで楽しむ</LinkButton>
-          <LinkButton to="/" class="ticket__button">Webサイトで楽しむ</LinkButton>
-          <LinkButton to="/" class="ticket__button">Live配信で楽しむ</LinkButton>
+          <LinkButton to="/" class="ticket__button">
+            Live配信で楽しむ
+          </LinkButton>
+          <LinkButton to="/" class="ticket__button">
+            動画で楽しむ
+          </LinkButton>
+          <LinkButton to="/" class="ticket__button">
+            Webサイトで楽しむ
+          </LinkButton>
         </div>
       </div>
       <div class="ticket__main__right">
@@ -44,7 +50,8 @@ export default {
 .ticket {
   width: 100%;
   margin: 4rem auto;
-  background-color: #fff;
+  background-color: #FFFAEF;
+  // background-color: #DFF1F7;
 
   &__upperline{
       height: 2rem;
@@ -58,7 +65,7 @@ export default {
       display: grid;
       grid-template-columns: 85% 1fr;
       padding: 2rem 1rem;
-      background-color: #fff;
+      background-color: #FFFAE6;
       @include media-breakpoint-down(sm) {
         grid-template-columns: 100% 1fr;
       }
@@ -83,6 +90,7 @@ export default {
   }
   &__title{
       font-size: 2rem;
+      font-family: $sub-font;
   }
   &__description{
       font-size: 1.2rem;
