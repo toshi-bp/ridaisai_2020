@@ -173,12 +173,12 @@ export default {
   &__title {
     font-size: 1.25rem;
     font-family: $sub-font;
-    margin-bottom: 0;
+    margin: 0.5rem 0 0;
     color: $color;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem 0.5rem 1rem;
     text-decoration: none;
     @include media-breakpoint-down(sm) {
-      font-size: 0.9rem;
+      font-size: 1.2rem;
     }
   }
   &__name {
@@ -188,7 +188,7 @@ export default {
     color: $color;
     padding: 0 1rem 0.5rem 1rem;
     @include media-breakpoint-down(sm) {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
   }
   &__label {

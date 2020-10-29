@@ -15,7 +15,7 @@ import GlobalFooter from '~/components/organisms/GlobalFooter.vue'
 export default {
   components: {
     GlobalHeader,
-    GlobalFooter,
+    GlobalFooter
     // GlobalNav
   }
 }
