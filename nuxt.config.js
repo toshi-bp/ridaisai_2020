@@ -20,7 +20,15 @@ export default {
     trailingSlash: true
   },
   generate: {
-    routes: ['404']
+    // routes: ['404']
+    // ↓ページの自動生成を試みたがその場合個別で編集ができなくなるため今回は使わない。
+    // routes () {
+    //   return KikakuList.filter(kikaku => kikaku.kikaku_id).map((kikaku) => {
+    //     return {
+    //       route: '/kikaku/' + kikaku.kikaku_id + '/'
+    //     }
+    //   })
+    // }
   },
   /*
   ** Customize the progress-bar color
@@ -35,7 +43,10 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/webfonts.js', '~/plugins/emptyTouchHandler.js'
+  plugins: ['~/plugins/webfonts.js',
+    '~/plugins/emptyTouchHandler.js',
+    '~/plugins/vue-youtube.js',
+    '~/plugins/smoothScroll.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -78,6 +89,7 @@ export default {
         ]
       }
     ],
+    'nuxt-vuex-localstorage',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@nuxtjs/markdownit'
@@ -93,6 +105,26 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    },
+    extend: ({ module, output }) => {
+      // rulesの先頭に追加
+      module.rules.unshift({
+        test: /\.worker\.js$/,
+        loader: 'worker-loader'
+      })
+
+      // HMR時にWebWorkerでWindow is not definedになる問題対策らしい(参考文献:qiita)
+      output.globalObject = 'this'
+    }
+  },
+  pwa: {
+    manifest: {
+      name: '2020年度野田地区理大祭',
+      lang: 'ja',
+      useWebmanifestExtension: false
+    },
+    workbox: {
+      dev: true // 開発環境でもPWA
     }
   },
   pwa: {
