@@ -29,6 +29,7 @@
           <h3>ジャンルから選ぶ</h3>
           <div class="kikaku__label">
             <KikakuLabel
+              @click="clickSmoothScroll(type)"
               v-for="type in types"
               :key="type"
               class="kikaku__label__main"
@@ -53,6 +54,7 @@
             <h3>開催形態から選ぶ</h3>
             <div class="kikaku__label">
               <KikakuLabel
+                @click="clickSmoothScroll(form)"
                 v-for="form in forms"
                 :key="form"
                 class="kikaku__label__main"
@@ -196,6 +198,13 @@ import KikakuLabel from '~/components/atoms/KikakuLabel'
 import KikakuList from '~/kikaku/KikakuList.json'
 
 export default {
+  data () {
+    return {
+      keyword: '',
+      types: ['academic', 'musical', 'cultual', 'exhibition'],
+      forms: ['live', 'youtube', 'website']
+    }
+  },
   components: {
     TheContainer,
     SubHeader,
@@ -212,11 +221,16 @@ export default {
       type: String
     }
   },
-  data () {
-    return {
-      keyword: '',
-      types: ['academic', 'musical', 'cultual', 'exhibition'],
-      forms: ['live', 'youtube', 'website']
+  methods: {
+    clickSmoothScroll () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector(this.type),
+        400,
+        null,
+        null,
+        'both'
+      )
     }
   },
   computed: {

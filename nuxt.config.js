@@ -45,7 +45,8 @@ export default {
   */
   plugins: ['~/plugins/webfonts.js',
     '~/plugins/emptyTouchHandler.js',
-    '~/plugins/vue-youtube.js'
+    '~/plugins/vue-youtube.js',
+    '~/plugins/smoothScroll.js'
   ],
   /*
   ** Nuxt.js dev-modules
