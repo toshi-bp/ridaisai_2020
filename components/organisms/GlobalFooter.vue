@@ -124,6 +124,7 @@ export default {
 <style lang="scss" scoped>
 .footer {
   position: relative;
+  bottom: 0;
   background: $color;
   padding: 3rem 0;
   @include media-breakpoint-down(md) {

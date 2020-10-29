@@ -1,0 +1,14 @@
+[{
+  "kikaku_id": 124,
+  "day": "Sunday",
+  "startTime": "12:00",
+  "endTime": "13:00",
+  "place": "講義棟"
+},
+{
+  "kikaku_id": 105,
+  "day": "Saturday",
+  "startTime": "15:45",
+  "endTime": "16:45",
+  "place": "1311"
+}]
