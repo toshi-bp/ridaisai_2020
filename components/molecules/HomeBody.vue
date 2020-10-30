@@ -12,9 +12,15 @@
       </h3>
       <!-- 企画一覧とライブ配信企画に飛ぶボタンのコンポーネントを作成するかもしれない -->
       <div>
+        <h3>
+          企画を楽しむ
+        </h3>
+          <p>
+            野田地区理大祭では多くの団体が様々な企画を出展しています。
+          </p>
         <nuxt-link to="/kikaku/">
           <div>
-            <h4>企画一覧</h4>
+            <h4>もっと詳しく</h4>
           </div>
         </nuxt-link>
         <nuxt-link to="/live/">
@@ -28,8 +34,18 @@
 </template>
 
 <script>
-export default {
+import KikakuList from '~/kikaku/KikakuList.json'
+import ItemCard from '~/components/molecules/ItemCard'
 
+export default {
+  components: {
+    ItemCard
+  },
+  computed: {
+    KikakuList () {
+      return KikakuList.filter(item => item.id === Math.random)
+    }
+  }
 }
 </script>
 
