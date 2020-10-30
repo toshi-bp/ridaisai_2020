@@ -141,7 +141,7 @@
               <KikakuLabel
                 :type="form"
                 link-component-is="a"
-                href="2020/kikaku/#head"
+                href="/2020/kikaku/"
               >
                 {{
                   {
