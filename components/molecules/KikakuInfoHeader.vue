@@ -14,7 +14,7 @@
         <KikakuLabel
           class="kikaku-info__label__main"
           :type="type"
-          linkComponentIs='a'
+          link-component-is="a"
           :href="`/2020/kikaku/#${type}`"
         >
           {{
@@ -31,7 +31,7 @@
           :live="live"
           class="kikaku-info__label__main"
           type="live"
-          linkComponentIs='a'
+          link-component-is="a"
           href="kikaku/#live"
         >
           ライブ配信
@@ -41,7 +41,7 @@
           :youtube="youtube"
           class="kikaku-info__label__main"
           type="youtube"
-          linkComponentIs='a'
+          link-component-is="a"
           href="kikaku/#youtube"
         >
           YouTube
@@ -51,7 +51,7 @@
           :website="website"
           class="kikaku-info__label__main"
           type="website"
-          linkComponentIs='a'
+          link-component-is="a"
           href="kikaku/#website"
         >
           Webサイト

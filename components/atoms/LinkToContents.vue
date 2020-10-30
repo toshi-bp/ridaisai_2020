@@ -1,5 +1,5 @@
 <template>
-<!-- ライブ配信用のリンクにしようと思ったけどZoomとかの他のコンテンツでも使えそうだから一応LinkToContentsという名前にした。 -->
+  <!-- ライブ配信用のリンクにしようと思ったけどZoomとかの他のコンテンツでも使えそうだから一応LinkToContentsという名前にした。 -->
   <div class="link">
     <div
       v-if="live"
@@ -13,7 +13,8 @@
     </div>
     <div
       v-if="zoom"
-      class="link__zoom">
+      class="link__zoom"
+    >
       <a>Zoomのリンク</a>
     </div>
     <div

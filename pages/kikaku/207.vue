@@ -13,7 +13,6 @@
           :type="KikakuList.type"
           :live="KikakuList.live"
           :website="KikakuList.website"
-
         />
 
         <!-- ここにコンテンツを掲載するよ -->
