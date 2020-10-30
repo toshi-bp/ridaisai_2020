@@ -17,7 +17,7 @@ if (typeof window === 'undefined') {
   TITLES['団体公式Twitter'] = 'twitter_ids'
   TITLES['画像'] = 'image_filename'
   TITLES['ライブ配信'] = 'live'
-  TITLES['Youtube'] = 'youtube'
+  TITLES.Youtube = 'youtube'
   TITLES['webサイト'] = 'website'
 
   const raw_data = fs.readFileSync(CSV_FILE_PATH, 'utf-8')

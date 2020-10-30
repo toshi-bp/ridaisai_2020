@@ -1,5 +1,5 @@
 <template>
-  <div class="kikaku">
+  <div id="head" class="kikaku">
     <TheContainer>
       <SubHeader>
         <template #title>
@@ -29,13 +29,13 @@
           <h3>ジャンルから選ぶ</h3>
           <div class="kikaku__label">
             <KikakuLabel
-              @click="clickSmoothScroll(type)"
               v-for="type in types"
               :key="type"
               class="kikaku__label__main"
               :type="type"
-              linkComponentIs='a'
+              link-component-is="a"
               :href="`/2020/kikaku/#${type}`"
+              @click="clickSmoothScroll(type)"
             >
               {{
                 {
@@ -54,13 +54,13 @@
             <h3>開催形態から選ぶ</h3>
             <div class="kikaku__label">
               <KikakuLabel
-                @click="clickSmoothScroll(form)"
                 v-for="form in forms"
                 :key="form"
                 class="kikaku__label__main"
                 :type="form"
-                linkComponentIs='a'
+                link-component-is="a"
                 :href="`/2020/kikaku/#${form}`"
+                @click="clickSmoothScroll(form)"
               >
                 {{
                   {
@@ -92,8 +92,8 @@
             >
               <KikakuLabel
                 :type="type"
-                linkComponentIs='nuxt-link'
-                to="/kikaku/"
+                link-component-is="a"
+                href="/2020/kikaku/"
               >
                 {{
                   {
@@ -140,8 +140,8 @@
             >
               <KikakuLabel
                 :type="form"
-                linkComponentIs='nuxt-link'
-                to="/kikaku/"
+                link-component-is="a"
+                href="2020/kikaku/#head"
               >
                 {{
                   {
@@ -198,13 +198,6 @@ import KikakuLabel from '~/components/atoms/KikakuLabel'
 import KikakuList from '~/kikaku/KikakuList.json'
 
 export default {
-  data () {
-    return {
-      keyword: '',
-      types: ['academic', 'musical', 'cultual', 'exhibition'],
-      forms: ['live', 'youtube', 'website']
-    }
-  },
   components: {
     TheContainer,
     SubHeader,
@@ -221,16 +214,11 @@ export default {
       type: String
     }
   },
-  methods: {
-    clickSmoothScroll () {
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector(this.type),
-        400,
-        null,
-        null,
-        'both'
-      )
+  data () {
+    return {
+      keyword: '',
+      types: ['academic', 'musical', 'cultual', 'exhibition'],
+      forms: ['live', 'youtube', 'website']
     }
   },
   computed: {
@@ -265,6 +253,18 @@ export default {
         SearchedKikaku.push(this.KikakuList.kikaku_id)
       }
       return KikakuList.filter(SearchedKikaku => SearchedKikaku.kikaku_id === this.KikakuList.kikaku_id)
+    }
+  },
+  methods: {
+    clickSmoothScroll () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector(this.type),
+        400,
+        null,
+        null,
+        'both'
+      )
     }
   }
 }

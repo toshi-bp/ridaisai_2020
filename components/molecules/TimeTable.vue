@@ -16,14 +16,18 @@
             v-show="dayTab === 1"
             class="time-table__body"
           >
-            <h1 class="time-table__body__title">21日(土)</h1>
+            <h1 class="time-table__body__title">
+              21日(土)
+            </h1>
             <p>ああああああ</p>
           </div>
           <div
             v-show="dayTab === 2"
             class="time-table__body"
           >
-            <h1 class="time-table__body__title">22日(日)</h1>
+            <h1 class="time-table__body__title">
+              22日(日)
+            </h1>
             <p>いいいいい</p>
           </div>
         </TheSection>
@@ -37,6 +41,10 @@ import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 
 export default {
+  components: {
+    TheSection,
+    TheContainer
+  },
   data () {
     return {
       dayTab: 1,
@@ -51,10 +59,6 @@ export default {
         }
       ]
     }
-  },
-  components: {
-    TheSection,
-    TheContainer
   }
 }
 </script>

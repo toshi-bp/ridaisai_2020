@@ -1,9 +1,11 @@
 <template>
   <!-- ここにはコンテンツの下に掲載する団体紹介と企画トップページへのリンクを貼る(できればおすすめ企画とか載せたいよね) -->
   <div>
-    <ComingSoon></ComingSoon>
+    <ComingSoon />
     <TheContainer>
-      <h2 class="kikaku-info__title">団体情報</h2>
+      <h2 class="kikaku-info__title">
+        団体情報
+      </h2>
       <TheSection>
         <div>
           <figure
@@ -27,8 +29,8 @@
             {{ introduce }} <!-- 団体紹介をここに入れる -->
           </p>
           <h3
-            class="kikaku-info__name"
             v-if="url"
+            class="kikaku-info__name"
           >
             ホームページ
           </h3>
@@ -38,7 +40,7 @@
           >
             {{ url }} <!-- urlをここに入れる -->
           </a>
-          <h3 class="kikaku-info__name" v-if="twitter">
+          <h3 v-if="twitter" class="kikaku-info__name">
             Twitter
           </h3>
           <a
@@ -50,8 +52,10 @@
         </div>
       </TheSection>
       <div class="kikaku-info__button">
-        <p class="kikaku-info__ad">他の企画も見てみよう</p>
-        <LinkButton to='/kikaku/'>
+        <p class="kikaku-info__ad">
+          他の企画も見てみよう
+        </p>
+        <LinkButton to="/kikaku/">
           企画一覧へ
         </LinkButton>
       </div>
