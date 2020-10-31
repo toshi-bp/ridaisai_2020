@@ -1,5 +1,5 @@
 <template>
-  <!-- ライブ -->
+  <!-- music and freaks -->
   <div class="kikaku-info">
     <div
       v-for="(KikakuList, id) in Kikaku"
