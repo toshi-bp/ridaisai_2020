@@ -83,7 +83,7 @@ export default {
     font-family: $sub-font;
     font-weight: bold;
     font-size: 1.2rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem 1.5rem 0.5rem;
   }
 }
 </style>
