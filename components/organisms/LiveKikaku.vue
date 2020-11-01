@@ -26,6 +26,7 @@
               >
                 <!--チャットの高さについては要調整(特にスマホ版)あとURLも-->
               </iframe>
+              <!-- heightは:style"{}"を利用して変えていく方式にした方がいいかもしれない -->
               <youtube
                 ref="youtube"
                 :video-id="videoId_2"
