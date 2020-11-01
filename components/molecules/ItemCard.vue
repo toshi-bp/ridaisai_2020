@@ -33,14 +33,14 @@
             :live="live"
             class="item-card__label2__main"
           >
-            ライブ配信
+            Live配信
           </ItemCardLabel2>
           <ItemCardLabel2
             v-if="youtube"
             :youtube="youtube"
             class="item-card__label2__main"
           >
-            YouTube
+            動画
           </ItemCardLabel2>
           <ItemCardLabel2
             v-if="website"
