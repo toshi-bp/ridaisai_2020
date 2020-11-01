@@ -21,6 +21,17 @@
           <TheSection>
             <h3>企画紹介</h3>
             {{ KikakuList.description }}
+            <h4>コンテンツのダウンロード(zipファイルでのダウンロードとなります。何卒ご了承ください。)</h4>
+            <div>
+              <p>
+                アクションゲーム
+              </p>
+              <div>
+                <DownLoadButton
+                  href="kikaku/121/action.zip"
+                ></DownLoadButton>
+              </div>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -41,6 +52,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import DownLoadButton from '~/components/atoms/DownLoadButton'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -50,7 +62,8 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    DownLoadButton
   },
   props: {
     id: {

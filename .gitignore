@@ -91,3 +91,6 @@ sw.*
 
 # Ignore Service Worker
 sw.*
+
+# 埋め込む各企画のコンテンツをまとめたフォルダ
+static/kikaku/
