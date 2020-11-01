@@ -32,6 +32,14 @@
                 height="100%"
               ></iframe>
             </div>
+            <div class="kikaku-info__chat">
+              <iframe
+                id="chat_embed"
+                src="https://www.twitch.tv/embed/stylishnoob4/chat?parent=localhost"
+                height="100%"
+                width="100%">
+              </iframe>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -101,6 +109,11 @@ export default {
     @include media-breakpoint-down(sm) {
       height: 200px;
     }
+  }
+
+  &__chat {
+    width: 100%;
+    height: 500px;
   }
 }
 </style>
