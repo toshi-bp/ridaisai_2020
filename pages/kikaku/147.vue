@@ -24,7 +24,7 @@
             <div class="kikaku-info__movie">
               <!-- parent=https://nodaridaisai.com -->
               <iframe
-                src="https://player.twitch.tv/?channel=fps_shaka&parent=localhost"
+                src="https://player.twitch.tv/?channel=stylishnoob4&parent=localhost"
                 frameborder="0"
                 allowfullscreen="true"
                 scrolling="no"
