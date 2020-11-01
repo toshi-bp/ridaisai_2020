@@ -20,7 +20,18 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p>{{ KikakuList.description }}</p>
+            <div class="kikaku-info__movie">
+              <!-- parent=https://nodaridaisai.com -->
+              <iframe
+                src="https://player.twitch.tv/?channel=fps_shaka&parent=localhost"
+                frameborder="0"
+                allowfullscreen="true"
+                scrolling="no"
+                width="100%"
+                height="100%"
+              ></iframe>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -80,5 +91,16 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+
+  &__movie {
+    width: 100%;
+    height: 500px;
+    @include media-breakpoint-down(md) {
+      height: 400px;
+    }
+    @include media-breakpoint-down(sm) {
+      height: 200px;
+    }
+  }
 }
 </style>
