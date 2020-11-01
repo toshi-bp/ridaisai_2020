@@ -34,7 +34,7 @@
           link-component-is="a"
           href="kikaku/#live"
         >
-          ライブ配信
+          Live配信
         </KikakuLabel>
         <KikakuLabel
           v-if="youtube"
@@ -44,7 +44,7 @@
           link-component-is="a"
           href="kikaku/#youtube"
         >
-          YouTube
+          動画
         </KikakuLabel>
         <KikakuLabel
           v-if="website"

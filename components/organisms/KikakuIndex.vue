@@ -64,8 +64,8 @@
               >
                 {{
                   {
-                    live: 'ライブ配信',
-                    youtube: 'YouTube',
+                    live: 'Live配信',
+                    youtube: '動画',
                     website: 'Webサイト'
                   }[form]
                 }}
@@ -145,8 +145,8 @@
               >
                 {{
                   {
-                    live: 'ライブ配信',
-                    youtube: 'YouTube',
+                    live: 'Live配信',
+                    youtube: '動画',
                     website: 'Webサイト'
                   }[form]
                 }}
