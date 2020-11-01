@@ -1,33 +1,34 @@
 <template>
   <div>
     <div class="side-bar">
-      <img src="~@/assets/image/symbol.png" />
+      <h2 class="side-bar__title">メニュー</h2>
       <ul class="side-bar__list">
         <li class="side-bar__list__item">
           <nuxt-link to="/">
-            <fa icon="home" />
-            Home
+            <fa icon="home" class="side-bar__list__item__icon" />
+            <span class="side-bar__list__item__text">Home</span>
           </nuxt-link>
         </li>
         <li class="side-bar__list__item">
           <nuxt-link to="/kikaku/">
-            <fa icon="star" />
-            企画一覧
+            <fa icon="star" class="side-bar__list__item__icon" />
+            <span class="side-bar__list__item__text">企画一覧</span>
           </nuxt-link>
         </li>
         <li class="side-bar__list__item">
           <nuxt-link to="/kikaku/">
-            <fa icon="video" />
-            Live配信
+            <fa icon="video" class="side-bar__list__item__icon" />
+            <span class="side-bar__list__item__text">Live配信</span>
           </nuxt-link>
         </li>
         <li class="side-bar__list__item">
           <a href="https://twitter.com/noda_ridaisai" >
-            <fa :icon="['fab', 'twitter']" fixed-width />
-            @noda_ridaisai
+            <fa :icon="['fab', 'twitter']" fixed-width class="side-bar__list__item__icon" />
+            <span class="side-bar__list__item__text">@noda_ridaisai</span>
           </a>
         </li>
       </ul>
+      <img src="~@/assets/image/symbol.svg" class="side-bar__img" />
     </div>
     <div class="footer-nav">
       <ul class="footer-nav__list">
@@ -64,19 +65,46 @@ export default {
 .side-bar {
   width: 100%;
   height: 100%;
-  background-color: linear-gradient(180deg, $sub-color, $theme-color);
+  // background-image: linear-gradient(180deg, $theme-color, $sub-color);
+  background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 100%);
   color: #fff;
-  position: fixed;
-  right: 0;
   @include media-breakpoint-down(md) {
     display: none;
   }
+  &__title {
+    padding-top: calc(#{$global-header-height} + 1rem);
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: $sub-font;
+    margin-left: 2.5rem;
+
+  }
+  &__img {
+    width: 180px;
+    margin-left: 2rem;
+    // padding-top: $global-header-height;
+    user-select: none;
+    position: fixed;
+    bottom: 1rem;
+  }
   &__list {
+    list-style: none;
+    // padding-top: calc(#{$global-header-height} + 1rem);
     &__item {
       color: #fff;
       text-decoration: none;
-      font-size: 1rem;
       transition: 0.2s ease all;
+      &__icon {
+        color: #fff;
+        font-size: 1.25rem;
+        text-decoration: none;
+      }
+      &__text {
+        color: #fff;
+        font-size: 1.25rem;
+        text-decoration: none;
+        font-family: $sub-font;
+      }
       &:hover {
         background-color: $theme-color;
       }

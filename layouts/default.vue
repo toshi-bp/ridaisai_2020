@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="default">
     <GlobalHeader />
-    <div class="default">
-      <SideBar class="default__side-bar" />
+    <div>
+      <SideBar class="default__side-bar"/>
       <nuxt />
       <!-- <GlobalNav /> -->
     </div>
@@ -30,14 +30,17 @@ export default {
 .default {
   $side-bar-width: 240px;
   @include media-breakpoint-up(md) {
-    display: grid;
-    grid-template-columns: calc(100% - #{$side-bar-width}, 1fr);
+    width: calc(100% - #{$side-bar-width});
   }
   &__side-bar {
     @include media-breakpoint-up(md) {
+      color: #fff;
+      position: fixed;
+      right: 0;
+      display: flex;
       width: $side-bar-width;
       height: 100vh;
-      z-index: 9998;
+      z-index: 9100;
     }
   }
 }
