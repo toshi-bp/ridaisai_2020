@@ -92,4 +92,5 @@ sw.*
 # Ignore Service Worker
 sw.*
 
+#コンテンツを入れておくフォルダ(膨大なファイル量となるため)
 static/kikaku/
