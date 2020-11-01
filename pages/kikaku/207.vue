@@ -20,6 +20,10 @@
           <TheSection>
             <h3>企画紹介</h3>
             {{ KikakuList.description }}
+            <h4>
+              コンテンツ
+            </h4>
+            <iframe src="kikaku/207/部内誌『Queue!』 2020夏.pdf" class="kikaku__pdf__body"></iframe>
           </TheSection>
         </TheContainer>
 
