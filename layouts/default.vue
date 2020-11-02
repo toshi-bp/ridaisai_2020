@@ -2,8 +2,10 @@
   <div class="default">
     <GlobalHeader />
     <div>
-      <SideBar class="default__side-bar"/>
-      <nuxt />
+      <div class="default__main">
+        <nuxt />
+        <SideBar class="default__side-bar"/>
+      </div>
       <!-- <GlobalNav /> -->
     </div>
     <GlobalFooter />
@@ -29,8 +31,15 @@ export default {
 <style lang="scss" scoped>
 .default {
   $side-bar-width: 240px;
-  @include media-breakpoint-up(md) {
-    width: calc(100% - #{$side-bar-width});
+  $main-width: calc(100% - #{$side-bar-width});
+  &__main {
+    @include media-breakpoint-up(md) {
+      display: grid;
+      grid-template-columns: $main-width 1fr;
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
   }
   &__side-bar {
     @include media-breakpoint-up(md) {

@@ -110,6 +110,7 @@
                 v-for="item in KikakuList"
                 :key="item.kikaku_id"
                 :spsize="12"
+                :pcsize="6"
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
@@ -157,6 +158,7 @@
                 v-for="item in KikakuList"
                 :key="item.kikaku_id"
                 :spsize="12"
+                :pcsize="6"
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
@@ -283,13 +285,13 @@ export default {
     margin: 1rem 0rem 1.5rem 0;
     display: flex;
     flex-direction: row;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       flex-direction: column;
       margin-bottom: 1rem;
     }
     &__main {
       margin-right: 0.5rem;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
       margin-bottom: 1rem;
     }
     }

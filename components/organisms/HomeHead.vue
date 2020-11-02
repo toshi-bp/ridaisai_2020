@@ -1,38 +1,40 @@
 <template>
   <div class="backpanel">
-    <TheContainer class="container">
-      <div class="head">
-        <div class="head__header">
-          <a href="https://lin.ee/UHWwtCc" target="_blank"><img src="~/assets/icons/LINE.png" class="head__header__logo"></a>
-          <a href="https://twitter.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
-          <a href="https://instagram.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Instagram.svg" class="head__header__logo__insta"></a>
+    <div class="background">
+      <TheContainer class="container">
+        <div class="head">
+          <div class="head__header">
+            <a href="https://lin.ee/UHWwtCc" target="_blank"><img src="~/assets/icons/LINE.png" class="head__header__logo"></a>
+            <a href="https://twitter.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
+            <a href="https://instagram.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Instagram.svg" class="head__header__logo__insta"></a>
+          </div>
+          <div class="head__box">
+            <img src="~/assets/image/symbol.svg" class="head__logo">
+            <div class="head__main">
+              <p class="head__main__lead">
+                <!-- <span>Tokyo University of Science</span><br>
+                <span>TUS festival @ Noda</span><br> -->
+                <span>November 21st and 22nd, 2020 <br>from 10:00 to 17:00</span>
+              </p>
+            </div>
+            <div class="button__group">
+              <LinkButton2 to="/groups/">
+                参加団体向け情報
+              </LinkButton2>
+            </div>
+            <div class="button__company">
+              <LinkButton2 to="/companies/">
+                企業協賛に関して
+              </LinkButton2>
+            </div>
+            <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
+          </div>
         </div>
-        <div class="head__box">
-          <img src="~/assets/image/symbol.svg" class="head__logo">
-          <div class="head__main">
-            <p class="head__main__lead">
-              <span>Tokyo University of Science</span><br>
-              <span>TUS festival @ Noda</span><br>
-              <span>November 21st and 22nd, 2020 <br>from 10:00 to 17:00</span>
-            </p>
-          </div>
-          <div class="button__group">
-            <LinkButton2 to="/groups/">
-              参加団体向け情報
-            </LinkButton2>
-          </div>
-          <div class="button__company">
-            <LinkButton2 to="/companies/">
-              企業協賛に関して
-            </LinkButton2>
-          </div>
-          <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
+        <div>
+          <HomeUpdate />
         </div>
-      </div>
-      <div>
-        <HomeUpdate />
-      </div>
-    </TheContainer>
+      </TheContainer>
+    </div>
   </div>
 </template>
 
@@ -83,7 +85,7 @@ export default {
     display: block;
     margin: 5rem auto 0;
     @include media-breakpoint-down(md) {
-      width: 38rem;
+      width: 32rem;
       margin: 5rem auto 0;
     }
     @include media-breakpoint-down(sm) {
@@ -161,12 +163,14 @@ export default {
 }
 
 .backpanel{
-  background-color: $theme-color;
+  // background-color: $theme-color;
   background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 100%);
+  background-color: rgba(#fff,0.9);
 }
 
-.container{
-  background-color: rgba(#fff,0.9);
+.background {
+  width: 100%;
+  background-color: rgba(#fff, 0.6);
 }
 
 .button__group {

@@ -17,19 +17,19 @@
             <h4>企画一覧</h4>
           </div>
         </nuxt-link>
-        <nuxt-link to="/live/">
-          <div>
-            <h4>ライブ配信</h4>
-          </div>
-        </nuxt-link>
+        <TheColumn></TheColumn>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import TheColumn from '~/components/atoms/TheColumn'
 
+export default {
+  components: {
+    TheColumn
+  }
 }
 </script>
 
