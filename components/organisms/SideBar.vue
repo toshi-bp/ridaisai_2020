@@ -71,7 +71,7 @@ export default {
   background-color: rgba($sub-color, 1.0);
   color: #fff;
   &__title {
-    padding-top: calc(#{$global-header-height} + 1rem);
+    padding-top: calc(#{$global-header-height} + 1rem + 5rem);
     font-size: 1.5rem;
     color: #fff;
     font-family: $sub-font;
@@ -84,7 +84,7 @@ export default {
     // padding-top: $global-header-height;
     user-select: none;
     position: fixed;
-    bottom: 1rem;
+    top: 5rem;
   }
   &__list {
     list-style: none;

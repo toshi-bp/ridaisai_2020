@@ -44,6 +44,14 @@
               参加団体向け情報
             </nuxt-link>に後期配布資料を掲載しました。
           </dd>
+          <dt class="update__list__date">
+            2020/11/05
+          </dt>
+          <dd class="update__list__content">
+            <nuxt-link to="/kikaku/">
+              企画一覧を
+            </nuxt-link>公開しました。
+          </dd>
         </dl>
       </div>
     </TheSection>

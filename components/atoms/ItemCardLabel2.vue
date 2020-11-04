@@ -61,7 +61,7 @@ export default {
     padding: 0 0.5rem;
     border-radius: 5px;
     background-color: $live-color;
-    font-weight: bold;
+    // font-weight: bold;
   }
   &--is-youtube {
     display: inline-block;
@@ -71,7 +71,7 @@ export default {
     padding: 0 0.5rem;
     border-radius: 5px;
     background-color: $youtube-color;
-    font-weight: bold;
+    // font-weight: bold;
   }
   &--is-website {
     display: inline-block;
@@ -81,7 +81,7 @@ export default {
     padding: 0 0.5rem;
     border-radius: 5px;
     background-color: $website-color;
-    font-weight: bold;
+    // font-weight: bold;
   }
 }
 </style>

@@ -17,7 +17,7 @@
                 <span>November 21st and 22nd, 2020 <br>from 10:00 to 17:00</span>
               </p>
             </div>
-            <div class="button__group">
+            <!-- <div class="button__group">
               <LinkButton2 to="/groups/">
                 参加団体向け情報
               </LinkButton2>
@@ -26,9 +26,12 @@
               <LinkButton2 to="/companies/">
                 企業協賛に関して
               </LinkButton2>
-            </div>
+            </div> -->
             <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
           </div>
+        </div>
+        <div>
+          <HomeBody />
         </div>
         <div>
           <HomeUpdate />
@@ -40,13 +43,15 @@
 
 <script>
 import TheContainer from '~/components/atoms/TheContainer.vue'
-import LinkButton2 from '~/components/atoms/LinkButton2.vue'
+// import LinkButton2 from '~/components/atoms/LinkButton2.vue'
+import HomeBody from '~/components/molecules/HomeBody'
 import HomeUpdate from '~/components/molecules/HomeUpdate.vue'
 
 export default {
   components: {
     TheContainer,
-    LinkButton2,
+    // LinkButton2,
+    HomeBody,
     HomeUpdate
   }
 }
