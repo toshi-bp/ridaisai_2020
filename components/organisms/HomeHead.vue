@@ -30,13 +30,15 @@
             <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
           </div>
         </div>
-        <div>
-          <HomeBody />
-        </div>
-        <div>
-          <HomeUpdate />
-        </div>
       </TheContainer>
+      <div>
+        <HomeBody />
+      </div>
+      <div>
+        <TheContainer>
+          <HomeUpdate />
+        </TheContainer>
+      </div>
     </div>
   </div>
 </template>
@@ -59,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 .head {
-  // height: 100vh;
+  height: 100vh;
   $header-height: 5rem;
   &__header{
     display: flex;
@@ -115,10 +117,10 @@ export default {
       margin-bottom: 0;
       text-align: center;
        @include media-breakpoint-down(sm) {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
        }
        @include media-breakpoint-down(xs) {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
        }
       &__text {
         display: inline-block;
@@ -127,9 +129,9 @@ export default {
   }
 
   &__tooltip {
-    $font-size: 0.9rem;
+    $font-size: 1.2rem;
     $translate-x: translate(-50%);
-    margin-top: 2rem;
+    margin-top: 5rem;
     display: block;
     line-height: 1;
     font-size: $font-size;
@@ -143,6 +145,7 @@ export default {
     text-align: center;
 
     animation: 10s ease tooltip both;
+    animation-iteration-count: infinite;
     @keyframes tooltip {
       from {
         transform: #{$translate-x} translateY(-0.5rem);
@@ -160,9 +163,13 @@ export default {
       }
       to {
         transform: #{$translate-x} translateY(-0.5rem);
-        opacity: 0;
+        opacity: 1;
         visibility: visible;
       }
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+      margin-top: 7rem;
     }
   }
 }

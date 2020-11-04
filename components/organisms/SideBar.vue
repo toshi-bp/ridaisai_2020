@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="side-bar">
-      <img src="~@/assets/image/symbol_white.svg" class="side-bar__img" />
+      <nuxt-link to="/">
+        <img src="~@/assets/image/symbol_white.svg" class="side-bar__img" />
+      </nuxt-link>
       <h2 class="side-bar__title"><span>野田地区理大祭2020</span><br />メニュー</h2>
       <ul class="side-bar__list">
         <li class="side-bar__list__item">

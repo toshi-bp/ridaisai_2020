@@ -11,7 +11,8 @@
       'label--is-exhibition': type === 'exhibition',
       'label--is-live': type === 'live',
       'label--is-youtube': type === 'youtube',
-      'label--is-website': type === 'website'
+      'label--is-website': type === 'website',
+      'label--is-special': type === 'special'
     }"
   >
     <div class="label__inner">
@@ -76,6 +77,9 @@ export default {
   }
   &--is-website {
     background-color: $website-color;
+  }
+  &--is-special {
+    background-color: $sub-color;
   }
 
   &__inner {

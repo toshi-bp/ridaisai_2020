@@ -130,6 +130,9 @@ export default {
   @include media-breakpoint-down(md) {
     text-align: center;
   }
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 240px);
+  }
   &__row {
     display: flex;
     text-align: left;
