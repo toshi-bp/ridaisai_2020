@@ -7,6 +7,7 @@ if (typeof window === 'undefined') {
   const JSON_FILE_PATH = 'KikakuList.json'
 
   const TITLES = {}
+  TITLES['ID'] = 'number'
   TITLES['企画ID'] = 'kikaku_id'
   TITLES['企画を出店する団体の名称'] = 'name'
   TITLES['企画名'] = 'kikaku_title'
@@ -42,6 +43,10 @@ if (typeof window === 'undefined') {
       }
 
       let item = line[j].split('"').join('')
+
+      if (titles[j] === 'ID') {
+        item = parseInt(item, 10)
+      }
 
       if (titles[j] === '企画ID') {
         item = parseInt(item, 10) // 文字列を10進数の数に変換
