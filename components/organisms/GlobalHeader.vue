@@ -44,6 +44,7 @@ export default {
     height: 100%;
     width: 960px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 
   @include media-breakpoint-down(sm) {
