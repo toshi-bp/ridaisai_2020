@@ -15,10 +15,14 @@
       v-if="zoom"
       class="link__zoom"
     >
-      <a>Zoomのリンク</a>
+      <a
+        :href="url"
+      >
+        Zoomのリンク
+      </a>
     </div>
     <div
-      v-if="url"
+      v-if="web"
       class="link__web"
     >
       <a :href="url">Webコンテンツはこちら</a>
@@ -40,7 +44,12 @@ export default {
       default: false
     },
     zoom: {
-      type: String
+      type: Boolean,
+      default: false
+    },
+    web: {
+      type: Boolean,
+      default: false
     },
     url: {
       type: String

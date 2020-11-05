@@ -1,50 +1,59 @@
 <template>
   <div class="backpanel">
-    <TheContainer class="container">
-      <div class="head">
-        <div class="head__header">
-          <a href="https://lin.ee/UHWwtCc" target="_blank"><img src="~/assets/icons/LINE.png" class="head__header__logo"></a>
-          <a href="https://twitter.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
-          <a href="https://instagram.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Instagram.svg" class="head__header__logo__insta"></a>
+    <div class="background">
+      <TheContainer class="container">
+        <div class="head">
+          <div class="head__header">
+            <a href="https://lin.ee/UHWwtCc" target="_blank"><img src="~/assets/icons/LINE.png" class="head__header__logo"></a>
+            <a href="https://twitter.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
+            <a href="https://instagram.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Instagram.svg" class="head__header__logo__insta"></a>
+          </div>
+          <div class="head__box">
+            <img src="~/assets/image/symbol.svg" class="head__logo">
+            <div class="head__main">
+              <p class="head__main__lead">
+                <!-- <span>Tokyo University of Science</span><br>
+                <span>TUS festival @ Noda</span><br> -->
+                <span>November 21st and 22nd, 2020 <br>from 10:00 to 17:00</span>
+              </p>
+            </div>
+            <!-- <div class="button__group">
+              <LinkButton2 to="/groups/">
+                参加団体向け情報
+              </LinkButton2>
+            </div>
+            <div class="button__company">
+              <LinkButton2 to="/companies/">
+                企業協賛に関して
+              </LinkButton2>
+            </div> -->
+            <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
+          </div>
         </div>
-        <div class="head__box">
-          <img src="~/assets/image/symbol.svg" class="head__logo">
-          <div class="head__main">
-            <p class="head__main__lead">
-              <span>Tokyo University of Science</span><br>
-              <span>TUS festival @ Noda</span><br>
-              <span>November 21st and 22nd, 2020 <br>from 10:00 to 17:00</span>
-            </p>
-          </div>
-          <div class="button__group">
-            <LinkButton2 to="/groups/">
-              参加団体向け情報
-            </LinkButton2>
-          </div>
-          <div class="button__company">
-            <LinkButton2 to="/companies/">
-              企業協賛に関して
-            </LinkButton2>
-          </div>
-          <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
-        </div>
+      </TheContainer>
+      <div>
+        <HomeBody />
       </div>
       <div>
-        <HomeUpdate />
+        <TheContainer>
+          <HomeUpdate />
+        </TheContainer>
       </div>
-    </TheContainer>
+    </div>
   </div>
 </template>
 
 <script>
 import TheContainer from '~/components/atoms/TheContainer.vue'
-import LinkButton2 from '~/components/atoms/LinkButton2.vue'
+// import LinkButton2 from '~/components/atoms/LinkButton2.vue'
+import HomeBody from '~/components/molecules/HomeBody'
 import HomeUpdate from '~/components/molecules/HomeUpdate.vue'
 
 export default {
   components: {
     TheContainer,
-    LinkButton2,
+    // LinkButton2,
+    HomeBody,
     HomeUpdate
   }
 }
@@ -52,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 .head {
-  // height: 100vh;
+  height: 100vh;
   $header-height: 5rem;
   &__header{
     display: flex;
@@ -83,7 +92,7 @@ export default {
     display: block;
     margin: 5rem auto 0;
     @include media-breakpoint-down(md) {
-      width: 38rem;
+      width: 32rem;
       margin: 5rem auto 0;
     }
     @include media-breakpoint-down(sm) {
@@ -108,10 +117,10 @@ export default {
       margin-bottom: 0;
       text-align: center;
        @include media-breakpoint-down(sm) {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
        }
        @include media-breakpoint-down(xs) {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
        }
       &__text {
         display: inline-block;
@@ -120,9 +129,9 @@ export default {
   }
 
   &__tooltip {
-    $font-size: 0.9rem;
+    $font-size: 1.2rem;
     $translate-x: translate(-50%);
-    margin-top: 2rem;
+    margin-top: 5rem;
     display: block;
     line-height: 1;
     font-size: $font-size;
@@ -135,7 +144,8 @@ export default {
     left: 50%;
     text-align: center;
 
-    animation: 10s ease tooltip both;
+    animation: 5s ease tooltip both;
+    animation-iteration-count: infinite;
     @keyframes tooltip {
       from {
         transform: #{$translate-x} translateY(-0.5rem);
@@ -153,20 +163,26 @@ export default {
       }
       to {
         transform: #{$translate-x} translateY(-0.5rem);
-        opacity: 0;
+        opacity: 1;
         visibility: visible;
       }
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+      margin-top: 7rem;
     }
   }
 }
 
 .backpanel{
-  background-color: $theme-color;
+  // background-color: $theme-color;
   background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 100%);
+  background-color: rgba(#fff,0.9);
 }
 
-.container{
-  background-color: rgba(#fff,0.9);
+.background {
+  width: 100%;
+  background-color: rgba(#fff, 0.6);
 }
 
 .button__group {

@@ -33,14 +33,14 @@
             :live="live"
             class="item-card__label2__main"
           >
-            ライブ配信
+            Live配信
           </ItemCardLabel2>
           <ItemCardLabel2
             v-if="youtube"
             :youtube="youtube"
             class="item-card__label2__main"
           >
-            YouTube
+            動画
           </ItemCardLabel2>
           <ItemCardLabel2
             v-if="website"
@@ -177,8 +177,13 @@ export default {
     color: $color;
     padding: 0 1rem 0.5rem 1rem;
     text-decoration: none;
+    line-height: 1.2;
+    @include media-breakpoint-down(md) {
+      font-size: 1.1rem;
+    }
     @include media-breakpoint-down(sm) {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      line-height: 1;
     }
   }
   &__name {
@@ -187,8 +192,13 @@ export default {
     text-decoration: none;
     color: $color;
     padding: 0 1rem 0.5rem 1rem;
+    line-height: 1;
+    @include media-breakpoint-down(md) {
+      font-size: 0.9rem;
+    }
     @include media-breakpoint-down(sm) {
       font-size: 0.9rem;
+      line-height: 1;
     }
   }
   &__label {

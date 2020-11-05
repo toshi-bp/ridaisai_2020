@@ -36,7 +36,7 @@ export default {
 .label {
   display: inline-block;
   color: #fff;
-  font-weight: bold;
+  // font-weight: bold;
   font-size: 0.7rem;
   line-height: 2;
   padding: 0 0.5rem;

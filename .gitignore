@@ -92,5 +92,9 @@ sw.*
 # Ignore Service Worker
 sw.*
 
+<<<<<<< HEAD
 # 埋め込む各企画のコンテンツをまとめたフォルダ
+=======
+#コンテンツを入れておくフォルダ(膨大なファイル量となるため)
+>>>>>>> 24093a9884499ca9880c267bfdc4ff8e9f1de7cf
 static/kikaku/

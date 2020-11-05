@@ -11,7 +11,8 @@
       'label--is-exhibition': type === 'exhibition',
       'label--is-live': type === 'live',
       'label--is-youtube': type === 'youtube',
-      'label--is-website': type === 'website'
+      'label--is-website': type === 'website',
+      'label--is-special': type === 'special'
     }"
   >
     <div class="label__inner">
@@ -54,6 +55,10 @@ export default {
   position: relative;
   border-radius: 5px;
   box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.1);
+  transition: 0.2s ease all;
+  &:hover {
+    transform: scale(1.05);
+  }
 
   // 企画のジャンル毎に色が変わるように設定
   &--is-academic {
@@ -76,6 +81,9 @@ export default {
   }
   &--is-website {
     background-color: $website-color;
+  }
+  &--is-special {
+    background-color: $sub-color;
   }
 
   &__inner {

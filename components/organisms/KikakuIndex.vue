@@ -24,7 +24,7 @@
         <TheSection>
           <p>このページでは理大祭に参加している団体の企画をみることができます。</p>
           <p>
-            企画は以下の4つのジャンルに分類されています。それぞれのラベルをクリックするとそれぞれの開催形態の部分に移動できます。
+            企画は以下の4つのジャンルに分類されています。それぞれのラベルをクリックするとそれぞれのジャンルで開催される企画をまとめて表示したエリアに移動できます。
           </p>
           <h3>ジャンルから選ぶ</h3>
           <div class="kikaku__label">
@@ -49,7 +49,7 @@
           </div>
           <div>
             <p>
-              また、各企画の開催形態は以下の3種類であり、それぞれのラベルをクリックするとそれぞれの開催形態の部分に移動できます。
+              また、各企画の開催形態は以下の3種類であり、それぞれのラベルをクリックするとそれぞれの開催形態で開催される企画をまとめて表示したエリアに移動できます。
             </p>
             <h3>開催形態から選ぶ</h3>
             <div class="kikaku__label">
@@ -64,8 +64,8 @@
               >
                 {{
                   {
-                    live: 'ライブ配信',
-                    youtube: 'YouTube',
+                    live: 'Live配信',
+                    youtube: '動画',
                     website: 'Webサイト'
                   }[form]
                 }}
@@ -110,6 +110,7 @@
                 v-for="item in KikakuList"
                 :key="item.kikaku_id"
                 :spsize="12"
+                :pcsize="4"
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
@@ -145,8 +146,8 @@
               >
                 {{
                   {
-                    live: 'ライブ配信',
-                    youtube: 'YouTube',
+                    live: 'Live配信',
+                    youtube: '動画',
                     website: 'Webサイト'
                   }[form]
                 }}
@@ -157,6 +158,7 @@
                 v-for="item in KikakuList"
                 :key="item.kikaku_id"
                 :spsize="12"
+                :pcsize="4"
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
@@ -283,13 +285,13 @@ export default {
     margin: 1rem 0rem 1.5rem 0;
     display: flex;
     flex-direction: row;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       flex-direction: column;
       margin-bottom: 1rem;
     }
     &__main {
       margin-right: 0.5rem;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
       margin-bottom: 1rem;
     }
     }

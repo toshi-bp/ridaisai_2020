@@ -47,7 +47,7 @@ export default {
 .form-label {
   display: inline-block;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 2;
   padding: 0 0.5rem;
   border-radius: 5px;
@@ -56,32 +56,32 @@ export default {
   &--is-live {
     display: inline-block;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 2;
     padding: 0 0.5rem;
     border-radius: 5px;
     background-color: $live-color;
-    font-weight: bold;
+    // font-weight: bold;
   }
   &--is-youtube {
     display: inline-block;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 2;
     padding: 0 0.5rem;
     border-radius: 5px;
     background-color: $youtube-color;
-    font-weight: bold;
+    // font-weight: bold;
   }
   &--is-website {
     display: inline-block;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 2;
     padding: 0 0.5rem;
     border-radius: 5px;
     background-color: $website-color;
-    font-weight: bold;
+    // font-weight: bold;
   }
 }
 </style>
