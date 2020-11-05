@@ -43,7 +43,7 @@ export default {
     justify-content: start;
     height: 100%;
     @include media-breakpoint-down(lg) {
-      margin-left: 0;
+      margin-left: -240px;
     }
   }
 
