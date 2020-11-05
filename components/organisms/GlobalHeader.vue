@@ -42,6 +42,7 @@ export default {
     align-items: center;
     justify-content: start;
     height: 100%;
+    width: 960px;
     @include media-breakpoint-down(lg) {
       margin-left: -240px;
     }
