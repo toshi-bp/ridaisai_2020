@@ -137,6 +137,7 @@ export default {
   padding: 3rem 0;
   @include media-breakpoint-down(md) {
     text-align: center;
+    padding: 3rem 0 7rem;
   }
   @include media-breakpoint-up(md) {
     width: calc(100% - 240px);
