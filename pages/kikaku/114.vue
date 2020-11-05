@@ -21,6 +21,20 @@
           <TheSection>
             <h3>企画紹介</h3>
             {{ KikakuList.description }}
+            <div class="kikaku-info__pdf">
+              <div>
+                <iframe src="kikaku/114/flat.pdf"/>
+              </div>
+              <div>
+                <iframe src="kikaku/114/noda_suken_基礎数学ゼミ.pdf"/>
+              </div>
+              <div>
+                <iframe src="kikaku/114/noda_suken_圏論ゼミ.pdf"/>
+              </div>
+              <div>
+                <iframe src="kikaku/114/線形代数学ゼミ.pdf"/>
+              </div>
+            </div>
           </TheSection>
         </TheContainer>
 

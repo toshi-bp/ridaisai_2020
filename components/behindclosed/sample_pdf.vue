@@ -16,9 +16,7 @@
               企画説明
             </p>
             <div class="sample__pdf">
-              <!-- <iframe src="2020前期配布資料.pdf" class="sample__pdf__body"></iframe> 操作が重くなるためコメント化した-->
-              <!-- <vuePdf src="./static/2020前期配布資料.pdf"></vuePdf> -->
-              <pdf src="./static/2020前期配布資料.pdf" />
+              <iframe src="kikaku/114/flat.pdf" class="sample__pdf__body" />
             </div>
           </div>
         </TheSection>

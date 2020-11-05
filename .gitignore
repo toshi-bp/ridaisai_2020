@@ -93,4 +93,4 @@ sw.*
 sw.*
 
 #コンテンツを入れておくフォルダ(膨大なファイル量となるため)
-static/kikaku/
+# static/kikaku/

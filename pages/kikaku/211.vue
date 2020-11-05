@@ -1,5 +1,5 @@
 <template>
-  <!-- 鉄道研究会 -->
+  <!-- 二輪会 -->
   <div class="kikaku-info">
     <div
       v-for="(KikakuList, id) in Kikaku"
@@ -12,7 +12,6 @@
           :circle_name="KikakuList.name"
           :type="KikakuList.type"
           :live="KikakuList.live"
-          :youtube="KikakuList.youtube"
           :website="KikakuList.website"
         />
 
@@ -21,11 +20,24 @@
           <TheSection>
             <h3>企画紹介</h3>
             {{ KikakuList.description }}
-            <div class="kikaku-info__pdf">
-              <div>
-                <iframe src="kikaku/111/鉄研.pdf"/>
+           <div class="kikaku-info__youtube">
+             <div>
+                <youtube
+                  ref="youtube"
+                  :video-id="videoId"
+                  :fit-parent="true"
+                  :resize="true"
+                />
               </div>
-            </div>
+              <div>
+                <youtube
+                  ref="youtube"
+                  :video-id="videoId2"
+                  :fit-parent="true"
+                  :resize="true"
+                />
+              </div>
+           </div>
           </TheSection>
         </TheContainer>
 
@@ -57,23 +69,29 @@ export default {
     TheSection,
     TheContainer
   },
+  data () {
+    return {
+      videoId: 'PvrOKBidztU',
+      videoId2: 'MRYuWsa8TS4'
+    }
+  },
   props: {
     id: {
       type: Number,
-      default: 111
+      default: 211
     }
   },
   computed: {
     Kikaku () {
-      const id = 111 // kikaku_idの値をjsonから調べて直接入力
+      const id = 211 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
   },
   head () {
     return makeHead(
-      '鉄道研究会',
-      '鉄道研究会',
-      require('~/assets/kikaku/GD0DcS7jHCVS5fr7t9p83BGU4q3Wxfg7Wvjju40V.jpeg')
+      '二輪会',
+      '二輪会',
+      require('~/assets/kikaku/airship.png')
     )
   }
 }
