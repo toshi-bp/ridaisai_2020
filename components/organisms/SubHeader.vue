@@ -2,7 +2,7 @@
   <div class="sub-header">
     <TheContainer>
       <div class="sub-header__body">
-        <img src="~/assets/image/airship.svg" class="sub-header__dodecagon">
+        <img src="~/assets/image/airship.svg" class="sub-header__airship">
         <h1 class="sub-header__title">
           <slot name="title" />
         </h1>
@@ -44,22 +44,22 @@ export default {
     align-items: center;
   }
 
-  &__dodecagon {
+  &__airship {
     // background-color: $accent-color;
     position: relative;
-    width: 3rem;
-    height: 3rem;
-    &__rect {
-      width: 26.794919243%;// 2-√3 円に外接する正多角形
-      height: 100%;
-      background-color: $accent-color;
-      border: 1px solid $accent-color;
-      @for $i from 0 through 5 {
-        &:nth-of-type(#{$i + 1}) {
-          transform: rotate(30deg * $i);
-        }
-      }
-    }
+    width: 4rem;
+    height: 4rem;
+    // &__rect {
+    //   width: 26.794919243%;// 2-√3 円に外接する正多角形
+    //   height: 100%;
+    //   background-color: $accent-color;
+    //   border: 1px solid $accent-color;
+    //   @for $i from 0 through 5 {
+    //     &:nth-of-type(#{$i + 1}) {
+    //       transform: rotate(30deg * $i);
+    //     }
+    //   }
+    // }
   }
 
   &__title {
