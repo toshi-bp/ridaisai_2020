@@ -110,7 +110,7 @@
                 v-for="item in KikakuList"
                 :key="item.kikaku_id"
                 :spsize="12"
-                :pcsize="6"
+                :pcsize="4"
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
@@ -158,7 +158,7 @@
                 v-for="item in KikakuList"
                 :key="item.kikaku_id"
                 :spsize="12"
-                :pcsize="6"
+                :pcsize="4"
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"

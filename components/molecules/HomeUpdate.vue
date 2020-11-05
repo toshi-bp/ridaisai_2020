@@ -49,8 +49,8 @@
           </dt>
           <dd class="update__list__content">
             <nuxt-link to="/kikaku/">
-              企画一覧を
-            </nuxt-link>公開しました。
+              企画一覧
+            </nuxt-link>を公開しました。
           </dd>
         </dl>
       </div>

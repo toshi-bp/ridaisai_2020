@@ -12,7 +12,7 @@
     </div>
     <div>
       <div class="home-body__kikaku">
-        <TheContainer>
+        <TheContainer class="home-body__kikaku__container">
             <div class="home-body__kikaku__label">
               <nuxt-link to="/kikaku/">
                 <KikakuLabel
@@ -25,26 +25,28 @@
                 各参加団体が理大祭のために準備をしたコンテンツはこちら
               </p>
             </div>
-          <TheRow>
-            <TheColumn
-              v-for="item in KikakuList"
-              :key="item.kikaku_id"
-              :spsize="6"
-              :pcsize="4"
-            >
-              <ItemCard
-                :to="`/kikaku/${item.kikaku_id}/`"
-                :label-type="item.type"
-                :label-text="item.type"
-                :title="item.kikaku_title"
-                :name="item.name"
-                :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-                :live="item.live"
-                :youtube="item.youtube"
-                :website="item.website"
-              ></ItemCard>
-            </TheColumn>
-          </TheRow>
+            <div>
+              <TheRow>
+                <TheColumn
+                  v-for="item in KikakuList"
+                  :key="item.kikaku_id"
+                  :spsize="6"
+                  :pcsize="4"
+                >
+                  <ItemCard
+                    :to="`/kikaku/${item.kikaku_id}/`"
+                    :label-type="item.type"
+                    :label-text="item.type"
+                    :title="item.kikaku_title"
+                    :name="item.name"
+                    :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
+                    :live="item.live"
+                    :youtube="item.youtube"
+                    :website="item.website"
+                  ></ItemCard>
+                </TheColumn>
+              </TheRow>
+            </div>
           <div class="home-body__button">
             <LinkButton2
               to="/kikaku/"
@@ -125,9 +127,8 @@ export default {
     }
   }
   &__kikaku {
-    background-color: #fff;
-    padding: 2rem 1rem 2rem;
-    border-radius: 5px;
+    background-color: rgba($sub-color, $alpha: 0.3);
+    padding: 0 1rem;
     margin-bottom: 2rem;
     &__label {
       margin-bottom: 2rem;
@@ -135,9 +136,14 @@ export default {
     &__text {
       margin-top: 1rem;
     }
+    &__container {
+      border-radius: 5px;
+      background-color: #fff;
+      padding: 1rem 1rem;
+    }
   }
   &__button {
-    margin-top: 1rem;
+    margin: 1rem 0;
     text-align: center;
   }
 }
