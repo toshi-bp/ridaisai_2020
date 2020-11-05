@@ -1,7 +1,7 @@
 <template>
   <div v-if="this.$route.name !== 'index'">
     <header class="header">
-      <TheContainer class="header__container">
+      <div class="header__container">
         <nuxt-link to="/" class="header__title">
           <div class="header__title__sub">
             2020年度野田地区理大祭
@@ -10,17 +10,17 @@
             11月21日(土)・22日(日)
           </div>
         </nuxt-link>
-      </TheContainer>
+      </div>
     </header>
   </div>
 </template>
 
 <script>
-import TheContainer from '~/components/atoms/TheContainer.vue'
+// // import TheContainer from '~/components/atoms/TheContainer.vue'
 
 export default {
   components: {
-    TheContainer
+    // TheContainer
   }
 }
 </script>
@@ -43,9 +43,7 @@ export default {
     justify-content: start;
     height: 100%;
     width: 960px;
-    @include media-breakpoint-down(lg) {
-      margin-left: -240px;
-    }
+    margin: 0 auto;
   }
 
   @include media-breakpoint-down(sm) {
