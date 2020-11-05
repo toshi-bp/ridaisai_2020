@@ -128,7 +128,7 @@ export default {
   }
   &__kikaku {
     background-color: rgba($sub-color, $alpha: 0.3);
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     margin-bottom: 2rem;
     &__label {
       margin-bottom: 2rem;
