@@ -178,7 +178,7 @@ export default {
     padding: 0 1rem 0.5rem 1rem;
     text-decoration: none;
     @include media-breakpoint-down(sm) {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
   &__name {

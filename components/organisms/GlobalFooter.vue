@@ -88,6 +88,14 @@
                     プライバシーポリシー
                   </nuxt-link>
                 </li>
+                <li class="footer__list__item">
+                  <nuxt-link
+                    to="/kikaku/"
+                    class="footer__list__link"
+                  >
+                    企画一覧
+                  </nuxt-link>
+                </li>
                 <!-- <li class="footer__list__item">
                   <nuxt-link
                     to="/"

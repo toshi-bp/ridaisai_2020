@@ -144,7 +144,7 @@ export default {
     left: 50%;
     text-align: center;
 
-    animation: 10s ease tooltip both;
+    animation: 5s ease tooltip both;
     animation-iteration-count: infinite;
     @keyframes tooltip {
       from {

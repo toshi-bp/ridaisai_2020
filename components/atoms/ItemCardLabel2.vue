@@ -47,7 +47,7 @@ export default {
 .form-label {
   display: inline-block;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 2;
   padding: 0 0.5rem;
   border-radius: 5px;
@@ -56,7 +56,7 @@ export default {
   &--is-live {
     display: inline-block;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 2;
     padding: 0 0.5rem;
     border-radius: 5px;
@@ -66,7 +66,7 @@ export default {
   &--is-youtube {
     display: inline-block;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 2;
     padding: 0 0.5rem;
     border-radius: 5px;
@@ -76,7 +76,7 @@ export default {
   &--is-website {
     display: inline-block;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 2;
     padding: 0 0.5rem;
     border-radius: 5px;

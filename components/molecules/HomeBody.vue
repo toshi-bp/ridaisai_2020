@@ -100,7 +100,7 @@ export default {
   // padding-top: 3rem;
   &__welcome {
     padding: 2rem 0;
-    background-color: rgba($theme-color, $alpha: 0.3);
+    background-color: rgba($theme-color, $alpha: 0.2);
     border-radius: 5px;
     &__link {
       border-radius: 5px;
@@ -113,6 +113,10 @@ export default {
       color: #fff;
       box-shadow: 0 0.2rem 1rem rgba($color: #000000, $alpha: 0.1);
       margin-bottom: 1rem;
+      transition: 0.2s ease all;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
     &__text {
       @include media-breakpoint-down(sm) {
