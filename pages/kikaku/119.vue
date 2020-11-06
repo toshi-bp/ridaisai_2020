@@ -47,7 +47,27 @@
                 <TheColumn
                   v-for="item in Shodo2"
                   :key="item.id"
-                  :pcsize="6"
+                  :pcsize="12"
+                  :spsize="12"
+                >
+                  <ImageFullScreen
+                    :title="item.title"
+                    :name="item.name"
+                    :description="item.description"
+                    :src="`kikaku/119/${item.imageUrl}`"
+                    :download="true"
+                  >
+                  </ImageFullScreen>
+                </TheColumn>
+              </TheRow>
+            </div>
+            <div>
+              <h3 class="kikaku-info__title">【クラシック】</h3>
+              <TheRow>
+                <TheColumn
+                  v-for="item in Shodo3"
+                  :key="item.id"
+                  :pcsize="12"
                   :spsize="12"
                 >
                   <ImageFullScreen
@@ -115,6 +135,9 @@ export default {
     },
     Shodo2 () {
       return Shodo.filter(item => item.id > 12 && item.id < 28)
+    },
+    Shodo3 () {
+      return Shodo.filter(item => item.id > 27)
     }
   },
   head () {
