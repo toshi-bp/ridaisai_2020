@@ -1,7 +1,7 @@
 <template>
   <!-- ここにはコンテンツの下に掲載する団体紹介と企画トップページへのリンクを貼る(できればおすすめ企画とか載せたいよね) -->
   <div>
-    <ComingSoon />
+    <!-- <ComingSoon /> -->
     <TheContainer>
       <h2 class="kikaku-info__title">
         団体情報
@@ -67,14 +67,14 @@
 import TheContainer from '~/components/atoms/TheContainer'
 import TheSection from '~/components/atoms/TheSection'
 import LinkButton from '~/components/atoms/LinkButton'
-import ComingSoon from '~/components/molecules/ComingSoon'
+// // import ComingSoon from '~/components/molecules/ComingSoon'
 
 export default {
   components: {
     TheContainer,
     TheSection,
     LinkButton,
-    ComingSoon
+    // ComingSoon
   },
   props: {
     imageUrl: {
