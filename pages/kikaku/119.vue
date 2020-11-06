@@ -20,7 +20,47 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <div>
+              <h3 class="kikaku-info__title">【デジタル×書道】</h3>
+              <TheRow>
+                <TheColumn
+                  v-for="item in Shodo1"
+                  :key="item.id"
+                  :pcsize="12"
+                  :spsize="12"
+                >
+                  <ImageFullScreen
+                    :title="item.title"
+                    :name="item.name"
+                    :description="item.description"
+                    :src="`kikaku/119/${item.imageUrl}`"
+                    :download="true"
+                  >
+                  </ImageFullScreen>
+                </TheColumn>
+              </TheRow>
+            </div>
+            <div>
+              <h3 class="kikaku-info__title">【年賀状デザイン】</h3>
+              <TheRow>
+                <TheColumn
+                  v-for="item in Shodo2"
+                  :key="item.id"
+                  :pcsize="6"
+                  :spsize="12"
+                >
+                  <ImageFullScreen
+                    :title="item.title"
+                    :name="item.name"
+                    :description="item.description"
+                    :src="`kikaku/119/${item.imageUrl}`"
+                    :download="true"
+                  >
+                  </ImageFullScreen>
+                </TheColumn>
+              </TheRow>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -39,18 +79,25 @@
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
+import ImageFullScreen from '~/components/atoms/ImageFullScreen'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import TheColumn from '~/components/atoms/TheColumn'
+import TheRow from '~/components/atoms/TheRow'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import Shodo from '~/kikaku/shodo.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
+    ImageFullScreen,
     TheSection,
-    TheContainer
+    TheContainer,
+    TheColumn,
+    TheRow
   },
   props: {
     id: {
@@ -62,6 +109,12 @@ export default {
     Kikaku () {
       const id = 119 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
+    },
+    Shodo1 () {
+      return Shodo.filter(item => item.id < 13)
+    },
+    Shodo2 () {
+      return Shodo.filter(item => item.id > 12 && item.id < 28)
     }
   },
   head () {
@@ -80,5 +133,16 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__description {
+    margin-bottom: 1rem;
+  }
+  &__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: -1rem;
+  }
+  &__button {
+    text-align: center;
+  }
 }
 </style>
