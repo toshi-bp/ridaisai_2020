@@ -41,8 +41,11 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import TheRow from '~/components/atoms/TheRow'
+import TheColumn from '~/components/atoms/TheColumn'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import manga from '~/kikaku/1manga.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
@@ -50,7 +53,9 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    TheRow,
+    TheColumn
   },
   props: {
     id: {
@@ -63,6 +68,9 @@ export default {
       const id = 122 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
+  },
+  manga () {
+    return manga
   },
   head () {
     return makeHead(
