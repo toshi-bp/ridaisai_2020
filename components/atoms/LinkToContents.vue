@@ -6,26 +6,34 @@
       class="link__live"
     >
       <nuxt-link to="/Live/">
-        <p>ライブ配信会場はこちら</p>
-        <!-- 開始時間と終了時間を入れる部分 -->
-        {{ startTime }} 〜 {{ endTime }}
+        <div class="link__live__inner">
+          <p>ライブ配信会場はこちら</p>
+          <!-- 開始時間と終了時間を入れる部分 -->
+          {{ startTime }} 〜 {{ endTime }}
+        </div>
       </nuxt-link>
     </div>
     <div
       v-if="zoom"
       class="link__zoom"
     >
-      <a
-        :href="url"
-      >
-        Zoomのリンク
-      </a>
+      <div class="link__zoom__inner">
+        <a
+          :href="url"
+        >
+          Zoomのリンク
+        </a>
+      </div>
     </div>
     <div
-      v-if="web"
+      v-if="website"
       class="link__web"
     >
-      <a :href="url">Webコンテンツはこちら</a>
+      <div class="link__web__inner">
+        <a :href="url">
+          Webコンテンツはこちら
+        </a>
+      </div>
     </div>
   </div>
 </template>
