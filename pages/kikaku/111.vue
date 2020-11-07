@@ -20,9 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p>{{ KikakuList.description }}</p>
             <div class="kikaku-info__pdf">
-              <div>
+              <div class="kikaku-info__pdf__body">
                 <iframe src="kikaku/111/鉄研.pdf"/>
               </div>
             </div>
@@ -85,5 +85,12 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+
+  &__pdf {
+    &__body {
+      width: 100%;
+      height: 500px;
+    }
+  }
 }
 </style>

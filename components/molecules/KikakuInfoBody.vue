@@ -73,7 +73,7 @@ export default {
   components: {
     TheContainer,
     TheSection,
-    LinkButton,
+    LinkButton
     // ComingSoon
   },
   props: {

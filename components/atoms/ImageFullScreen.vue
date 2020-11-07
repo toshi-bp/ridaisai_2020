@@ -4,15 +4,24 @@
     <div>
       <img :src="src" class="full-screen__img" @click="ImageFullScreen">
       <div>
-        <p class="full-screen__title">
+        <p
+          v-if="title"
+          class="full-screen__title"
+        >
           <span class="full-screen__index">作品名</span>
           <br/>{{ title }}
         </p>
-        <p class="full-screen__name">
+        <p
+          v-if="name"
+          class="full-screen__name"
+        >
           <span class="full-screen__index">作成者</span>
           <br/>{{ name }}
         </p>
-        <p class="full-screen__description">
+        <p
+          v-if="description"
+          class="full-screen__description"
+        >
           <span class="full-screen__index">説明</span>
           <br/>{{ description }}
         </p>
