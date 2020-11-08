@@ -7,10 +7,9 @@
         class="link__live"
       >
         <div class="link__live__inner">
-          <p>Live配信会場はこちら
+          <p class="link__text">Live配信会場はこちら</p>
             <!-- 開始時間と終了時間を入れる部分 -->
-            {{ startTime }} 〜 {{ endTime }}
-          </p>
+          <p class="link__text__under">{{ startTime }} 〜 {{ endTime }}</p>
         </div>
       </div>
     </nuxt-link>
@@ -22,6 +21,7 @@
         <a
           :href="url"
           target="_blank"
+          class="link__text"
         >
           <slot />
         </a>
@@ -63,11 +63,17 @@ export default {
   display: block;
   margin-bottom: 1rem;
   box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.3);
+  &__text {
+    padding: 1rem 0;
+    &__under {
+      padding: 0 0 1rem;
+      margin-top: -1rem;
+    }
+  }
   &__live {
     width: 100%;
     text-align: center;
     background-color: $live-color;
-    opacity: 0.8;
     :hover {
       width: 105%;
       height: auto;
@@ -87,7 +93,6 @@ export default {
     width: 100%;
     text-align: center;
     background-color: $website-color;
-    opacity: 0.8;
     :hover {
       width: 105%;
       height: auto;
