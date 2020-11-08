@@ -7,9 +7,10 @@
         class="link__live"
       >
         <div class="link__live__inner">
-          <p>ライブ配信会場はこちら</p>
-          <!-- 開始時間と終了時間を入れる部分 -->
-          {{ startTime }} 〜 {{ endTime }}
+          <p>Live配信会場はこちら
+            <!-- 開始時間と終了時間を入れる部分 -->
+            {{ startTime }} 〜 {{ endTime }}
+          </p>
         </div>
       </div>
     </nuxt-link>
@@ -46,7 +47,7 @@ export default {
       type: Boolean,
       default: false
     },
-    web: {
+    link: {
       type: Boolean,
       default: false
     },
@@ -61,7 +62,7 @@ export default {
 .link {
   display: block;
   margin-bottom: 1rem;
-  box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.1);
+  box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.3);
   &__live {
     width: 100%;
     text-align: center;
