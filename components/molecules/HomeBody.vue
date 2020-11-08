@@ -13,40 +13,40 @@
     <div>
       <div class="home-body__kikaku">
         <TheContainer class="home-body__kikaku__container">
-            <div class="home-body__kikaku__label">
-              <nuxt-link to="/kikaku/">
-                <KikakuLabel
-                  type="special"
-                >
-                  企画を楽しむ
-                </KikakuLabel>
-              </nuxt-link>
-              <p class="home-body__kikaku__text">
-                各参加団体が理大祭のために準備をしたコンテンツはこちら
-              </p>
-            </div>
-            <div>
-              <TheRow>
-                <TheColumn
-                  v-for="item in KikakuList"
-                  :key="item.kikaku_id"
-                  :spsize="6"
-                  :pcsize="4"
-                >
-                  <ItemCard
-                    :to="`/kikaku/${item.kikaku_id}/`"
-                    :label-type="item.type"
-                    :label-text="item.type"
-                    :title="item.kikaku_title"
-                    :name="item.name"
-                    :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-                    :live="item.live"
-                    :youtube="item.youtube"
-                    :website="item.website"
-                  ></ItemCard>
-                </TheColumn>
-              </TheRow>
-            </div>
+          <div class="home-body__kikaku__label">
+            <nuxt-link to="/kikaku/">
+              <KikakuLabel
+                type="special"
+              >
+                企画を楽しむ
+              </KikakuLabel>
+            </nuxt-link>
+            <p class="home-body__kikaku__text">
+              各参加団体が理大祭のために準備をしたコンテンツはこちら
+            </p>
+          </div>
+          <div>
+            <TheRow>
+              <TheColumn
+                v-for="item in KikakuList"
+                :key="item.kikaku_id"
+                :spsize="6"
+                :pcsize="4"
+              >
+                <ItemCard
+                  :to="`/kikaku/${item.kikaku_id}/`"
+                  :label-type="item.type"
+                  :label-text="item.type"
+                  :title="item.kikaku_title"
+                  :name="item.name"
+                  :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
+                  :live="item.live"
+                  :youtube="item.youtube"
+                  :website="item.website"
+                />
+              </TheColumn>
+            </TheRow>
+          </div>
           <div class="home-body__button">
             <LinkButton2
               to="/kikaku/"

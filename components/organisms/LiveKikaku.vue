@@ -10,36 +10,36 @@
         <TheSection>
           <p>ここではライブ配信を行っています。配信は二つの会場で行なわれています。</p>
           <!-- ここにライブ配信する動画を埋め込むよ(チャットを載せるか否かは要相談) -->
-           <div class="live__movie">
-             <!-- 公開に際しチャットを埋め込む場合はsrcのurlの部分を変更すること -->
-              <youtube
-                ref="youtube"
-                :video-id="videoId_1"
-                :fit-parent="true"
-                :resize="true"
-              />
-              <iframe
-                height="400"
-                frameborder="0"
-                :src="`https://www.youtube.com/live_chat?v=${videoId_1}&embed_domain=localhost`"
-                allowfullscreen
-              >
-                <!--チャットの高さについては要調整(特にスマホ版)あとURLも-->
-              </iframe>
-              <!-- heightは:style"{}"を利用して変えていく方式にした方がいいかもしれない -->
-              <youtube
-                ref="youtube"
-                :video-id="videoId_2"
-                :fit-parent="true"
-                :resize="true"
-              />
-              <iframe
-                height="400"
-                frameborder="0"
-                :src="`https://www.youtube.com/live_chat?v=${videoId_2}&embed_domain=localhost`"
-                allowfullscreen
-              />
-            </div>
+          <div class="live__movie">
+            <!-- 公開に際しチャットを埋め込む場合はsrcのurlの部分を変更すること -->
+            <youtube
+              ref="youtube"
+              :video-id="videoId_1"
+              :fit-parent="true"
+              :resize="true"
+            />
+            <iframe
+              height="400"
+              frameborder="0"
+              :src="`https://www.youtube.com/live_chat?v=${videoId_1}&embed_domain=localhost`"
+              allowfullscreen
+            >
+              <!--チャットの高さについては要調整(特にスマホ版)あとURLも-->
+            </iframe>
+            <!-- heightは:style"{}"を利用して変えていく方式にした方がいいかもしれない -->
+            <youtube
+              ref="youtube"
+              :video-id="videoId_2"
+              :fit-parent="true"
+              :resize="true"
+            />
+            <iframe
+              height="400"
+              frameborder="0"
+              :src="`https://www.youtube.com/live_chat?v=${videoId_2}&embed_domain=localhost`"
+              allowfullscreen
+            />
+          </div>
         </TheSection>
       </div>
       <div>

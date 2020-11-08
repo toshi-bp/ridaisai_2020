@@ -7,7 +7,7 @@ if (typeof window === 'undefined') {
   const JSON_FILE_PATH = 'KikakuList.json'
 
   const TITLES = {}
-  TITLES['ID'] = 'number'
+  TITLES.ID = 'number'
   TITLES['企画ID'] = 'kikaku_id'
   TITLES['企画を出店する団体の名称'] = 'name'
   TITLES['企画名'] = 'kikaku_title'
@@ -20,6 +20,7 @@ if (typeof window === 'undefined') {
   TITLES['ライブ配信'] = 'live'
   TITLES.Youtube = 'youtube'
   TITLES['webサイト'] = 'website'
+  TITLES['link'] = 'link'
 
   const raw_data = fs.readFileSync(CSV_FILE_PATH, 'utf-8')
   const array_data = raw_data.split('\n')
@@ -78,6 +79,14 @@ if (typeof window === 'undefined') {
       }
 
       if (titles[j] === 'webサイト') {
+        if (item === 'true') {
+          item = true
+        } else {
+          item = false
+        }
+      }
+
+      if (titles[j] === 'link') {
         if (item === 'true') {
           item = true
         } else {

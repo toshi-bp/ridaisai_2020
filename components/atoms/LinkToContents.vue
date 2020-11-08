@@ -1,37 +1,28 @@
 <template>
   <!-- ライブ配信用のリンクにしようと思ったけどZoomとかの他のコンテンツでも使えそうだから一応LinkToContentsという名前にした。 -->
   <div class="link">
-    <div
-      v-if="live"
-      class="link__live"
-    >
-      <nuxt-link to="/Live/">
+    <nuxt-link to="/Live/">
+      <div
+        v-if="live"
+        class="link__live"
+      >
         <div class="link__live__inner">
           <p>ライブ配信会場はこちら</p>
           <!-- 開始時間と終了時間を入れる部分 -->
           {{ startTime }} 〜 {{ endTime }}
         </div>
-      </nuxt-link>
-    </div>
-    <div
-      v-if="zoom"
-      class="link__zoom"
-    >
-      <div class="link__zoom__inner">
-        <a
-          :href="url"
-        >
-          Zoomのリンク
-        </a>
       </div>
-    </div>
+    </nuxt-link>
     <div
-      v-if="website"
+      v-if="link"
       class="link__web"
     >
       <div class="link__web__inner">
-        <a :href="url">
-          Webコンテンツはこちら
+        <a
+          :href="url"
+          target="_blank"
+        >
+          <slot />
         </a>
       </div>
     </div>
@@ -80,6 +71,35 @@ export default {
       width: 105%;
       height: auto;
       transition: 0.15s ease all;
+    }
+    &__inner {
+      font-size: 1.2rem;
+      font-family: $sub-font;
+      text-align: center;
+      color: #fff;
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
+    }
+  }
+  &__web {
+    width: 100%;
+    text-align: center;
+    background-color: $website-color;
+    opacity: 0.8;
+    :hover {
+      width: 105%;
+      height: auto;
+      transition: 0.15s ease all;
+    }
+    &__inner {
+      font-size: 1.2rem;
+      font-family: $sub-font;
+      text-align: center;
+      color: #fff;
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
     }
   }
 }
