@@ -20,7 +20,41 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p>{{ KikakuList.description }}</p>
+            <div class="kikaku-info__youtube">
+              <div class="kikaku-info__youtube__body">
+                <youtube
+                  ref="youtube"
+                  :video-id="videoId"
+                  :fit-parent="true"
+                  :resize="true"
+                />
+              </div>
+              <div class="kikaku-info__youtube__body">
+                <youtube
+                  ref="youtube"
+                  :video-id="videoId2"
+                  :fit-parent="true"
+                  :resize="true"
+                />
+              </div>
+              <div class="kikaku-info__youtube__body">
+                <youtube
+                  ref="youtube"
+                  :video-id="videoId3"
+                  :fit-parent="true"
+                  :resize="true"
+                />
+              </div>
+              <div class="kikaku-info__youtube__body">
+                <youtube
+                  ref="youtube"
+                  :video-id="videoId4"
+                  :fit-parent="true"
+                  :resize="true"
+                />
+              </div>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -46,6 +80,14 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  data () {
+    return {
+      videoId: 'prLY2nn6Spc',
+      videoId2: 'a4s0eHACmMI',
+      videoId3: 'ZUnjwPFdKXY',
+      videoId4: '6BQQIL6KgHE'
+    }
+  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -80,5 +122,11 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__youtube{
+    &__body {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
 }
 </style>

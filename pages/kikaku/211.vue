@@ -20,9 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
-           <div class="kikaku-info__youtube">
-             <div>
+            <p>{{ KikakuList.description }}</p>
+            <div class="kikaku-info__youtube">
+               <div class="kikaku-info__youtube__body">
                 <youtube
                   ref="youtube"
                   :video-id="videoId"
@@ -30,7 +30,7 @@
                   :resize="true"
                 />
               </div>
-              <div>
+              <div class="kikaku-info__youtube__body">
                 <youtube
                   ref="youtube"
                   :video-id="videoId2"
@@ -104,5 +104,11 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__youtube {
+    &__body {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
 }
 </style>

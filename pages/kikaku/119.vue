@@ -40,6 +40,22 @@
                   </ImageFullScreen>
                 </TheColumn>
               </TheRow>
+              <div class="kikaku-info__youtube">
+                <youtube
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+              </div>
+              <div class="kikaku-info__youtube">
+                <youtube
+                ref="youtube"
+                :video-id="videoId2"
+                :fit-parent="true"
+                :resize="true"
+              />
+              </div>
             </div>
             <div>
               <h3 class="kikaku-info__title">【年賀状デザイン】</h3>
@@ -110,6 +126,12 @@ import Shodo from '~/kikaku/shodo.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  data () {
+    return {
+      videoId: 'B3uJF-Qemlg',
+      videoId2: '5pb6dCV3uxs'
+    }
+  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -166,6 +188,9 @@ export default {
   }
   &__button {
     text-align: center;
+  }
+  &__youtube {
+    margin-bottom: 1.5rem;
   }
 }
 </style>

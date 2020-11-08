@@ -22,17 +22,33 @@
             <h3>企画紹介</h3>
             {{ KikakuList.description }}
             <div class="kikaku-info__pdf">
-              <div>
-                <iframe src="kikaku/114/flat.pdf"/>
+              <div class="kikaku-info__pdf__body">
+                <iframe
+                  src="kikaku/114/flat.pdf"
+                  width="100%"
+                  height="100%"
+                />
               </div>
-              <div>
-                <iframe src="kikaku/114/noda_suken_基礎数学ゼミ.pdf"/>
+              <div class="kikaku-info__pdf__body">
+                <iframe
+                  src="kikaku/114/noda_suken_基礎数学ゼミ.pdf"
+                  width="100%"
+                  height="100%"
+                />
               </div>
-              <div>
-                <iframe src="kikaku/114/noda_suken_圏論ゼミ.pdf"/>
+              <div class="kikaku-info__pdf__body">
+                <iframe
+                  src="kikaku/114/noda_suken_圏論ゼミ.pdf"
+                  width="100%"
+                  height="100%"
+                />
               </div>
-              <div>
-                <iframe src="kikaku/114/線形代数学ゼミ.pdf"/>
+              <div class="kikaku-info__pdf__body">
+                <iframe
+                  src="kikaku/114/線形代数学ゼミ.pdf"
+                  width="100%"
+                  height="100%"
+                />
               </div>
             </div>
           </TheSection>
@@ -94,5 +110,15 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__pdf {
+    &__body {
+      height: 750px;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    &__link {
+
+    }
+  }
 }
 </style>

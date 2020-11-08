@@ -22,8 +22,13 @@
             <h3>企画紹介</h3>
             <p>{{ KikakuList.description }}</p>
             <div class="kikaku-info__pdf">
+              <a href="kikaku/111/鉄研.pdf" class="kikaku-info__pdf__link">鉄研.pdf</a>
               <div class="kikaku-info__pdf__body">
-                <iframe src="kikaku/111/鉄研.pdf"/>
+                <iframe
+                  src="kikaku/111/鉄研.pdf"
+                  width="100%"
+                  height="100%"
+                />
               </div>
             </div>
           </TheSection>
@@ -89,7 +94,10 @@ export default {
   &__pdf {
     &__body {
       width: 100%;
-      height: 500px;
+      height: 750px;
+    }
+    &__link {
+      margin: 1rem 0 1rem;
     }
   }
 }
