@@ -4,7 +4,7 @@
     <div>
       <div class="default__main">
         <nuxt />
-        <SideBar class="default__side-bar"/>
+        <SideBar class="default__side-bar" />
       </div>
       <!-- <GlobalNav /> -->
     </div>

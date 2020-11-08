@@ -2,9 +2,11 @@
   <div>
     <div class="side-bar">
       <nuxt-link to="/">
-        <img src="~@/assets/image/symbol_white.svg" class="side-bar__img" />
+        <img src="~@/assets/image/symbol_white.svg" class="side-bar__img">
       </nuxt-link>
-      <h2 class="side-bar__title"><span>野田地区理大祭2020</span><br />メニュー</h2>
+      <h2 class="side-bar__title">
+        <span>野田地区理大祭2020</span><br>メニュー
+      </h2>
       <ul class="side-bar__list">
         <li class="side-bar__list__item">
           <nuxt-link to="/">
@@ -31,7 +33,7 @@
           </a>
         </li> -->
       </ul>
-      <img src="~@/assets/image/symbol_white.svg" class="side-bar__img" />
+      <img src="~@/assets/image/symbol_white.svg" class="side-bar__img">
     </div>
     <div class="footer-nav">
       <ul class="footer-nav__list">

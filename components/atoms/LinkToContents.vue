@@ -20,6 +20,7 @@
       <div class="link__zoom__inner">
         <a
           :href="url"
+          target="_blank"
         >
           Zoomのリンク
         </a>
@@ -30,7 +31,7 @@
       class="link__web"
     >
       <div class="link__web__inner">
-        <a :href="url">
+        <a :href="url" target="_blank">
           Webコンテンツはこちら
         </a>
       </div>
