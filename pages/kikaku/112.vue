@@ -21,6 +21,23 @@
           <TheSection>
             <h3>企画紹介</h3>
             {{ KikakuList.description }}
+            <div class="kikaku-info__body">
+              <div class="kikaku-info__pdf">
+                <iframe
+                  src="kikaku/112/RIM42 原稿.pdf"
+                  width="100%"
+                  height="100%"
+                ></iframe>
+              </div>
+              <div class="kikaku-info__pdf">
+                <a href="kikaku/112/TONE2020 原稿.pdf">aaa</a>
+                <iframe
+                  src="kikaku/112/TONE2020 原稿.pdf"
+                  width="100%"
+                  height="100%"
+                ></iframe>
+              </div>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -80,5 +97,13 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__body {
+    margin-top: 1.5rem;
+  }
+  &__pdf {
+    width: 100%;
+    height: 750px;
+    margin-bottom: 1.5rem;
+  }
 }
 </style>
