@@ -103,6 +103,7 @@ export default {
   }
   &__name {
     font-family: $sub-font;
+    margin-top: 1rem;
   }
   &__img {
     width: 15rem;
