@@ -20,6 +20,7 @@ if (typeof window === 'undefined') {
   TITLES['ライブ配信'] = 'live'
   TITLES.Youtube = 'youtube'
   TITLES['webサイト'] = 'website'
+  TITLES['link'] = 'link'
 
   const raw_data = fs.readFileSync(CSV_FILE_PATH, 'utf-8')
   const array_data = raw_data.split('\n')
@@ -78,6 +79,14 @@ if (typeof window === 'undefined') {
       }
 
       if (titles[j] === 'webサイト') {
+        if (item === 'true') {
+          item = true
+        } else {
+          item = false
+        }
+      }
+
+      if (titles[j] === 'link') {
         if (item === 'true') {
           item = true
         } else {
