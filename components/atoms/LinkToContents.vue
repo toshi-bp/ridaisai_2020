@@ -22,6 +22,7 @@
         <a
           :href="url"
           target="_blank"
+          class="link__web__inner"
         >
           <slot />
         </a>
@@ -67,13 +68,14 @@ export default {
     width: 100%;
     text-align: center;
     background-color: $live-color;
-    opacity: 0.8;
+    border-radius: 5px;
     :hover {
       width: 105%;
       height: auto;
       transition: 0.15s ease all;
     }
     &__inner {
+      padding: 1rem 0;
       font-size: 1.2rem;
       font-family: $sub-font;
       text-align: center;
@@ -87,13 +89,14 @@ export default {
     width: 100%;
     text-align: center;
     background-color: $website-color;
-    opacity: 0.8;
+    border-radius: 5px;
     :hover {
       width: 105%;
       height: auto;
       transition: 0.15s ease all;
     }
     &__inner {
+      padding: 1.5rem 0;
       font-size: 1.2rem;
       font-family: $sub-font;
       text-align: center;

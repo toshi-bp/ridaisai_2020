@@ -21,24 +21,25 @@
           <TheSection>
             <h3>企画紹介</h3>
             <p>{{ KikakuList.description }}</p>
+            <div class="kikaku-info__link">
+              <LinkToContents
+                :link="true"
+                :url="KikakuList.url"
+              >
+                Webサイトへのアクセスはこちら<br/>
+                {{ KikakuList.url }}
+              </LinkToContents>
+            </div>
             <div class="kikaku-info__movie">
               <!-- parent=https://nodaridaisai.com -->
               <iframe
-                src="https://player.twitch.tv/?channel=stylishnoob4&parent=localhost"
+                src="https://player.twitch.tv/?channel=tus_robot_2020&parent=localhost"
                 frameborder="0"
                 allowfullscreen="true"
                 scrolling="no"
                 width="100%"
                 height="100%"
               ></iframe>
-            </div>
-            <div class="kikaku-info__chat">
-              <iframe
-                id="chat_embed"
-                src="https://www.twitch.tv/embed/stylishnoob4/chat?parent=localhost"
-                height="100%"
-                width="100%">
-              </iframe>
             </div>
           </TheSection>
         </TheContainer>
@@ -60,6 +61,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -69,7 +71,8 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   props: {
     id: {
@@ -110,10 +113,8 @@ export default {
       height: 200px;
     }
   }
-
-  &__chat {
-    width: 100%;
-    height: 500px;
+  &__link {
+    margin: 1.5rem 0;
   }
 }
 </style>
