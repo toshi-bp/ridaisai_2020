@@ -7,10 +7,9 @@
         class="link__live"
       >
         <div class="link__live__inner">
-          <p>Live配信会場はこちら
+          <p class="link__live__text">Live配信会場はこちら</p>
             <!-- 開始時間と終了時間を入れる部分 -->
-            {{ startTime }} 〜 {{ endTime }}
-          </p>
+          <p class="link__live__text2">{{ startTime }} 〜 {{ endTime }}</p>
         </div>
       </div>
     </nuxt-link>
@@ -64,15 +63,21 @@ export default {
   display: block;
   margin-bottom: 1rem;
   box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.3);
+  transition: 0.15s ease all;
+  :hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.5);
+  }
   &__live {
     width: 100%;
     text-align: center;
     background-color: $live-color;
     border-radius: 5px;
-    :hover {
-      width: 105%;
-      height: auto;
-      transition: 0.15s ease all;
+    &__text {
+      padding: 1rem 0 0;
+    }
+    &__text2 {
+      padding: 0.5rem 0 1rem;
     }
     &__inner {
       padding: 1rem 0;
@@ -90,11 +95,6 @@ export default {
     text-align: center;
     background-color: $website-color;
     border-radius: 5px;
-    :hover {
-      width: 105%;
-      height: auto;
-      transition: 0.15s ease all;
-    }
     &__inner {
       padding: 1.5rem 0;
       font-size: 1.2rem;
