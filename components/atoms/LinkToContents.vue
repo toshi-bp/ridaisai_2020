@@ -64,20 +64,26 @@ export default {
   margin-bottom: 1rem;
   box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.3);
   transition: 0.15s ease all;
-  :hover {
-    transform: scale(1.05);
+  border-radius: 5px;
+  &:hover {
+    transform: scale(1.03);
     box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.5);
   }
   &__live {
-    width: 100%;
+    // width: 100%;
     text-align: center;
     background-color: $live-color;
     border-radius: 5px;
+    :hover {
+      text-decoration: none;
+    }
     &__text {
       padding: 1rem 0 0;
+      text-decoration: none;
     }
     &__text2 {
-      padding: 0.5rem 0 1rem;
+      padding: 0.5rem 0 0.5rem;
+      text-decoration: none;
     }
     &__inner {
       padding: 1rem 0;
