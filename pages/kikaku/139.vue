@@ -21,9 +21,21 @@
           <TheSection>
             <h3>企画紹介</h3>
             <p>{{ KikakuList.description }}</p>
-            <div class="kikaku-info__body">
-
+            <div class="kikaku-info__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
             </div>
+            <LinkToContents
+              :link="true"
+              url="https://note.com/solt_sauna/m/m7b3993240b70"
+            >
+              C4's 理大祭展示会場<br />
+              コンテンツはこちら
+            </LinkToContents>
           </TheSection>
         </TheContainer>
 
@@ -90,5 +102,8 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__youtube {
+    margin: 1.5rem 0 1.5rem;
+  }
 }
 </style>
