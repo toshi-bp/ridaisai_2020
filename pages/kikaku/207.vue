@@ -37,8 +37,9 @@
               </TheColumn>
             </TheRow>
               <div class="kikaku-info__pdf">
+                <a href="kikaku/207/部内誌『Queue!』 2020夏.pdf">pdf</a>
                 <iframe
-                  src="kikaku/207/部内誌『Queue!』 2020夏.pdf#zoom=40"
+                  src="kikaku/207/部内誌『Queue!』 2020夏.pdf"
                   width="100%"
                   height="100%"
                 >
@@ -114,7 +115,7 @@ export default {
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
   &__pdf {
-    height: 600px;
+    height: 750px;
     width: 100%;
   }
 }
