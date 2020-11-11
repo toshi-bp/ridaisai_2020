@@ -124,6 +124,7 @@ export default {
     font-size: 1.2rem;
   }
   &__intro {
+    margin-top: -1rem;
     white-space: pre-line;
   }
 }
