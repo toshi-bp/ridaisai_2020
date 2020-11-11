@@ -38,6 +38,7 @@
           :introduce="KikakuList.introduction"
           :url="KikakuList.url"
           :twitter="KikakuList.twitter_ids"
+          :instagram="KikakuList.Instagram"
         />
       </div>
     </div>

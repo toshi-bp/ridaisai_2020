@@ -24,7 +24,8 @@ export default {
         academic: '#f28c8e',
         musical: '#56a1bf',
         cultual: '#6fc880',
-        exhibition: '#fdb06f'
+        exhibition: '#fdb06f',
+        sports: '#caca61'
       }
       return typesColorDict[this.type]
     }

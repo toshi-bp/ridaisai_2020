@@ -134,7 +134,8 @@ export default {
         academic: '学術系',
         musical: '音楽系',
         cultual: '文化系',
-        exhibition: '展示系'
+        exhibition: '展示系',
+        sports: '運動系'
       }
       return typeDict[this.labelType]
     }

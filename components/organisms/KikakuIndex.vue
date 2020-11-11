@@ -24,7 +24,7 @@
         <TheSection>
           <p>このページでは理大祭に参加している団体の企画をみることができます。</p>
           <p>
-            企画は以下の4つのジャンルに分類されています。それぞれのラベルをクリックするとそれぞれのジャンルで開催される企画をまとめて表示したエリアに移動できます。
+            企画は以下の5つのジャンルに分類されています。それぞれのラベルをクリックするとそれぞれのジャンルで開催される企画をまとめて表示したエリアに移動できます。
           </p>
           <h3>ジャンルから選ぶ</h3>
           <div class="kikaku__label">
@@ -42,7 +42,8 @@
                   academic: '学術系',
                   musical: '音楽系',
                   cultual: '文化系',
-                  exhibition: '展示系'
+                  exhibition: '展示系',
+                  sports: '運動系'
                 }[type]
               }}
             </KikakuLabel>
@@ -81,7 +82,8 @@
               academic: academicKikaku,
               musical: musicalKikaku,
               cultual: cultualKikaku,
-              exhibition: exhibitionKikaku
+              exhibition: exhibitionKikaku,
+              sports: sportsKikaku
             }"
             :key="type"
           >
@@ -100,7 +102,8 @@
                     academic: '学術系',
                     musical: '音楽系',
                     cultual: '文化系',
-                    exhibition: '展示系'
+                    exhibition: '展示系',
+                    sports: '運動系'
                   }[type]
                 }}
               </KikakuLabel>
@@ -219,7 +222,7 @@ export default {
   data () {
     return {
       keyword: '',
-      types: ['academic', 'musical', 'cultual', 'exhibition'],
+      types: ['academic', 'musical', 'cultual', 'exhibition', 'sports'],
       forms: ['live', 'youtube', 'website']
     }
   },
@@ -238,6 +241,9 @@ export default {
     },
     exhibitionKikaku () {
       return KikakuList.filter(item => item.type === 'exhibition')
+    },
+    sportsKikaku () {
+      return KikakuList.filter(item => item.type === 'sports')
     },
     liveKikaku () {
       return KikakuList.filter(item => item.live === true)

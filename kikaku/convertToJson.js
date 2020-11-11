@@ -21,6 +21,8 @@ if (typeof window === 'undefined') {
   TITLES.Youtube = 'youtube'
   TITLES['webサイト'] = 'website'
   TITLES['link'] = 'link'
+  TITLES['Instagram'] = 'Instagram'
+  TITLES['mail'] = 'mail'
 
   const raw_data = fs.readFileSync(CSV_FILE_PATH, 'utf-8')
   const array_data = raw_data.split('\n')
@@ -53,6 +55,10 @@ if (typeof window === 'undefined') {
         item = parseInt(item, 10) // 文字列を10進数の数に変換
       }
 
+      if(titles[j] === '企画名') {
+        item = item.replace(/{{改行}}/g, '\n')
+      }
+
       if(titles[j] === '説明文(字数制限なし)') {
         item = item.replace(/{{改行}}/g, '\n')
       }
@@ -66,7 +72,8 @@ if (typeof window === 'undefined') {
           学術: 'academic',
           音楽: 'musical',
           カルチャー: 'cultual',
-          展示企画: 'exhibition'
+          展示企画: 'exhibition',
+          スポーツ武道: 'sports'
         }[item]
       }
 
