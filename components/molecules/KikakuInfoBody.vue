@@ -123,5 +123,8 @@ export default {
     font-weight: bold;
     font-size: 1.2rem;
   }
+  &__intro {
+    white-space: pre-line;
+  }
 }
 </style>

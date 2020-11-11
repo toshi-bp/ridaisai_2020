@@ -53,6 +53,14 @@ if (typeof window === 'undefined') {
         item = parseInt(item, 10) // 文字列を10進数の数に変換
       }
 
+      if(titles[j] === '説明文(字数制限なし)') {
+        item = item.replace(/{{改行}}/g, '\n')
+      }
+
+      if(titles[j] === '団体紹介(字数制限なし)') {
+        item = item.replace(/{{改行}}/g, '\n')
+      }
+
       if (titles[j] === 'ジャンル') {
         item = {
           学術: 'academic',

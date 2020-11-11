@@ -80,5 +80,8 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__description {
+    white-space: pre-line;
+  }
 }
 </style>

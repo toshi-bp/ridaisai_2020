@@ -16,13 +16,12 @@
           :website="KikakuList.website"
         />
 
-        <!-- ここにコンテンツを掲載するよ -->
-        <!-- <TheContainer>
+        <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
           </TheSection>
-        </TheContainer> -->
+        </TheContainer>
 
         <KikakuInfoBody
           :image-url="require(`@/assets/kikaku/${KikakuList.image_filename}`)"
@@ -81,5 +80,8 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__description {
+    white-space: pre-line;
+  }
 }
 </style>
