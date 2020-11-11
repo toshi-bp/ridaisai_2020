@@ -20,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
             <h4>コンテンツのダウンロード(zipファイルでのダウンロードとなります。何卒ご了承ください。)</h4>
             <div>
               <p>
@@ -93,5 +93,8 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__description {
+    white-space: pre-line;
+  }
 }
 </style>

@@ -20,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p>{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
             <div class="kikaku-info__pdf">
               <div class="kikaku-info__pdf__body">
                 <a href="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf">pdf</a>
@@ -136,6 +136,9 @@ export default {
   }
   &__link {
     text-align: center;
+  }
+  &__description {
+    white-space: pre-line;
   }
 }
 </style>

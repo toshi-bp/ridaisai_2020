@@ -143,8 +143,8 @@ export default {
   },
   head () {
     return makeHead(
-      'RICORA',
-      'RICORA',
+      'RICORA MUSIC TEAM',
+      'RICORA MUSIC TEAM',
       require('~/assets/kikaku/airship.png')
     )
   }
@@ -159,6 +159,9 @@ export default {
   background-size: repeat;
   &__youtube {
     margin-bottom: 1.5rem;
+  }
+  &__description {
+    white-space: pre-line;
   }
 }
 </style>

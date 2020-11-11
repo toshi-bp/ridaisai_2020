@@ -20,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p>{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
             <div class="kikaku-info__pdf">
               <a href="kikaku/111/鉄研.pdf" class="kikaku-info__pdf__link">鉄研.pdf</a>
               <div class="kikaku-info__pdf__body">
@@ -99,6 +99,9 @@ export default {
     &__link {
       margin: 1rem 0 1rem;
     }
+  }
+  &__description {
+    white-space: pre-line;
   }
 }
 </style>

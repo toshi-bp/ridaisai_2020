@@ -20,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p>{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
             <a href="kikaku/104/ピアノコンサートprogram.pdf">ピアノコンサートprogram</a>
             <div class="kikaku-info__youtube">
               <h3 class="kikaku-info__youtube__title">①宿命/藤原聡<br/>
@@ -161,6 +161,9 @@ export default {
     &__text {
       font-size: 1rem;
     }
+  }
+  &__description {
+    white-space: pre-line;
   }
 }
 </style>

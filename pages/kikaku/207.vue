@@ -20,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <!-- <h3>企画紹介</h3> -->
-            <p>{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
             <h4>
               コンテンツはこちら(クリックすると全画面表示ができます)
             </h4>
@@ -117,6 +117,9 @@ export default {
   &__pdf {
     height: 750px;
     width: 100%;
+  }
+  &__description {
+    white-space: pre-line;
   }
 }
 </style>

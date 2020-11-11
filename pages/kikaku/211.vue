@@ -20,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p>{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
             <div class="kikaku-info__youtube">
                <div class="kikaku-info__youtube__body">
                 <youtube
@@ -109,6 +109,9 @@ export default {
       width: 100%;
       margin-bottom: 1rem;
     }
+  }
+  &__description {
+    white-space: pre-line;
   }
 }
 </style>

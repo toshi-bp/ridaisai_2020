@@ -20,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p>{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
             <div class="kikaku-info__link">
               <LinkToContents
                 :link="true"
@@ -115,6 +115,9 @@ export default {
   }
   &__link {
     margin: 1.5rem 0;
+  }
+  &__description {
+    white-space: pre-line;
   }
 }
 </style>

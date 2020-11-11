@@ -20,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
             <div class="kikaku-info__body">
               <div class="kikaku-info__pdf">
                 <iframe
@@ -104,6 +104,9 @@ export default {
     width: 100%;
     height: 750px;
     margin-bottom: 1.5rem;
+  }
+  &__description {
+    white-space: pre-line;
   }
 }
 </style>

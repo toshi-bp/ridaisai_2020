@@ -180,6 +180,7 @@ export default {
   background-size: repeat;
   &__description {
     margin-bottom: 1rem;
+    white-space: pre-line;
   }
   &__title {
     font-size: 1.4rem;

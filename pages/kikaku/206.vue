@@ -19,7 +19,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p>{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
             <div class="kikaku-info__youtube">
               <youtube
                 ref="youtube"
@@ -112,6 +112,9 @@ export default {
   background-size: repeat;
   &__youtube {
     margin-bottom: 1.5rem;
+  }
+  &__description {
+    white-space: pre-line;
   }
 }
 </style>
