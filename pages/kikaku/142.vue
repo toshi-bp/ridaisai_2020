@@ -20,7 +20,15 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p>{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <div class="kikaku-info__youtube">
+              <youtube
+              ref="youtube"
+              :video-id="videoId"
+              :fit-parent="true"
+              :resize="true"
+            />
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -46,6 +54,11 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  data () {
+    return {
+      videoId: '4lBLAmV6Bu4'
+    }
+  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -82,6 +95,9 @@ export default {
   background-size: repeat;
   &__description {
     white-space: pre-line;
+  }
+  &__youtube {
+    margin: 1.5rem 0 1rem;
   }
 }
 </style>
