@@ -9,6 +9,7 @@
       'label--is-musical': type === 'musical',
       'label--is-cultual': type === 'cultual',
       'label--is-exhibition': type === 'exhibition',
+      'label--is-sports': type === 'sports',
       'label--is-live': type === 'live',
       'label--is-youtube': type === 'youtube',
       'label--is-website': type === 'website',
@@ -72,6 +73,9 @@ export default {
   }
   &--is-exhibition {
     background-color: $exhibition-color;
+  }
+  &--is-sports {
+    background-color: $sports-color;
   }
   &--is-youtube {
     background-color: $youtube-color;
