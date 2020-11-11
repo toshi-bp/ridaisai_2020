@@ -82,9 +82,9 @@ import makeHead from '~/utils/makeHead.js'
 export default {
   data () {
     return {
-      videoId: 'prLY2nn6Spc',
-      videoId2: 'a4s0eHACmMI',
-      videoId3: 'ZUnjwPFdKXY',
+      videoId: 'ZUnjwPFdKXY',
+      videoId2: 'prLY2nn6Spc',
+      videoId3: 'a4s0eHACmMI',
       videoId4: '6BQQIL6KgHE'
     }
   },
