@@ -38,8 +38,8 @@
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
-// import TheSection from '~/components/atoms/TheSection'
-// import TheContainer from '~/components/atoms/TheContainer'
+import TheSection from '~/components/atoms/TheSection'
+import TheContainer from '~/components/atoms/TheContainer'
 
 import makeHead from '~/utils/makeHead.js'
 
@@ -48,9 +48,9 @@ import KikakuList from '~/kikaku/KikakuList.json'
 export default {
   components: {
     KikakuInfoHeader,
-    KikakuInfoBody
-    // TheSection,
-    // TheContainer
+    KikakuInfoBody,
+    TheSection,
+    TheContainer
   },
   props: {
     id: {
