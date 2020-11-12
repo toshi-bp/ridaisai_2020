@@ -114,7 +114,7 @@ export default {
     return makeHead(
       '情報技術クラブ',
       '情報技術クラブ',
-      require('~/assets/kikaku/airship.png')
+      require('~/assets/kikaku/itc.png')
     )
   }
 }

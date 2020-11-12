@@ -90,9 +90,9 @@ export default {
   },
   head () {
     return makeHead(
+      '大学生×バイクのある生活(NRK)',
       '二輪会',
-      '二輪会',
-      require('~/assets/kikaku/airship.png')
+      require('~/assets/kikaku/二輪会.jpg')
     )
   }
 }
