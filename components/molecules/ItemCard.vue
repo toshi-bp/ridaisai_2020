@@ -168,7 +168,7 @@ export default {
     &::before {
       content: "";
       display: block;
-      padding-top: calc(100% * (3 / 4));
+      padding-top: calc(100% * (9 / 10));
     }
   }
   &__title {
