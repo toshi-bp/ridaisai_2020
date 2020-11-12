@@ -65,7 +65,7 @@ export default {
   },
   head () {
     return makeHead(
-      'RICORA MUSIC TEAM',
+      'RICORA\'s MUSIC 2020',
       'RICORA MUSIC TEAM',
       require('~/assets/kikaku/airship.png')
     )
