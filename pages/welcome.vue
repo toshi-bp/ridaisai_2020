@@ -1,91 +1,86 @@
 <template>
   <div class="welcome__bg">
-    <TheContainer>
-      <div class="welcome__ticket">
-        <Ticket />
+    <TheContainer class="welcome__container">
+      <div>
+        <Ticket class="welcome__ticket"/>
         <div class="welcome__article">
           <div class="welcome__article__youtube">
-            <div class="welcome__article__title">
+            <div class="welcome__article__main">
               <WelcomeHeader>
                 <template #title>
-                  動画で理大祭を楽しむ
+                  Live配信で理大祭を楽しむ
                 </template>
               </WelcomeHeader>
-            </div>
-            <div class="welcome__article__main">
-              <img src="~@/assets/image/symbol.svg" class="welcome__article__image">
+              <!-- <img src="~@/assets/image/symbol.svg" class="welcome__article__image"> -->
               <div class="welcome__article__right">
-                <div class="welcome__article__section">
-                  <p class="welcome__article__text">
-                    参加団体が理大祭のために練習、制作した様々なパフォーマンスを動画で楽しむことができます。
-                  </p>
-                </div>
                 <div class="welcome__article__button">
-                  <LinkButton to="/">
-                    動画企画はこちら
-                  </LinkButton>
+                  <KikakuLabel
+                    type="live"
+                    href="/kikaku/#live"
+                  >
+                    Live配信の企画はこちら
+                  </KikakuLabel>
                 </div>
-              </div>
-              <div
-                class="welcome__imgbox"
-              >
-                <img
-                  src="~@/assets/image/symbol.png"
-                  class="welcome__imgbox__item"
-                />
-                <img
-                  src="~@/assets/image/symbol.png"
-                  class="welcome__imgbox__item"
-                />
-                <img
-                  src="~@/assets/image/symbol.png"
-                  class="welcome__imgbox__item"
-                />
-              </div>
-            </div>
-            <WelcomeHeader>
-              <template #title>
-                Live配信で理大祭を楽しむ
-              </template>
-            </WelcomeHeader>
-            <!-- <div class="welcome__article__title">
-              Live配信で理大祭を楽しむ
-            </div> -->
-            <div class="welcome__article__main">
-              <img src="~@/assets/image/symbol.svg" class="welcome__article__image">
-              <div class="welcome__article__right">
                 <div class="welcome__article__section">
                   <p class="welcome__article__text">
                     参加団体が理大祭のために日々培ってきた練習の成果をYouTubeLiveを通して生放送で披露します。
                   </p>
                 </div>
-                <div class="welcome__article__button">
-                  <LinkButton to="/">
-                    Live配信の企画はこちら
-                  </LinkButton>
-                </div>
               </div>
             </div>
-            <WelcomeHeader>
-              <template #title>
-                Webサイトで理大祭を楽しむ
-              </template>
-            </WelcomeHeader>
+            <div class="welcome__article__main">
+              <div class="welcome__article__title">
+                <WelcomeHeader>
+                  <template #title>
+                    動画で理大祭を楽しむ
+                  </template>
+                </WelcomeHeader>
+              </div>
+              <!-- <img src="~@/assets/image/symbol.svg" class="welcome__article__image"> -->
+              <div class="welcome__article__right">
+                <div class="welcome__article__button">
+                  <KikakuLabel type="youtube" href="/kikaku/#youtube">
+                    動画企画はこちら
+                  </KikakuLabel>
+                </div>
+                <div class="welcome__article__section">
+                  <p class="welcome__article__text">
+                    参加団体が理大祭のために練習、制作した様々なパフォーマンスを動画で楽しむことができます。
+                  </p>
+                </div>
+              </div>
+              <!-- <div
+                class="welcome__imgbox"
+              >
+                <div>
+                  <img src="~@/assets/kikaku/SpMn1UMEEqkp0If1En6LmiNHiuqmPvGxH9JqjrpX.png" class="welcome__imgbox__1" />
+                </div>
+              </div> -->
+            </div>
             <!-- <div class="welcome__article__title">
               Webサイトで理大祭を楽しむ
             </div> -->
             <div class="welcome__article__main">
-              <img src="~@/assets/welcome/website_1.jpg" class="welcome__article__image">
+              <WelcomeHeader>
+                <template #title>
+                  Webサイトで理大祭を楽しむ
+                </template>
+              </WelcomeHeader>
+              <!-- <img src="~@/assets/welcome/website_1.jpg" class="welcome__article__image"> -->
               <div class="welcome__article__right">
+                <div class="welcome__article__button">
+                  <KikakuLabel
+                    type="website"
+                    href="/kikaku/#website"
+                    class="welcome__label"
+                  >
+                    Webサイトで楽しむ企画はこちら
+                  </KikakuLabel>
+                </div>
                 <div class="welcome__article__section">
                   <p class="welcome__article__text">
                     参加団体が理大祭のために作成した様々なコンテンツをこの理大祭Webサイト上で楽しむことができます。
                   </p>
-                </div>
-                <div class="welcome__article__button">
-                  <LinkButton to="/">
-                    Webサイトの企画はこちら
-                  </LinkButton>
                 </div>
               </div>
             </div>
@@ -101,15 +96,15 @@
 // import LinkButton3 from '~/components/atoms/LinkButton3.vue'
 import TheContainer from '~/components/atoms/TheContainer'
 import Ticket from '~/components/atoms/Ticket'
-import LinkButton from '~/components/atoms/LinkButton'
 import WelcomeHeader from '~/components/organisms/WelcomeHeader'
+import KikakuLabel from '~/components/atoms/KikakuLabel'
 
 export default {
   components: {
     TheContainer,
     Ticket,
-    LinkButton,
-    WelcomeHeader
+    WelcomeHeader,
+    KikakuLabel
     // LinkButton2,
     // LinkButton3
   }
@@ -124,17 +119,23 @@ export default {
     // background-image: url('~@/assets/image/bg.svg');
     background-size: repeat;
     // background-color: #BCEDF7;
+    background-color: rgba(#fff,0.9);
+  }
+  &__container {
+    background-color: rgba(#fff,0.9);
   }
   &__ticket {
-    padding-bottom: 5rem;
     width: 100%;
+    margin-bottom: 10rem;
     &__body {
       user-select: none;
     }
   }
   &__article {
     &__main {
-      margin-bottom: 15rem;
+      margin-bottom: 10rem;
+      // background-color: #FFFAE6;
+      // padding-bottom: 1rem;
       @include media-breakpoint-down(sm) {
         display: flex;
         flex-direction: column;
@@ -152,23 +153,25 @@ export default {
       }
     }
     &__text {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      padding: 1rem;
+      text-align: left;
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
     }
     &__right {
-      display: inline-block;
-      width: 40%;
-      margin-left: 1.5rem;
+      display: flex;
+      flex-direction: row;
+      // margin-left: 1.5rem;
       @include media-breakpoint-down(sm) {
+        flex-direction: column-reverse;
         width: 100%;
       }
 
       &__imagebox {
-        // display: grid;
-        // grid-auto-columns: calc((100% / 3) - 1rem);
-        // grid-template-columns: repeat(3, 1fr);
         width: 100%;
-        display: flex;
-        justify-content: space-between;
+        height: 500px;
         &__item {
           // display: flex;
           // flex-direction: row;
@@ -177,20 +180,29 @@ export default {
       }
     }
     &__section {
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding: 1rem;
+      display: flex;
+      width: 70%;
+      margin: 0 1rem 1rem 1rem;
+      padding: 1rem 0;
       text-align: center;
       background-color: rgba(#fff, 0.8);
       border-radius: 5px;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
     }
     &__button {
-      display: inline-block;
-      text-align: right;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
       vertical-align: middle;
+      margin-left: 1rem;
 
       @include media-breakpoint-down(sm) {
-        margin-top: 0.5rem;
+        margin-right: 0;
+        margin: 0.5rem 0;
         display: block;
         text-align: center;
       }
@@ -198,13 +210,31 @@ export default {
   }
 
   &__imgbox {
-    display: flex;
+    // display: flex;
+    width: 100%;
+    height: 500px;
     &__item {
       display: flex;
       width: calc(100% / 3);
       flex-direction: row;
       position: relative;
     }
+    &__1 {
+      border-radius: 100%;
+      height: 200px;
+      width: auto;
+      position: relative;
+      top: 3rem;
+      left: 1rem;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
+  &__label {
+    text-align: center;
+  }
+
 }
 </style>

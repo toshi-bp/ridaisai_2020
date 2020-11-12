@@ -15,15 +15,15 @@
           企画一覧はこちら
         </p>
         <div class="ticket__button">
-          <LinkButton to="/" class="ticket__button">
+          <KikakuLabel type="live" to="/" class="ticket__button">
             Live配信で楽しむ
-          </LinkButton>
-          <LinkButton to="/" class="ticket__button">
+          </KikakuLabel>
+          <KikakuLabel type="youtube" to="/" class="ticket__button">
             動画で楽しむ
-          </LinkButton>
-          <LinkButton to="/" class="ticket__button">
+          </KikakuLabel>
+          <KikakuLabel type="website" to="/" class="ticket__button">
             Webサイトで楽しむ
-          </LinkButton>
+          </KikakuLabel>
         </div>
       </div>
       <div class="ticket__main__right">
@@ -36,11 +36,11 @@
 </template>
 
 <script>
-import LinkButton from '~/components/atoms/LinkButton.vue'
+import KikakuLabel from '~/components/atoms/KikakuLabel.vue'
 
 export default {
   components: {
-    LinkButton
+    KikakuLabel
   }
 
 }
@@ -97,11 +97,14 @@ export default {
       margin-bottom: 1rem;
   }
   &__button{
-
+    margin: 0 1rem 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__bottomline{
-      height: 1rem;
-      background-color: $theme-color;
+    height: 1rem;
+    background-color: $theme-color;
   }
 }
 </style>
