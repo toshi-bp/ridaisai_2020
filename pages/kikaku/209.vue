@@ -21,17 +21,17 @@
             <h3>企画紹介</h3>
             <p>{{ KikakuList.description }}</p>
             <div
-            v-for="videos in videoIds"
-            :key="videos. id"
-            class="kikaku-info__youtube"
-          >
-            <youtube
-              ref="youtube"
-              :video-id="videos.videoId"
-              :fit-parent="true"
-              :resize="true"
-            />
-          </div>
+              v-for="videos in videoIds"
+              :key="videos. id"
+              class="kikaku-info__youtube"
+            >
+              <youtube
+                ref="youtube"
+                :video-id="videos.videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
           </TheSection>
         </TheContainer>
 
