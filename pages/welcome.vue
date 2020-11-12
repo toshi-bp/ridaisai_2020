@@ -2,7 +2,6 @@
   <div class="welcome__bg">
     <TheContainer>
       <div class="welcome__ticket">
-        <!-- <img src="~@/assets/image/ticket.svg"  class="welcome__ticket__body"/> -->
         <Ticket />
         <div class="welcome__article">
           <div class="welcome__article__youtube">
@@ -23,7 +22,7 @@
                 </div>
                 <div class="welcome__article__button">
                   <LinkButton to="/">
-                    Youtubeの企画はこちら
+                    動画企画はこちら
                   </LinkButton>
                 </div>
               </div>
