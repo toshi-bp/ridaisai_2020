@@ -56,6 +56,14 @@
                   ></iframe>
                 </div>
               </div>
+              <div class="kikaku-info__youtube">
+                <youtube
+                  ref="youtube"
+                  :video-id="videoId"
+                  :fit-parent="true"
+                  :resize="true"
+                />
+              </div>
             </div>
           </TheSection>
         </TheContainer>
@@ -86,6 +94,11 @@ import ITC from '~/kikaku/ITC.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  data () {
+    return {
+      videoId: '2DpXeUbmjs0'
+    }
+  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -145,6 +158,10 @@ export default {
   }
   &__description {
     white-space: pre-line;
+  }
+  &__youtube {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 </style>
