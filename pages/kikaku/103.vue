@@ -16,13 +16,12 @@
           :website="KikakuList.website"
         />
 
-        <!-- ここにコンテンツを掲載するよ -->
-        <!-- <TheContainer>
+        <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
           </TheSection>
-        </TheContainer> -->
+        </TheContainer>
 
         <KikakuInfoBody
           :image-url="require(`@/assets/kikaku/${KikakuList.image_filename}`)"
@@ -39,8 +38,8 @@
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
-// import TheSection from '~/components/atoms/TheSection'
-// import TheContainer from '~/components/atoms/TheContainer'
+import TheSection from '~/components/atoms/TheSection'
+import TheContainer from '~/components/atoms/TheContainer'
 
 import makeHead from '~/utils/makeHead.js'
 
@@ -49,9 +48,9 @@ import KikakuList from '~/kikaku/KikakuList.json'
 export default {
   components: {
     KikakuInfoHeader,
-    KikakuInfoBody
-    // TheSection,
-    // TheContainer
+    KikakuInfoBody,
+    TheSection,
+    TheContainer
   },
   props: {
     id: {
@@ -81,5 +80,8 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__description {
+    white-space: pre-line;
+  }
 }
 </style>

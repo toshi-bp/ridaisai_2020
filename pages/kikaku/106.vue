@@ -20,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
           </TheSection>
         </TheContainer>
 
@@ -30,6 +30,7 @@
           :introduce="KikakuList.introduction"
           :url="KikakuList.url"
           :twitter="KikakuList.twitter_ids"
+          :instagram="KikakuList.Instagram"
         />
       </div>
     </div>
@@ -80,5 +81,8 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__description {
+    white-space: pre-line;
+  }
 }
 </style>

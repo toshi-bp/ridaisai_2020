@@ -88,6 +88,14 @@
                     プライバシーポリシー
                   </nuxt-link>
                 </li>
+                <li class="footer__list__item">
+                  <nuxt-link
+                    to="/kikaku/"
+                    class="footer__list__link"
+                  >
+                    企画一覧
+                  </nuxt-link>
+                </li>
                 <!-- <li class="footer__list__item">
                   <nuxt-link
                     to="/"
@@ -129,6 +137,10 @@ export default {
   padding: 3rem 0;
   @include media-breakpoint-down(md) {
     text-align: center;
+    padding: 3rem 0 7rem;
+  }
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 240px);
   }
   &__row {
     display: flex;

@@ -49,6 +49,24 @@
           >
             {{ twitter }} <!-- twitterのidをここに入れる -->
           </a>
+          <h3 v-if="instagram" class="kikaku-info__name">
+            Instagram
+          </h3>
+          <a
+            :href="`https://www.instagram.com/${instagram}`"
+            target="_blank"
+          >
+            {{ instagram }} <!-- instagramのidをここに入れる -->
+          </a>
+          <h3 v-if="mail" class="kikaku-info__name">
+            メール
+          </h3>
+          <a
+            :href="`mailto:${mail}`"
+            target="_blank"
+          >
+            {{ mail }} <!-- twitterのidをここに入れる -->
+          </a>
         </div>
       </TheSection>
       <div class="kikaku-info__button">
@@ -91,6 +109,12 @@ export default {
     },
     twitter: {
       type: String
+    },
+    instagram: {
+      type: String
+    },
+    mail: {
+      type: String
     }
   }
 }
@@ -103,6 +127,7 @@ export default {
   }
   &__name {
     font-family: $sub-font;
+    margin-top: 1rem;
   }
   &__img {
     width: 15rem;
@@ -121,6 +146,10 @@ export default {
     font-family: $sub-font;
     font-weight: bold;
     font-size: 1.2rem;
+  }
+  &__intro {
+    margin-top: -1rem;
+    white-space: pre-line;
   }
 }
 </style>

@@ -11,7 +11,7 @@ export default {}
 <style lang="scss" scoped>
 .container {
   margin: 0 auto;
-  width: 960px;
+  width: 960px - 240px;
   padding: 0 $container-padding;
   @include media-breakpoint-down(md) {
     margin: 0 0;

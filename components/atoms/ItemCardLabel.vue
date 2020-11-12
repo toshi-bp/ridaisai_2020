@@ -24,7 +24,8 @@ export default {
         academic: '#f28c8e',
         musical: '#56a1bf',
         cultual: '#6fc880',
-        exhibition: '#fdb06f'
+        exhibition: '#fdb06f',
+        sports: '#caca61'
       }
       return typesColorDict[this.type]
     }
@@ -36,7 +37,7 @@ export default {
 .label {
   display: inline-block;
   color: #fff;
-  font-weight: bold;
+  // font-weight: bold;
   font-size: 0.7rem;
   line-height: 2;
   padding: 0 0.5rem;

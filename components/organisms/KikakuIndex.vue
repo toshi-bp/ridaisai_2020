@@ -24,7 +24,7 @@
         <TheSection>
           <p>このページでは理大祭に参加している団体の企画をみることができます。</p>
           <p>
-            企画は以下の4つのジャンルに分類されています。それぞれのラベルをクリックするとそれぞれの開催形態の部分に移動できます。
+            企画は以下の5つのジャンルに分類されています。それぞれのラベルをクリックするとそれぞれのジャンルで開催される企画をまとめて表示したエリアに移動できます。
           </p>
           <h3>ジャンルから選ぶ</h3>
           <div class="kikaku__label">
@@ -42,14 +42,15 @@
                   academic: '学術系',
                   musical: '音楽系',
                   cultual: '文化系',
-                  exhibition: '展示系'
+                  exhibition: '展示系',
+                  sports: '運動系'
                 }[type]
               }}
             </KikakuLabel>
           </div>
           <div>
             <p>
-              また、各企画の開催形態は以下の3種類であり、それぞれのラベルをクリックするとそれぞれの開催形態の部分に移動できます。
+              また、各企画の開催形態は以下の3種類であり、それぞれのラベルをクリックするとそれぞれの開催形態で開催される企画をまとめて表示したエリアに移動できます。
             </p>
             <h3>開催形態から選ぶ</h3>
             <div class="kikaku__label">
@@ -81,7 +82,8 @@
               academic: academicKikaku,
               musical: musicalKikaku,
               cultual: cultualKikaku,
-              exhibition: exhibitionKikaku
+              exhibition: exhibitionKikaku,
+              sports: sportsKikaku
             }"
             :key="type"
           >
@@ -100,7 +102,8 @@
                     academic: '学術系',
                     musical: '音楽系',
                     cultual: '文化系',
-                    exhibition: '展示系'
+                    exhibition: '展示系',
+                    sports: '運動系'
                   }[type]
                 }}
               </KikakuLabel>
@@ -110,6 +113,7 @@
                 v-for="item in KikakuList"
                 :key="item.kikaku_id"
                 :spsize="12"
+                :pcsize="4"
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
@@ -141,7 +145,7 @@
               <KikakuLabel
                 :type="form"
                 link-component-is="a"
-                href="2020/kikaku/#head"
+                href="/2020/kikaku/"
               >
                 {{
                   {
@@ -157,6 +161,7 @@
                 v-for="item in KikakuList"
                 :key="item.kikaku_id"
                 :spsize="12"
+                :pcsize="4"
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
@@ -217,7 +222,7 @@ export default {
   data () {
     return {
       keyword: '',
-      types: ['academic', 'musical', 'cultual', 'exhibition'],
+      types: ['academic', 'musical', 'cultual', 'exhibition', 'sports'],
       forms: ['live', 'youtube', 'website']
     }
   },
@@ -236,6 +241,9 @@ export default {
     },
     exhibitionKikaku () {
       return KikakuList.filter(item => item.type === 'exhibition')
+    },
+    sportsKikaku () {
+      return KikakuList.filter(item => item.type === 'sports')
     },
     liveKikaku () {
       return KikakuList.filter(item => item.live === true)
@@ -283,13 +291,13 @@ export default {
     margin: 1rem 0rem 1.5rem 0;
     display: flex;
     flex-direction: row;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       flex-direction: column;
       margin-bottom: 1rem;
     }
     &__main {
       margin-right: 0.5rem;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
       margin-bottom: 1rem;
     }
     }

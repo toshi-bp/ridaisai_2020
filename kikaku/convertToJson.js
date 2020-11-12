@@ -7,6 +7,7 @@ if (typeof window === 'undefined') {
   const JSON_FILE_PATH = 'KikakuList.json'
 
   const TITLES = {}
+  TITLES.ID = 'number'
   TITLES['企画ID'] = 'kikaku_id'
   TITLES['企画を出店する団体の名称'] = 'name'
   TITLES['企画名'] = 'kikaku_title'
@@ -19,6 +20,9 @@ if (typeof window === 'undefined') {
   TITLES['ライブ配信'] = 'live'
   TITLES.Youtube = 'youtube'
   TITLES['webサイト'] = 'website'
+  TITLES['link'] = 'link'
+  TITLES['Instagram'] = 'Instagram'
+  TITLES['mail'] = 'mail'
 
   const raw_data = fs.readFileSync(CSV_FILE_PATH, 'utf-8')
   const array_data = raw_data.split('\n')
@@ -43,8 +47,24 @@ if (typeof window === 'undefined') {
 
       let item = line[j].split('"').join('')
 
+      if (titles[j] === 'ID') {
+        item = parseInt(item, 10)
+      }
+
       if (titles[j] === '企画ID') {
         item = parseInt(item, 10) // 文字列を10進数の数に変換
+      }
+
+      if(titles[j] === '企画名') {
+        item = item.replace(/{{改行}}/g, '\n')
+      }
+
+      if(titles[j] === '説明文(字数制限なし)') {
+        item = item.replace(/{{改行}}/g, '\n')
+      }
+
+      if(titles[j] === '団体紹介(字数制限なし)') {
+        item = item.replace(/{{改行}}/g, '\n')
       }
 
       if (titles[j] === 'ジャンル') {
@@ -52,7 +72,8 @@ if (typeof window === 'undefined') {
           学術: 'academic',
           音楽: 'musical',
           カルチャー: 'cultual',
-          展示企画: 'exhibition'
+          展示企画: 'exhibition',
+          スポーツ武道: 'sports'
         }[item]
       }
 
@@ -73,6 +94,14 @@ if (typeof window === 'undefined') {
       }
 
       if (titles[j] === 'webサイト') {
+        if (item === 'true') {
+          item = true
+        } else {
+          item = false
+        }
+      }
+
+      if (titles[j] === 'link') {
         if (item === 'true') {
           item = true
         } else {

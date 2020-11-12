@@ -12,6 +12,7 @@
           :circle_name="KikakuList.name"
           :type="KikakuList.type"
           :live="KikakuList.live"
+          :youtube="KikakuList.youtube"
           :website="KikakuList.website"
         />
 
@@ -19,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
           </TheSection>
         </TheContainer>
 
@@ -79,5 +80,8 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__description {
+    white-space: pre-line;
+  }
 }
 </style>

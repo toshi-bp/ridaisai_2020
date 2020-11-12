@@ -1,27 +1,31 @@
 <template>
   <!-- ライブ配信用のリンクにしようと思ったけどZoomとかの他のコンテンツでも使えそうだから一応LinkToContentsという名前にした。 -->
   <div class="link">
+    <nuxt-link to="/Live/">
+      <div
+        v-if="live"
+        class="link__live"
+      >
+        <div class="link__live__inner">
+          <p class="link__live__text">Live配信会場はこちら</p>
+            <!-- 開始時間と終了時間を入れる部分 -->
+          <p class="link__live__text2">{{ startTime }} 〜 {{ endTime }}</p>
+        </div>
+      </div>
+    </nuxt-link>
     <div
-      v-if="live"
-      class="link__live"
-    >
-      <nuxt-link to="/Live/">
-        <p>ライブ配信会場はこちら</p>
-        <!-- 開始時間と終了時間を入れる部分 -->
-        {{ startTime }} 〜 {{ endTime }}
-      </nuxt-link>
-    </div>
-    <div
-      v-if="zoom"
-      class="link__zoom"
-    >
-      <a>Zoomのリンク</a>
-    </div>
-    <div
-      v-if="url"
+      v-if="link"
       class="link__web"
     >
-      <a :href="url">Webコンテンツはこちら</a>
+      <div class="link__web__inner">
+        <a
+          :href="url"
+          target="_blank"
+          class="link__web__inner"
+        >
+          <slot />
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -40,7 +44,12 @@ export default {
       default: false
     },
     zoom: {
-      type: String
+      type: Boolean,
+      default: false
+    },
+    link: {
+      type: Boolean,
+      default: false
     },
     url: {
       type: String
@@ -53,16 +62,54 @@ export default {
 .link {
   display: block;
   margin-bottom: 1rem;
-  box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.1);
+  box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.3);
+  transition: 0.15s ease all;
+  border-radius: 5px;
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.5);
+  }
   &__live {
-    width: 100%;
+    // width: 100%;
     text-align: center;
     background-color: $live-color;
-    opacity: 0.8;
+    border-radius: 5px;
     :hover {
-      width: 105%;
-      height: auto;
-      transition: 0.15s ease all;
+      text-decoration: none;
+    }
+    &__text {
+      padding: 1rem 0 0;
+      text-decoration: none;
+    }
+    &__text2 {
+      padding: 0.5rem 0 0.5rem;
+      text-decoration: none;
+    }
+    &__inner {
+      padding: 1rem 0;
+      font-size: 1.2rem;
+      font-family: $sub-font;
+      text-align: center;
+      color: #fff;
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
+    }
+  }
+  &__web {
+    width: 100%;
+    text-align: center;
+    background-color: $website-color;
+    border-radius: 5px;
+    &__inner {
+      padding: 1.5rem 0;
+      font-size: 1.2rem;
+      font-family: $sub-font;
+      text-align: center;
+      color: #fff;
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
     }
   }
 }
