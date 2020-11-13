@@ -8,10 +8,11 @@
       </SubHeader>
       <div>
         <TheSection>
-          <p>ここではライブ配信を行っています。配信は二つの会場で行なわれています。</p>
+          <p>今年度の理大祭はYouTubeLiveによる参加団体のパフォーマンスのLive配信を行っています。まずは配信タイムテーブルをチェック！</p>
           <!-- ここにライブ配信する動画を埋め込むよ(チャットを載せるか否かは要相談) -->
-          <div class="live__movie">
-            <!-- 公開に際しチャットを埋め込む場合はsrcのurlの部分を変更すること -->
+          <!-- 埋め込めなくない可能性が出てきたため一旦動画の部分はコメントアウト -->
+          <!-- <div class="live__movie">
+            公開に際しチャットを埋め込む場合はsrcのurlの部分を変更すること
             <youtube
               ref="youtube"
               :video-id="videoId_1"
@@ -24,9 +25,8 @@
               :src="`https://www.youtube.com/live_chat?v=${videoId_1}&embed_domain=localhost`"
               allowfullscreen
             >
-              <!--チャットの高さについては要調整(特にスマホ版)あとURLも-->
+              チャットの高さについては要調整(特にスマホ版)あとURLも
             </iframe>
-            <!-- heightは:style"{}"を利用して変えていく方式にした方がいいかもしれない -->
             <youtube
               ref="youtube"
               :video-id="videoId_2"
@@ -39,7 +39,7 @@
               :src="`https://www.youtube.com/live_chat?v=${videoId_2}&embed_domain=localhost`"
               allowfullscreen
             />
-          </div>
+          </div> -->
         </TheSection>
       </div>
       <div>

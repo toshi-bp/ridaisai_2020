@@ -1,14 +1,119 @@
-[{
-  "kikaku_id": 124,
-  "day": "Sunday",
-  "startTime": "12:00",
-  "endTime": "13:00",
-  "place": "講義棟"
-},
-{
-  "kikaku_id": 105,
-  "day": "Saturday",
-  "startTime": "15:45",
-  "endTime": "16:45",
-  "place": "1311"
-}]
+[
+  {
+    "id": 1,
+    "kikaku_id": 104,
+    "day": "Saturday",
+    "startTime": "10:00",
+    "endTime": "12:15",
+    "minutes": 135,
+    "place": "1311"
+  },
+  {
+    "id": 2,
+    "kikaku_id": 103,
+    "day": "Saturday",
+    "startTime": "13:30",
+    "endTime": "13:45",
+    "minutes": 15,
+    "place": "1311"
+  },
+  {
+    "id": 3,
+    "kikaku_id": 202,
+    "day": "Saturday",
+    "startTime": "14:15",
+    "endTime": "14:30",
+    "minutes": 15,
+    "place": "1311"
+  },
+  {
+    "id": 5,
+    "kikaku_id": 105,
+    "day": "Saturday",
+    "startTime": "15:45",
+    "endTime": "16:45",
+    "minutes": 60,
+    "place": "1311"
+  },
+  {
+    "id": 6,
+    "kikaku_id": 151,
+    "day": "Saturday",
+    "startTime": "17:30",
+    "endTime": "18:00",
+    "minutes": 30,
+    "place": "1311"
+  },
+  {
+    "id": 7,
+    "kikaku_id": 129,
+    "day": "Saturday",
+    "startTime": "12:15",
+    "endTime": "13:30",
+    "minutes": 75,
+    "place": "講義棟"
+  },
+  {
+    "id": 8,
+    "kikaku_id": 150,
+    "day": "Saturday",
+    "startTime": "14:00",
+    "endTime": "16:00",
+    "minutes": 120,
+    "place": "講義棟"
+  },
+  {
+    "id": 9,
+    "kikaku_id": 120,
+    "day": "Saturday",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "minutes": 60,
+    "place": "講義棟"
+  },
+  {
+    "id": 10,
+    "kikaku_id": 113,
+    "day": "Sunday",
+    "startTime": "10:45",
+    "endTime": "12:15",
+    "minutes": 90,
+    "place": "1311"
+  },
+  {
+    "id": 11,
+    "kikaku_id": 115,
+    "day": "Sunday",
+    "startTime": "12:30",
+    "endTime": "14:00",
+    "minutes": 90,
+    "place": "1311"
+  },
+  {
+    "id": 12,
+    "kikaku_id": 203,
+    "day": "Sunday",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "minutes": 30,
+    "place": "1311"
+  },
+  {
+    "id": 13,
+    "kikaku_id": 124,
+    "day": "Sunday",
+    "startTime": "12:00",
+    "endTime": "13:00",
+    "minutes": 60,
+    "place": "講義棟"
+  },
+  {
+    "id": 14,
+    "kikaku_id": 106,
+    "day": "Sunday",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "minutes": 90,
+    "place": "講義棟"
+  }
+]
