@@ -100,6 +100,15 @@
   },
   {
     "id": 13,
+    "kikaku_id": 201,
+    "day": "Sunday",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "minutes": 60,
+    "place": "1311"
+  },
+  {
+    "id": 14,
     "kikaku_id": 124,
     "day": "Sunday",
     "startTime": "12:00",
@@ -108,7 +117,7 @@
     "place": "講義棟"
   },
   {
-    "id": 14,
+    "id": 15,
     "kikaku_id": 106,
     "day": "Sunday",
     "startTime": "15:00",
