@@ -24,8 +24,8 @@
             <div>
               <LinkToContents
                 :link="true"
-                :url="KikakuList.url"
-              >コンテンツはこちら<br/>{{ KikakuList.url }}
+                url="https://www.ed.tus.ac.jp/eic/product.html"
+              >コンテンツはこちら<br/>https://www.ed.tus.ac.jp/eic/product.html
               </LinkToContents>
             </div>
           </TheSection>
