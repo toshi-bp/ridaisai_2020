@@ -20,12 +20,15 @@
               21日(土)
             </h1>
             <div class="time-table__saturday">
+              <div class="time-table__title">
+                <div class="time-table__title__child">薬学ステージ</div>
+                <div class="time-table__title__child">理工ステージ</div>
+              </div>
               <div
                  v-for="time in times"
                   :key="time.id"
                 class="time-table__time"
               >
-                <div class="time-table__time__line"></div>
                 <div
                   class="time-table__time__child"
                 >
@@ -33,17 +36,11 @@
                 </div>
                 <div></div>
               </div>
-              <div
-                v-for="stage in Saturday1311"
-                :key="stage.id"
-                class="time-table__saturday__1311"
-              >
               <div></div>
+              <div class="time-table__body">
+                <div class="time-table__body__saturday">
+                </div>
               </div>
-              <div
-                v-for="stage in SaturdayLB"
-                :key="stage.id"
-              ></div>
             </div>
           </div>
           <div
@@ -145,18 +142,62 @@ export default {
 
 <style lang="scss" scoped>
 .time-table {
+  &__title {
+    display: flex;
+    flex-direction: row;
+    &__child {
+      position: relative;
+      left: 60px;
+      background-color: $theme-color;
+      color: #fff;
+      font-family: $sub-font;
+      margin: 1rem 0.5rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      width: calc(100% / 2 - 60px);
+      @include media-breakpoint-down(sm) {
+        left: 0;
+        width: calc(100% / 2);
+        padding: 1rem;
+      }
+    }
+  }
   &__time {
     position: relative;
     &__child {
       margin-bottom: 5rem;
-      text-align: center;
+      left: 0;
+      z-index: -2;
       width: 60px;
+      text-align: center;
+      &::before {
+        content: '';
+        border-top: 1px $theme-color dashed;
+        position: absolute;
+        top: 0.8rem;
+        left: 60px;
+        opacity: 0.7;
+        height: 0;
+        width: calc(100% - 60px);
+        display: block;
+      }
     }
-    &__line {
-      border-top: 1px $theme-color dashed;
-      opacity: 0.7;
-      height: 0;
-      width: 100%;
+  }
+  &__body {
+    &__saturday {
+      &__1 {
+        z-index: 1;
+        position: absolute;
+        left: 60px;
+        background-color: $theme-color;
+        padding: 1rem;
+        height: 60px;
+        width: calc(100% / 4 - 1rem);
+        @include media-breakpoint-down(sm) {
+          width: calc(100% / 3 - 2rem);
+          left: 0;
+        }
+      }
     }
   }
 }
