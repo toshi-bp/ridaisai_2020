@@ -6,7 +6,9 @@
     "startTime": "10:00",
     "endTime": "12:15",
     "minutes": 135,
-    "place": "1311"
+    "place": "1311",
+    "start_h": 10,
+    "start_m": 0
   },
   {
     "id": 2,
@@ -15,7 +17,9 @@
     "startTime": "13:30",
     "endTime": "13:45",
     "minutes": 15,
-    "place": "1311"
+    "place": "1311",
+    "start_h": 13,
+    "start_m": 30
   },
   {
     "id": 3,
@@ -24,7 +28,9 @@
     "startTime": "14:15",
     "endTime": "14:30",
     "minutes": 15,
-    "place": "1311"
+    "place": "1311",
+    "start_h": 14,
+    "start_m": 15
   },
   {
     "id": 5,
@@ -33,7 +39,9 @@
     "startTime": "15:45",
     "endTime": "16:45",
     "minutes": 60,
-    "place": "1311"
+    "place": "1311",
+    "start_h": 15,
+    "start_m": 45
   },
   {
     "id": 6,
@@ -42,7 +50,9 @@
     "startTime": "17:30",
     "endTime": "18:00",
     "minutes": 30,
-    "place": "1311"
+    "place": "1311",
+    "start_h": 17,
+    "start_m": 30
   },
   {
     "id": 7,
@@ -51,7 +61,9 @@
     "startTime": "12:15",
     "endTime": "13:30",
     "minutes": 75,
-    "place": "講義棟"
+    "place": "講義棟",
+    "start_h": 12,
+    "start_m": 15
   },
   {
     "id": 8,
@@ -60,7 +72,9 @@
     "startTime": "14:00",
     "endTime": "16:00",
     "minutes": 120,
-    "place": "講義棟"
+    "place": "講義棟",
+    "start_h": 14,
+    "start_m": 0
   },
   {
     "id": 9,
@@ -69,7 +83,9 @@
     "startTime": "16:30",
     "endTime": "17:30",
     "minutes": 60,
-    "place": "講義棟"
+    "place": "講義棟",
+    "start_h": 16,
+    "start_m": 30
   },
   {
     "id": 10,
@@ -78,7 +94,9 @@
     "startTime": "10:45",
     "endTime": "12:15",
     "minutes": 90,
-    "place": "1311"
+    "place": "1311",
+    "start_h": 10,
+    "start_m": 45
   },
   {
     "id": 11,
@@ -87,7 +105,9 @@
     "startTime": "12:30",
     "endTime": "14:00",
     "minutes": 90,
-    "place": "1311"
+    "place": "1311",
+    "start_h": 12,
+    "start_m": 30
   },
   {
     "id": 12,
@@ -96,7 +116,9 @@
     "startTime": "16:30",
     "endTime": "17:00",
     "minutes": 30,
-    "place": "1311"
+    "place": "1311",
+    "start_h": 16,
+    "start_m": 30
   },
   {
     "id": 13,
@@ -105,7 +127,9 @@
     "startTime": "17:30",
     "endTime": "18:30",
     "minutes": 60,
-    "place": "1311"
+    "place": "1311",
+    "start_h": 17,
+    "start_m": 30
   },
   {
     "id": 14,
@@ -114,7 +138,9 @@
     "startTime": "12:00",
     "endTime": "13:00",
     "minutes": 60,
-    "place": "講義棟"
+    "place": "講義棟",
+    "start_h": 12,
+    "start_m": 0
   },
   {
     "id": 15,
@@ -123,6 +149,19 @@
     "startTime": "15:00",
     "endTime": "16:30",
     "minutes": 90,
-    "place": "講義棟"
+    "place": "講義棟",
+    "start_h": 15,
+    "start_m": 0
+  },
+  {
+    "id": 16,
+    "kikaku_id": 404,
+    "day": "Sunday",
+    "startTime": "15:30",
+    "endTime": "16:00",
+    "minutes": 30,
+    "place": "1311",
+    "start_h": 15,
+    "start_m": 30
   }
 ]

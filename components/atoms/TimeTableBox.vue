@@ -10,12 +10,11 @@
 <script>
 export default {
   computed: {
-
+    boxStyle () {
+      let box_height = (this.minutes) * 160 / 60
+    }
   },
   props: {
-    type: {
-      type: Number
-    },
     title: {
       type: String
     },
@@ -24,6 +23,9 @@ export default {
     },
     endTime: {
       type: String
+    },
+    minutes: {
+      type: Number
     }
   }
 }

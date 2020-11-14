@@ -1,6 +1,5 @@
 <template>
-  <!-- ライブ配信のタイムテーブルを作成する(作ってもらった画像を埋め込むかこちらで作成するかは未定)とりあえずこちらで作成 -->
-  <!-- こちらで作成する場合でもそうでなくてもTabを利用して日時毎に表示できるようにしたい -->
+  <!-- これは期間内にタイテが完成しなかった時の保険である -->
   <div class="time-table">
     <TheContainer>
       <div>
@@ -22,24 +21,9 @@
             <div class="time-table__saturday">
               <div class="time-table__title">
                 <div class="time-table__title__child">薬学ステージ</div>
-                <div class="time-table__title__child">理工ステージ</div>
+                <div class="time-table__title__child">理工学ステージ</div>
               </div>
-              <div
-                 v-for="time in times"
-                  :key="time.id"
-                class="time-table__time"
-              >
-                <div
-                  class="time-table__time__child"
-                >
-                  {{ time.time }}
-                </div>
-                <div></div>
-              </div>
-              <div></div>
               <div class="time-table__body">
-                <div class="time-table__body__saturday">
-                </div>
               </div>
             </div>
           </div>
@@ -81,44 +65,6 @@ export default {
           id: 2,
           day: 'Sunday'
         }
-      ],
-      times: [
-        {
-          id: 1,
-          time: '10:00'
-        },
-        {
-          id: 2,
-          time: '11:00'
-        },
-        {
-          id: 3,
-          time: '12:00'
-        },
-        {
-          id: 4,
-          time: '13:00'
-        },
-        {
-          id: 5,
-          time: '14:00'
-        },
-        {
-          id: 6,
-          time: '15:00'
-        },
-        {
-          id: 7,
-          time: '16:00'
-        },
-        {
-          id: 8,
-          time: '17:00'
-        },
-        {
-          id: 9,
-          time: '18:00'
-        }
       ]
     }
   },
@@ -131,11 +77,10 @@ export default {
       return StageList.filter(item => item.id > 6 && item.id < 11)
     },
     Sunday1311 () {
-      // あとでここに芸能人企画の情報を結びつけるよ
       return StageList.filter(item => item.id > 10 && item.id < 14)
     },
     SundayLB () {
-      return StageList.filter(item => item.id > 13 && item.id < 16)
+      return StageList.filter(item => item.id > 13)
     }
   }
 }
