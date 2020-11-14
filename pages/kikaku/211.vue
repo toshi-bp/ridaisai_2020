@@ -20,7 +20,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
           </TheSection>
         </TheContainer>
 
