@@ -360,6 +360,12 @@ export default {
     &__title {
       font-size: 1.1rem;
       font-family: $sub-font;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0.5rem;
+      }
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 0.5rem;
+      }
     }
     &__inside {
       display: flex;
