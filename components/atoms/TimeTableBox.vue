@@ -1,9 +1,15 @@
 <template>
-  <div class="box">
-    <div class="box__inner">
-      <h4 class="box__inner__title">{{ title }}</h4>
-      <p class="box__inner__time">{{ startTime }} 〜 {{endTime}}</p>
-    </div>
+  <div
+    :style="boxStyle()"
+    class="box"
+  >
+    <nuxt-link :to="url">
+      <div class="box__inner">
+        <h4 class="box__inner__title">{{ title }}</h4>
+        <h5 class="box__inner__name">{{ name }}</h5>
+        <p class="box__inner__time">{{ startTime }} 〜 {{ endTime }}</p>
+      </div>
+    </nuxt-link>
   </div>
 </template>
 
@@ -11,11 +17,16 @@
 export default {
   computed: {
     boxStyle () {
-      let box_height = (this.minutes) * 160 / 60
+      const BoxHeight = (this.minutes) * 160 / 60
+      const BoxTop = (this.start_h - 10) * 160 + (this.start_m - 30) * 160 / 60
+      return 'top:' + BoxTop + 'px;' + 'height:' + BoxHeight + 'px;'
     }
   },
   props: {
     title: {
+      type: String
+    },
+    name: {
       type: String
     },
     startTime: {
@@ -26,6 +37,15 @@ export default {
     },
     minutes: {
       type: Number
+    },
+    start_h: {
+      type: Number
+    },
+    start_m: {
+      type: Number
+    },
+    url: {
+      type: String
     }
   }
 }

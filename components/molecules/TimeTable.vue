@@ -37,9 +37,23 @@
                 <div></div>
               </div>
               <div></div>
+              <div
+                v-for="Saturday1311 in Satuday1311WithKikaku()"
+                :key="Saturday1311.kikaku_id"
+                class="time-table__body"
+              >
+                <TimeTableBox
+                  :title="Saturday1311.title"
+                  :name="Saturday1311.name"
+                  :startTime="Saturday1311.startTime"
+                  :endTime="Saturday1311.endTime"
+                  :start_h="Satuday1311.start_h"
+                  :start_m="Saturday1311.start_m"
+                  :url="`kikaku/${Saturday1311.kikaku_id}/`"
+                >
+                </TimeTableBox>
+              </div>
               <div class="time-table__body">
-                <div class="time-table__body__saturday">
-                </div>
               </div>
             </div>
           </div>
@@ -61,13 +75,16 @@
 <script>
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import TimeTableBox from '~/components/atoms/TimeTableBox'
 
+import KikakuList from '~/kikaku/KikakuList.json'
 import StageList from '~/kikaku/StageList.json'
 
 export default {
   components: {
     TheSection,
-    TheContainer
+    TheContainer,
+    TimeTableBox
   },
   data () {
     return {
@@ -136,6 +153,63 @@ export default {
     },
     SundayLB () {
       return StageList.filter(item => item.id > 13 && item.id < 16)
+    },
+    Saturday1311WithKikaku () {
+      return StageList.map(stage => {
+        const kikaku = KikakuList.find(
+          kikaku => kikaku.kikaku_id === this.Saturday1311.kikaku_id
+        )
+        if (!kikaku) {
+          return stage
+        }
+        return {
+          ...stage,
+          kikakuInfoUrl: `/kikaku/${stage.kikaku_id}/`
+        }
+      }
+      )
+    },
+    SaturdayLBWithKikaku () {
+      return StageList.map(stage => {
+        const kikaku = KikakuList.find(
+          kikaku => kikaku.kikaku_id === this.SaturdayLB.kikaku_id
+        )
+        if (!kikaku) {
+          return stage
+        }
+        return {
+          ...stage,
+          kikakuInfoUrl: `/kikaku/${stage.kikaku_id}/`
+        }
+      })
+    },
+    Sunday1311WithKikaku () {
+      return StageList.map(stage => {
+        const kikaku = KikakuList.find(
+          kikaku => kikaku.kikaku_id === this.Sunday1311.kikaku_id
+        )
+        if (!kikaku) {
+          return stage
+        }
+        return {
+          ...stage,
+          kikakuInfoUrl: `/kikaku/${stage.kikaku_id}/`
+        }
+      })
+    },
+    SundayLBWithKikaku () {
+      return StageList.map(stage => {
+        const kikaku = KikakuList.find(
+          kikaku => kikaku.kikaku_id === this.SundayLB.kikaku_id
+        )
+        if (!kikaku) {
+          return stage
+        }
+        return {
+          ...stage,
+          kikakuInfoUrl: `/kikaku/${stage.kikaku_id}/`
+        }
+      })
     }
   }
 }
@@ -185,21 +259,22 @@ export default {
     }
   }
   &__body {
-    &__saturday {
-      &__1 {
-        z-index: 1;
-        position: absolute;
-        left: 60px;
-        background-color: $theme-color;
-        padding: 1rem;
-        height: 60px;
-        width: calc(100% / 4 - 1rem);
-        @include media-breakpoint-down(sm) {
-          width: calc(100% / 3 - 2rem);
-          left: 0;
-        }
-      }
-    }
+    width: calc(100% / 2 - 1rem);
+    // &__saturday {
+    //   &__1 {
+    //     z-index: 1;
+    //     position: absolute;
+    //     left: 60px;
+    //     background-color: $theme-color;
+    //     padding: 1rem;
+    //     height: 60px;
+    //     width: calc(100% / 4 - 1rem);
+    //     @include media-breakpoint-down(sm) {
+    //       width: calc(100% / 3 - 2rem);
+    //       left: 0;
+    //     }
+    //   }
+    // }
   }
 }
 </style>

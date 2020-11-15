@@ -2,6 +2,8 @@
   {
     "id": 1,
     "kikaku_id": 104,
+    "title": "ピアノコンサート",
+    "name": "東京理科大学ピアノの会",
     "day": "Saturday",
     "startTime": "10:00",
     "endTime": "12:15",
@@ -13,6 +15,8 @@
   {
     "id": 2,
     "kikaku_id": 103,
+    "title": "ジャグリングパフォーマンス",
+    "name": "東京理科大学野田同好会ジャグリング部DOMINUS SOMNI",
     "day": "Saturday",
     "startTime": "13:30",
     "endTime": "13:45",
@@ -24,6 +28,8 @@
   {
     "id": 3,
     "kikaku_id": 202,
+    "title": "GASSES",
+    "name": "GASSES",
     "day": "Saturday",
     "startTime": "14:15",
     "endTime": "14:30",
@@ -35,6 +41,8 @@
   {
     "id": 5,
     "kikaku_id": 105,
+    "title": "Beauty and the Beast＜ESS理大祭ドラマ＞",
+    "name": "英語研究会",
     "day": "Saturday",
     "startTime": "15:45",
     "endTime": "16:45",
@@ -46,6 +54,8 @@
   {
     "id": 6,
     "kikaku_id": 151,
+    "title": "吹奏楽部onステージ～音符と休符の化学反応～",
+    "name": "東京理科大学Ⅰ部体育局吹奏楽部",
     "day": "Saturday",
     "startTime": "17:30",
     "endTime": "18:00",
@@ -57,6 +67,8 @@
   {
     "id": 7,
     "kikaku_id": 129,
+    "title": "ライブ",
+    "name": "music and freaks",
     "day": "Saturday",
     "startTime": "12:15",
     "endTime": "13:30",
@@ -68,6 +80,8 @@
   {
     "id": 8,
     "kikaku_id": 150,
+    "title": "Enter Rockman",
+    "name": "軽音楽部ロック研究会",
     "day": "Saturday",
     "startTime": "14:00",
     "endTime": "16:00",
@@ -79,6 +93,8 @@
   {
     "id": 9,
     "kikaku_id": 120,
+    "title": "capselour理大祭LIVE",
+    "name": "ポピュラーソング同好会capselour",
     "day": "Saturday",
     "startTime": "16:30",
     "endTime": "17:30",
@@ -90,6 +106,8 @@
   {
     "id": 10,
     "kikaku_id": 113,
+    "title": "",
+    "name": "",
     "day": "Sunday",
     "startTime": "10:45",
     "endTime": "12:15",
@@ -101,6 +119,8 @@
   {
     "id": 11,
     "kikaku_id": 115,
+    "title": "ACTive festival!! 2020",
+    "name": "軽音楽・工作研究会ACT!!",
     "day": "Sunday",
     "startTime": "12:30",
     "endTime": "14:00",
@@ -112,6 +132,8 @@
   {
     "id": 12,
     "kikaku_id": 203,
+    "title": "和太鼓サークル樹",
+    "name": "和太鼓サークル樹",
     "day": "Sunday",
     "startTime": "16:30",
     "endTime": "17:00",
@@ -123,6 +145,8 @@
   {
     "id": 13,
     "kikaku_id": 201,
+    "title": "KOOLGEM",
+    "name": "KOOLGEM",
     "day": "Sunday",
     "startTime": "17:30",
     "endTime": "18:30",
@@ -134,6 +158,8 @@
   {
     "id": 14,
     "kikaku_id": 124,
+    "title": "あ！か！ぺ！ら！",
+    "name": "VOICE TRAINING部",
     "day": "Sunday",
     "startTime": "12:00",
     "endTime": "13:00",
@@ -145,6 +171,8 @@
   {
     "id": 15,
     "kikaku_id": 106,
+    "title": "理系グッズ販売＆何でも相談所(高校生向け)",
+    "name": "野田国際コミュニティハウス",
     "day": "Sunday",
     "startTime": "15:00",
     "endTime": "16:30",
@@ -156,6 +184,8 @@
   {
     "id": 16,
     "kikaku_id": 404,
+    "title": "コロナを笑いで吹き飛ばせ！オンラインお笑いライブ",
+    "name": "理大祭実行委員会",
     "day": "Sunday",
     "startTime": "15:30",
     "endTime": "16:00",
