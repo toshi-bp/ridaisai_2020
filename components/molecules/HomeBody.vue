@@ -171,6 +171,7 @@ export default {
   &__live {
     background-color: rgba($live-color, $alpha: 0.3);
     padding: 2rem 1rem;
+    margin-bottom: 2rem;
     &__container {
       border-radius: 5px;
       background-color: #fff;
