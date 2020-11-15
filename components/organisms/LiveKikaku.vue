@@ -8,9 +8,9 @@
       </SubHeader>
       <div>
         <TheSection>
-          <p>今年度の理大祭はYouTubeLiveによる参加団体のパフォーマンスのLive配信を行っています。まずは配信タイムテーブルをチェック！</p>
+          <p>理大祭ではYouTubeLiveによる参加団体のパフォーマンスのLive配信を行っています。まずはタイムテーブルをチェック！</p>
           <!-- ここにライブ配信する動画を埋め込むよ(チャットを載せるか否かは要相談) -->
-          <!-- 埋め込めなくない可能性が出てきたため一旦動画の部分はコメントアウト -->
+          <!-- 埋め込めなくなる可能性が出てきたため一旦動画の部分はコメントアウト -->
           <!-- <div class="live__movie">
             公開に際しチャットを埋め込む場合はsrcのurlの部分を変更すること
             <youtube
@@ -42,7 +42,7 @@
           </div> -->
         </TheSection>
       </div>
-      <div>
+      <div class="live__time-table">
         <TimeTable />
       </div>
       <div>
@@ -98,6 +98,11 @@ export default {
         @include media-breakpoint-down(sm) {
           height: 30rem;
         }
+      }
+    }
+    &__time-table {
+      @include media-breakpoint-down(md) {
+        overflow: scroll visible;
       }
     }
   }

@@ -106,8 +106,8 @@
   {
     "id": 10,
     "kikaku_id": 113,
-    "title": "",
-    "name": "",
+    "title": "ACTive festival!! 2020",
+    "name": "軽音楽・工作研究会ACT!!",
     "day": "Sunday",
     "startTime": "10:45",
     "endTime": "12:15",
@@ -119,8 +119,8 @@
   {
     "id": 11,
     "kikaku_id": 115,
-    "title": "ACTive festival!! 2020",
-    "name": "軽音楽・工作研究会ACT!!",
+    "title": "音楽研究会理大祭ライブ",
+    "name": "音楽研究会",
     "day": "Sunday",
     "startTime": "12:30",
     "endTime": "14:00",
