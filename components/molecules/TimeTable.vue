@@ -22,8 +22,8 @@
             </h1>
             <div class="time-table__saturday">
               <div class="time-table__title">
-                <div class="time-table__title__child">薬学ステージ</div>
-                <div class="time-table__title__child__2">理工ステージ</div>
+                <div class="time-table__title__child">薬学<span class="time-table__title__child__sub">ステージ</span></div>
+                <div class="time-table__title__child__2">理工<span class="time-table__title__child__2__sub">ステージ</span></div>
               </div>
               <div
                  v-for="time in times"
@@ -88,8 +88,8 @@
             </h1>
             <div class="time-table__saturday">
               <div class="time-table__title">
-                <div class="time-table__title__child">薬学ステージ</div>
-                <div class="time-table__title__child__2">理工ステージ</div>
+                <div class="time-table__title__child">薬学<span class="time-table__title__child__sub">ステージ</span></div>
+                <div class="time-table__title__child__2">理工<span class="time-table__title__child__sub">ステージ</span></div>
               </div>
               <div
                  v-for="time in times"
@@ -256,7 +256,7 @@ export default {
   },
   computed: {
     Saturday1311 () {
-      return StageList.filter(item => item.id < 7)
+      return StageList.filter(item => item.id < 6)
     },
     SaturdayLB () {
       // LBは講義棟を表しています(Lecture Building)
@@ -269,63 +269,6 @@ export default {
     SundayLB () {
       return StageList.filter(item => item.id > 13 && item.id < 16)
     }
-    // Saturday1311WithKikaku () {
-    //   return StageList.map((stage) => {
-    //     const kikaku = KikakuList.find(
-    //       kikaku => kikaku.kikaku_id === this.Saturday1311.kikaku_id
-    //     )
-    //     if (!kikaku) {
-    //       return stage
-    //     }
-    //     return {
-    //       ...stage,
-    //       kikakuInfoUrl: `/kikaku/${stage.kikaku_id}/`
-    //     }
-    //   }
-    //   )
-    // },
-    // SaturdayLBWithKikaku () {
-    //   return StageList.map((stage) => {
-    //     const kikaku = KikakuList.find(
-    //       kikaku => kikaku.kikaku_id === this.SaturdayLB.kikaku_id
-    //     )
-    //     if (!kikaku) {
-    //       return stage
-    //     }
-    //     return {
-    //       ...stage,
-    //       kikakuInfoUrl: `/kikaku/${stage.kikaku_id}/`
-    //     }
-    //   })
-    // },
-    // Sunday1311WithKikaku () {
-    //   return StageList.map((stage) => {
-    //     const kikaku = KikakuList.find(
-    //       kikaku => kikaku.kikaku_id === this.Sunday1311.kikaku_id
-    //     )
-    //     if (!kikaku) {
-    //       return stage
-    //     }
-    //     return {
-    //       ...stage,
-    //       kikakuInfoUrl: `/kikaku/${stage.kikaku_id}/`
-    //     }
-    //   })
-    // },
-    // SundayLBWithKikaku () {
-    //   return StageList.map((stage) => {
-    //     const kikaku = KikakuList.find(
-    //       kikaku => kikaku.kikaku_id === this.SundayLB.kikaku_id
-    //     )
-    //     if (!kikaku) {
-    //       return stage
-    //     }
-    //     return {
-    //       ...stage,
-    //       kikakuInfoUrl: `/kikaku/${stage.kikaku_id}/`
-    //     }
-    //   })
-    // }
   }
 }
 </script>
@@ -352,13 +295,22 @@ export default {
         margin-left: 4rem;
         margin-right: -1rem;
       }
+      @include media-breakpoint-down(sm) {
+        padding: 0.7rem 1rem 0.5rem;
+        font-size: 0.9rem;
+      }
+      &__sub {
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
       &__2 {
         position: relative;
         left: 60px;
         background-color: $theme-color;
         color: #fff;
         font-family: $sub-font;
-        margin: 1rem 0.5rem 2rem;
+        margin: 1rem 1rem 2rem;
         padding: 1rem 2rem;
         text-align: center;
         width: calc(100% / 2 - 60px);
@@ -366,7 +318,17 @@ export default {
           width: 100%;
           padding: 1rem;
           margin-right: 4rem;
+          margin-left: 0;
           right: 0;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 0.7rem 1rem 0.5rem;
+          font-size: 0.9rem;
+        }
+        &__sub {
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
         }
       }
     }
@@ -412,6 +374,10 @@ export default {
         width: 20%;
         left: calc(15%);
       }
+      @include media-breakpoint-down(sm) {
+        width: 25%;
+        left: 30%;
+      }
     }
     &__box2 {
       width: calc(71% / 4);
@@ -422,7 +388,11 @@ export default {
       }
       @include media-breakpoint-down(md) {
         width: 20%;
-        right: calc(10%);
+        right: calc(10% + 240px);
+      }
+      @include media-breakpoint-down(sm) {
+        width: 25%;
+        right: 14%;
       }
     }
     // &__saturday {
@@ -442,6 +412,8 @@ export default {
     // }
   }
   &__button {
+    display: inline-block;
+    width: calc(100% / 2 - 0.5rem);
     margin-right: 0.5rem;
     background-color: $theme-color;
     border-radius: 5px;
@@ -450,6 +422,9 @@ export default {
     padding: 0.5rem;
     transition: 0.15s ease all;
     box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.1);
+    :last-child {
+      margin-right: 0;
+    }
     &:hover {
       transform: scale(1.03);
     }

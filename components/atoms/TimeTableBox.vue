@@ -57,6 +57,10 @@ export default {
   border: 2px solid $theme-color;
   background-color: #fff;
   vertical-align: middle;
+  transition: 0.15s ease all;
+  &:hover {
+    transform: scale(1.03)
+  }
   &__inner {
     padding: 0.5rem 0.5rem;
     vertical-align: middle;
@@ -65,7 +69,7 @@ export default {
       color: $theme-color;
       margin: 0 auto 0.5rem;
       @include media-breakpoint-down(md) {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin: 0 auto 0.1rem;
       }
     }

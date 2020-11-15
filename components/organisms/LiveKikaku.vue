@@ -7,7 +7,7 @@
         </template>
       </SubHeader>
       <div>
-        <TheSection>
+        <TheSection class="live__section">
           <p>理大祭ではYouTubeLiveによる参加団体のパフォーマンスのLive配信を行っています。まずはタイムテーブルをチェック！</p>
           <!-- ここにライブ配信する動画を埋め込むよ(チャットを載せるか否かは要相談) -->
           <!-- 埋め込めなくなる可能性が出てきたため一旦動画の部分はコメントアウト -->
