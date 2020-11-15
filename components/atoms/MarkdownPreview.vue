@@ -54,6 +54,42 @@ export default {
         margin-top: 0;
       }
     }
+
+    /deep/ hr {
+      border: 0;
+      height: 1px;
+      border-top: 1px solid #ccc;
+      margin: 1rem 0;
+    }
+
+    /deep/ ol,
+    /deep/ ul {
+      padding-left: 1.5rem;
+    }
+
+    /deep/ li {
+      margin-bottom: 0.5rem;
+    }
+
+    /deep/ img {
+      display: block;
+      width: 100%;
+      height: auto;
+      //border-radius: 0.5rem;
+      margin: 0 auto 1.5rem;
+    }
+
+    /deep/ table {
+      display: inline-block;
+      text-align: center;
+      padding: 0.5rem 0rem;
+    }
+
+    /deep/ th,
+    /deep/ td {
+      border: $color solid;
+      padding: 0rem 0.5rem;
+    }
   }
 }
 </style>
