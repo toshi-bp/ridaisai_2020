@@ -152,7 +152,7 @@ export default {
     background-color: $live-color;
     border-radius: 5px;
     &__inner {
-      padding: 3rem 0;
+      padding: 3rem 0.5rem;
       font-size: 1.2rem;
       font-family: $sub-font;
       text-align: center;

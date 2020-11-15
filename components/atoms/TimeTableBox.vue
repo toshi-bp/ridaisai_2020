@@ -1,16 +1,16 @@
 <template>
-  <div
-    :style="boxStyle"
-    class="box"
-  >
-    <nuxt-link :to="url">
-      <div class="box__inner">
-        <h4 class="box__inner__title">{{ title }}</h4>
-        <!-- <h5 class="box__inner__name">{{ name }}</h5> -->
-        <p class="box__inner__time">{{ startTime }} 〜 {{ endTime }}</p>
-      </div>
-    </nuxt-link>
-  </div>
+  <nuxt-link :to="url">
+    <div
+      :style="boxStyle"
+      class="box"
+    >
+        <div class="box__inner">
+          <h4 class="box__inner__title">{{ title }}</h4>
+          <!-- <h5 class="box__inner__name">{{ name }}</h5> -->
+          <p class="box__inner__time">{{ startTime }} 〜 {{ endTime }}</p>
+        </div>
+    </div>
+  </nuxt-link>
 </template>
 
 <script>
