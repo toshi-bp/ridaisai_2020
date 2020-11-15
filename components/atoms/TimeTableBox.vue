@@ -55,6 +55,7 @@ export default {
 .box {
   position: absolute;
   border: 2px solid $theme-color;
+  border-radius: 5px;
   background-color: #fff;
   vertical-align: middle;
   transition: 0.15s ease all;

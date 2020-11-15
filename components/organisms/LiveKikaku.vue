@@ -3,7 +3,7 @@
     <TheContainer>
       <SubHeader>
         <template #title>
-          ライブ配信
+          Live配信
         </template>
       </SubHeader>
       <div>
@@ -45,11 +45,21 @@
       <div class="live__time-table">
         <TimeTable />
       </div>
-      <div>
+      <div class="live__link">
+        <TheSection>
+          <LinkToContents
+          :livelink="true"
+            class="live__link__body"
+          >
+            YouTubeLiveへは当日こちらのボタンからアクセスできます。<br />お楽しみに！
+          </LinkToContents>
+        </TheSection>
+      </div>
+      <div class="live__button">
         <LinkButton
-          to="/kikaku/"
+          to="/"
         >
-          企画一覧
+          topページに戻る
         </LinkButton>
       </div>
     </TheContainer>
@@ -62,6 +72,7 @@ import TheContainer from '~/components/atoms/TheContainer.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
 import LinkButton from '~/components/atoms/LinkButton.vue'
 import TimeTable from '~/components/molecules/TimeTable'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 export default {
   components: {
@@ -69,7 +80,8 @@ export default {
     TheContainer,
     SubHeader,
     LinkButton,
-    TimeTable
+    TimeTable,
+    LinkToContents
   },
   data () {
     return {
@@ -100,10 +112,18 @@ export default {
         }
       }
     }
-    &__time-table {
-      @include media-breakpoint-down(md) {
-        overflow: scroll visible;
-      }
+  }
+  &__button {
+    text-align: center;
+  }
+  // &__time-table {
+  //   @include media-breakpoint-down(md) {
+  //     overflow: scroll visible;
+  //   }
+  // }
+  &__link {
+    &__body {
+      background-color: $live-color;
     }
   }
 }

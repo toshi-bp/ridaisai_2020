@@ -57,6 +57,30 @@
         </TheContainer>
       </div>
     </div>
+    <div class="home-body__live">
+      <TheContainer class="home-body__live__container">
+        <div class="home-body__live__label">
+          <nuxt-link to="/live/">
+            <KikakuLabel
+              type="live"
+            >
+              Live配信を楽しむ
+            </KikakuLabel>
+          </nuxt-link>
+          <p class="home-body__live__text">
+            各参加団体によるパフォーマンスの配信はこちら
+          </p>
+          <div>
+            <LinkToContents
+              :toptolive="true"
+              url="/live/"
+            >
+            Live配信の情報をもっと見る
+            </LinkToContents>
+          </div>
+        </div>
+      </TheContainer>
+    </div>
   </div>
 </template>
 
@@ -67,6 +91,7 @@ import KikakuLabel from '~/components/atoms/KikakuLabel'
 import ItemCard from '~/components/molecules/ItemCard'
 import LinkButton2 from '~/components/atoms/LinkButton2'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 
@@ -77,7 +102,8 @@ export default {
     LinkButton2,
     KikakuLabel,
     ItemCard,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   computed: {
     KikakuList () {
@@ -129,7 +155,7 @@ export default {
   &__kikaku {
     background-color: rgba($sub-color, $alpha: 0.3);
     padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
     &__label {
       margin-bottom: 2rem;
     }
@@ -140,6 +166,21 @@ export default {
       border-radius: 5px;
       background-color: #fff;
       padding: 1rem 1rem;
+    }
+  }
+  &__live {
+    background-color: rgba($live-color, $alpha: 0.3);
+    padding: 2rem 1rem;
+    &__container {
+      border-radius: 5px;
+      background-color: #fff;
+      padding: 1rem 1rem;
+    }
+    &__label {
+      margin-bottom: 2rem;
+    }
+    &__text {
+      margin-top: 1rem;
     }
   }
   &__button {

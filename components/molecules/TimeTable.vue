@@ -359,6 +359,7 @@ export default {
     z-index: 2;
     &__title {
       font-size: 1.1rem;
+      font-family: $sub-font;
     }
     &__inside {
       display: flex;
@@ -419,6 +420,7 @@ export default {
     border-radius: 5px;
     border: none;
     color: #fff;
+    font-family: $sub-font;
     padding: 0.5rem;
     transition: 0.15s ease all;
     box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.1);
