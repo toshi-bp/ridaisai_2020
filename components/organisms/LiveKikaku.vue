@@ -3,15 +3,16 @@
     <TheContainer>
       <SubHeader>
         <template #title>
-          ライブ配信
+          Live配信
         </template>
       </SubHeader>
       <div>
-        <TheSection>
-          <p>ここではライブ配信を行っています。配信は二つの会場で行なわれています。</p>
+        <TheSection class="live__section">
+          <p>理大祭ではYouTubeLiveによる参加団体のパフォーマンスのLive配信を行っています。まずはタイムテーブルをチェック！</p>
           <!-- ここにライブ配信する動画を埋め込むよ(チャットを載せるか否かは要相談) -->
-          <div class="live__movie">
-            <!-- 公開に際しチャットを埋め込む場合はsrcのurlの部分を変更すること -->
+          <!-- 埋め込めなくなる可能性が出てきたため一旦動画の部分はコメントアウト -->
+          <!-- <div class="live__movie">
+            公開に際しチャットを埋め込む場合はsrcのurlの部分を変更すること
             <youtube
               ref="youtube"
               :video-id="videoId_1"
@@ -24,9 +25,8 @@
               :src="`https://www.youtube.com/live_chat?v=${videoId_1}&embed_domain=localhost`"
               allowfullscreen
             >
-              <!--チャットの高さについては要調整(特にスマホ版)あとURLも-->
+              チャットの高さについては要調整(特にスマホ版)あとURLも
             </iframe>
-            <!-- heightは:style"{}"を利用して変えていく方式にした方がいいかもしれない -->
             <youtube
               ref="youtube"
               :video-id="videoId_2"
@@ -39,17 +39,27 @@
               :src="`https://www.youtube.com/live_chat?v=${videoId_2}&embed_domain=localhost`"
               allowfullscreen
             />
-          </div>
+          </div> -->
         </TheSection>
       </div>
-      <div>
+      <div class="live__time-table">
         <TimeTable />
       </div>
-      <div>
+      <div class="live__link">
+        <TheSection>
+          <LinkToContents
+          :livelink="true"
+            class="live__link__body"
+          >
+            YouTubeLiveへは当日こちらのボタンからアクセスできます。<br />お楽しみに！
+          </LinkToContents>
+        </TheSection>
+      </div>
+      <div class="live__button">
         <LinkButton
-          to="/kikaku/"
+          to="/"
         >
-          企画一覧
+          topページに戻る
         </LinkButton>
       </div>
     </TheContainer>
@@ -62,6 +72,7 @@ import TheContainer from '~/components/atoms/TheContainer.vue'
 import SubHeader from '~/components/organisms/SubHeader.vue'
 import LinkButton from '~/components/atoms/LinkButton.vue'
 import TimeTable from '~/components/molecules/TimeTable'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 export default {
   components: {
@@ -69,7 +80,8 @@ export default {
     TheContainer,
     SubHeader,
     LinkButton,
-    TimeTable
+    TimeTable,
+    LinkToContents
   },
   data () {
     return {
@@ -99,6 +111,19 @@ export default {
           height: 30rem;
         }
       }
+    }
+  }
+  &__button {
+    text-align: center;
+  }
+  // &__time-table {
+  //   @include media-breakpoint-down(md) {
+  //     overflow: scroll visible;
+  //   }
+  // }
+  &__link {
+    &__body {
+      background-color: $live-color;
     }
   }
 }

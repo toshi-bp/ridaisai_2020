@@ -27,6 +27,32 @@
         </a>
       </div>
     </div>
+    <div
+      v-if="livelink"
+      class="link__toptolive"
+    >
+    <!-- 直前にLive配信のリンクに変えて下さい -->
+      <div class="link__toptolive__inner">
+        <div
+          class="link__toptolive__inner"
+        >
+          <slot />
+        </div>
+      </div>
+    </div>
+    <div
+      v-if="toptolive"
+      class="link__toptolive"
+    >
+      <nuxt-link
+        :to="url"
+        class="link__toptolive__inner"
+      >
+        <div class="link__toptolive__inner">
+          <slot />
+        </div>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
@@ -53,6 +79,14 @@ export default {
     },
     url: {
       type: String
+    },
+    livelink: {
+      type: Boolean,
+      default: false
+    },
+    toptolive: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -103,6 +137,22 @@ export default {
     border-radius: 5px;
     &__inner {
       padding: 1.5rem 0;
+      font-size: 1.2rem;
+      font-family: $sub-font;
+      text-align: center;
+      color: #fff;
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
+    }
+  }
+  &__toptolive {
+    width: 100%;
+    text-align: center;
+    background-color: $live-color;
+    border-radius: 5px;
+    &__inner {
+      padding: 3rem 0.5rem;
       font-size: 1.2rem;
       font-family: $sub-font;
       text-align: center;
