@@ -15,13 +15,13 @@
           企画一覧はこちら
         </p>
         <div class="ticket__button">
-          <KikakuLabel type="live" to="/" class="ticket__button__body">
+          <KikakuLabel type="live" href="/2020/kikaku/#live" class="ticket__button__body">
             Live配信
           </KikakuLabel>
-          <KikakuLabel type="youtube" to="/" class="ticket__button__body">
+          <KikakuLabel type="youtube" href="/2020/kikaku/#youtube" class="ticket__button__body">
             動画
           </KikakuLabel>
-          <KikakuLabel type="website" to="/" class="ticket__button__body">
+          <KikakuLabel type="website" href="/2020/kikaku/#website" class="ticket__button__body">
             Webサイト
           </KikakuLabel>
         </div>

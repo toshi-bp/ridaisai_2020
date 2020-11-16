@@ -16,7 +16,7 @@
                 <div class="welcome__article__button">
                   <KikakuLabel
                     type="live"
-                    href="/kikaku/#live"
+                    href="/2020//kikaku/#live"
                   >
                     Live配信の企画はこちら
                   </KikakuLabel>
@@ -50,7 +50,7 @@
               <!-- <img src="~@/assets/image/symbol.svg" class="welcome__article__image"> -->
               <div class="welcome__article__right">
                 <div class="welcome__article__button">
-                  <KikakuLabel type="youtube" href="/kikaku/#youtube">
+                  <KikakuLabel type="youtube" href="/2020/kikaku/#youtube">
                     動画企画はこちら
                   </KikakuLabel>
                 </div>
@@ -81,7 +81,7 @@
                 <div class="welcome__article__button">
                   <KikakuLabel
                     type="website"
-                    href="/kikaku/#website"
+                    href="/2020/kikaku/#website"
                     class="welcome__label"
                   >
                     Webサイトで楽しむ企画はこちら
