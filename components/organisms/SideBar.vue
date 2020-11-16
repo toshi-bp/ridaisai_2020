@@ -20,12 +20,12 @@
             <span class="side-bar__list__item__text">企画一覧</span>
           </nuxt-link>
         </li>
-        <!-- <li class="side-bar__list__item">
-          <nuxt-link to="/kikaku/">
+        <li class="side-bar__list__item">
+          <nuxt-link to="/live/">
             <fa icon="video" class="side-bar__list__item__icon" />
             <span class="side-bar__list__item__text">Live配信</span>
           </nuxt-link>
-        </li> -->
+        </li>
         <!-- <li class="side-bar__list__item">
           <a href="https://twitter.com/noda_ridaisai" >
             <fa :icon="['fab', 'twitter']" fixed-width class="side-bar__list__item__icon" />
@@ -49,12 +49,12 @@
             <span class="footer-nav__list__item__text">企画一覧</span>
           </nuxt-link>
         </li>
-        <!-- <li class="footer-nav__list__item">
-          <nuxt-link to="/kikaku/">
+        <li class="footer-nav__list__item">
+          <nuxt-link to="/live/">
             <fa icon="video" class="footer-nav__list__item__icon"/>
             <span class="footer-nav__list__item__text">Live配信</span>
           </nuxt-link>
-        </li> -->
+        </li>
       </ul>
     </div>
   </div>
@@ -143,7 +143,7 @@ export default {
         flex-wrap: wrap;
         transition: 0.2s ease all;
         text-decoration: none;
-        width: calc(100% / 2);
+        width: calc(100% / 3);
         &__icon {
           display: flex;
           font-size: 1.3rem;
