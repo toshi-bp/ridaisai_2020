@@ -2,9 +2,13 @@
   <div class="home-body">
     <div class="home-body__welcome">
       <TheContainer>
-        <div class="home-body__welcome__link">
-          オンライン理大祭の歩き方
-        </div>
+        <nuxt-link to="/welcome/">
+          <div class="home-body__welcome__link">
+            <div>
+              <span class="home-body__welcome__link__title">オンライン理大祭の歩き方</span>
+            </div>
+          </div>
+        </nuxt-link>
         <p class="home-body__welcome__text">
           2020年度野田地区理大祭はこのWebサイト上でのオンライン開催です。理大祭の楽しみ方について説明しています。はじめにお読みください。
         </p>
@@ -144,6 +148,9 @@ export default {
       transition: 0.2s ease all;
       &:hover {
         transform: scale(1.05);
+      }
+      &__title {
+        color: #fff;
       }
     }
     &__text {
