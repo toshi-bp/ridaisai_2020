@@ -13,12 +13,12 @@
     <TheContainer>
       <TheSection>
         <div>
-          <div class="talent__img">
-            <img src="" />
+          <div>
+            <img src="~@/assets/events/commedians.jpg" class="talent__img" />
           </div>
           <div>
             <h3>企画紹介</h3>
-            <p>8.6秒バズーカーとGO！皆川の2組のギャグが炸裂!<br />コロナで退屈な生活をお笑いで吹っ飛ばそう!</p>
+            <p>GO！皆川と8.6秒バズーカーの2組のギャグが炸裂!<br />コロナで退屈な生活をお笑いで吹っ飛ばそう!</p>
           </div>
           <div>
             <h3>開催概要</h3>
@@ -29,7 +29,17 @@
           </div>
           <div>
             <h3>注意事項</h3>
-            <p></p>
+            <ul>
+              <li>
+                撮影禁止
+              </li>
+              <li>
+                笑え
+              </li>
+              <li>
+                ガッカリすな
+              </li>
+            </ul>
           </div>
         </div>
       </TheSection>
@@ -57,5 +67,10 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
 }
 </style>
