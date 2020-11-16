@@ -116,13 +116,13 @@ export default {
   &__bg {
     padding-top: $global-header-height;
     padding-bottom: 2rem;
-    // background-image: url('~@/assets/image/bg.svg');
+    background-image: url('~@/assets/image/footprint.svg');
     background-size: repeat;
     // background-color: #BCEDF7;
-    background-color: rgba(#fff,0.9);
+    background-color: rgba(#fff,0.8);
   }
   &__container {
-    background-color: rgba(#fff,0.9);
+    // background-color: rgba(#fff,0.5);
   }
   &__ticket {
     width: 100%;
@@ -134,7 +134,7 @@ export default {
   &__article {
     &__main {
       margin-bottom: 10rem;
-      // background-color: #FFFAE6;
+      background-color: rgba(#fff, 0.8);
       // padding-bottom: 1rem;
       @include media-breakpoint-down(sm) {
         display: flex;

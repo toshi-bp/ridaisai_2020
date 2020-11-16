@@ -24,6 +24,7 @@ export default {
 
   @include media-breakpoint-down(sm) {
     margin: 1.7rem 0;
+    text-align: center;
   }
 
   @include media-breakpoint-down(xs) {
@@ -61,6 +62,8 @@ export default {
 
     @include media-breakpoint-down(sm) {
       font-size: 1.5rem;
+      text-align: center;
+      padding: 0.5rem 0.5rem;
     }
   }
 }
