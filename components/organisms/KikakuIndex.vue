@@ -112,7 +112,7 @@
               <TheColumn
                 v-for="item in KikakuList"
                 :key="item.kikaku_id"
-                :spsize="12"
+                :spsize="6"
                 :pcsize="4"
               >
                 <ItemCard
@@ -160,7 +160,7 @@
               <TheColumn
                 v-for="item in KikakuList"
                 :key="item.kikaku_id"
-                :spsize="12"
+                :spsize="6"
                 :pcsize="4"
               >
                 <ItemCard

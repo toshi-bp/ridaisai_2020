@@ -19,7 +19,7 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            {{ KikakuList.description }}
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
           </TheSection>
         </TheContainer>
 
@@ -67,7 +67,7 @@ export default {
     return makeHead(
       'RICORA\'s MUSIC 2020',
       'RICORA MUSIC TEAM',
-      require('~/assets/kikaku/airship.png')
+      require('~/assets/kikaku/ricora.png')
     )
   }
 }

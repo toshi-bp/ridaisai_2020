@@ -208,8 +208,14 @@ export default {
   &__label2 {
     display: flex;
     flex-direction: row;
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
     &__main {
       margin: 0 -0.5rem 1rem 1rem;
+      @include media-breakpoint-down(sm) {
+        margin: -0.5rem -0.5rem 0.8rem 1rem;
+      }
     }
   }
 }
