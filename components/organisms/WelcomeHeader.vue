@@ -40,6 +40,9 @@ export default {
     position: relative;
     display: inline-block;
     font-size: 2rem;
+    @include media-breakpoint-down(md) {
+        font-size: 1.5rem;
+      }
     font-family: $sub-font;
     color: #fff;
     padding: 0 1rem;

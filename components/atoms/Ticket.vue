@@ -15,20 +15,20 @@
           企画一覧はこちら
         </p>
         <div class="ticket__button">
-          <KikakuLabel type="live" to="/" class="ticket__button">
-            Live配信で楽しむ
+          <KikakuLabel type="live" to="/" class="ticket__button__body">
+            Live配信
           </KikakuLabel>
-          <KikakuLabel type="youtube" to="/" class="ticket__button">
-            動画で楽しむ
+          <KikakuLabel type="youtube" to="/" class="ticket__button__body">
+            動画
           </KikakuLabel>
-          <KikakuLabel type="website" to="/" class="ticket__button">
-            Webサイトで楽しむ
+          <KikakuLabel type="website" to="/" class="ticket__button__body">
+            Webサイト
           </KikakuLabel>
         </div>
       </div>
-      <div class="ticket__main__right">
+      <!-- <div class="ticket__main__right">
         <img src="~@/assets/image/stamp.svg" class="ticket__main__right__stamp"/>
-      </div>
+      </div> -->
     </div>
     <div class="ticket__bottomline">
     </div>
@@ -63,7 +63,7 @@ export default {
   }
   &__main{
       display: grid;
-      grid-template-columns: 85% 1fr;
+      grid-template-columns: 100% 1fr;
       padding: 2rem 1rem;
       background-color: #FFFAE6;
       @include media-breakpoint-down(sm) {
@@ -90,16 +90,33 @@ export default {
   }
   &__title{
       font-size: 2rem;
+      @include media-breakpoint-down(md) {
+        font-size: 1.5rem;
+      }
       font-family: $sub-font;
   }
   &__description{
       font-size: 1.2rem;
+      @include media-breakpoint-down(md) {
+        font-size: 1rem;
+      }
       margin-bottom: 1rem;
   }
   &__button{
     margin: 0 1rem 1rem;
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-direction: column;
+    }
     &:last-child {
       margin-bottom: 0;
+    }
+    &__body {
+      width: calc(100% / 3 - 3rem);
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
     }
   }
   &__bottomline{
