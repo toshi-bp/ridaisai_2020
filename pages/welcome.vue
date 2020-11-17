@@ -132,6 +132,9 @@ export default {
     LinkButton
     // LinkButton2,
     // LinkButton3
+  },
+  head () {
+    return makeHead()
   }
 }
 </script>
