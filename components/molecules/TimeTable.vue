@@ -260,11 +260,11 @@ export default {
     },
     SaturdayLB () {
       // LBは講義棟を表しています(Lecture Building)
-      return StageList.filter(item => item.id > 6 && item.id < 11)
+      return StageList.filter(item => item.id > 6 && item.id < 10)
     },
     Sunday1311 () {
       // あとでここに芸能人企画の情報を結びつけるよ
-      return StageList.filter(item => item.id > 10 && item.id < 14)
+      return StageList.filter(item => item.id > 9 && item.id < 14)
     },
     SundayLB () {
       return StageList.filter(item => item.id > 13 && item.id < 16)
