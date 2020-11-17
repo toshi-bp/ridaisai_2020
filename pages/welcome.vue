@@ -134,7 +134,7 @@ export default {
     // LinkButton3
   },
   head () {
-    return makeHead()
+    return makeHead('理大祭の歩き方', 'オンライン理大祭の回り方について書かれています。まず初めにお読みください')
   }
 }
 </script>
