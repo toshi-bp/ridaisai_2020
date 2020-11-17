@@ -123,6 +123,8 @@ import WelcomeHeader from '~/components/organisms/WelcomeHeader'
 import KikakuLabel from '~/components/atoms/KikakuLabel'
 import LinkButton from '~/components/atoms/LinkButton'
 
+import makeHead from '~/utils/makeHead.js'
+
 export default {
   components: {
     TheContainer,
@@ -134,7 +136,7 @@ export default {
     // LinkButton3
   },
   head () {
-    return makeHead('理大祭の歩き方', 'オンライン理大祭の回り方について書かれています。まず初めにお読みください')
+    return makeHead('オンライン理大祭の歩き方', 'オンライン理大祭の回り方について書かれています。まず初めにお読みください')
   }
 }
 </script>
