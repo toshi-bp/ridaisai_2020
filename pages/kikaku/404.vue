@@ -31,18 +31,21 @@
             <h3>注意事項</h3>
             <ul>
               <li>
-                撮影禁止
+                配信される動画の撮影及びスクリーンショットはお控えください。
               </li>
               <li>
-                笑え
+                アーカイブは残りませんので必ず指定の時間で観覧ください。
               </li>
-              <li>
-                ガッカリすな
-              </li>
+              <!-- <li>
+                コメント欄における暴言などは慎みましょう。
+              </li> -->
             </ul>
           </div>
         </div>
       </TheSection>
+      <div class="button">
+        <LinkButton to="/">topページへ戻る</LinkButton>
+      </div>
     </TheContainer>
   </div>
 </template>
@@ -51,12 +54,14 @@
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import TheContainer from '~/components/atoms/TheContainer'
 import TheSection from '~/components/atoms/TheSection'
+import LinkButton from '~/components/atoms/LinkButton'
 
 export default {
   components: {
     KikakuInfoHeader,
     TheContainer,
-    TheSection
+    TheSection,
+    LinkButton
   }
 }
 </script>
@@ -70,7 +75,10 @@ export default {
   &__img {
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
+}
+.button {
+  text-align: center;
 }
 </style>
