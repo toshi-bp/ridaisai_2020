@@ -60,6 +60,14 @@
               Live配信
             </nuxt-link>を公開しました。
           </dd>
+          <dt class="update__list__date">
+            2020/11/16
+          </dt>
+          <dd class="update__list__content">
+            <nuxt-link to="/welcome/">
+              理大祭の歩き方
+            </nuxt-link>を公開しました。
+          </dd>
         </dl>
       </div>
     </TheSection>
