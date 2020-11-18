@@ -9,7 +9,7 @@
         <div class="link__live__inner">
           <p class="link__live__text">Live配信会場はこちら</p>
             <!-- 開始時間と終了時間を入れる部分 -->
-          <p class="link__live__text2">{{ day }}：{{ startTime }} 〜 {{ endTime }}</p>
+          <p class="link__live__text2">{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
         </div>
       </div>
     </nuxt-link>
