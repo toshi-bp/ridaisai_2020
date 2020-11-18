@@ -41,6 +41,17 @@
               </li> -->
             </ul>
           </div>
+          <div
+            v-for="(StageList, id) in Stage"
+            :key="id"
+          >
+            <LinkToContents
+              :live="true"
+              :day="StageList.day"
+              :startTime="StageList.startTime"
+              :endTime="StageList.endTime"
+            ></LinkToContents>
+          </div>
         </div>
       </TheSection>
       <div class="button">
@@ -55,13 +66,22 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import TheContainer from '~/components/atoms/TheContainer'
 import TheSection from '~/components/atoms/TheSection'
 import LinkButton from '~/components/atoms/LinkButton'
+import LinkToContents from '~/components/atoms/LinkToContents'
+
+import StageList from '~/kikaku/StageList.json'
 
 export default {
   components: {
     KikakuInfoHeader,
     TheContainer,
     TheSection,
-    LinkButton
+    LinkButton,
+    LinkToContents
+  },
+  computed: {
+    Stage () {
+      return StageList.filter(item => item.kikaku_id === 404)
+    }
   }
 }
 </script>
