@@ -69,6 +69,7 @@ import LinkButton from '~/components/atoms/LinkButton'
 import LinkToContents from '~/components/atoms/LinkToContents'
 
 import StageList from '~/kikaku/StageList.json'
+import makeHead from '~/utils/makeHead'
 
 export default {
   components: {
@@ -82,6 +83,13 @@ export default {
     Stage () {
       return StageList.filter(item => item.kikaku_id === 404)
     }
+  },
+  head () {
+    return makeHead(
+      'コロナを笑い飛ばせ！オンラインお笑いライブ',
+      'GO！皆川と8.6秒バズーカーの2組のギャグが炸裂!コロナで退屈な生活をお笑いで吹っ飛ばそう!',
+      require('~/assets/events/commedians.jpg')
+    )
   }
 }
 </script>
