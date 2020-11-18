@@ -9,7 +9,7 @@
         <div class="link__live__inner">
           <p class="link__live__text">Live配信会場はこちら</p>
             <!-- 開始時間と終了時間を入れる部分 -->
-          <p class="link__live__text2">{{ startTime }} 〜 {{ endTime }}</p>
+          <p class="link__live__text2">{{ day }}：{{ startTime }} 〜 {{ endTime }}</p>
         </div>
       </div>
     </nuxt-link>
@@ -65,6 +65,9 @@ export default {
     endTime: {
       type: String
     },
+    day: {
+      type: String
+    },
     live: {
       type: Boolean,
       default: false
@@ -87,6 +90,15 @@ export default {
     toptolive: {
       type: Boolean,
       default: false
+    }
+  },
+  computed: {
+    TheDay () {
+      if (this.day === 'Sunday') {
+        return '11月22日(日)'
+      } else if(this.day === 'Saturday') {
+        return "11月21日"
+      }
     }
   }
 }
