@@ -68,7 +68,7 @@ export default {
         {
           id: 1,
           title: '定食',
-          description: '- YouTube「3キャンパスで比べる！理科大メシ　定食編」',
+          description: 'YouTube「3キャンパスで比べる！理科大メシ　定食編」',
           videoId: 'B9lZXvz66Qo'
         },
         {
