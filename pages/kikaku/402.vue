@@ -1,5 +1,5 @@
 <template>
-  <!-- サイエンス夢工房 -->
+  <!-- ご飯企画 -->
   <div class="kikaku-info">
     <div
       v-for="(KikakuList, id) in Kikaku"
