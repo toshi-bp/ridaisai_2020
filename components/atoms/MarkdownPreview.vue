@@ -41,7 +41,7 @@ export default {
 
     /deep/ h2 {
       font-family: $sub-font;
-      padding-top: #{$global-header-height + 1rem};
+      // padding-top: #{$global-header-height + 1rem};
       font-feature-settings: "palt";
       font-size: 1.5rem;
     }

@@ -1,7 +1,10 @@
 <template>
   <!-- ペーパークラフト企画 -->
   <div class="kikaku-info">
-    <div>
+    <div
+      v-for="(KikakuList, id) in Kikaku"
+      :key="id"
+    >
       <div>
         <KikakuInfoHeader
           :id="KikakuList.kikaku_id"
@@ -16,18 +19,18 @@
         <!-- ここにコンテンツを掲載するよ -->
         <TheContainer>
           <TheSection>
-            <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <!-- <h3>企画紹介</h3>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p> -->
+            <div>
+              <MarkdownPreview
+                :markdownHtml="PaperCraft"
+              ></MarkdownPreview>
+            </div>
           </TheSection>
         </TheContainer>
-
-        <KikakuInfoBody
-          :image-url="require(`@/assets/kikaku/${KikakuList.image_filename}`)"
-          :name="KikakuList.name"
-          :introduce="KikakuList.introduction"
-          :url="KikakuList.url"
-          :twitter="KikakuList.twitter_ids"
-        />
+      </div>
+      <div class="kikaku-info__button">
+        <LinkButton to="/">topページに戻る</LinkButton>
       </div>
     </div>
   </div>
@@ -35,9 +38,12 @@
 
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
-import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
+// // import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import MarkdownPreview from '~/components/atoms/MarkdownPreview'
+import LinkButton from '~/components/atoms/LinkButton'
+import PaperCraft from '~/assets/markdown/405.md'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -45,27 +51,32 @@ import makeHead from '~/utils/makeHead.js'
 export default {
   components: {
     KikakuInfoHeader,
-    KikakuInfoBody,
+    // KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    MarkdownPreview,
+    LinkButton
   },
   props: {
     id: {
       type: Number,
-      default: 210
+      default: 405
     }
   },
   computed: {
     Kikaku () {
-      const id = 210 // kikaku_idの値をjsonから調べて直接入力
+      const id = 405 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
+    },
+    PaperCraft () {
+      return PaperCraft
     }
   },
   head () {
     return makeHead(
-      '情報技術クラブ',
-      '情報技術クラブ',
-      require('~/assets/kikaku/itc.png')
+      'ペーパークラフト',
+      '理大祭実行委員会',
+      require('~/assets/kikaku/airship.png')
     )
   }
 }
@@ -79,6 +90,9 @@ export default {
   background-size: repeat;
   &__description {
     white-space: pre-line;
+  }
+  &__button {
+    text-align: center;
   }
 }
 </style>
