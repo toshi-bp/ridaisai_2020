@@ -21,7 +21,19 @@
           <TheSection>
             <h3>企画紹介</h3>
             <p class="kikaku-info__description">{{ KikakuList.description }}</p>
-            <a href="kikaku/104/ピアノコンサートprogram.pdf">ピアノコンサートprogram</a>
+            <div>
+              <h2>Live配信</h2>
+              <a href="kikaku/104/ピアノコンサート(Live配信)program.pdf">ピアノコンサート(Live配信)program</a>
+              <LinkToContents
+                :live="true"
+                day="Saturday"
+                startTime="10:00"
+                endTime="12:00"
+              >
+                Live配信会場はこちら
+              </LinkToContents>
+            </div>
+            <a href="kikaku/104/ピアノコンサートprogram.pdf">ピアノコンサート(動画)program</a>
             <div class="kikaku-info__youtube">
               <h3 class="kikaku-info__youtube__title">①宿命/藤原聡<br/>
                 <span class="kikaku-info__youtube__name">
@@ -69,16 +81,6 @@
                 :fit-parent="true"
                 :resize="true"
               />
-            </div>
-            <div>
-              <h2>Live配信</h2>
-              <LinkToContents
-                :live="true"
-                startTime="10:00"
-                endTime="12:00"
-              >
-                Live配信会場はこちら
-              </LinkToContents>
             </div>
           </TheSection>
         </TheContainer>

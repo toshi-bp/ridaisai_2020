@@ -24,10 +24,27 @@
             <div class="kikaku-info__body">
               <LinkToContents
                 :live="true"
+                day="Sunday"
                 startTime="15:00"
                 endTime="16:30"
               >
               </LinkToContents>
+            </div>
+            <div class="kikaku-info__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
+            <div class="kikaku-info__pdf">
+              <a href="kikaku/106/野田コミュニティハウス.pdf">野田コミュニティハウス.pdf</a>
+              <iframe
+                src="kikaku/106/野田コミュニティハウス.pdf"
+                width="100%"
+                height="100%"
+              />
             </div>
           </TheSection>
         </TheContainer>
@@ -56,6 +73,11 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  data () {
+    return {
+      videoId: 'OyTaWr3NU7o'
+    }
+  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -96,6 +118,17 @@ export default {
   }
   &__description {
     white-space: pre-line;
+  }
+  &__youtube {
+    margin-bottom: 1.5rem;
+  }
+  &__pdf {
+    width: 100%;
+    height: 750px;
+    margin-bottom: 1.5rem;
+    @include media-breakpoint-down(md) {
+      height: 500px;
+    }
   }
 }
 </style>
