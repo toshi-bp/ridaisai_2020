@@ -264,7 +264,7 @@ export default {
     },
     Sunday1311 () {
       // あとでここに芸能人企画の情報を結びつけるよ
-      return StageList.filter(item => item.id > 9 && item.id < 14) //  || item.id === 19 を後で付け足す
+      return StageList.filter(item => (item.id > 9 && item.id < 14) || (item.id === 19)) //  || item.id === 19 を後で付け足す
     },
     SundayLB () {
       return StageList.filter(item => item.id > 13 && item.id < 19)
@@ -371,8 +371,27 @@ export default {
       display: flex;
     }
     &__box {
+      @include media-breakpoint-up(wd) {
+        width: 200px;
+        left: 35%;
+        transform: translateX(-35%);
+      }
+      @include media-breakpoint-up(wwd) {
+        width: 200px;
+        left: 38%;
+        // transform: translateX(-40%);
+      }
+      @include media-breakpoint-up(wwwd) {
+        width: 200px;
+        left: 40%;
+      }
+      @include media-breakpoint-up (wwwwd) {
+        width: 200px;
+        left: 42%;
+      }
       width: calc(71% / 4);
       left: calc(25%);
+      max-width: 200px;
       @include media-breakpoint-down(lg) {
         width: calc(96% / 4);
         left: calc(16.5%);
@@ -387,8 +406,25 @@ export default {
       }
     }
     &__box2 {
+      @include media-breakpoint-up(wd) {
+        width: 200px;
+        right: calc(30% + 240px);
+      }
+      @include media-breakpoint-up(wwd) {
+        width: 200px;
+        right: calc(33% + 240px);
+      }
+      @include media-breakpoint-up(wwwd) {
+        width: 200px;
+        right: calc(35% + 240px);
+      }
+      @include media-breakpoint-up (wwwwd) {
+        width: 200px;
+        right: calc(37% + 240px)
+      }
       width: calc(71% / 4);
       right: calc(21% + 240px);
+      max-width: 200px;
       @include media-breakpoint-down(lg) {
         width: calc(96% / 4);
         right: calc(11% + 240px);
