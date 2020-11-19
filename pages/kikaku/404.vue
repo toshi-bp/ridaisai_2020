@@ -88,7 +88,7 @@ export default {
     return makeHead(
       'コロナを笑い飛ばせ！オンラインお笑いライブ',
       'GO！皆川と8.6秒バズーカーの2組のギャグが炸裂!コロナで退屈な生活をお笑いで吹っ飛ばそう!',
-      require('~/assets/events/commedians.jpg')
+      require('~/assets/events/commedians_twitter.png')
     )
   }
 }
