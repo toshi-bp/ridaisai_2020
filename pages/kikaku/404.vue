@@ -69,7 +69,7 @@ import LinkButton from '~/components/atoms/LinkButton'
 import LinkToContents from '~/components/atoms/LinkToContents'
 
 import StageList from '~/kikaku/StageList.json'
-import makeHead from '~/utils/makeHead'
+import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {

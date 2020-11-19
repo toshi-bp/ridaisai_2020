@@ -4,7 +4,12 @@ $grid-breakpoints: (
   // md: 690px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  wd: 1500px,
+  wwd: 2100px,
+  wwwd: 2500px,
+  wwwwd: 2900px,
+  xwd: 3400px
 );
 @import '~bootstrap/scss/mixins/_breakpoints';
 

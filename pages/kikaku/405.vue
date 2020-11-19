@@ -23,7 +23,18 @@
             <p class="kikaku-info__description">{{ KikakuList.description }}</p> -->
             <div>
               <MarkdownPreview
-                :markdownHtml="PaperCraft"
+                :markdownHtml="PaperCraft1"
+              ></MarkdownPreview>
+              <div class="kikaku-info__youtube">
+                <youtube
+                  ref="youtube"
+                  :video-id="videoId1"
+                  :fit-parent="true"
+                  :resize="true"
+                />
+              </div>
+              <MarkdownPreview
+                :markdownHtml="PaperCraft2"
               ></MarkdownPreview>
             </div>
           </TheSection>
@@ -43,12 +54,18 @@ import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 import MarkdownPreview from '~/components/atoms/MarkdownPreview'
 import LinkButton from '~/components/atoms/LinkButton'
-import PaperCraft from '~/assets/markdown/405.md'
+import PaperCraft1 from '~/assets/markdown/405_1.md'
+import PaperCraft2 from '~/assets/markdown/405_2.md'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  data () {
+    return {
+      videoId1: 'WTeUiDiXuC0'
+    }
+  },
   components: {
     KikakuInfoHeader,
     // KikakuInfoBody,
@@ -68,8 +85,11 @@ export default {
       const id = 405 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     },
-    PaperCraft () {
-      return PaperCraft
+    PaperCraft1 () {
+      return PaperCraft1
+    },
+    PaperCraft2 () {
+      return PaperCraft2
     }
   },
   head () {
