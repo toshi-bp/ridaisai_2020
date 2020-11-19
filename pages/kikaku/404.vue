@@ -3,7 +3,7 @@
     <KikakuInfoHeader
       :id="404"
       kikaku_name="コロナを笑い飛ばせ！オンラインお笑いライブ"
-      circle_name=""
+      circle_name="理大祭実行委員会"
       type="cultual"
       :live="true"
       :youtube="false"
@@ -18,7 +18,7 @@
           </div>
           <div>
             <h3>企画紹介</h3>
-            <p>GO！皆川と8.6秒バズーカーの2組のギャグが炸裂!<br />コロナで退屈な生活をお笑いで吹っ飛ばそう!</p>
+            <p>GO！皆川と8.6秒バズーカーの2組のネタが炸裂!<br />コロナで退屈な生活をお笑いで吹っ飛ばそう!</p>
           </div>
           <div>
             <h3>開催概要</h3>
@@ -87,8 +87,8 @@ export default {
   head () {
     return makeHead(
       'コロナを笑い飛ばせ！オンラインお笑いライブ',
-      'GO！皆川と8.6秒バズーカーの2組のギャグが炸裂!コロナで退屈な生活をお笑いで吹っ飛ばそう!',
-      require('~/assets/events/commedians_twitter.png')
+      'GO！皆川と8.6秒バズーカーの2組のネタが炸裂!コロナで退屈な生活をお笑いで吹っ飛ばそう!',
+      require('~/assets/events/commedians_twitter_4.png')
     )
   }
 }

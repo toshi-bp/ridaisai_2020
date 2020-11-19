@@ -37,6 +37,7 @@ export default {
     /deep/ h3 {
       line-height: 1.5;
       margin-bottom: 1rem;
+      margin-top: 2rem;
     }
 
     /deep/ h2 {
