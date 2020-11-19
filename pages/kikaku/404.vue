@@ -3,7 +3,7 @@
     <KikakuInfoHeader
       :id="404"
       kikaku_name="コロナを笑い飛ばせ！オンラインお笑いライブ"
-      circle_name=""
+      circle_name="理大祭実行委員会"
       type="cultual"
       :live="true"
       :youtube="false"
