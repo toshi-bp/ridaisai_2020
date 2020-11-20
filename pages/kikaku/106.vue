@@ -46,6 +46,14 @@
                 height="100%"
               />
             </div>
+            <div>
+              <LinkToContents
+                :link="true"
+                url="https://tus-ac-jp.zoom.us/j/93123439777?pwd=a0lzWlRobmF0bFNEb0xiaysvME1FZz09"
+              >
+                Zoomはこちら<br />https://tus-ac-jp.zoom.us/j/93123439777?pwd=a0lzWlRobmF0bFNEb0xiaysvME1FZz09
+              </LinkToContents>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -125,9 +133,10 @@ export default {
   &__pdf {
     width: 100%;
     height: 750px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
     @include media-breakpoint-down(md) {
       height: 500px;
+      margin-bottom: 3rem;
     }
   }
 }
