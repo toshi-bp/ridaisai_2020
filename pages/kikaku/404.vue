@@ -5,7 +5,7 @@
       :key="id"
     >
       <KikakuInfoHeader
-        :id="404"
+        :id="KikakuList.kikaku_id"
         :kikaku_name="KikakuList.kikaku_title"
         :circle_name="KikakuList.name"
         :type="KikakuList.type"
