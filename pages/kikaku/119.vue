@@ -40,21 +40,39 @@
                   </ImageFullScreen>
                 </TheColumn>
               </TheRow>
-              <div class="kikaku-info__youtube">
-                <youtube
-                ref="youtube"
-                :video-id="videoId"
-                :fit-parent="true"
-                :resize="true"
-              />
-              </div>
-              <div class="kikaku-info__youtube">
-                <youtube
-                ref="youtube"
-                :video-id="videoId2"
-                :fit-parent="true"
-                :resize="true"
-              />
+              <div
+                v-for="video in videos"
+                :key="video.id"
+                class="kikaku-info__youtube"
+              >
+                <div>
+                  <youtube
+                    ref="youtube"
+                    :video-id="video.videoId"
+                    :fit-parent="true"
+                    :resize="true"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="kikaku-info__youtube__title"
+                  >
+                    <span class="kikaku-info__youtube__index">作品名</span>
+                    <br/>{{ video.title }}
+                  </p>
+                  <p
+                    class="kikaku-info__youtube__name"
+                  >
+                    <span class="kikaku-info__youtube__index">作成者</span>
+                    <br/>{{ video.name }}
+                  </p>
+                  <p
+                    class="kikaku-info__youtube__description"
+                  >
+                    <span class="kikaku-info__youtube__index">説明</span>
+                    <br/>{{ video.description }}
+                  </p>
+                </div>
               </div>
             </div>
             <div>
@@ -130,8 +148,22 @@ import makeHead from '~/utils/makeHead.js'
 export default {
   data () {
     return {
-      videoId: 'B3uJF-Qemlg',
-      videoId2: '5pb6dCV3uxs'
+      videos: [
+        {
+          id: 1,
+          videoId: 'B3uJF-Qemlg',
+          title: '秋',
+          name: 'N.N. 薬学部生命創薬科学科 2 年',
+          description: '少しでも秋を感じていただけたらいいなと思います。'
+        },
+        {
+          id: 2,
+          videoId: '5pb6dCV3uxs',
+          title: '秋',
+          name: 'S.Y. 理工学部建築学科 3 年',
+          description: '足早に過ぎゆく秋を、涼しく舞う風とともに'
+        }
+      ]
     }
   },
   components: {
@@ -193,7 +225,11 @@ export default {
     text-align: center;
   }
   &__youtube {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+    &__index {
+      font-size: 1.2rem;
+      font-weight:bold;
+    }
   }
 }
 </style>
