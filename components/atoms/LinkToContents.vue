@@ -1,7 +1,7 @@
 <template>
   <!-- ライブ配信用のリンクにしようと思ったけどZoomとかの他のコンテンツでも使えそうだから一応LinkToContentsという名前にした。 -->
   <div class="link">
-    <nuxt-link to="/Live/">
+    <nuxt-link to="/live/">
       <div
         v-if="live"
         class="link__live"
@@ -13,6 +13,30 @@
         </div>
       </div>
     </nuxt-link>
+    <a href="https://www.youtube.com/watch?v=5Z5LGivixHY&feature=youtu.be">
+      <div
+        v-if="live1311"
+        class="link__live"
+      >
+        <div class="link__live__inner">
+          <p class="link__live__text">Live配信会場はこちら(薬学ステージ)</p>
+            <!-- 開始時間と終了時間を入れる部分 -->
+          <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
+        </div>
+      </div>
+    </a>
+    <a href="https://www.youtube.com/watch?v=L_8VsWOuKw4&feature=youtu.be">
+      <div
+        v-if="liveLB"
+        class="link__live"
+      >
+        <div class="link__live__inner">
+          <p class="link__live__text">Live配信会場はこちら(理工学ステージ)</p>
+            <!-- 開始時間と終了時間を入れる部分 -->
+          <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
+        </div>
+      </div>
+    </a>
     <div
       v-if="link"
       class="link__web"
@@ -88,6 +112,14 @@ export default {
       default: false
     },
     toptolive: {
+      type: Boolean,
+      default: false
+    },
+    live1311: {
+      type: Boolean,
+      default: false
+    },
+    liveLB: {
       type: Boolean,
       default: false
     }

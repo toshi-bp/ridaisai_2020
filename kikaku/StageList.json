@@ -145,7 +145,7 @@
   {
     "id": 13,
     "kikaku_id": 201,
-    "title": "KOOLGEM",
+    "title": "K-POPカバーダンスステージ",
     "name": "KOOLGEM",
     "day": "Sunday",
     "startTime": "17:30",
@@ -213,12 +213,12 @@
     "title": "管弦楽団",
     "name": "管弦楽団",
     "day": "Sunday",
-    "startTime": "17:15",
-    "endTime": "17:30",
+    "startTime": "17:00",
+    "endTime": "17:15",
     "minutes": 15,
     "place": "講義棟",
     "start_h": 17,
-    "start_m": 15
+    "start_m": 0
   },
   {
     "id": 19,
