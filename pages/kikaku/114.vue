@@ -23,29 +23,33 @@
             <p class="kikaku-info__description">{{ KikakuList.description }}</p>
             <div class="kikaku-info__pdf">
               <div class="kikaku-info__pdf__body">
+                <a href="kikaku/114/flat.pdf#toolbar=0">スペクトラムと分離公理</a>
                 <iframe
-                  src="kikaku/114/flat.pdf"
+                  src="kikaku/114/flat.pdf#toolbar=0"
                   width="100%"
                   height="100%"
                 />
               </div>
               <div class="kikaku-info__pdf__body">
+                <a href="kikaku/114/noda_suken_基礎数学ゼミ.pdf#toolbar=0">基礎数学ゼミ</a>
                 <iframe
-                  src="kikaku/114/noda_suken_基礎数学ゼミ.pdf"
+                  src="kikaku/114/noda_suken_基礎数学ゼミ.pdf#toolbar=0"
                   width="100%"
                   height="100%"
                 />
               </div>
               <div class="kikaku-info__pdf__body">
+                <a href="kikaku/114/noda_suken_圏論ゼミ.pdf#toolbar=0">圏論ゼミ</a>
                 <iframe
-                  src="kikaku/114/noda_suken_圏論ゼミ.pdf"
+                  src="kikaku/114/noda_suken_圏論ゼミ.pdf#toolbar=0"
                   width="100%"
                   height="100%"
                 />
               </div>
               <div class="kikaku-info__pdf__body">
+                <a href="kikaku/114/線形代数学ゼミ.pdf#toolbar=0">線形代数学</a>
                 <iframe
-                  src="kikaku/114/線形代数学ゼミ.pdf"
+                  src="kikaku/114/線形代数学ゼミ.pdf#toolbar=0"
                   width="100%"
                   height="100%"
                 />
@@ -114,7 +118,10 @@ export default {
     &__body {
       height: 750px;
       width: 100%;
-      margin-bottom: 1.5rem;
+      margin-bottom: 5rem;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 3rem;
+      }
     }
     &__link {
 
