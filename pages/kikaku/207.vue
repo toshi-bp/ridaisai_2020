@@ -37,7 +37,7 @@
               </TheColumn>
             </TheRow>
               <div class="kikaku-info__pdf">
-                <a href="kikaku/207/部内誌『Queue!』 2020夏.pdf">pdf</a>
+                <a href="kikaku/207/部内誌『Queue!』 2020夏.pdf">部内誌『Queue!』 2020夏</a>
                 <iframe
                   src="kikaku/207/部内誌『Queue!』 2020夏.pdf"
                   width="100%"
@@ -117,6 +117,7 @@ export default {
   &__pdf {
     height: 750px;
     width: 100%;
+    margin-bottom: 3rem;
   }
   &__description {
     white-space: pre-line;
