@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <!-- <h3>企画紹介</h3> -->
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <h4>
               コンテンツはこちら(クリックすると全画面表示ができます)
             </h4>
@@ -33,18 +35,17 @@
               >
                 <ImageFullScreen
                   :src="`kikaku/207/${item.imageUrl}`"
-                ></ImageFullScreen>
+                />
               </TheColumn>
             </TheRow>
-              <div class="kikaku-info__pdf">
-                <a href="kikaku/207/部内誌『Queue!』 2020夏.pdf">部内誌『Queue!』 2020夏</a>
-                <iframe
-                  src="kikaku/207/部内誌『Queue!』 2020夏.pdf"
-                  width="100%"
-                  height="100%"
-                >
-                </iframe>
-              </div>
+            <div class="kikaku-info__pdf">
+              <a href="kikaku/207/部内誌『Queue!』 2020夏.pdf">部内誌『Queue!』 2020夏</a>
+              <iframe
+                src="kikaku/207/部内誌『Queue!』 2020夏.pdf"
+                width="100%"
+                height="100%"
+              />
+            </div>
           </TheSection>
         </TheContainer>
 

@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__pdf">
               <a href="kikaku/111/鉄研.pdf" class="kikaku-info__pdf__link">鉄研.pdf</a>
               <div class="kikaku-info__pdf__body">

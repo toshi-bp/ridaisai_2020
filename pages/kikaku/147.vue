@@ -31,7 +31,7 @@
                 :link="true"
                 :url="KikakuList.url"
               >
-                Webサイトへのアクセスはこちら<br/>
+                Webサイトへのアクセスはこちら<br>
                 {{ KikakuList.url }}
               </LinkToContents>
             </div>
@@ -45,7 +45,7 @@
                 scrolling="no"
                 width="100%"
                 height="100%"
-              ></iframe>
+              />
             </div>
           </TheSection>
         </TheContainer>

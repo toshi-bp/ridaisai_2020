@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <h4>コンテンツのダウンロード(zipファイルでのダウンロードとなります。)</h4>
             <TheRow>
               <TheColumn
@@ -71,6 +73,21 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  components: {
+    KikakuInfoHeader,
+    KikakuInfoBody,
+    TheSection,
+    TheContainer,
+    DownLoadButton,
+    TheRow,
+    TheColumn
+  },
+  props: {
+    id: {
+      type: Number,
+      default: 121
+    }
+  },
   data () {
     return {
       games: [
@@ -105,21 +122,6 @@ export default {
           zip: 'SpaceShooting.zip'
         }
       ]
-    }
-  },
-  components: {
-    KikakuInfoHeader,
-    KikakuInfoBody,
-    TheSection,
-    TheContainer,
-    DownLoadButton,
-    TheRow,
-    TheColumn
-  },
-  props: {
-    id: {
-      type: Number,
-      default: 121
     }
   },
   computed: {

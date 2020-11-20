@@ -36,7 +36,7 @@
       >
         <div class="link__live__inner">
           <p class="link__live__text">Live配信会場はこちら(理工<span class="link__live__text__span">学</span>ステージ)</p>
-            <!-- 開始時間と終了時間を入れる部分 -->
+          <!-- 開始時間と終了時間を入れる部分 -->
           <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
         </div>
       </div>

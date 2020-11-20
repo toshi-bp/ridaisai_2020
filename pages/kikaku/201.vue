@@ -20,14 +20,16 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div>
               <LinkToContents
                 :live="true"
                 day="Sunday"
-                startTime="17:30"
-                endTime="18:30"
-              ></LinkToContents>
+                start-time="17:30"
+                end-time="18:30"
+              />
             </div>
             <h4>ダンス動画はこちら</h4>
             <div
@@ -69,6 +71,19 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  components: {
+    KikakuInfoHeader,
+    KikakuInfoBody,
+    TheSection,
+    TheContainer,
+    LinkToContents
+  },
+  props: {
+    id: {
+      type: Number,
+      default: 201
+    }
+  },
   data () {
     return {
       videoIds: [
@@ -101,19 +116,6 @@ export default {
           videoId: 'DnPxNvOzkVQ'
         }
       ]
-    }
-  },
-  components: {
-    KikakuInfoHeader,
-    KikakuInfoBody,
-    TheSection,
-    TheContainer,
-    LinkToContents
-  },
-  props: {
-    id: {
-      type: Number,
-      default: 201
     }
   },
   computed: {

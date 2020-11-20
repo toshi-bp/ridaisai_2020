@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__pdf">
               <div class="kikaku-info__pdf__body">
                 <a href="kikaku/114/flat.pdf#toolbar=0">スペクトラムと分離公理</a>

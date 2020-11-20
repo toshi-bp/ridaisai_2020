@@ -20,9 +20,13 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div>
-              <h3 class="kikaku-info__title">【デジタル×書道】</h3>
+              <h3 class="kikaku-info__title">
+                【デジタル×書道】
+              </h3>
               <TheRow>
                 <TheColumn
                   v-for="item in Shodo1"
@@ -36,8 +40,7 @@
                     :description="item.description"
                     :src="`kikaku/119/${item.imageUrl}`"
                     :download="true"
-                  >
-                  </ImageFullScreen>
+                  />
                 </TheColumn>
               </TheRow>
               <div
@@ -58,25 +61,27 @@
                     class="kikaku-info__youtube__title"
                   >
                     <span class="kikaku-info__youtube__index">作品名</span>
-                    <br/>{{ video.title }}
+                    <br>{{ video.title }}
                   </p>
                   <p
                     class="kikaku-info__youtube__name"
                   >
                     <span class="kikaku-info__youtube__index">作成者</span>
-                    <br/>{{ video.name }}
+                    <br>{{ video.name }}
                   </p>
                   <p
                     class="kikaku-info__youtube__description"
                   >
                     <span class="kikaku-info__youtube__index">説明</span>
-                    <br/>{{ video.description }}
+                    <br>{{ video.description }}
                   </p>
                 </div>
               </div>
             </div>
             <div>
-              <h3 class="kikaku-info__title">【年賀状デザイン】</h3>
+              <h3 class="kikaku-info__title">
+                【年賀状デザイン】
+              </h3>
               <TheRow>
                 <TheColumn
                   v-for="item in Shodo2"
@@ -90,13 +95,14 @@
                     :description="item.description"
                     :src="`kikaku/119/${item.imageUrl}`"
                     :download="true"
-                  >
-                  </ImageFullScreen>
+                  />
                 </TheColumn>
               </TheRow>
             </div>
             <div>
-              <h3 class="kikaku-info__title">【クラシック】</h3>
+              <h3 class="kikaku-info__title">
+                【クラシック】
+              </h3>
               <TheRow>
                 <TheColumn
                   v-for="item in Shodo3"
@@ -110,8 +116,7 @@
                     :description="item.description"
                     :src="`kikaku/119/${item.imageUrl}`"
                     :download="true"
-                  >
-                  </ImageFullScreen>
+                  />
                 </TheColumn>
               </TheRow>
             </div>
@@ -146,6 +151,21 @@ import Shodo from '~/kikaku/shodo.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  components: {
+    KikakuInfoHeader,
+    KikakuInfoBody,
+    ImageFullScreen,
+    TheSection,
+    TheContainer,
+    TheColumn,
+    TheRow
+  },
+  props: {
+    id: {
+      type: Number,
+      default: 119
+    }
+  },
   data () {
     return {
       videos: [
@@ -164,21 +184,6 @@ export default {
           description: '足早に過ぎゆく秋を、涼しく舞う風とともに'
         }
       ]
-    }
-  },
-  components: {
-    KikakuInfoHeader,
-    KikakuInfoBody,
-    ImageFullScreen,
-    TheSection,
-    TheContainer,
-    TheColumn,
-    TheRow
-  },
-  props: {
-    id: {
-      type: Number,
-      default: 119
     }
   },
   computed: {

@@ -20,9 +20,11 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__youtube">
-               <div class="kikaku-info__youtube__body">
+              <div class="kikaku-info__youtube__body">
                 <youtube
                   ref="youtube"
                   :video-id="videoId"
@@ -38,7 +40,7 @@
                   :resize="true"
                 />
               </div>
-           </div>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -70,16 +72,16 @@ export default {
     TheSection,
     TheContainer
   },
-  data () {
-    return {
-      videoId: 'PvrOKBidztU',
-      videoId2: 'MRYuWsa8TS4'
-    }
-  },
   props: {
     id: {
       type: Number,
       default: 211
+    }
+  },
+  data () {
+    return {
+      videoId: 'PvrOKBidztU',
+      videoId2: 'MRYuWsa8TS4'
     }
   },
   computed: {

@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__body">
               <div class="kikaku-info__pdf__pc">
                 <a href="kikaku/112/RIM42 原稿.pdf">RIM42原稿</a>
@@ -28,7 +30,7 @@
                   src="kikaku/112/RIM42 原稿.pdf"
                   width="100%"
                   height="100%"
-                ></iframe>
+                />
               </div>
               <div class="kikaku-info__pdf__sp">
                 <a href="kikaku/112/RIM42 原稿.pdf">RIM42原稿</a>
@@ -39,7 +41,7 @@
                   src="kikaku/112/TONE2020 原稿.pdf"
                   width="100%"
                   height="100%"
-                ></iframe>
+                />
               </div>
               <div class="kikaku-info__pdf__sp">
                 <a href="kikaku/112/TONE2020 原稿.pdf">TONE2020原稿</a>

@@ -5,8 +5,8 @@
     :href="href"
     class="download-button"
     tabindex="0"
-    @click="onClick"
     download
+    @click="onClick"
   >
     <div class="download-button__inner">
       <slot />

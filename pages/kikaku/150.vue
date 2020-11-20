@@ -20,14 +20,16 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div>
               <LinkToContents
-                :liveLB="true"
+                :live-l-b="true"
                 day="Saturday"
-                startTime="14:00"
-                endTime="16:00"
-              ></LinkToContents>
+                start-time="14:00"
+                end-time="16:00"
+              />
             </div>
           </TheSection>
         </TheContainer>

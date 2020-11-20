@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <!-- <div
               v-for="videos in videoIds"
               :key="videos. id"
@@ -38,7 +40,7 @@
                 :link="true"
                 url="https://www.youtube.com/playlist?list=PLl3dtZKrEFdZeDpsstL1F8BNoNoQ4D8E5"
               >
-                コンテンツはこちら<br />https://www.youtube.com/playlist?list=PLl3dtZKrEFdZeDpsstL1F8BNoNoQ4D8E5
+                コンテンツはこちら<br>https://www.youtube.com/playlist?list=PLl3dtZKrEFdZeDpsstL1F8BNoNoQ4D8E5
               </LinkToContents>
             </div>
           </TheSection>
@@ -67,6 +69,19 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  components: {
+    KikakuInfoHeader,
+    KikakuInfoBody,
+    TheSection,
+    TheContainer,
+    LinkToContents
+  },
+  props: {
+    id: {
+      type: Number,
+      default: 109
+    }
+  },
   data () {
     return {
       videoIds: [
@@ -83,19 +98,6 @@ export default {
           videoId: 'NVVJWG3xGc0'
         }
       ]
-    }
-  },
-  components: {
-    KikakuInfoHeader,
-    KikakuInfoBody,
-    TheSection,
-    TheContainer,
-    LinkToContents
-  },
-  props: {
-    id: {
-      type: Number,
-      default: 109
     }
   },
   computed: {

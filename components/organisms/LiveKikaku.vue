@@ -57,20 +57,20 @@
             <LinkToContents
               :live1311="true"
               day="Saturday"
-              startTime="10:00"
-              endTime="16:45"
+              start-time="10:00"
+              end-time="16:45"
               class="live__link__contents__child"
             >
-            薬学ステージのLive配信にアクセス！
+              薬学ステージのLive配信にアクセス！
             </LinkToContents>
             <LinkToContents
-              :liveLB="true"
+              :live-l-b="true"
               day="Saturday"
-              startTime="10:00"
-              endTime="16:45"
+              start-time="10:00"
+              end-time="16:45"
               class="live__link__contents__child"
             >
-            理工ステージのLive配信にアクセス！
+              理工ステージのLive配信にアクセス！
             </LinkToContents>
           </div>
           <!-- 実験的に埋め込んでみる(ダメならコメントアウトします) -->
@@ -88,8 +88,8 @@
               :resize="true"
             />
           </div> -->
-          </TheSection>
-        </div>
+        </TheSection>
+      </div>
       <div class="live__button">
         <LinkButton
           to="/"

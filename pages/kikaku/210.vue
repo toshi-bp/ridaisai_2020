@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div>
               <TheRow>
                 <TheColumn
@@ -29,31 +31,30 @@
                 >
                   <ImageFullScreen
                     :src="`kikaku/210/${item.imageUrl}`"
-                  >
-                  </ImageFullScreen>
+                  />
                 </TheColumn>
               </TheRow>
-               <div class="kikaku-info__pdf">
-                 <div class="kikaku-info__pdf__body">
+              <div class="kikaku-info__pdf">
+                <div class="kikaku-info__pdf__body">
                   <iframe
                     src="kikaku/210/bacon1.pdf#zoom=27"
                     width="100%"
                     height="100%"
-                  ></iframe>
+                  />
                 </div>
                 <div class="kikaku-info__pdf__body">
                   <iframe
                     src="kikaku/210/bacon2.pdf#zoom=27"
                     width="100%"
                     height="100%"
-                  ></iframe>
+                  />
                 </div>
                 <div class="kikaku-info__pdf__body">
                   <iframe
                     src="kikaku/210/KS.pdf#zoom=27"
                     width="100%"
                     height="100%"
-                  ></iframe>
+                  />
                 </div>
               </div>
               <div class="kikaku-info__youtube">
@@ -94,11 +95,6 @@ import ITC from '~/kikaku/ITC.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
-  data () {
-    return {
-      videoId: '2DpXeUbmjs0'
-    }
-  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -112,6 +108,11 @@ export default {
     id: {
       type: Number,
       default: 210
+    }
+  },
+  data () {
+    return {
+      videoId: '2DpXeUbmjs0'
     }
   },
   computed: {

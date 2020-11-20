@@ -9,26 +9,26 @@
           class="full-screen__title"
         >
           <span class="full-screen__index">作品名</span>
-          <br/>{{ title }}
+          <br>{{ title }}
         </p>
         <p
           v-if="name"
           class="full-screen__name"
         >
           <span class="full-screen__index">作成者</span>
-          <br/>{{ name }}
+          <br>{{ name }}
         </p>
         <p
           v-if="description"
           class="full-screen__description"
         >
           <span class="full-screen__index">説明</span>
-          <br/>{{ description }}
+          <br>{{ description }}
         </p>
         <div class="full-screen__download">
           <DownLoadButton
-            v-if="download"
             is="a"
+            v-if="download"
             :href="src"
             download
             class="download-button"

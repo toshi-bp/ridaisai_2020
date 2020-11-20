@@ -19,7 +19,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__youtube">
               <youtube
                 ref="youtube"
@@ -69,13 +71,6 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
-  data () {
-    return {
-      videoId: 'TOZU3x78kCg',
-      videoId2: 'WDnLFD7-nZc',
-      videoId3: 'npi8Vw7MnJ4'
-    }
-  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -86,6 +81,13 @@ export default {
     id: {
       type: Number,
       default: 206
+    }
+  },
+  data () {
+    return {
+      videoId: 'TOZU3x78kCg',
+      videoId2: 'WDnLFD7-nZc',
+      videoId3: 'npi8Vw7MnJ4'
     }
   },
   computed: {

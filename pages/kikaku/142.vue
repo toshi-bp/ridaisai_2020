@@ -20,23 +20,24 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__youtube">
               <youtube
-              ref="youtube"
-              :video-id="videoId"
-              :fit-parent="true"
-              :resize="true"
-            />
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
             </div>
             <div class="kikaku-info__pdf">
-                <a href="kikaku/142/受験生に向けて（Spectrum).pdf">受験生に向けて（Spectrum)</a>
-                <iframe
-                  src="kikaku/142/受験生に向けて（Spectrum).pdf"
-                  width="100%"
-                  height="100%"
-                >
-                </iframe>
+              <a href="kikaku/142/受験生に向けて（Spectrum).pdf">受験生に向けて（Spectrum)</a>
+              <iframe
+                src="kikaku/142/受験生に向けて（Spectrum).pdf"
+                width="100%"
+                height="100%"
+              />
             </div>
           </TheSection>
         </TheContainer>
@@ -63,11 +64,6 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
-  data () {
-    return {
-      videoId: '4lBLAmV6Bu4'
-    }
-  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -78,6 +74,11 @@ export default {
     id: {
       type: Number,
       default: 142
+    }
+  },
+  data () {
+    return {
+      videoId: '4lBLAmV6Bu4'
     }
   },
   computed: {

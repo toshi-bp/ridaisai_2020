@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__pdf">
               <div class="kikaku-info__pdf__body">
                 <a href="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf">pdf</a>
@@ -57,10 +59,10 @@
                 :link="true"
                 url="https://tus-ac-jp.zoom.us/j/99850846269?pwd=NTczNkJWcSs4VG5tRWR0ZTBnVWxkdz09"
               >
-              <p class="kikaku-info__link">
-                Zoomのリンクはこちら<br/>
-                11月21日(土)、11月22日(日) 10:00〜17:00
-              </p>
+                <p class="kikaku-info__link">
+                  Zoomのリンクはこちら<br>
+                  11月21日(土)、11月22日(日) 10:00〜17:00
+                </p>
               </LinkToContents>
             </div>
           </TheSection>

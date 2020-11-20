@@ -20,15 +20,16 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__body">
               <LinkToContents
                 :live="true"
                 day="Sunday"
-                startTime="15:00"
-                endTime="16:30"
-              >
-              </LinkToContents>
+                start-time="15:00"
+                end-time="16:30"
+              />
             </div>
             <div class="kikaku-info__youtube">
               <youtube
@@ -51,7 +52,7 @@
                 :link="true"
                 url="https://tus-ac-jp.zoom.us/j/93123439777?pwd=a0lzWlRobmF0bFNEb0xiaysvME1FZz09"
               >
-                Zoomはこちら<br />https://tus-ac-jp.zoom.us/j/93123439777?pwd=a0lzWlRobmF0bFNEb0xiaysvME1FZz09
+                Zoomはこちら<br>https://tus-ac-jp.zoom.us/j/93123439777?pwd=a0lzWlRobmF0bFNEb0xiaysvME1FZz09
               </LinkToContents>
             </div>
           </TheSection>
@@ -81,11 +82,6 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
-  data () {
-    return {
-      videoId: 'OyTaWr3NU7o'
-    }
-  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -97,6 +93,11 @@ export default {
     id: {
       type: Number,
       default: 106
+    }
+  },
+  data () {
+    return {
+      videoId: 'OyTaWr3NU7o'
     }
   },
   computed: {

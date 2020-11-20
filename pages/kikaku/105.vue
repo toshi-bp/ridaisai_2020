@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__pdf">
               <a href="kikaku/105/2020理大祭ドラマ_パンフレット.pdf">ドラマパンフレット</a>
               <iframe
@@ -32,9 +34,9 @@
             <div class="kikaku-info__link">
               <LinkToContents
                 :live1311="true"
-                startTime="15:45"
-                endTime="16:45"
-              ></LinkToContents>
+                start-time="15:45"
+                end-time="16:45"
+              />
             </div>
           </TheSection>
         </TheContainer>

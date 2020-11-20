@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div>
               <h4>コンテンツはこちら(画像をクリックすると全画面表示ができます。)↓</h4>
               <TheRow>
@@ -32,8 +34,7 @@
                 >
                   <ImageFullScreen
                     :src="`kikaku/122/${item.imageUrl}`"
-                  >
-                  </ImageFullScreen>
+                  />
                 </TheColumn>
               </TheRow>
             </div>

@@ -84,7 +84,7 @@ export default {
     player () {
       return this.$refs.youtube.player
     }
-  },
+  }
   // methods: {
   //   loadVideo () {
   //     const video = '<youtube ref="youtube" :video-id="videoId" :fit-parent="true" :resize="true" />'

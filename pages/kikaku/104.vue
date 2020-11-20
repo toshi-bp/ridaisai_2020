@@ -20,22 +20,25 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div>
               <h2>Live配信</h2>
               <a href="kikaku/104/ピアノコンサート(Live配信)program.pdf">ピアノコンサート(Live配信)program</a>
               <LinkToContents
                 :live1311="true"
                 day="Saturday"
-                startTime="10:00"
-                endTime="12:00"
+                start-time="10:00"
+                end-time="12:00"
               >
                 Live配信会場はこちら
               </LinkToContents>
             </div>
             <a href="kikaku/104/ピアノコンサートprogram.pdf">ピアノコンサート(動画)program</a>
             <div class="kikaku-info__youtube">
-              <h3 class="kikaku-info__youtube__title">①宿命/藤原聡<br/>
+              <h3 class="kikaku-info__youtube__title">
+                ①宿命/藤原聡<br>
                 <span class="kikaku-info__youtube__name">
                   理工学部応用生物科学科1年山本由珠
                 </span>
@@ -51,7 +54,8 @@
               />
             </div>
             <div class="kikaku-info__youtube">
-              <h3 class="kikaku-info__youtube__title">②夜に駆ける/YOASOBI<br/>
+              <h3 class="kikaku-info__youtube__title">
+                ②夜に駆ける/YOASOBI<br>
                 <span class="kikaku-info__youtube__name">
                   理工学部電子電気情報工学科1年NaTsu@dw
                 </span>
@@ -67,7 +71,8 @@
               />
             </div>
             <div class="kikaku-info__youtube">
-              <h3 class="kikaku-info__youtube__title">③夜に駆ける/YOASOBI <br/>
+              <h3 class="kikaku-info__youtube__title">
+                ③夜に駆ける/YOASOBI <br>
                 <span class="kikaku-info__youtube__name">
                   基礎工学部材料工学科1年4040
                 </span>
@@ -109,13 +114,6 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
-  data () {
-    return {
-      videoId: '3K4UW0-J7CY',
-      videoId2: 'pClAIG-QPSw',
-      videoId3: '4rbk6XXw9dU'
-    }
-  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -127,6 +125,13 @@ export default {
     id: {
       type: Number,
       default: 104
+    }
+  },
+  data () {
+    return {
+      videoId: '3K4UW0-J7CY',
+      videoId2: 'pClAIG-QPSw',
+      videoId3: '4rbk6XXw9dU'
     }
   },
   computed: {

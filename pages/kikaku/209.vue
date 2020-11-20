@@ -57,6 +57,18 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  components: {
+    KikakuInfoHeader,
+    KikakuInfoBody,
+    TheSection,
+    TheContainer
+  },
+  props: {
+    id: {
+      type: Number,
+      default: 209
+    }
+  },
   data () {
     return {
       videoIds: [
@@ -121,18 +133,6 @@ export default {
           videoId: 'AHZwsCis2IQ'
         }
       ]
-    }
-  },
-  components: {
-    KikakuInfoHeader,
-    KikakuInfoBody,
-    TheSection,
-    TheContainer
-  },
-  props: {
-    id: {
-      type: Number,
-      default: 209
     }
   },
   computed: {

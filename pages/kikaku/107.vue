@@ -20,12 +20,15 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div>
               <LinkToContents
                 :link="true"
                 url="https://www.ed.tus.ac.jp/eic/product.html"
-              >コンテンツはこちら<br/>https://www.ed.tus.ac.jp/eic/product.html
+              >
+                コンテンツはこちら<br>https://www.ed.tus.ac.jp/eic/product.html
               </LinkToContents>
             </div>
           </TheSection>
