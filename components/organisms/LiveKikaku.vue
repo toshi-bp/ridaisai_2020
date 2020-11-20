@@ -53,6 +53,21 @@
           >
             YouTubeLiveへは当日こちらのボタンからアクセスできます。<br />お楽しみに！
           </LinkToContents>
+          <!-- 実験的に埋め込んでみる(ダメならコメントアウトします) -->
+          <!-- <div class="live__youtube">
+            <youtube
+              ref="youtube"
+              :video-id="videoId"
+              :fit-parent="true"
+              :resize="true"
+            />
+            <youtube
+              ref="youtube"
+              :video-id="videoId2"
+              :fit-parent="true"
+              :resize="true"
+            />
+          </div> -->
         </TheSection>
       </div>
       <div class="live__button">
@@ -85,8 +100,8 @@ export default {
   },
   data () {
     return {
-      videoId_1: 'YAdpFRgXjh0',
-      videoId_2: 'CiEzaiFuz9E' // 動画IDを入力する
+      videoId: '5Z5LGivixHY',
+      videoId2: 'L_8VsWOuKw4' // 動画IDを入力する
     }
   }
 }

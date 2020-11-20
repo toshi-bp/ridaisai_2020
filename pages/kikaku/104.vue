@@ -25,7 +25,7 @@
               <h2>Live配信</h2>
               <a href="kikaku/104/ピアノコンサート(Live配信)program.pdf">ピアノコンサート(Live配信)program</a>
               <LinkToContents
-                :live="true"
+                :live1311="true"
                 day="Saturday"
                 startTime="10:00"
                 endTime="12:00"

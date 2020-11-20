@@ -24,6 +24,7 @@
             <div>
               <LinkToContents
                 :live="true"
+                day="Sunday"
                 startTime="17:30"
                 endTime="18:00"
               ></LinkToContents>

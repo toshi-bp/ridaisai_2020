@@ -31,7 +31,7 @@
             </div>
             <div class="kikaku-info__link">
               <LinkToContents
-                :live="true"
+                :live1311="true"
                 startTime="15:45"
                 endTime="16:45"
               ></LinkToContents>
