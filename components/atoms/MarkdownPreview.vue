@@ -1,8 +1,8 @@
 <template>
   <div
-    v-html="markdownHtml"
     class="markdown-preview"
     :class="{'markdown-preview--no-strong-hightlight': noStrongHighLight}"
+    v-html="markdownHtml"
   />
 </template>
 

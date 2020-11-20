@@ -20,11 +20,14 @@
             </h1>
             <div class="time-table__saturday">
               <div class="time-table__title">
-                <div class="time-table__title__child">薬学ステージ</div>
-                <div class="time-table__title__child">理工学ステージ</div>
+                <div class="time-table__title__child">
+                  薬学ステージ
+                </div>
+                <div class="time-table__title__child">
+                  理工学ステージ
+                </div>
               </div>
-              <div class="time-table__body">
-              </div>
+              <div class="time-table__body" />
             </div>
           </div>
           <div

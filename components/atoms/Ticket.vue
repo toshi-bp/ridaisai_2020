@@ -9,7 +9,7 @@
           オンライン理大祭の歩き方
         </h2>
         <h2 class="ticket__description">
-          オンライン理大祭には次の3つの楽しみ方があります。<br />それぞれについて知って理大祭を楽しもう!<br />このページを読んで気になる企画をCHECK!
+          オンライン理大祭には次の3つの楽しみ方があります。<br>それぞれについて知って理大祭を楽しもう!<br>このページを読んで気になる企画をCHECK!
         </h2>
         <p class="ticket__description">
           企画一覧はこちら
@@ -30,8 +30,7 @@
         <img src="~@/assets/image/stamp.svg" class="ticket__main__right__stamp"/>
       </div> -->
     </div>
-    <div class="ticket__bottomline">
-    </div>
+    <div class="ticket__bottomline" />
   </div>
 </template>
 

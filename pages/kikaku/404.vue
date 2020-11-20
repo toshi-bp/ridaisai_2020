@@ -8,17 +8,16 @@
       :live="true"
       :youtube="false"
       :website="false"
-    >
-    </KikakuInfoHeader>
+    />
     <TheContainer>
       <TheSection>
         <div>
           <div>
-            <img src="~@/assets/events/commedians.jpg" class="talent__img" />
+            <img src="~@/assets/events/commedians.jpg" class="talent__img">
           </div>
           <div>
             <h3>企画紹介</h3>
-            <p>GO！皆川と8.6秒バズーカーの2組のネタが炸裂!<br />コロナで退屈な生活をお笑いで吹っ飛ばそう!</p>
+            <p>GO！皆川と8.6秒バズーカーの2組のネタが炸裂!<br>コロナで退屈な生活をお笑いで吹っ飛ばそう!</p>
           </div>
           <div>
             <h3>開催概要</h3>
@@ -48,14 +47,16 @@
             <LinkToContents
               :live="true"
               :day="StageList.day"
-              :startTime="StageList.startTime"
-              :endTime="StageList.endTime"
-            ></LinkToContents>
+              :start-time="StageList.startTime"
+              :end-time="StageList.endTime"
+            />
           </div>
         </div>
       </TheSection>
       <div class="button">
-        <LinkButton to="/">topページへ戻る</LinkButton>
+        <LinkButton to="/">
+          topページへ戻る
+        </LinkButton>
       </div>
     </TheContainer>
   </div>

@@ -20,9 +20,9 @@ if (typeof window === 'undefined') {
   TITLES['ライブ配信'] = 'live'
   TITLES.Youtube = 'youtube'
   TITLES['webサイト'] = 'website'
-  TITLES['link'] = 'link'
-  TITLES['Instagram'] = 'Instagram'
-  TITLES['mail'] = 'mail'
+  TITLES.link = 'link'
+  TITLES.Instagram = 'Instagram'
+  TITLES.mail = 'mail'
 
   const raw_data = fs.readFileSync(CSV_FILE_PATH, 'utf-8')
   const array_data = raw_data.split('\n')
@@ -55,15 +55,15 @@ if (typeof window === 'undefined') {
         item = parseInt(item, 10) // 文字列を10進数の数に変換
       }
 
-      if(titles[j] === '企画名') {
+      if (titles[j] === '企画名') {
         item = item.replace(/{{改行}}/g, '\n')
       }
 
-      if(titles[j] === '説明文(字数制限なし)') {
+      if (titles[j] === '説明文(字数制限なし)') {
         item = item.replace(/{{改行}}/g, '\n')
       }
 
-      if(titles[j] === '団体紹介(字数制限なし)') {
+      if (titles[j] === '団体紹介(字数制限なし)') {
         item = item.replace(/{{改行}}/g, '\n')
       }
 
