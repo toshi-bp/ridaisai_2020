@@ -47,7 +47,8 @@ export default {
     '~/plugins/emptyTouchHandler.js',
     '~/plugins/vue-youtube.js',
     '~/plugins/smoothScroll.js',
-    '~/plugins/vue-scrollto.js'
+    '~/plugins/vue-scrollto.js',
+    { src: '~/plugins/vue-loading-template.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules

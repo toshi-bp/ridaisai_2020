@@ -1,5 +1,6 @@
 <template>
   <div class="default">
+    <VueLoading type="spiningDubbles" color="#2ca9e1" :size="{ width: '50px', height: '50px' }"></VueLoading>
     <GlobalHeader />
     <div>
       <div class="default__main">
