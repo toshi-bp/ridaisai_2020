@@ -21,8 +21,8 @@
           <TheSection>
             <h3>企画紹介</h3>
             <p
-              v-html="KikakuList.description"
               class="kikaku-info__description"
+              v-html="KikakuList.description"
             >
               {{ KikakuList.description }}
             </p>
