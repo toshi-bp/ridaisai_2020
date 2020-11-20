@@ -13,7 +13,8 @@
       'label--is-live': type === 'live',
       'label--is-youtube': type === 'youtube',
       'label--is-website': type === 'website',
-      'label--is-special': type === 'special'
+      'label--is-special': type === 'special',
+      'label--is-rfc': type === 'rfc'
     }"
   >
     <div class="label__inner">
@@ -88,6 +89,9 @@ export default {
   }
   &--is-special {
     background-color: $sub-color;
+  }
+  &--is-rfc {
+    background-color: $theme-color;
   }
 
   &__inner {

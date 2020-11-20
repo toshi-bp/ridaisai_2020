@@ -85,6 +85,53 @@
         </div>
       </TheContainer>
     </div>
+    <div>
+      <div class="home-body__rfc">
+        <TheContainer class="home-body__rfc__container">
+          <div class="home-body__rfc__label">
+            <nuxt-link to="/kikaku/">
+              <KikakuLabel
+                type="rfc"
+              >
+                委員会企画を楽しむ
+              </KikakuLabel>
+            </nuxt-link>
+            <p class="home-body__rfc__text">
+              理大祭実行委員会による企画はこちら
+            </p>
+          </div>
+          <div>
+            <TheRow>
+              <TheColumn
+                v-for="item in RFCKikaku"
+                :key="item.kikaku_id"
+                :spsize="6"
+                :pcsize="4"
+              >
+                <ItemCard
+                  :to="`/kikaku/${item.kikaku_id}/`"
+                  :label-type="item.type"
+                  :label-text="item.type"
+                  :title="item.kikaku_title"
+                  :name="item.name"
+                  :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
+                  :live="item.live"
+                  :youtube="item.youtube"
+                  :website="item.website"
+                />
+              </TheColumn>
+            </TheRow>
+          </div>
+          <!-- <div class="home-body__button">
+            <LinkButton2
+              to="/kikaku/"
+            >
+              企画一覧はこちら
+            </LinkButton2>
+          </div> -->
+        </TheContainer>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -122,6 +169,9 @@ export default {
       //   }
       // }
       return KikakuList.slice(0, 6)
+    },
+    RFCKikaku () {
+      return KikakuList.filter(item => item.name === '理大祭実行委員会')
     }
   }
 }
@@ -178,7 +228,7 @@ export default {
   &__live {
     background-color: rgba($live-color, $alpha: 0.3);
     padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
     &__container {
       border-radius: 5px;
       background-color: #fff;
@@ -189,6 +239,22 @@ export default {
     }
     &__text {
       margin-top: 1rem;
+    }
+  }
+  &__rfc {
+    background-color: rgba($theme-color, $alpha: 0.3);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    &__label {
+      margin-bottom: 2rem;
+    }
+    &__text {
+      margin-top: 1rem;
+    }
+    &__container {
+      border-radius: 5px;
+      background-color: #fff;
+      padding: 1rem 1rem;
     }
   }
   &__button {
