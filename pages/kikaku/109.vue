@@ -21,7 +21,7 @@
           <TheSection>
             <h3>企画紹介</h3>
             <p class="kikaku-info__description">{{ KikakuList.description }}</p>
-            <div
+            <!-- <div
               v-for="videos in videoIds"
               :key="videos. id"
               class="kikaku-info__youtube"
@@ -32,6 +32,14 @@
                 :fit-parent="true"
                 :resize="true"
               />
+            </div> -->
+            <div>
+              <LinkToContents
+                :link="true"
+                url="https://www.youtube.com/playlist?list=PLl3dtZKrEFdZeDpsstL1F8BNoNoQ4D8E5"
+              >
+                コンテンツはこちら<br />https://www.youtube.com/playlist?list=PLl3dtZKrEFdZeDpsstL1F8BNoNoQ4D8E5
+              </LinkToContents>
             </div>
           </TheSection>
         </TheContainer>
@@ -53,6 +61,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -80,7 +89,8 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   props: {
     id: {

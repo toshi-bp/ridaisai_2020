@@ -29,6 +29,15 @@
               :resize="true"
             />
             </div>
+            <div class="kikaku-info__pdf">
+                <a href="kikaku/142/受験生に向けて（Spectrum).pdf">受験生に向けて（Spectrum)</a>
+                <iframe
+                  src="kikaku/142/受験生に向けて（Spectrum).pdf"
+                  width="100%"
+                  height="100%"
+                >
+                </iframe>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -98,6 +107,14 @@ export default {
   }
   &__youtube {
     margin: 1.5rem 0 1rem;
+  }
+  &__pdf {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 3rem;
+    @include media-breakpoint-down(md) {
+      height: 500px;
+    }
   }
 }
 </style>
