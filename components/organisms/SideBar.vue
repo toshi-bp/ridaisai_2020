@@ -51,7 +51,7 @@
         </li>
         <li class="footer-nav__list__item">
           <nuxt-link to="/live/">
-            <fa icon="video" class="footer-nav__list__item__icon"/>
+            <fa icon="video" class="footer-nav__list__item__icon" />
             <span class="footer-nav__list__item__text">Live配信</span>
           </nuxt-link>
         </li>

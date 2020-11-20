@@ -2,7 +2,7 @@
   <div class="welcome__bg">
     <TheContainer class="welcome__container">
       <div>
-        <Ticket class="welcome__ticket"/>
+        <Ticket class="welcome__ticket" />
         <div class="welcome__article">
           <div class="welcome__article__youtube">
             <div class="welcome__article__main">
@@ -31,11 +31,14 @@
             <div class="welcome__img1">
               <div class="welcome__img1__left">
                 <img src="~@/assets/kikaku/FDpCNsRfJvy3oYNBawGZPJI9xkxhahoxosiHVnKG.jpeg" class="welcome__img1__left">
-                <p class="welcome__img1__left__title">「英語研究会」より</p>
+                <p class="welcome__img1__left__title">
+                  「英語研究会」より
+                </p>
               </div>
               <div class="welcome__img1__right">
                 <img src="~@/assets/kikaku/SpMn1UMEEqkp0If1En6LmiNHiuqmPvGxH9JqjrpX.png" class="welcome__img1__right">
-                <p class="welcome__img1__right__title">「リモートロボット操縦体験プロジェクトチーム」より
+                <p class="welcome__img1__right__title">
+                  「リモートロボット操縦体験プロジェクトチーム」より
                 </p>
               </div>
             </div>
@@ -64,11 +67,15 @@
             <div class="welcome__img2">
               <div class="welcome__img2__left">
                 <img src="~@/assets/welcome/mq1-1.jpg" class="welcome__img2__left">
-                <p class="welcome__img2__left__title">「東京理科大学野田文化会天文研究会」より</p>
+                <p class="welcome__img2__left__title">
+                  「東京理科大学野田文化会天文研究会」より
+                </p>
               </div>
               <div class="welcome__img2__right">
                 <img src="~@/assets/welcome/mq1.jpg" class="welcome__img2__right">
-                <p class="welcome__img2__right__title">「メディアアートサークルC4's」より</p>
+                <p class="welcome__img2__right__title">
+                  「メディアアートサークルC4's」より
+                </p>
               </div>
             </div>
             <div class="welcome__article__main">
@@ -97,18 +104,24 @@
             <div class="welcome__img3">
               <div class="welcome__img3__left">
                 <img src="~@/assets/welcome/B09賀正・富嶽.jpg" class="welcome__img3__left">
-                <p class="welcome__img__left__title">「東京理科大学野田文化会書道部」より</p>
+                <p class="welcome__img__left__title">
+                  「東京理科大学野田文化会書道部」より
+                </p>
               </div>
               <div class="welcome__img3__right">
                 <img src="~@/assets/welcome/remi2.jpg" class="welcome__img3__right">
-                <p class="welcome__img3__right__title">「情報技術クラブ」より</p>
+                <p class="welcome__img3__right__title">
+                  「情報技術クラブ」より
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="button">
-        <LinkButton to="/">topページに戻る</LinkButton>
+        <LinkButton to="/">
+          topページに戻る
+        </LinkButton>
       </div>
     </TheContainer>
   </div>

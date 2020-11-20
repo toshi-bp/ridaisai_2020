@@ -7,9 +7,13 @@
         class="link__live"
       >
         <div class="link__live__inner">
-          <p class="link__live__text">Live配信会場はこちら</p>
-            <!-- 開始時間と終了時間を入れる部分 -->
-          <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
+          <p class="link__live__text">
+            Live配信会場はこちら
+          </p>
+          <!-- 開始時間と終了時間を入れる部分 -->
+          <p class="link__live__text2" TheDay()>
+            {{ TheDay }}：{{ startTime }} 〜 {{ endTime }}
+          </p>
         </div>
       </div>
     </nuxt-link>
@@ -20,7 +24,7 @@
       >
         <div class="link__live__inner">
           <p class="link__live__text">Live配信会場はこちら(薬学ステージ)</p>
-            <!-- 開始時間と終了時間を入れる部分 -->
+          <!-- 開始時間と終了時間を入れる部分 -->
           <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
         </div>
       </div>
@@ -32,7 +36,7 @@
       >
         <div class="link__live__inner">
           <p class="link__live__text">Live配信会場はこちら(理工学ステージ)</p>
-            <!-- 開始時間と終了時間を入れる部分 -->
+          <!-- 開始時間と終了時間を入れる部分 -->
           <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
         </div>
       </div>
@@ -55,7 +59,7 @@
       v-if="livelink"
       class="link__toptolive"
     >
-    <!-- 直前にLive配信のリンクに変えて下さい -->
+      <!-- 直前にLive配信のリンクに変えて下さい -->
       <div class="link__toptolive__inner">
         <div
           class="link__toptolive__inner"
