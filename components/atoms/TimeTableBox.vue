@@ -5,11 +5,15 @@
   >
     <nuxt-link :to="url">
       <div>
-          <div class="box__inner">
-            <h4 class="box__inner__title">{{ title }}</h4>
-            <!-- <h5 class="box__inner__name">{{ name }}</h5> -->
-            <p class="box__inner__time">{{ startTime }} 〜 {{ endTime }}</p>
-          </div>
+        <div class="box__inner">
+          <h4 class="box__inner__title">
+            {{ title }}
+          </h4>
+          <!-- <h5 class="box__inner__name">{{ name }}</h5> -->
+          <p class="box__inner__time">
+            {{ startTime }} 〜 {{ endTime }}
+          </p>
+        </div>
       </div>
     </nuxt-link>
   </div>
@@ -17,13 +21,6 @@
 
 <script>
 export default {
-  computed: {
-    boxStyle () {
-      const BoxHeight = (this.minutes) * 5 // 1時間で300px(1分で5px)
-      const BoxTop = (this.start_h - 8) * 300 + this.start_m * 300 / 60
-      return 'top:' + BoxTop + 'px;' + 'height:' + BoxHeight + 'px;'
-    }
-  },
   props: {
     title: {
       type: String
@@ -48,6 +45,13 @@ export default {
     },
     url: {
       type: String
+    }
+  },
+  computed: {
+    boxStyle () {
+      const BoxHeight = (this.minutes) * 5 // 1時間で300px(1分で5px)
+      const BoxTop = (this.start_h - 8) * 300 + this.start_m * 300 / 60
+      return 'top:' + BoxTop + 'px;' + 'height:' + BoxHeight + 'px;'
     }
   }
 }

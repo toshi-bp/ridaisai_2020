@@ -79,7 +79,7 @@
               :toptolive="true"
               url="/live/"
             >
-            Live配信タイムテーブル
+              Live配信タイムテーブル
             </LinkToContents>
           </div>
         </div>

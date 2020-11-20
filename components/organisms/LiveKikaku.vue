@@ -48,10 +48,10 @@
       <div class="live__link">
         <TheSection>
           <LinkToContents
-          :livelink="true"
+            :livelink="true"
             class="live__link__body"
           >
-            YouTubeLiveへは当日こちらのボタンからアクセスできます。<br />お楽しみに！
+            YouTubeLiveへは当日こちらのボタンからアクセスできます。<br>お楽しみに！
           </LinkToContents>
         </TheSection>
       </div>
