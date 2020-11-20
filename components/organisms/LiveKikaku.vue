@@ -47,12 +47,32 @@
       </div>
       <div class="live__link">
         <TheSection>
-          <LinkToContents
+          <!-- <LinkToContents
           :livelink="true"
             class="live__link__body"
           >
             YouTubeLiveへは当日こちらのボタンからアクセスできます。<br />お楽しみに！
-          </LinkToContents>
+          </LinkToContents> -->
+          <div class="live__link__contents">
+            <LinkToContents
+              :live1311="true"
+              day="Saturday"
+              startTime="10:00"
+              endTime="16:45"
+              class="live__link__contents__child"
+            >
+            薬学ステージのLive配信にアクセス！
+            </LinkToContents>
+            <LinkToContents
+              :liveLB="true"
+              day="Saturday"
+              startTime="10:00"
+              endTime="16:45"
+              class="live__link__contents__child"
+            >
+            理工ステージのLive配信にアクセス！
+            </LinkToContents>
+          </div>
           <!-- 実験的に埋め込んでみる(ダメならコメントアウトします) -->
           <!-- <div class="live__youtube">
             <youtube
@@ -68,8 +88,8 @@
               :resize="true"
             />
           </div> -->
-        </TheSection>
-      </div>
+          </TheSection>
+        </div>
       <div class="live__button">
         <LinkButton
           to="/"
@@ -139,6 +159,17 @@ export default {
   &__link {
     &__body {
       background-color: $live-color;
+    }
+    &__contents{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include media-breakpoint-down(sm){
+        flex-direction: column;
+      }
+      &__child{
+        margin: 0 0.5rem;
+      }
     }
   }
 }
