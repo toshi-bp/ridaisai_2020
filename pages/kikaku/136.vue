@@ -96,10 +96,10 @@ export default {
   },
   data () {
     return {
-      videoId: 'ZUnjwPFdKXY',
-      videoId2: 'prLY2nn6Spc',
-      videoId3: 'a4s0eHACmMI',
-      videoId4: '6BQQIL6KgHE'
+      videoId: 'prLY2nn6Spc',
+      videoId2: 'ZUnjwPFdKXY',
+      videoId3: '6BQQIL6KgHE',
+      videoId4: 'a4s0eHACmMI'
     }
   },
   computed: {
