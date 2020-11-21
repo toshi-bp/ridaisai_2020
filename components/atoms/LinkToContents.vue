@@ -39,7 +39,7 @@
         class="link__live"
       >
         <component
-          :is="LinkComponentIs"
+          :is="linkComponentIs"
           target="_blank"
           :href="hrefLB"
         >
