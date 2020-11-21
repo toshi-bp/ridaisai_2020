@@ -25,9 +25,16 @@
             </p>
             <div class="kikaku-info__pdf">
               <a href="kikaku/111/鉄研.pdf" class="kikaku-info__pdf__link">鉄研.pdf</a>
-              <div class="kikaku-info__pdf__body">
+              <div class="kikaku-info__pdf__body-pc">
                 <iframe
                   src="kikaku/111/鉄研.pdf"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-sm">
+                <iframe
+                  src="kikaku/111/鉄研.pdf#zoom=20"
                   width="100%"
                   height="100%"
                 />
@@ -94,14 +101,20 @@ export default {
   background-size: repeat;
 
   &__pdf {
-    &__body {
-      width: 100%;
-      height: 750px;
-      @include media-breakpoint-down(sm){
-        width: 75%;
-        height: 500px;
+      &__body-pc {
+        width: 100%;
+        height: 750px;
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
       }
-    }
+      &__body-sm {
+        width: 100%;
+        height: 500px;
+        @include media-breakpoint-up(sm) {
+          display: none;
+        }
+      }
     &__link {
       margin: 1rem 0 1rem;
     }
