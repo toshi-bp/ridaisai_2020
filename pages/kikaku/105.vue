@@ -25,11 +25,20 @@
             </p>
             <div class="kikaku-info__pdf">
               <a href="kikaku/105/2020理大祭ドラマ_パンフレット.pdf">ドラマパンフレット</a>
-              <iframe
-                src="kikaku/105/2020理大祭ドラマ_パンフレット.pdf"
-                width="100%"
-                height="100%"
-              />
+               <div class="kikaku-info__pdf__body-pc">
+                <iframe
+                  src="kikaku/105/2020理大祭ドラマ_パンフレット.pdf"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-sm">
+                <iframe
+                  src="kikaku/105/2020理大祭ドラマ_パンフレット.pdf#zoom=17"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
             </div>
             <div class="kikaku-info__link">
               <LinkToContents
@@ -104,9 +113,21 @@ export default {
     white-space: pre-line;
   }
   &__pdf {
-    width: 100%;
-    height: 500px;
     margin-bottom: 3rem;
+    &__body-pc {
+        width: 100%;
+        height: 750px;
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    &__body-sm {
+      width: 100%;
+      height: 500px;
+      @include media-breakpoint-up(sm) {
+        display: none;
+      }
+    }
   }
   &__link {
     margin-top: 3rem;
