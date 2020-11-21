@@ -56,18 +56,18 @@
           <div class="live__link__contents">
             <LinkToContents
               :live1311="true"
-              day="Saturday"
-              startTime="10:00"
-              endTime="16:45"
+              day="Sunday"
+              startTime="10:45"
+              endTime="18:30"
               class="live__link__contents__child"
             >
               薬学ステージのLive配信にアクセス！
             </LinkToContents>
             <LinkToContents
               :liveLB="true"
-              day="Saturday"
-              start-time="10:00"
-              end-time="17:30"
+              day="Sunday"
+              start-time="12:00"
+              end-time="17:15"
               class="live__link__contents__child"
             >
               理工ステージのLive配信にアクセス！

@@ -175,7 +175,7 @@ export default {
   },
   data () {
     return {
-      dayTab: 1,
+      dayTab: 2,
       days: [
         {
           id: 1,

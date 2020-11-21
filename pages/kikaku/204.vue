@@ -22,7 +22,7 @@
             <p>{{ KikakuList.description }}</p>
             <div>
               <LinkToContents
-                :live="true"
+                :liveLB="true"
                 day="Sunday"
                 startTime="17:15"
                 endTime="17:30"

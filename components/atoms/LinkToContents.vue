@@ -21,25 +21,35 @@
         v-if="live1311"
         class="link__live"
       >
-        <a  target="_blank" href="https://www.youtube.com/watch?v=5Z5LGivixHY&feature=youtu.be">
+        <component
+          :is="linkComponentIs"
+          target="_blank"
+          :href="href1311"
+        >
           <div class="link__live__inner">
             <p class="link__live__text">Live配信会場はこちら(薬学ステージ)</p>
             <!-- 開始時間と終了時間を入れる部分 -->
             <p class="link__live__text2">{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
+            <p>{{ Message }}</p>
           </div>
-        </a>
+        </component>
       </div>
       <div
         v-if="liveLB"
         class="link__live"
       >
-        <a target="_blank" href="https://www.youtube.com/watch?v=L_8VsWOuKw4&feature=youtu.be">
+        <component
+          :is="LinkComponentIs"
+          target="_blank"
+          :href="hrefLB"
+        >
           <div class="link__live__inner">
             <p class="link__live__text">Live配信会場はこちら(理工<span class="link__live__text__span">学</span>ステージ)</p>
             <!-- 開始時間と終了時間を入れる部分 -->
             <p class="link__live__text2">{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
+            <p>{{ Message }}</p>
           </div>
-        </a>
+        </component>
       </div>
     <div
       v-if="link"
@@ -136,6 +146,40 @@ export default {
         return '11月21日(土)'
       } else {
         return this.day
+      }
+    },
+    Message () {
+      if (this.day === 'Sunday') {
+        return ''
+      } else if (this.day === 'Saturday') {
+        return 'この企画の配信は終了しました'
+      } else {
+        return this.day
+      }
+    },
+    href1311 () {
+      if (this.day === 'Sunday') {
+        return 'https://www.youtube.com/watch?v=ftiaZa3wAEc&feature=youtu.be'
+      } else if (this.day === 'Saturday') {
+        return ''
+      } else {
+        return this.day
+      }
+    },
+    hrefLB () {
+      if (this.day === 'Sunday') {
+        return 'https://www.youtube.com/watch?v=-p5dJN1QpVU&feature=youtu.be'
+      } else if (this.day === 'Saturday') {
+        return ''
+      } else {
+        return this.day
+      }
+    },
+    linkComponentIs () {
+      if (this.day === 'Sunday') {
+        return 'a'
+      } else {
+        return 'div'
       }
     }
   }

@@ -25,7 +25,7 @@
             </p>
             <div>
               <LinkToContents
-                :live="true"
+                :live1311="true"
                 day="Sunday"
                 start-time="17:30"
                 end-time="18:30"

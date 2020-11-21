@@ -25,9 +25,9 @@
             </p>
             <div class="kikaku-info__body">
               <LinkToContents
-                :live="true"
+                :liveLB="true"
                 day="Sunday"
-                starTime="15:00"
+                startTime="15:00"
                 endTime="16:30"
               />
             </div>
