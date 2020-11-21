@@ -21,12 +21,18 @@
                 class="sample__youtube__img"
                 @click="playVideo"
               >
-              <!-- <youtube
+              <youtube
                 ref="youtube"
                 :video-id="videoId"
                 :fit-parent="true"
                 :resize="true"
-              /> -->
+              />
+              <youtube
+                ref="youtube"
+                :video-id="videoId2"
+                :fit-parent="true"
+                :resize="true"
+              />
             </div>
             <!-- <div class="sample__img">
               <p class="sample__img__text">
@@ -70,23 +76,24 @@ export default {
   },
   data () {
     return {
-      videoId: '29nSdJtFiCo'
+      videoId: '29nSdJtFiCo',
+      videoId2: '29nSdJtFiCo'
     }
   },
   computed: {
     player () {
       return this.$refs.youtube.player
     }
-  },
-  methods: {
-    loadVideo () {
-      const video = '<youtube ref="youtube" :video-id="videoId" :fit-parent="true" :resize="true" />'
-      this.replace(video)
-    },
-    playVideo () {
-      this.player.playVideo()
-    }
   }
+  // methods: {
+  //   loadVideo () {
+  //     const video = '<youtube ref="youtube" :video-id="videoId" :fit-parent="true" :resize="true" />'
+  //     this.replace(video)
+  //   },
+  //   playVideo () {
+  //     this.player.playVideo()
+  //   }
+  // }
 }
 </script>
 

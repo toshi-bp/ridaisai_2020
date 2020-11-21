@@ -22,6 +22,14 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div>
+              <LinkToContents
+                :live="true"
+                day="Sunday"
+                start-time="12:00"
+                end-time="13:00"
+              />
+            </div>
           </TheSection>
         </TheContainer>
         <KikakuInfoBody
@@ -41,6 +49,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -50,7 +59,8 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   props: {
     id: {

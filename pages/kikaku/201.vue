@@ -23,6 +23,27 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div>
+              <LinkToContents
+                :live="true"
+                day="Sunday"
+                start-time="17:30"
+                end-time="18:30"
+              />
+            </div>
+            <h4>ダンス動画はこちら</h4>
+            <div
+              v-for="videos in videoIds"
+              :key="videos. id"
+              class="kikaku-info__youtube"
+            >
+              <youtube
+                ref="youtube"
+                :video-id="videos.videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -44,6 +65,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -53,12 +75,47 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   props: {
     id: {
       type: Number,
       default: 201
+    }
+  },
+  data () {
+    return {
+      videoIds: [
+        {
+          id: 1,
+          videoId: 'YUajA0M0wdM'
+        },
+        {
+          id: 2,
+          videoId: 'v25J2JminvM'
+        },
+        {
+          id: 3,
+          videoId: 'D-bllsSPozs'
+        },
+        {
+          id: 4,
+          videoId: 'GjValkysY64'
+        },
+        {
+          id: 5,
+          videoId: 'Qmq1HKQBYlY'
+        },
+        {
+          id: 6,
+          videoId: 'RsrafF20cDs'
+        },
+        {
+          id: 7,
+          videoId: 'DnPxNvOzkVQ'
+        }
+      ]
     }
   },
   computed: {
@@ -85,6 +142,9 @@ export default {
   background-size: repeat;
   &__description {
     white-space: pre-line;
+  }
+  &__youtube {
+    margin-bottom: 1.5rem;
   }
 }
 </style>

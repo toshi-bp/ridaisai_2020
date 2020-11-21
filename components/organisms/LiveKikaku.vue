@@ -47,12 +47,47 @@
       </div>
       <div class="live__link">
         <TheSection>
-          <LinkToContents
-            :livelink="true"
+          <!-- <LinkToContents
+          :livelink="true"
             class="live__link__body"
           >
-            YouTubeLiveへは当日こちらのボタンからアクセスできます。<br>お楽しみに！
-          </LinkToContents>
+            YouTubeLiveへは当日こちらのボタンからアクセスできます。<br />お楽しみに！
+          </LinkToContents> -->
+          <div class="live__link__contents">
+            <LinkToContents
+              :live1311="true"
+              day="Saturday"
+              start-time="10:00"
+              end-time="16:45"
+              class="live__link__contents__child"
+            >
+              薬学ステージのLive配信にアクセス！
+            </LinkToContents>
+            <LinkToContents
+              :live-l-b="true"
+              day="Saturday"
+              start-time="10:00"
+              end-time="16:45"
+              class="live__link__contents__child"
+            >
+              理工ステージのLive配信にアクセス！
+            </LinkToContents>
+          </div>
+          <!-- 実験的に埋め込んでみる(ダメならコメントアウトします) -->
+          <!-- <div class="live__youtube">
+            <youtube
+              ref="youtube"
+              :video-id="videoId"
+              :fit-parent="true"
+              :resize="true"
+            />
+            <youtube
+              ref="youtube"
+              :video-id="videoId2"
+              :fit-parent="true"
+              :resize="true"
+            />
+          </div> -->
         </TheSection>
       </div>
       <div class="live__button">
@@ -85,8 +120,8 @@ export default {
   },
   data () {
     return {
-      videoId_1: 'YAdpFRgXjh0',
-      videoId_2: 'CiEzaiFuz9E' // 動画IDを入力する
+      videoId: '5Z5LGivixHY',
+      videoId2: 'L_8VsWOuKw4' // 動画IDを入力する
     }
   }
 }
@@ -124,6 +159,17 @@ export default {
   &__link {
     &__body {
       background-color: $live-color;
+    }
+    &__contents{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include media-breakpoint-down(sm){
+        flex-direction: column;
+      }
+      &__child{
+        margin: 0 0.5rem;
+      }
     }
   }
 }

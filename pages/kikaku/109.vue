@@ -23,6 +23,26 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <!-- <div
+              v-for="videos in videoIds"
+              :key="videos. id"
+              class="kikaku-info__youtube"
+            >
+              <youtube
+                ref="youtube"
+                :video-id="videos.videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div> -->
+            <div>
+              <LinkToContents
+                :link="true"
+                url="https://www.youtube.com/playlist?list=PLl3dtZKrEFdZeDpsstL1F8BNoNoQ4D8E5"
+              >
+                コンテンツはこちら<br>https://www.youtube.com/playlist?list=PLl3dtZKrEFdZeDpsstL1F8BNoNoQ4D8E5
+              </LinkToContents>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -43,6 +63,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -52,12 +73,31 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   props: {
     id: {
       type: Number,
       default: 109
+    }
+  },
+  data () {
+    return {
+      videoIds: [
+        {
+          id: 1,
+          videoId: 'OkgWT3Ypscw'
+        },
+        {
+          id: 2,
+          videoId: 'iuOEnfdfvWw'
+        },
+        {
+          id: 3,
+          videoId: 'NVVJWG3xGc0'
+        }
+      ]
     }
   },
   computed: {
@@ -84,6 +124,9 @@ export default {
   background-size: repeat;
   &__description {
     white-space: pre-line;
+  }
+  &__youtube {
+    margin-bottom: 1.5rem;
   }
 }
 </style>

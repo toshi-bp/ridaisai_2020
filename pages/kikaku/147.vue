@@ -26,6 +26,27 @@
             >
               {{ KikakuList.description }}
             </p>
+            <div class="kikaku-info__link">
+              <LinkToContents
+                :link="true"
+                :url="KikakuList.url"
+              >
+                Webサイトへのアクセスはこちら<br>
+                {{ KikakuList.url }}
+              </LinkToContents>
+            </div>
+            <div class="kikaku-info__movie">
+              <!-- parent=https://nodaridaisai.com -->
+              <h4>企画の様子をtwitchで配信しています</h4>
+              <iframe
+                src="https://player.twitch.tv/?channel=tus_robot_2020&parent=localhost"
+                frameborder="0"
+                allowfullscreen="true"
+                scrolling="no"
+                width="100%"
+                height="100%"
+              />
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -46,6 +67,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -55,7 +77,8 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   props: {
     id: {
@@ -85,6 +108,20 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+
+  &__movie {
+    width: 100%;
+    height: 500px;
+    @include media-breakpoint-down(md) {
+      height: 400px;
+    }
+    @include media-breakpoint-down(sm) {
+      height: 200px;
+    }
+  }
+  &__link {
+    margin: 1.5rem 0;
+  }
   &__description {
     white-space: pre-line;
   }

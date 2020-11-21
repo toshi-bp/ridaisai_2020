@@ -23,6 +23,22 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div>
+              <LinkToContents
+                :live="true"
+                day="Sunday"
+                start-time="17:30"
+                end-time="18:00"
+              />
+            </div>
+            <div class="kikaku-info__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -43,6 +59,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -52,12 +69,18 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   props: {
     id: {
       type: Number,
       default: 151
+    }
+  },
+  data () {
+    return {
+      videoId: 'a8_CWDB1mLQ'
     }
   },
   computed: {
@@ -82,6 +105,9 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__youtube {
+    margin: 3rem 0 1.5rem;
+  }
   &__description {
     white-space: pre-line;
   }

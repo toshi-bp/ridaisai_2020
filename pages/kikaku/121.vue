@@ -23,6 +23,28 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <h4>コンテンツのダウンロード(zipファイルでのダウンロードとなります。)</h4>
+            <TheRow>
+              <TheColumn
+                v-for="game in games"
+                :key="game.id"
+                :pcsize="4"
+                :spsize="12"
+              >
+                <div class="kikaku-info__game">
+                  <h4 class="kikaku-info__game__title">
+                    {{ game.title }}
+                  </h4>
+                  <div class="kikaku-info__download">
+                    <DownLoadButton
+                      :href="`kikaku/121/${game.zip}`"
+                    >
+                      <span class="kikaku-info__game__button"><fa icon="download" fixed-width />ダウンロード</span>
+                    </DownLoadButton>
+                  </div>
+                </div>
+              </TheColumn>
+            </TheRow>
           </TheSection>
         </TheContainer>
 
@@ -43,6 +65,9 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import DownLoadButton from '~/components/atoms/DownLoadButton'
+import TheRow from '~/components/atoms/TheRow'
+import TheColumn from '~/components/atoms/TheColumn'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -52,12 +77,51 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    DownLoadButton,
+    TheRow,
+    TheColumn
   },
   props: {
     id: {
       type: Number,
       default: 121
+    }
+  },
+  data () {
+    return {
+      games: [
+        {
+          id: 1,
+          title: 'action',
+          zip: 'action.zip'
+        },
+        {
+          id: 2,
+          title: 'action_small',
+          zip: 'action_small.zip'
+        },
+        {
+          id: 3,
+          title: 'block_breaking',
+          zip: 'block_breaking.zip'
+        },
+        {
+          id: 4,
+          title: 'block_breaking_small',
+          zip: 'block_breaking_small.zip'
+        },
+        {
+          id: 5,
+          title: 'SpaceExploration',
+          zip: 'SpaceExploration.zip'
+        },
+        {
+          id: 6,
+          title: 'SpaceShooting',
+          zip: 'SpaceShooting.zip'
+        }
+      ]
     }
   },
   computed: {
@@ -84,6 +148,18 @@ export default {
   background-size: repeat;
   &__description {
     white-space: pre-line;
+  }
+  &__download {
+    text-align: center;
+  }
+  &__game {
+    margin-bottom: 1rem;
+    &__title {
+      font-size: 1.2rem;
+    }
+    &__button {
+      font-size: 1.1rem;
+    }
   }
 }
 </style>

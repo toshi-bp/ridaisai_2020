@@ -22,6 +22,30 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div class="kikaku-info__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
+            <div class="kikaku-info__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId2"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
+            <div class="kikaku-info__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId3"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -59,6 +83,13 @@ export default {
       default: 206
     }
   },
+  data () {
+    return {
+      videoId: 'TOZU3x78kCg',
+      videoId2: 'WDnLFD7-nZc',
+      videoId3: 'npi8Vw7MnJ4'
+    }
+  },
   computed: {
     Kikaku () {
       const id = 206 // kikaku_idの値をjsonから調べて直接入力
@@ -81,6 +112,9 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__youtube {
+    margin-bottom: 1.5rem;
+  }
   &__description {
     white-space: pre-line;
   }

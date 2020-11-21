@@ -23,6 +23,21 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div>
+              <h4>コンテンツはこちら(画像をクリックすると全画面表示ができます。)↓</h4>
+              <TheRow>
+                <TheColumn
+                  v-for="item in Manga"
+                  :key="item.id"
+                  :spsize="12"
+                  :pcsize="6"
+                >
+                  <ImageFullScreen
+                    :src="`kikaku/122/${item.imageUrl}`"
+                  />
+                </TheColumn>
+              </TheRow>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -43,8 +58,12 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import ImageFullScreen from '~/components/atoms/ImageFullScreen'
+import TheRow from '~/components/atoms/TheRow'
+import TheColumn from '~/components/atoms/TheColumn'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import Manga from '~/kikaku/1manga.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
@@ -52,7 +71,10 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    ImageFullScreen,
+    TheRow,
+    TheColumn
   },
   props: {
     id: {
@@ -64,6 +86,9 @@ export default {
     Kikaku () {
       const id = 122 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
+    },
+    Manga () {
+      return Manga
     }
   },
   head () {

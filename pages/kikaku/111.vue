@@ -23,6 +23,16 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div class="kikaku-info__pdf">
+              <a href="kikaku/111/鉄研.pdf" class="kikaku-info__pdf__link">鉄研.pdf</a>
+              <div class="kikaku-info__pdf__body">
+                <iframe
+                  src="kikaku/111/鉄研.pdf"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -82,6 +92,16 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+
+  &__pdf {
+    &__body {
+      width: 100%;
+      height: 750px;
+    }
+    &__link {
+      margin: 1rem 0 1rem;
+    }
+  }
   &__description {
     white-space: pre-line;
   }
