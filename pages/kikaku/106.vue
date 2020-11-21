@@ -27,8 +27,8 @@
               <LinkToContents
                 :live="true"
                 day="Sunday"
-                start-time="15:00"
-                end-time="16:30"
+                starTime="15:00"
+                endTime="16:30"
               />
             </div>
             <div class="kikaku-info__youtube">
@@ -52,7 +52,7 @@
                 :link="true"
                 url="https://tus-ac-jp.zoom.us/j/93123439777?pwd=a0lzWlRobmF0bFNEb0xiaysvME1FZz09"
               >
-                Zoomはこちら<br>https://tus-ac-jp.zoom.us/j/93123439777?pwd=a0lzWlRobmF0bFNEb0xiaysvME1FZz09
+                Zoomはこちら
               </LinkToContents>
             </div>
           </TheSection>

@@ -53,8 +53,8 @@
             <LinkToContents
               :live="true"
               :day="StageList.day"
-              :start-time="StageList.startTime"
-              :end-time="StageList.endTime"
+              :startTime="StageList.startTime"
+              :endTime="StageList.endTime"
             />
           </div>
         </div>

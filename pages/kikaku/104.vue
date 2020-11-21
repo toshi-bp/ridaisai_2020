@@ -29,8 +29,8 @@
               <LinkToContents
                 :live1311="true"
                 day="Saturday"
-                start-time="10:00"
-                end-time="12:00"
+                startTime="10:00"
+                endTime="12:00"
               >
                 Live配信会場はこちら
               </LinkToContents>

@@ -31,8 +31,7 @@
                 :link="true"
                 :url="KikakuList.url"
               >
-                Webサイトへのアクセスはこちら<br>
-                {{ KikakuList.url }}
+                Webサイトへのアクセスはこちら
               </LinkToContents>
             </div>
             <div class="kikaku-info__movie">

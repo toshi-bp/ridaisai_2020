@@ -25,7 +25,7 @@
             </p>
             <div class="kikaku-info__pdf">
               <div class="kikaku-info__pdf__body">
-                <a href="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf">pdf</a>
+                <a href="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf">一階線形同次連立常微分方程式の解き方</a>
                 <iframe
                   src="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf"
                   width="100%"
@@ -33,6 +33,7 @@
                 />
               </div>
               <div class="kikaku-info__pdf__body">
+                <a href="kikaku/148/宇宙の起源と終わり.pdf">宇宙の起源と終わり</a>
                 <iframe
                   src="kikaku/148/宇宙の起源と終わり.pdf"
                   width="100%"
@@ -40,6 +41,7 @@
                 />
               </div>
               <div class="kikaku-info__pdf__body">
+                <a href="kikaku/148/物理研究会ロボット班活動紹介.pdf">物理研究会ロボット班活動紹介</a>
                 <iframe
                   src="kikaku/148/物理研究会ロボット班活動紹介.pdf"
                   width="100%"
@@ -47,6 +49,7 @@
                 />
               </div>
               <div class="kikaku-info__pdf__body">
+                <a href="kikaku/148/物理研究会Zoom質問受付のご案内.pdf">物理研究会Zoom質問受付のご案内</a>
                 <iframe
                   src="kikaku/148/物理研究会Zoom質問受付のご案内.pdf"
                   width="100%"

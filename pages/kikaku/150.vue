@@ -27,8 +27,8 @@
               <LinkToContents
                 :live-l-b="true"
                 day="Saturday"
-                start-time="14:00"
-                end-time="16:00"
+                startTime="14:00"
+                endTime="16:00"
               />
             </div>
           </TheSection>

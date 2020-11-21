@@ -34,8 +34,9 @@
             <div class="kikaku-info__link">
               <LinkToContents
                 :live1311="true"
-                start-time="15:45"
-                end-time="16:45"
+                day="Saturday"
+                startTime="15:45"
+                endTime="16:45"
               />
             </div>
           </TheSection>

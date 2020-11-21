@@ -1,46 +1,46 @@
 <template>
   <!-- ライブ配信用のリンクにしようと思ったけどZoomとかの他のコンテンツでも使えそうだから一応LinkToContentsという名前にした。 -->
   <div class="link">
-    <nuxt-link to="/live/">
       <div
         v-if="live"
         class="link__live"
       >
+      <nuxt-link to="/live/">
         <div class="link__live__inner">
           <p class="link__live__text">
             Live配信会場はこちら
           </p>
           <!-- 開始時間と終了時間を入れる部分 -->
-          <p class="link__live__text2" TheDay()>
+          <p class="link__live__text2">
             {{ TheDay }}：{{ startTime }} 〜 {{ endTime }}
           </p>
         </div>
+      </nuxt-link>
       </div>
-    </nuxt-link>
-    <a href="https://www.youtube.com/watch?v=5Z5LGivixHY&feature=youtu.be">
       <div
         v-if="live1311"
         class="link__live"
       >
-        <div class="link__live__inner">
-          <p class="link__live__text">Live配信会場はこちら(薬学ステージ)</p>
-          <!-- 開始時間と終了時間を入れる部分 -->
-          <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
-        </div>
+        <a href="https://www.youtube.com/watch?v=5Z5LGivixHY&feature=youtu.be">
+          <div class="link__live__inner">
+            <p class="link__live__text">Live配信会場はこちら(薬学ステージ)</p>
+            <!-- 開始時間と終了時間を入れる部分 -->
+            <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
+          </div>
+        </a>
       </div>
-    </a>
-    <a href="https://www.youtube.com/watch?v=L_8VsWOuKw4&feature=youtu.be">
       <div
         v-if="liveLB"
         class="link__live"
       >
-        <div class="link__live__inner">
-          <p class="link__live__text">Live配信会場はこちら(理工<span class="link__live__text__span">学</span>ステージ)</p>
-          <!-- 開始時間と終了時間を入れる部分 -->
-          <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
-        </div>
+        <a href="https://www.youtube.com/watch?v=L_8VsWOuKw4&feature=youtu.be">
+          <div class="link__live__inner">
+            <p class="link__live__text">Live配信会場はこちら(理工<span class="link__live__text__span">学</span>ステージ)</p>
+            <!-- 開始時間と終了時間を入れる部分 -->
+            <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
+          </div>
+        </a>
       </div>
-    </a>
     <div
       v-if="link"
       class="link__web"
