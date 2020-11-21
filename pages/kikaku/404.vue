@@ -1,14 +1,20 @@
 <template>
   <div class="talent">
-    <KikakuInfoHeader
-      :id="404"
-      kikaku_name="コロナを笑い飛ばせ！オンラインお笑いライブ"
-      circle_name="理大祭実行委員会"
-      type="cultual"
-      :live="true"
-      :youtube="false"
-      :website="false"
-    />
+    <div
+      v-for="(KikakuList, id) in Kikaku"
+      :key="id"
+    >
+      <KikakuInfoHeader
+        :id="KikakuList.kikaku_id"
+        :kikaku_name="KikakuList.kikaku_title"
+        :circle_name="KikakuList.name"
+        :type="KikakuList.type"
+        :live="KikakuList.live"
+        :youtube="KikakuList.youtube"
+        :website="KikakuList.website"
+      >
+      </KikakuInfoHeader>
+    </div>
     <TheContainer>
       <TheSection>
         <div>
@@ -47,8 +53,8 @@
             <LinkToContents
               :live="true"
               :day="StageList.day"
-              :start-time="StageList.startTime"
-              :end-time="StageList.endTime"
+              :startTime="StageList.startTime"
+              :endTime="StageList.endTime"
             />
           </div>
         </div>
@@ -69,6 +75,7 @@ import TheSection from '~/components/atoms/TheSection'
 import LinkButton from '~/components/atoms/LinkButton'
 import LinkToContents from '~/components/atoms/LinkToContents'
 
+import KikakuList from '~/kikaku/KikakuList.json'
 import StageList from '~/kikaku/StageList.json'
 import makeHead from '~/utils/makeHead.js'
 
@@ -83,6 +90,9 @@ export default {
   computed: {
     Stage () {
       return StageList.filter(item => item.kikaku_id === 404)
+    },
+    Kikaku () {
+      return KikakuList.filter(item => item.kikaku_id === 404)
     }
   },
   head () {

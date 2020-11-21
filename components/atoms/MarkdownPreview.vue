@@ -37,11 +37,12 @@ export default {
     /deep/ h3 {
       line-height: 1.5;
       margin-bottom: 1rem;
+      margin-top: 2rem;
     }
 
     /deep/ h2 {
       font-family: $sub-font;
-      padding-top: #{$global-header-height + 1rem};
+      // padding-top: #{$global-header-height + 1rem};
       font-feature-settings: "palt";
       font-size: 1.5rem;
     }

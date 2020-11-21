@@ -31,15 +31,14 @@
                 :link="true"
                 :url="KikakuList.url"
               >
-                Webサイトへのアクセスはこちら<br>
-                {{ KikakuList.url }}
+                Webサイトへのアクセスはこちら
               </LinkToContents>
             </div>
             <div class="kikaku-info__movie">
               <!-- parent=https://nodaridaisai.com -->
               <h4>企画の様子をtwitchで配信しています</h4>
               <iframe
-                src="https://player.twitch.tv/?channel=tus_robot_2020&parent=localhost"
+                src="https://player.twitch.tv/?channel=tus_robot_2020&parent=nodaridaisai.com"
                 frameborder="0"
                 allowfullscreen="true"
                 scrolling="no"

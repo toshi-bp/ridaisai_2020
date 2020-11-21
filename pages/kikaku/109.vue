@@ -40,7 +40,8 @@
                 :link="true"
                 url="https://www.youtube.com/playlist?list=PLl3dtZKrEFdZeDpsstL1F8BNoNoQ4D8E5"
               >
-                コンテンツはこちら<br>https://www.youtube.com/playlist?list=PLl3dtZKrEFdZeDpsstL1F8BNoNoQ4D8E5
+                コンテンツはこちら(YouTubeのプレイリストに飛びます)
+                <!-- <br>https://www.youtube.com/playlist?list=PLl3dtZKrEFdZeDpsstL1F8BNoNoQ4D8E5 -->
               </LinkToContents>
             </div>
           </TheSection>

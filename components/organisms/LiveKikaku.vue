@@ -57,17 +57,17 @@
             <LinkToContents
               :live1311="true"
               day="Saturday"
-              start-time="10:00"
-              end-time="16:45"
+              startTime="10:00"
+              endTime="16:45"
               class="live__link__contents__child"
             >
               薬学ステージのLive配信にアクセス！
             </LinkToContents>
             <LinkToContents
-              :live-l-b="true"
+              :liveLB="true"
               day="Saturday"
               start-time="10:00"
-              end-time="16:45"
+              end-time="17:30"
               class="live__link__contents__child"
             >
               理工ステージのLive配信にアクセス！

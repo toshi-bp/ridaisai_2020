@@ -1,5 +1,5 @@
 <template>
-  <!-- 電気工学研究会 -->
+  <!-- 二輪会 -->
   <div class="kikaku-info">
     <div
       v-for="(KikakuList, id) in Kikaku"
@@ -20,27 +20,20 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">
-              {{ KikakuList.description }}
-            </p>
-            <div>
-              <LinkToContents
-                :link="true"
-                url="https://www.ed.tus.ac.jp/eic/product.html"
-              >
-                コンテンツはこちら
-              </LinkToContents>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <div class="kikaku-info__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
             </div>
           </TheSection>
         </TheContainer>
-
-        <KikakuInfoBody
-          :image-url="require(`@/assets/kikaku/${KikakuList.image_filename}`)"
-          :name="KikakuList.name"
-          :introduce="KikakuList.introduction"
-          :url="KikakuList.url"
-          :twitter="KikakuList.twitter_ids"
-        />
+        <div class="kikaku-info__button">
+          <LinkButton to="/">topページに戻る</LinkButton>
+        </div>
       </div>
     </div>
   </div>
@@ -48,39 +41,44 @@
 
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
-import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
+// // import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import LinkToContents from '~/components/atoms/LinkToContents'
+import LinkButton from '~/components/atoms/LinkButton'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  data () {
+    return {
+      videoId: 'scsCAVzSvM'
+    }
+  },
   components: {
     KikakuInfoHeader,
-    KikakuInfoBody,
+    // KikakuInfoBody,
     TheSection,
     TheContainer,
-    LinkToContents
+    LinkButton
   },
   props: {
     id: {
       type: Number,
-      default: 107
+      default: 406
     }
   },
   computed: {
     Kikaku () {
-      const id = 107 // kikaku_idの値をjsonから調べて直接入力
+      const id = 406 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
     }
   },
   head () {
     return makeHead(
-      '電気工学研究会展示',
-      '電気工学研究会',
-      require('~/assets/kikaku/DJaCZBuZfDvTWFeOF0MmXr83XPhbRgqhlMoKf1KI.png')
+      '空から野田キャンパスを見てみよう！',
+      '理大祭実行委員会',
+      require('~/assets/kikaku/NodaCampus.jpeg')
     )
   }
 }
@@ -94,6 +92,12 @@ export default {
   background-size: repeat;
   &__description {
     white-space: pre-line;
+  }
+  &__youtube {
+    margin-bottom: 1.5rem;
+  }
+  &__button {
+    text-align: center;
   }
 }
 </style>
