@@ -21,11 +21,11 @@
         v-if="live1311"
         class="link__live"
       >
-        <a href="https://www.youtube.com/watch?v=5Z5LGivixHY&feature=youtu.be">
+        <a  target="_blank" href="https://www.youtube.com/watch?v=5Z5LGivixHY&feature=youtu.be">
           <div class="link__live__inner">
             <p class="link__live__text">Live配信会場はこちら(薬学ステージ)</p>
             <!-- 開始時間と終了時間を入れる部分 -->
-            <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
+            <p class="link__live__text2">{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
           </div>
         </a>
       </div>
@@ -33,11 +33,11 @@
         v-if="liveLB"
         class="link__live"
       >
-        <a href="https://www.youtube.com/watch?v=L_8VsWOuKw4&feature=youtu.be">
+        <a target="_blank" href="https://www.youtube.com/watch?v=L_8VsWOuKw4&feature=youtu.be">
           <div class="link__live__inner">
             <p class="link__live__text">Live配信会場はこちら(理工<span class="link__live__text__span">学</span>ステージ)</p>
             <!-- 開始時間と終了時間を入れる部分 -->
-            <p class="link__live__text2" TheDay()>{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
+            <p class="link__live__text2">{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
           </div>
         </a>
       </div>
