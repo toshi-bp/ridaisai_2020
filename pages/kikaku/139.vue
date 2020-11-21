@@ -20,9 +20,22 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">
-              {{ KikakuList.description }}
-            </p>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <div class="kikaku-info__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
+            <LinkToContents
+              :link="true"
+              url="https://note.com/solt_sauna/m/m7b3993240b70"
+            >
+              C4's 理大祭展示会場<br />
+              コンテンツはこちら
+            </LinkToContents>
           </TheSection>
         </TheContainer>
 
@@ -43,16 +56,23 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  data () {
+    return {
+      videoId: 'rrIk2dkPuI0'
+    }
+  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   props: {
     id: {
@@ -82,6 +102,9 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__youtube {
+    margin: 1.5rem 0 1.5rem;
+  }
   &__description {
     white-space: pre-line;
   }
