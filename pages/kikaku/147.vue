@@ -111,6 +111,7 @@ export default {
   &__movie {
     width: 100%;
     height: 500px;
+    margin-bottom: 1.5rem;
     @include media-breakpoint-down(md) {
       height: 400px;
     }

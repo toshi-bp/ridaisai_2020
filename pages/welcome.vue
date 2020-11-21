@@ -23,7 +23,7 @@
                 </div>
                 <div class="welcome__article__section">
                   <p class="welcome__article__text">
-                    参加団体が理大祭のために日々培ってきた練習の成果をYouTubeLiveを通して生放送で披露します。
+                    参加団体が理大祭のために日々培ってきた練習の成果をYouTubeLiveなどを通して生放送で披露します。
                   </p>
                 </div>
               </div>
