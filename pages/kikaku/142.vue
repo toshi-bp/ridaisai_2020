@@ -38,7 +38,6 @@
                 width="100%"
                 height="100%"
               />
-              <pdf src="kikaku/142/受験生に向けて（Spectrum).pdf"></pdf>
             </div>
           </TheSection>
         </TheContainer>
@@ -56,7 +55,6 @@
 </template>
 
 <script>
-import pdf from 'vue-pdf'
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
@@ -67,7 +65,6 @@ import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {
-    pdf,
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
