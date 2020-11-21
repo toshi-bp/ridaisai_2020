@@ -162,6 +162,7 @@ export default {
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
   &__pdf {
+    margin-bottom: 4rem;
       &__body-pc {
         width: 100%;
         height: 750px;
