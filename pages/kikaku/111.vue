@@ -97,6 +97,10 @@ export default {
     &__body {
       width: 100%;
       height: 750px;
+      @include media-breakpoint-down(sm){
+        width: 75%;
+        height: 500px;
+      }
     }
     &__link {
       margin: 1rem 0 1rem;
