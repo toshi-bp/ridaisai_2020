@@ -46,6 +46,7 @@ export default {
   plugins: ['~/plugins/webfonts.js',
     '~/plugins/emptyTouchHandler.js',
     '~/plugins/vue-youtube.js',
+    '~/plugins/vue-pdf.js',
     '~/plugins/smoothScroll.js'
   ],
   /*

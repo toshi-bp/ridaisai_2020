@@ -52,7 +52,7 @@ import makeHead from '~/utils/makeHead.js'
 export default {
   data () {
     return {
-      videoId: 'scsCAVzSvM'
+      videoId: '_scsCAVzSvM'
     }
   },
   components: {
