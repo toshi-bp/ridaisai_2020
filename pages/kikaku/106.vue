@@ -23,6 +23,38 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div class="kikaku-info__body">
+              <LinkToContents
+                :live="true"
+                day="Sunday"
+                start-time="15:00"
+                end-time="16:30"
+              />
+            </div>
+            <div class="kikaku-info__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
+            <div class="kikaku-info__pdf">
+              <a href="kikaku/106/野田コミュニティハウス.pdf">野田コミュニティハウス.pdf</a>
+              <iframe
+                src="kikaku/106/野田コミュニティハウス.pdf"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <div>
+              <LinkToContents
+                :link="true"
+                url="https://tus-ac-jp.zoom.us/j/93123439777?pwd=a0lzWlRobmF0bFNEb0xiaysvME1FZz09"
+              >
+                Zoomはこちら<br>https://tus-ac-jp.zoom.us/j/93123439777?pwd=a0lzWlRobmF0bFNEb0xiaysvME1FZz09
+              </LinkToContents>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -44,6 +76,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -53,12 +86,18 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   props: {
     id: {
       type: Number,
       default: 106
+    }
+  },
+  data () {
+    return {
+      videoId: 'OyTaWr3NU7o'
     }
   },
   computed: {
@@ -83,8 +122,23 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__body {
+    margin-top: 1.5rem;
+  }
   &__description {
     white-space: pre-line;
+  }
+  &__youtube {
+    margin-bottom: 1.5rem;
+  }
+  &__pdf {
+    width: 100%;
+    height: 750px;
+    margin-bottom: 3rem;
+    @include media-breakpoint-down(md) {
+      height: 500px;
+      margin-bottom: 3rem;
+    }
   }
 }
 </style>

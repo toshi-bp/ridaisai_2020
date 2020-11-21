@@ -23,6 +23,14 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div class="kikaku-info__youtube">
+              <youtube
+                ref="youtube"
+                :video-id="videoId"
+                :fit-parent="true"
+                :resize="true"
+              />
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -60,6 +68,11 @@ export default {
       default: 208
     }
   },
+  data () {
+    return {
+      videoId: 'fhuslI_vWtQ'
+    }
+  },
   computed: {
     Kikaku () {
       const id = 208 // kikaku_idの値をjsonから調べて直接入力
@@ -84,6 +97,9 @@ export default {
   background-size: repeat;
   &__description {
     white-space: pre-line;
+  }
+  &__youtube {
+    margin-bottom: 1.5rem;
   }
 }
 </style>

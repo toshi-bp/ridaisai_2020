@@ -23,6 +23,48 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div class="kikaku-info__pdf">
+              <div class="kikaku-info__pdf__body">
+                <a href="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf">pdf</a>
+                <iframe
+                  src="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body">
+                <iframe
+                  src="kikaku/148/宇宙の起源と終わり.pdf"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body">
+                <iframe
+                  src="kikaku/148/物理研究会ロボット班活動紹介.pdf"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body">
+                <iframe
+                  src="kikaku/148/物理研究会Zoom質問受付のご案内.pdf"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+            </div>
+            <div>
+              <LinkToContents
+                :link="true"
+                url="https://tus-ac-jp.zoom.us/j/99850846269?pwd=NTczNkJWcSs4VG5tRWR0ZTBnVWxkdz09"
+              >
+                <p class="kikaku-info__link">
+                  Zoomのリンクはこちら<br>
+                  11月21日(土)、11月22日(日) 10:00〜17:00
+                </p>
+              </LinkToContents>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -43,6 +85,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -52,7 +95,8 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    LinkToContents
   },
   props: {
     id: {
@@ -82,6 +126,19 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__pdf {
+    &__body {
+      height: 750px;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    &__link {
+
+    }
+  }
+  &__link {
+    text-align: center;
+  }
   &__description {
     white-space: pre-line;
   }

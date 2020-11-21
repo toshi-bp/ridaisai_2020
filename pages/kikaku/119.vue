@@ -23,6 +23,103 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div>
+              <h3 class="kikaku-info__title">
+                【デジタル×書道】
+              </h3>
+              <TheRow>
+                <TheColumn
+                  v-for="item in Shodo1"
+                  :key="item.id"
+                  :pcsize="12"
+                  :spsize="12"
+                >
+                  <ImageFullScreen
+                    :title="item.title"
+                    :name="item.name"
+                    :description="item.description"
+                    :src="`kikaku/119/${item.imageUrl}`"
+                    :download="true"
+                  />
+                </TheColumn>
+              </TheRow>
+              <div
+                v-for="video in videos"
+                :key="video.id"
+                class="kikaku-info__youtube"
+              >
+                <div>
+                  <youtube
+                    ref="youtube"
+                    :video-id="video.videoId"
+                    :fit-parent="true"
+                    :resize="true"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="kikaku-info__youtube__title"
+                  >
+                    <span class="kikaku-info__youtube__index">作品名</span>
+                    <br>{{ video.title }}
+                  </p>
+                  <p
+                    class="kikaku-info__youtube__name"
+                  >
+                    <span class="kikaku-info__youtube__index">作成者</span>
+                    <br>{{ video.name }}
+                  </p>
+                  <p
+                    class="kikaku-info__youtube__description"
+                  >
+                    <span class="kikaku-info__youtube__index">説明</span>
+                    <br>{{ video.description }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="kikaku-info__title">
+                【年賀状デザイン】
+              </h3>
+              <TheRow>
+                <TheColumn
+                  v-for="item in Shodo2"
+                  :key="item.id"
+                  :pcsize="12"
+                  :spsize="12"
+                >
+                  <ImageFullScreen
+                    :title="item.title"
+                    :name="item.name"
+                    :description="item.description"
+                    :src="`kikaku/119/${item.imageUrl}`"
+                    :download="true"
+                  />
+                </TheColumn>
+              </TheRow>
+            </div>
+            <div>
+              <h3 class="kikaku-info__title">
+                【クラシック】
+              </h3>
+              <TheRow>
+                <TheColumn
+                  v-for="item in Shodo3"
+                  :key="item.id"
+                  :pcsize="12"
+                  :spsize="12"
+                >
+                  <ImageFullScreen
+                    :title="item.title"
+                    :name="item.name"
+                    :description="item.description"
+                    :src="`kikaku/119/${item.imageUrl}`"
+                    :download="true"
+                  />
+                </TheColumn>
+              </TheRow>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -43,18 +140,25 @@
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
+import ImageFullScreen from '~/components/atoms/ImageFullScreen'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import TheColumn from '~/components/atoms/TheColumn'
+import TheRow from '~/components/atoms/TheRow'
 
 import KikakuList from '~/kikaku/KikakuList.json'
+import Shodo from '~/kikaku/shodo.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
+    ImageFullScreen,
     TheSection,
-    TheContainer
+    TheContainer,
+    TheColumn,
+    TheRow
   },
   props: {
     id: {
@@ -62,10 +166,39 @@ export default {
       default: 119
     }
   },
+  data () {
+    return {
+      videos: [
+        {
+          id: 1,
+          videoId: 'B3uJF-Qemlg',
+          title: '秋',
+          name: 'N.N. 薬学部生命創薬科学科 2 年',
+          description: '少しでも秋を感じていただけたらいいなと思います。'
+        },
+        {
+          id: 2,
+          videoId: '5pb6dCV3uxs',
+          title: '秋',
+          name: 'S.Y. 理工学部建築学科 3 年',
+          description: '足早に過ぎゆく秋を、涼しく舞う風とともに'
+        }
+      ]
+    }
+  },
   computed: {
     Kikaku () {
       const id = 119 // kikaku_idの値をjsonから調べて直接入力
       return KikakuList.filter(item => item.kikaku_id === id)
+    },
+    Shodo1 () {
+      return Shodo.filter(item => item.id < 13)
+    },
+    Shodo2 () {
+      return Shodo.filter(item => item.id > 12 && item.id < 28)
+    },
+    Shodo3 () {
+      return Shodo.filter(item => item.id > 27)
     }
   },
   head () {
@@ -85,7 +218,23 @@ export default {
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
   &__description {
+    margin-bottom: 1rem;
     white-space: pre-line;
+  }
+  &__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: -1rem;
+  }
+  &__button {
+    text-align: center;
+  }
+  &__youtube {
+    margin-bottom: 3rem;
+    &__index {
+      font-size: 1.2rem;
+      font-weight:bold;
+    }
   }
 }
 </style>

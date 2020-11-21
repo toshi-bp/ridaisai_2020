@@ -23,6 +23,30 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <div class="kikaku-info__body">
+              <div class="kikaku-info__pdf__pc">
+                <a href="kikaku/112/RIM42 原稿.pdf">RIM42原稿</a>
+                <iframe
+                  src="kikaku/112/RIM42 原稿.pdf"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__sp">
+                <a href="kikaku/112/RIM42 原稿.pdf">RIM42原稿</a>
+              </div>
+              <div class="kikaku-info__pdf__pc">
+                <a href="kikaku/112/TONE2020 原稿.pdf">TONE2020原稿</a>
+                <iframe
+                  src="kikaku/112/TONE2020 原稿.pdf"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__sp">
+                <a href="kikaku/112/TONE2020 原稿.pdf">TONE2020原稿</a>
+              </div>
+            </div>
           </TheSection>
         </TheContainer>
 
@@ -82,6 +106,25 @@ export default {
   padding-bottom: 2rem;
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
+  &__body {
+    margin-top: 1.5rem;
+  }
+  &__pdf {
+    &__pc {
+      width: 100%;
+      height: 750px;
+      margin-bottom: 1.5rem;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+    &__sp {
+      display: none;
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+    }
+  }
   &__description {
     white-space: pre-line;
   }
