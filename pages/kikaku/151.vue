@@ -27,8 +27,8 @@
               <LinkToContents
                 :liveLB="true"
                 day="Sunday"
-                startTime="17:30"
-                endTime="18:00"
+                startTime="14:30"
+                endTime="14:55"
               />
             </div>
             <div class="kikaku-info__youtube">
