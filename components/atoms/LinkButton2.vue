@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="linkcomponentIs"
+    :is="linkComponentIs"
     :to="to"
     :href="href"
     class="link-button"

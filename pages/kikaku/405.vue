@@ -36,6 +36,23 @@
               <MarkdownPreview
                 :markdownHtml="PaperCraft2"
               ></MarkdownPreview>
+              <div class="kikaku-info__youtube">
+                <youtube
+                  ref="youtube"
+                  :video-id="videoId2"
+                  :fit-parent="true"
+                  :resize="true"
+                />
+              </div>
+              <p>また、実際に作成した飛行船は野田キャンパス・講義棟前に展示していますので、ステージに出演したサークル・団体の皆様はぜひ立ち寄って記念撮影をしたら青春の思い出になること間違いなし！</p>
+            </div>
+            <div class="kikaku-info__button">
+            <LinkButton2
+              href="https://twitter.com/intent/tweet?text=%23%E9%87%8E%E7%94%B0%E7%90%86%E5%A4%A7%E7%A5%AD%E9%A3%9B%E8%A1%8C%E8%88%B92020%0A%40noda_ridaisai"
+              target="_blank"
+            >
+              <fa :icon="['fab', 'twitter']" fixed-width />Twitterに投稿する
+            </LinkButton2>
             </div>
           </TheSection>
         </TheContainer>
@@ -59,11 +76,13 @@ import PaperCraft2 from '~/assets/markdown/405_2.md'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
+import LinkButton2 from '~/components/atoms/LinkButton2'
 
 export default {
   data () {
     return {
-      videoId1: 'WTeUiDiXuC0'
+      videoId1: 'WTeUiDiXuC0',
+      videoId2: 'cCimybxVMiI'
     }
   },
   components: {
@@ -72,7 +91,8 @@ export default {
     TheSection,
     TheContainer,
     MarkdownPreview,
-    LinkButton
+    LinkButton,
+    LinkButton2
   },
   props: {
     id: {

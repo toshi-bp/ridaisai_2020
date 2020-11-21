@@ -1,5 +1,5 @@
 <template>
-  <!-- 二輪会 -->
+  <!-- 空から理科大を見てみよう -->
   <div class="kikaku-info">
     <div
       v-for="(KikakuList, id) in Kikaku"
