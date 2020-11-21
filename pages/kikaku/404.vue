@@ -12,8 +12,7 @@
         :live="KikakuList.live"
         :youtube="KikakuList.youtube"
         :website="KikakuList.website"
-      >
-      </KikakuInfoHeader>
+      />
     </div>
     <TheContainer>
       <TheSection>
@@ -121,3 +120,4 @@ export default {
   text-align: center;
 }
 </style>
+
