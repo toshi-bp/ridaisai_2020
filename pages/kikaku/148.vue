@@ -174,6 +174,7 @@ export default {
       &__body-sm {
         width: 100%;
         height: 500px;
+        margin-bottom: 3rem;
         @include media-breakpoint-up(sm) {
           display: none;
         }
