@@ -33,11 +33,20 @@
             </div>
             <div class="kikaku-info__pdf">
               <a href="kikaku/142/受験生に向けて（Spectrum).pdf">受験生に向けて（Spectrum)</a>
-              <iframe
-                src="kikaku/142/受験生に向けて（Spectrum).pdf#zoom=50"
-                width="100%"
-                height="100%"
-              />
+              <div class="kikaku-info__pdf__body-pc">
+                <iframe
+                  src="kikaku/142/受験生に向けて（Spectrum).pdf#zoom=50"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-sm">
+                <iframe
+                  src="kikaku/142/受験生に向けて（Spectrum).pdf#zoom=20"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
             </div>
           </TheSection>
         </TheContainer>
@@ -110,12 +119,21 @@ export default {
     margin: 1.5rem 0 1rem;
   }
   &__pdf {
-    height: 800px;
-    width: 100%;
     margin-bottom: 3rem;
-    @include media-breakpoint-down(md) {
-      height: 500px;
-    }
+    &__body-pc {
+        width: 100%;
+        height: 800px;
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+      &__body-sm {
+        width: 100%;
+        height: 500px;
+        @include media-breakpoint-up(sm) {
+          display: none;
+        }
+      }
   }
 }
 </style>

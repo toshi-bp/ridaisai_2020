@@ -24,7 +24,7 @@
               {{ KikakuList.description }}
             </p>
             <div class="kikaku-info__pdf">
-              <div class="kikaku-info__pdf__body">
+              <div class="kikaku-info__pdf__body-pc">
                 <a href="kikaku/114/flat.pdf#toolbar=0">スペクトラムと分離公理</a>
                 <iframe
                   src="kikaku/114/flat.pdf#toolbar=0"
@@ -32,7 +32,15 @@
                   height="100%"
                 />
               </div>
-              <div class="kikaku-info__pdf__body">
+              <div class="kikaku-info__pdf__body-sm">
+                <a href="kikaku/114/flat.pdf#toolbar=0">スペクトラムと分離公理</a>
+                <iframe
+                  src="kikaku/114/flat.pdf#toolbar=0#zoom=20"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-pc">
                 <a href="kikaku/114/noda_suken_基礎数学ゼミ.pdf#toolbar=0">基礎数学ゼミ</a>
                 <iframe
                   src="kikaku/114/noda_suken_基礎数学ゼミ.pdf#toolbar=0"
@@ -40,7 +48,15 @@
                   height="100%"
                 />
               </div>
-              <div class="kikaku-info__pdf__body">
+              <div class="kikaku-info__pdf__body-sm">
+                <a href="kikaku/114/noda_suken_基礎数学ゼミ.pdf#toolbar=0">基礎数学ゼミ</a>
+                <iframe
+                  src="kikaku/114/noda_suken_基礎数学ゼミ.pdf#toolbar=0#zoom=20"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-pc">
                 <a href="kikaku/114/noda_suken_圏論ゼミ.pdf#toolbar=0">圏論ゼミ</a>
                 <iframe
                   src="kikaku/114/noda_suken_圏論ゼミ.pdf#toolbar=0"
@@ -48,10 +64,26 @@
                   height="100%"
                 />
               </div>
-              <div class="kikaku-info__pdf__body">
+              <div class="kikaku-info__pdf__body-sm">
+                <a href="kikaku/114/noda_suken_圏論ゼミ.pdf#toolbar=0">圏論ゼミ</a>
+                <iframe
+                  src="kikaku/114/noda_suken_圏論ゼミ.pdf#toolbar=0#zoom=20"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-pc">
                 <a href="kikaku/114/線形代数学ゼミ.pdf#toolbar=0">線形代数学</a>
                 <iframe
-                  src="kikaku/114/線形代数学ゼミ.pdf#toolbar=0"
+                  src="kikaku/114/線形代数学ゼミ.pdf#toolbar=0#zoom=20"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-sm">
+                <a href="kikaku/114/線形代数学ゼミ.pdf#toolbar=0">線形代数学</a>
+                <iframe
+                  src="kikaku/114/線形代数学ゼミ.pdf#toolbar=0#zoom=20"
                   width="100%"
                   height="100%"
                 />
@@ -117,12 +149,20 @@ export default {
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
   &__pdf {
-    &__body {
-      height: 750px;
+    &__body-pc {
+        width: 100%;
+        height: 750px;
+        margin-bottom: 5rem;
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    &__body-sm {
       width: 100%;
-      margin-bottom: 5rem;
-      @include media-breakpoint-down(md) {
-        margin-bottom: 3rem;
+      height: 500px;
+      margin-bottom: 3rem;
+      @include media-breakpoint-up(sm) {
+        display: none;
       }
     }
     &__link {

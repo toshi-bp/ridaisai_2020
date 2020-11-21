@@ -24,7 +24,7 @@
               {{ KikakuList.description }}
             </p>
             <div class="kikaku-info__pdf">
-              <div class="kikaku-info__pdf__body">
+              <div class="kikaku-info__pdf__body-pc">
                 <a href="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf">一階線形同次連立常微分方程式の解き方</a>
                 <iframe
                   src="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf"
@@ -32,7 +32,15 @@
                   height="100%"
                 />
               </div>
-              <div class="kikaku-info__pdf__body">
+              <div class="kikaku-info__pdf__body-sm">
+                <a href="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf">一階線形同次連立常微分方程式の解き方</a>
+                <iframe
+                  src="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf#zoom=20"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-pc">
                 <a href="kikaku/148/宇宙の起源と終わり.pdf">宇宙の起源と終わり</a>
                 <iframe
                   src="kikaku/148/宇宙の起源と終わり.pdf"
@@ -40,7 +48,15 @@
                   height="100%"
                 />
               </div>
-              <div class="kikaku-info__pdf__body">
+              <div class="kikaku-info__pdf__body-sm">
+                <a href="kikaku/148/宇宙の起源と終わり.pdf">宇宙の起源と終わり</a>
+                <iframe
+                  src="kikaku/148/宇宙の起源と終わり.pdf#zoom=20"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-pc">
                 <a href="kikaku/148/物理研究会ロボット班活動紹介.pdf">物理研究会ロボット班活動紹介</a>
                 <iframe
                   src="kikaku/148/物理研究会ロボット班活動紹介.pdf"
@@ -48,10 +64,26 @@
                   height="100%"
                 />
               </div>
-              <div class="kikaku-info__pdf__body">
+              <div class="kikaku-info__pdf__body-sm">
+                <a href="kikaku/148/物理研究会ロボット班活動紹介.pdf">物理研究会ロボット班活動紹介</a>
+                <iframe
+                  src="kikaku/148/物理研究会ロボット班活動紹介.pdf#zoom=20"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-pc">
                 <a href="kikaku/148/物理研究会Zoom質問受付のご案内.pdf">物理研究会Zoom質問受付のご案内</a>
                 <iframe
                   src="kikaku/148/物理研究会Zoom質問受付のご案内.pdf"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="kikaku-info__pdf__body-sm">
+                <a href="kikaku/148/物理研究会Zoom質問受付のご案内.pdf">物理研究会Zoom質問受付のご案内</a>
+                <iframe
+                  src="kikaku/148/物理研究会Zoom質問受付のご案内.pdf#zoom=20"
                   width="100%"
                   height="100%"
                 />
@@ -130,11 +162,22 @@ export default {
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
   &__pdf {
-    &__body {
-      height: 750px;
-      width: 100%;
-      margin-bottom: 1.5rem;
-    }
+    margin-bottom: 4rem;
+      &__body-pc {
+        width: 100%;
+        height: 750px;
+        margin-bottom: 1.5rem;
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+      &__body-sm {
+        width: 100%;
+        height: 500px;
+        @include media-breakpoint-up(sm) {
+          display: none;
+        }
+      }
     &__link {
 
     }
