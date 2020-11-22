@@ -149,38 +149,42 @@ export default {
       }
     },
     Message () {
-      if (this.day === 'Sunday') {
-        return ''
-      } else if (this.day === 'Saturday') {
-        return 'この企画の配信は終了しました'
-      } else {
-        return this.day
-      }
+      // if (this.day === 'Sunday') {
+      //   return ''
+      // } else if (this.day === 'Saturday') {
+      //   return 'この企画の配信は終了しました'
+      // } else {
+      //   return this.day
+      // }
+      return 'この企画の配信は終了しました'
     },
     href1311 () {
-      if (this.day === 'Sunday') {
-        return 'https://www.youtube.com/watch?v=ftiaZa3wAEc&feature=youtu.be'
-      } else if (this.day === 'Saturday') {
-        return ''
-      } else {
-        return this.day
-      }
+      // if (this.day === 'Sunday') {
+      //   return 'https://www.youtube.com/watch?v=ftiaZa3wAEc&feature=youtu.be'
+      // } else if (this.day === 'Saturday') {
+      //   return ''
+      // } else {
+      //   return this.day
+      // }
+      return ''
     },
     hrefLB () {
-      if (this.day === 'Sunday') {
-        return 'https://www.youtube.com/watch?v=-p5dJN1QpVU&feature=youtu.be'
-      } else if (this.day === 'Saturday') {
-        return ''
-      } else {
-        return this.day
-      }
+      // if (this.day === 'Sunday') {
+      //   return 'https://www.youtube.com/watch?v=-p5dJN1QpVU&feature=youtu.be'
+      // } else if (this.day === 'Saturday') {
+      //   return ''
+      // } else {
+      //   return this.day
+      // }
+      return ''
     },
     linkComponentIs () {
-      if (this.day === 'Sunday') {
-        return 'a'
-      } else {
-        return 'div'
-      }
+      // if (this.day === 'Sunday') {
+      //   return 'a'
+      // } else {
+      //   return 'div'
+      // }
+      return 'div'
     }
   }
 }
