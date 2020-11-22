@@ -68,6 +68,14 @@
               理大祭の歩き方
             </nuxt-link>を公開しました。
           </dd>
+          <dt class="update__list__date">
+            2020/11/21
+          </dt>
+          <dd class="update__list__content">
+            <nuxt-link to="/kikaku/">
+              各コンテンツ
+            </nuxt-link>を公開しました。
+          </dd>
         </dl>
       </div>
     </TheSection>
