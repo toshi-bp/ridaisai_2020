@@ -50,7 +50,7 @@ export default {
   computed: {
     boxStyle () {
       const BoxHeight = (this.minutes) * 5 // 1時間で300px(1分で5px)
-      const BoxTop = (this.start_h - 8) * 300 + this.start_m * 300 / 60
+      const BoxTop = (this.start_h - 10) * 300 + this.start_m * 300 / 60
       return 'top:' + BoxTop + 'px;' + 'height:' + BoxHeight + 'px;'
     }
   }
