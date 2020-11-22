@@ -381,7 +381,11 @@ export default {
     &__box {
       @include media-breakpoint-up(wd) {
         width: 200px;
-        left: 35%;
+        left: 28%;
+      }
+      @include media-breakpoint-up(wd2) {
+        width: 200px;
+        left: 32%;
       }
       @include media-breakpoint-up(wwd) {
         width: 200px;
@@ -415,7 +419,11 @@ export default {
     &__box2 {
       @include media-breakpoint-up(wd) {
         width: 200px;
-        right: calc(30% + 240px);
+        right: calc(25% + 240px);
+      }
+      @include media-breakpoint-up(wd2) {
+        width: 200px;
+        right: calc(29% + 240px);
       }
       @include media-breakpoint-up(wwd) {
         width: 200px;
