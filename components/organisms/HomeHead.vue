@@ -1,8 +1,8 @@
 <template>
   <div class="backpanel">
     <div class="background">
-      <TheContainer class="container">
-        <div class="head">
+      <div class="head">
+        <TheContainer>
           <div class="head__header">
             <a href="https://lin.ee/UHWwtCc" target="_blank"><img src="~/assets/icons/LINE.png" class="head__header__logo"></a>
             <a href="https://twitter.com/noda_ridaisai" target="_blank"><img src="~/assets/icons/Twitter.svg" alt="twitter" class="head__header__logo"></a>
@@ -12,11 +12,13 @@
             <img src="~/assets/image/symbol.svg" class="head__logo">
             <div class="head__main">
               <p class="head__main__lead">
-                <!-- <span>Tokyo University of Science</span><br>
-                <span>TUS festival @ Noda</span><br> -->
-                <span>November 21st and 22nd, 2020 <br>from 10:00 to 18:30</span>
+                <span>Tokyo University of Science</span><br>
+                <span>TUS festival @ Noda</span><br>
+                <span>November 21st and 22nd, 2020 </span>
               </p>
             </div>
+          </div>
+        </TheContainer>
             <!-- <div class="button__group">
               <LinkButton2 to="/groups/">
                 参加団体向け情報
@@ -27,10 +29,16 @@
                 企業協賛に関して
               </LinkButton2>
             </div> -->
-            <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span>
-          </div>
+            <!-- <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span> -->
         </div>
-      </TheContainer>
+        <div class="head__finish">
+          <p class="head__finish__text">
+            今年度の理大祭は終了しました。
+          </p>
+          <p class="head__finish__text">
+            ご来場ありがとうございました。
+          </p>
+        </div>
       <div>
         <HomeBody />
       </div>
@@ -61,8 +69,11 @@ export default {
 
 <style lang="scss" scoped>
 .head {
-  height: 100vh;
+  height: 70vh;
   $header-height: 5rem;
+  @include media-breakpoint-down(sm) {
+    height: calc(70vh);
+  }
   &__header{
     display: flex;
     align-items: center;
@@ -88,9 +99,9 @@ export default {
   }
 
   &__logo {
-    width: 45rem;
+    width: 40rem;
     display: block;
-    margin: 5rem auto 0;
+    margin: 3rem auto 0;
     @include media-breakpoint-down(md) {
       width: 32rem;
       margin: 5rem auto 0;
@@ -100,13 +111,16 @@ export default {
       margin: 3rem auto 0;
     }
     @include media-breakpoint-down(xs) {
-      width: 18rem;
+      width: 15rem;
       margin: 2rem auto 0;
     }
   }
 
   &__main {
     margin: 0 auto;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
     &__lead {
       font-family: $sub-font;
       font-size: 1.5rem;
@@ -170,6 +184,30 @@ export default {
     @include media-breakpoint-down(sm) {
       font-size: 1rem;
       margin-top: 7rem;
+    }
+  }
+  &__finish {
+    background-color: $sub-color;
+    opacity: 0.6;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include media-breakpoint-down(sm) {
+      height: calc(30vh - 3rem);
+    }
+    &__text {
+      font-size: 1.5rem ;
+      font-family: $sub-font;
+      font-weight: normal;
+      text-align: center;
+      color: #FFF;
+      // padding: 2.1rem 0rem;
+      @include media-breakpoint-down(xs) {
+        font-size: 1rem;
+        // padding: 1.5rem 0;
+      }
     }
   }
 }
