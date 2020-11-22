@@ -50,7 +50,7 @@
             :key="id"
           >
             <LinkToContents
-              :live="true"
+              :live1311="true"
               :day="StageList.day"
               :startTime="StageList.startTime"
               :endTime="StageList.endTime"
