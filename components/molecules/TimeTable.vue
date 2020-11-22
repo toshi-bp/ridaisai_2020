@@ -29,57 +29,56 @@
                   理工<span class="time-table__title__child__2__sub">ステージ</span>
                 </div>
               </div>
-              <div
-                 v-for="time in times"
-                  :key="time.id"
-                class="time-table__time"
-              >
+              <div class="time-table__box">
                 <div
-                  class="time-table__time__child"
+                  v-for="time in times"
+                    :key="time.id"
+                  class="time-table__time"
                 >
-                  {{ time.time }}
-                </div>
-                <div></div>
-              </div>
-              <div class="time-table__body">
-                <div
-                  v-for="Saturday1311 in Saturday1311"
-                  :key="Saturday1311.kikaku_id"
-                  class="time-table__body__inside"
-                >
-                  <TimeTableBox
-                    :title="Saturday1311.title"
-                    :name="Saturday1311.name"
-                    :startTime="Saturday1311.startTime"
-                    :endTime="Saturday1311.endTime"
-                    :start_h="Saturday1311.start_h"
-                    :start_m="Saturday1311.start_m"
-                    :minutes="Saturday1311.minutes"
-                    :url="`/kikaku/${Saturday1311.kikaku_id}/`"
-                    class="time-table__body__box"
+                  <div
+                    class="time-table__time__child"
                   >
-                  </TimeTableBox>
+                    {{ time.time }}
+                  </div>
                 </div>
-                <div
-                  v-for="SaturdayLB in SaturdayLB"
-                  :key="SaturdayLB.kikaku_id"
-                  class="time-table__body__inside"
-                >
-                  <TimeTableBox
-                    :title="SaturdayLB.title"
-                    :name="SaturdayLB.name"
-                    :startTime="SaturdayLB.startTime"
-                    :endTime="SaturdayLB.endTime"
-                    :start_h="SaturdayLB.start_h"
-                    :start_m="SaturdayLB.start_m"
-                    :minutes="SaturdayLB.minutes"
-                    :url="`/kikaku/${SaturdayLB.kikaku_id}/`"
-                    class="time-table__body__box2"
+                <div class="time-table__body">
+                  <div
+                    v-for="Saturday1311 in Saturday1311"
+                    :key="Saturday1311.kikaku_id"
+                    class="time-table__body__inside"
                   >
-                  </TimeTableBox>
+                    <TimeTableBox
+                      :title="Saturday1311.title"
+                      :name="Saturday1311.name"
+                      :startTime="Saturday1311.startTime"
+                      :endTime="Saturday1311.endTime"
+                      :start_h="Saturday1311.start_h"
+                      :start_m="Saturday1311.start_m"
+                      :minutes="Saturday1311.minutes"
+                      :url="`/kikaku/${Saturday1311.kikaku_id}/`"
+                      class="time-table__body__box"
+                    >
+                    </TimeTableBox>
+                  </div>
+                  <div
+                    v-for="SaturdayLB in SaturdayLB"
+                    :key="SaturdayLB.kikaku_id"
+                    class="time-table__body__inside"
+                  >
+                    <TimeTableBox
+                      :title="SaturdayLB.title"
+                      :name="SaturdayLB.name"
+                      :startTime="SaturdayLB.startTime"
+                      :endTime="SaturdayLB.endTime"
+                      :start_h="SaturdayLB.start_h"
+                      :start_m="SaturdayLB.start_m"
+                      :minutes="SaturdayLB.minutes"
+                      :url="`/kikaku/${SaturdayLB.kikaku_id}/`"
+                      class="time-table__body__box2"
+                    >
+                    </TimeTableBox>
+                  </div>
                 </div>
-              </div>
-              <div class="time-table__body">
               </div>
             </div>
           </div>
@@ -99,54 +98,56 @@
                   理工<span class="time-table__title__child__sub">ステージ</span>
                 </div>
               </div>
-              <div
-                 v-for="time in times"
+              <div class="time-table__box">
+                <div
+                  v-for="time in times"
                   :key="time.id"
-                class="time-table__time"
-              >
-                <div
-                  class="time-table__time__child"
+                  class="time-table__time"
                 >
-                  {{ time.time }}
-                </div>
-                <div />
-              </div>
-              <div class="time-table__body">
-                <div
-                  v-for="Sunday1311 in Sunday1311"
-                  :key="Sunday1311.kikaku_id"
-                  class="time-table__body__inside"
-                >
-                  <TimeTableBox
-                    :title="Sunday1311.title"
-                    :name="Sunday1311.name"
-                    :start-time="Sunday1311.startTime"
-                    :end-time="Sunday1311.endTime"
-                    :start_h="Sunday1311.start_h"
-                    :start_m="Sunday1311.start_m"
-                    :minutes="Sunday1311.minutes"
-                    :url="`/kikaku/${Sunday1311.kikaku_id}/`"
-                    class="time-table__body__box"
+                  <div
+                    class="time-table__time__child"
                   >
-                  </TimeTableBox>
+                    {{ time.time }}
+                  </div>
+                  <div />
                 </div>
-                <div
-                  v-for="SundayLB in SundayLB"
-                  :key="SundayLB.kikaku_id"
-                  class="time-table__body__inside"
-                >
-                  <TimeTableBox
-                    :title="SundayLB.title"
-                    :name="SundayLB.name"
-                    :start-time="SundayLB.startTime"
-                    :end-time="SundayLB.endTime"
-                    :start_h="SundayLB.start_h"
-                    :start_m="SundayLB.start_m"
-                    :minutes="SundayLB.minutes"
-                    :url="`/kikaku/${SundayLB.kikaku_id}/`"
-                    class="time-table__body__box2"
+                <div class="time-table__body">
+                  <div
+                    v-for="Sunday1311 in Sunday1311"
+                    :key="Sunday1311.kikaku_id"
+                    class="time-table__body__inside"
                   >
-                  </TimeTableBox>
+                    <TimeTableBox
+                      :title="Sunday1311.title"
+                      :name="Sunday1311.name"
+                      :start-time="Sunday1311.startTime"
+                      :end-time="Sunday1311.endTime"
+                      :start_h="Sunday1311.start_h"
+                      :start_m="Sunday1311.start_m"
+                      :minutes="Sunday1311.minutes"
+                      :url="`/kikaku/${Sunday1311.kikaku_id}/`"
+                      class="time-table__body__box"
+                    >
+                    </TimeTableBox>
+                  </div>
+                  <div
+                    v-for="SundayLB in SundayLB"
+                    :key="SundayLB.kikaku_id"
+                    class="time-table__body__inside"
+                  >
+                    <TimeTableBox
+                      :title="SundayLB.title"
+                      :name="SundayLB.name"
+                      :start-time="SundayLB.startTime"
+                      :end-time="SundayLB.endTime"
+                      :start_h="SundayLB.start_h"
+                      :start_m="SundayLB.start_m"
+                      :minutes="SundayLB.minutes"
+                      :url="`/kikaku/${SundayLB.kikaku_id}/`"
+                      class="time-table__body__box2"
+                    >
+                    </TimeTableBox>
+                  </div>
                 </div>
               </div>
               <div class="time-table__body">
@@ -277,6 +278,10 @@ export default {
     SundayLB () {
       return StageList.filter(item => item.id > 13 && item.id < 19)
     }
+    // boxStyle () {
+    //   const BoxTop = (this.start_h - 8) * 300 + this.start_m * 300 / 60
+    //   return 'top:' + BoxTop + 'px;'
+    // }
   }
 }
 </script>
@@ -363,6 +368,9 @@ export default {
       }
     }
   }
+  &__box {
+    position: relative;
+  }
   &__body {
     z-index: 2;
     &__title {
@@ -380,77 +388,75 @@ export default {
     }
     &__box {
       @include media-breakpoint-up(wd) {
-        width: 200px;
-        left: 28%;
+        width: 30%;
+        left: 15%;
       }
       @include media-breakpoint-up(wd2) {
-        width: 200px;
-        left: 32%;
+        width: 30%;
+        left: 15%;
       }
       @include media-breakpoint-up(wwd) {
-        width: 200px;
-        left: 38%;
-        // transform: translateX(-40%);
+        width: 30%;
+        left: 15%;
       }
       @include media-breakpoint-up(wwwd) {
-        width: 200px;
-        left: 40%;
+        width: 30%;
+        left: 15%;
       }
       @include media-breakpoint-up (wwwwd) {
-        width: 200px;
-        left: 42%;
+        width: 30%;
+        left: 15%;
       }
-      width: calc(71% / 4);
-      left: calc(25%);
-      max-width: 200px;
+      width: 30%;
+      left: 15%;
       @include media-breakpoint-down(lg) {
-        width: calc(96% / 4);
-        left: calc(16.5%);
-      }
-      @include media-breakpoint-down(md) {
-        width: 20%;
+        width: calc(30%);
         left: calc(15%);
       }
+      @include media-breakpoint-down(md) {
+        width: 30%;
+        left: calc(18%);
+      }
       @include media-breakpoint-down(sm) {
-        width: 25%;
-        left: 30%;
+        width: 30%;
+        left: 24%;
       }
     }
     &__box2 {
       @include media-breakpoint-up(wd) {
-        width: 200px;
-        right: calc(25% + 240px);
+        width: 30%;
+        right: calc(10%);
       }
       @include media-breakpoint-up(wd2) {
-        width: 200px;
-        right: calc(29% + 240px);
+        width: 30%;
+        right: calc(10%);
       }
       @include media-breakpoint-up(wwd) {
-        width: 200px;
-        right: calc(33% + 240px);
+        width: 30%;
+        right: calc(10%);
       }
       @include media-breakpoint-up(wwwd) {
-        width: 200px;
-        right: calc(35% + 240px);
+        width: 30%;
+        right: calc(10%);
       }
       @include media-breakpoint-up (wwwwd) {
-        width: 200px;
-        right: calc(37% + 240px)
+        width: 30%;
+        right: 10%
       }
-      width: calc(71% / 4);
-      right: calc(21% + 240px);
-      max-width: 200px;
+      width: calc(30%);
+      right: calc(10%);
+      max-width: 30%;
       @include media-breakpoint-down(lg) {
-        width: calc(96% / 4);
-        right: calc(11% + 240px);
+        width: calc(30%);
+        right: calc(11%);
       }
       @include media-breakpoint-down(md) {
-        width: 20%;
-        right: calc(10% + 240px);
+        width: 30%;
+        right: calc(5%);
       }
       @include media-breakpoint-down(sm) {
-        width: 25%;
-        right: 14%;
+        width: 30%;
+        right: 5%;
       }
     }
     // &__saturday {
@@ -468,6 +474,9 @@ export default {
     //     }
     //   }
     // }
+  }
+  &__saturday {
+    position: relative;
   }
   &__button {
     display: inline-block;
