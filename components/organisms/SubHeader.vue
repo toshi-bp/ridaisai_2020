@@ -69,6 +69,7 @@ export default {
     font-family: $sub-font;
     // color: #fff;
     margin-left: 0.5rem;
+    font-weight: normal;
 
     @include media-breakpoint-down(sm) {
       font-size: 1.8rem;

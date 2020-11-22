@@ -80,7 +80,7 @@ export default {
     color: #fff;
     font-family: $sub-font;
     margin-left: 2.5rem;
-
+    font-weight: normal;
   }
   &__img {
     width: 180px;
@@ -103,6 +103,7 @@ export default {
         text-decoration: none;
       }
       &__text {
+        font-weight: normal;
         color: #fff;
         font-size: 1.25rem;
         text-decoration: none;
