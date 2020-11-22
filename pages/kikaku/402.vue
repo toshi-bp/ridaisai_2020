@@ -116,7 +116,7 @@ export default {
     return makeHead(
       '3キャンパスで比べる！理科大メシ',
       '理大祭実行委員会',
-      require('~/assets/kikaku/airship.png')
+      require('~/assets/kikaku/food.png')
     )
   }
 }

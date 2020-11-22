@@ -78,7 +78,7 @@ export default {
     return makeHead(
       '空から野田キャンパスを見てみよう！',
       '理大祭実行委員会',
-      require('~/assets/kikaku/NodaCampus.jpeg')
+      require('~/assets/kikaku/drone.png')
     )
   }
 }

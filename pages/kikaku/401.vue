@@ -145,7 +145,7 @@ export default {
     return makeHead(
       '現役理科大生に聞く！受験体験談・理科大生の生活を徹底紹介！',
       '理大祭実行委員会',
-      require('~/assets/kikaku/airship.png')
+      require('~/assets/kikaku/ForExam.png')
     )
   }
 }
