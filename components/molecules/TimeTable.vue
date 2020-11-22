@@ -382,7 +382,6 @@ export default {
       @include media-breakpoint-up(wd) {
         width: 200px;
         left: 35%;
-        transform: translateX(-35%);
       }
       @include media-breakpoint-up(wwd) {
         width: 200px;
