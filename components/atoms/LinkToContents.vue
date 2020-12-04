@@ -1,10 +1,10 @@
 <template>
   <!-- ライブ配信用のリンクにしようと思ったけどZoomとかの他のコンテンツでも使えそうだから一応LinkToContentsという名前にした。 -->
   <div class="link">
-      <div
-        v-if="live"
-        class="link__live"
-      >
+    <div
+      v-if="live"
+      class="link__live"
+    >
       <nuxt-link to="/live/">
         <div class="link__live__inner">
           <p class="link__live__text">
@@ -16,41 +16,49 @@
           </p>
         </div>
       </nuxt-link>
-      </div>
-      <div
-        v-if="live1311"
-        class="link__live"
+    </div>
+    <div
+      v-if="live1311"
+      class="link__live"
+    >
+      <component
+        :is="linkComponentIs"
+        target="_blank"
+        :href="href1311"
       >
-        <component
-          :is="linkComponentIs"
-          target="_blank"
-          :href="href1311"
-        >
-          <div class="link__live__inner">
-            <p class="link__live__text">Live配信会場はこちら(薬学ステージ)</p>
-            <!-- 開始時間と終了時間を入れる部分 -->
-            <p class="link__live__text2">{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
-            <p>{{ Message }}</p>
-          </div>
-        </component>
-      </div>
-      <div
-        v-if="liveLB"
-        class="link__live"
+        <div class="link__live__inner">
+          <p class="link__live__text">
+            Live配信会場はこちら(薬学ステージ)
+          </p>
+          <!-- 開始時間と終了時間を入れる部分 -->
+          <p class="link__live__text2">
+            {{ TheDay }}：{{ startTime }} 〜 {{ endTime }}
+          </p>
+          <p>{{ Message }}</p>
+        </div>
+      </component>
+    </div>
+    <div
+      v-if="liveLB"
+      class="link__live"
+    >
+      <component
+        :is="linkComponentIs"
+        target="_blank"
+        :href="hrefLB"
       >
-        <component
-          :is="linkComponentIs"
-          target="_blank"
-          :href="hrefLB"
-        >
-          <div class="link__live__inner">
-            <p class="link__live__text">Live配信会場はこちら(理工<span class="link__live__text__span">学</span>ステージ)</p>
-            <!-- 開始時間と終了時間を入れる部分 -->
-            <p class="link__live__text2">{{ TheDay }}：{{ startTime }} 〜 {{ endTime }}</p>
-            <p>{{ Message }}</p>
-          </div>
-        </component>
-      </div>
+        <div class="link__live__inner">
+          <p class="link__live__text">
+            Live配信会場はこちら(理工<span class="link__live__text__span">学</span>ステージ)
+          </p>
+          <!-- 開始時間と終了時間を入れる部分 -->
+          <p class="link__live__text2">
+            {{ TheDay }}：{{ startTime }} 〜 {{ endTime }}
+          </p>
+          <p>{{ Message }}</p>
+        </div>
+      </component>
+    </div>
     <div
       v-if="link"
       class="link__web"

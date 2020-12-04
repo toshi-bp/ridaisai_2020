@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div
               v-for="S in Food"
               :key="S.id"
@@ -28,7 +30,9 @@
             >
               <!-- <h2>{{ S.group }}</h2> -->
               <h3>{{ S.title }}</h3>
-              <p v-html="S.description">{{ S.description }}</p>
+              <p v-html="S.description">
+                {{ S.description }}
+              </p>
               <div
                 class="kikaku-info__youtube"
               >
@@ -44,7 +48,9 @@
         </TheContainer>
       </div>
       <div class="kikaku-info__button">
-        <LinkButton to="/">topページに戻る</LinkButton>
+        <LinkButton to="/">
+          topページに戻る
+        </LinkButton>
       </div>
     </div>
   </div>
@@ -62,6 +68,20 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  components: {
+    KikakuInfoHeader,
+    // KikakuInfoBody,
+    TheSection,
+    TheContainer,
+    // MarkdownPreview,
+    LinkButton
+  },
+  props: {
+    id: {
+      type: Number,
+      default: 402
+    }
+  },
   data  () {
     return {
       Food: [
@@ -90,20 +110,6 @@ export default {
           videoId: '6ABjeA9r7SA'
         }
       ]
-    }
-  },
-  components: {
-    KikakuInfoHeader,
-    // KikakuInfoBody,
-    TheSection,
-    TheContainer,
-    // MarkdownPreview,
-    LinkButton
-  },
-  props: {
-    id: {
-      type: Number,
-      default: 402
     }
   },
   computed: {

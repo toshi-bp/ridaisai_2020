@@ -8,7 +8,24 @@
       </SubHeader>
       <div>
         <TheSection class="live__section">
-          <p>理大祭ではYouTubeLiveによる参加団体のパフォーマンスのLive配信を行っています。まずはタイムテーブルをチェック！</p>
+          <p>理大祭ではYouTubeLiveによる参加団体のパフォーマンスのLive配信を行っています。</p>
+          <!-- アーカイブを埋め込む(今更) -->
+          <h4 class="live__youtube__text">Live配信のアーカイブはこちら</h4>
+          <div
+            v-for="video in videos"
+            :key="video.id"
+            class="live__youtube"
+          >
+            <h3 class="live__youtube__title">
+              {{ video.title }}
+            </h3>
+            <youtube
+              ref="youtube"
+              :video-id="video.videoId"
+              :fit-parent="true"
+              :resize="true"
+            />
+          </div>
           <!-- ここにライブ配信する動画を埋め込むよ(チャットを載せるか否かは要相談) -->
           <!-- 埋め込めなくなる可能性が出てきたため一旦動画の部分はコメントアウト -->
           <!-- <div class="live__movie">
@@ -57,14 +74,14 @@
             <LinkToContents
               :live1311="true"
               day="Sunday"
-              startTime="10:45"
-              endTime="18:30"
+              start-time="10:45"
+              end-time="18:30"
               class="live__link__contents__child"
             >
               薬学ステージのLive配信にアクセス！
             </LinkToContents>
             <LinkToContents
-              :liveLB="true"
+              :live-l-b="true"
               day="Sunday"
               start-time="12:00"
               end-time="17:15"
@@ -73,21 +90,6 @@
               理工ステージのLive配信にアクセス！
             </LinkToContents>
           </div>
-          <!-- 実験的に埋め込んでみる(ダメならコメントアウトします) -->
-          <!-- <div class="live__youtube">
-            <youtube
-              ref="youtube"
-              :video-id="videoId"
-              :fit-parent="true"
-              :resize="true"
-            />
-            <youtube
-              ref="youtube"
-              :video-id="videoId2"
-              :fit-parent="true"
-              :resize="true"
-            />
-          </div> -->
         </TheSection>
       </div>
       <div class="live__button">
@@ -120,8 +122,30 @@ export default {
   },
   data () {
     return {
-      videoId: '5Z5LGivixHY',
-      videoId2: 'L_8VsWOuKw4' // 動画IDを入力する
+      videos: [
+        {
+          id: 1,
+          title: '薬学ステージ1日目',
+          videoId: '5Z5LGivixHY'
+        },
+        {
+          id: 2,
+          title: '理工ステージ1日目',
+          videoId: 'L_8VsWOuKw4'
+        },
+        {
+          id: 3,
+          title: '薬学ステージ2日目',
+          videoId: 'XJ4-ugXDuyU'
+        },
+        {
+          id: 4,
+          title: '理工ステージ2日目',
+          videoId: '-p5dJN1QpVU'
+        }
+      ]
+      // videoId: '5Z5LGivixHY',
+      // videoId2: 'L_8VsWOuKw4' // 動画IDを入力する
     }
   }
 }
@@ -134,18 +158,18 @@ export default {
   background-image: url('~@/assets/image/bg.svg');
   background-size: repeat;
 
-  &__movie {
-    &__live {
-      width: 100%;
-      &__body {
-        height: 35rem;
-        @include media-breakpoint-down(md) {
-          height: 40rem;
-        }
-        @include media-breakpoint-down(sm) {
-          height: 30rem;
-        }
-      }
+  &__youtube {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    &__text {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      line-height: 2rem;
+    }
+    &__title {
+      font-family: $sub-font;
+      font-size: 1rem;
+      font-weight: normal;
     }
   }
   &__button {
