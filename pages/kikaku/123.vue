@@ -25,10 +25,10 @@
             </p>
             <div>
               <LinkToContents
-                :liveLB="true"
+                :live-l-b="true"
                 day="Sunday"
-                startTime="14:00"
-                endTime="14:15"
+                start-time="14:00"
+                end-time="14:15"
               />
             </div>
           </TheSection>

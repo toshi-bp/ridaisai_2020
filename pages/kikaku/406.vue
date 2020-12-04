@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__youtube">
               <youtube
                 ref="youtube"
@@ -32,7 +34,9 @@
           </TheSection>
         </TheContainer>
         <div class="kikaku-info__button">
-          <LinkButton to="/">topページに戻る</LinkButton>
+          <LinkButton to="/">
+            topページに戻る
+          </LinkButton>
         </div>
       </div>
     </div>
@@ -50,11 +54,6 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
-  data () {
-    return {
-      videoId: '_scsCAVzSvM'
-    }
-  },
   components: {
     KikakuInfoHeader,
     // KikakuInfoBody,
@@ -66,6 +65,11 @@ export default {
     id: {
       type: Number,
       default: 406
+    }
+  },
+  data () {
+    return {
+      videoId: '_scsCAVzSvM'
     }
   },
   computed: {

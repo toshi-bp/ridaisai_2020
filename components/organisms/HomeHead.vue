@@ -19,7 +19,7 @@
             </div>
           </div>
         </TheContainer>
-            <!-- <div class="button__group">
+        <!-- <div class="button__group">
               <LinkButton2 to="/groups/">
                 参加団体向け情報
               </LinkButton2>
@@ -29,16 +29,19 @@
                 企業協賛に関して
               </LinkButton2>
             </div> -->
-            <!-- <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span> -->
-        </div>
-        <div class="head__finish">
-          <p class="head__finish__text">
-            今年度の理大祭は終了しました。
-          </p>
-          <p class="head__finish__text">
-            ご来場ありがとうございました。
-          </p>
-        </div>
+        <!-- <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span> -->
+      </div>
+      <div class="head__finish">
+        <p class="head__finish__text">
+          今年度の理大祭は終了しました。
+        </p>
+        <p class="head__finish__text">
+          ご来場ありがとうございました。
+        </p>
+        <p class="head__finish__text__attention">
+          (各コンテンツは12月20日(日)までの公開となります。)
+        </p>
+      </div>
       <div>
         <HomeBody />
       </div>
@@ -207,6 +210,14 @@ export default {
       @include media-breakpoint-down(xs) {
         font-size: 1rem;
         // padding: 1.5rem 0;
+      }
+      &__attention {
+        font-size: 1.2rem;
+        font-family: $sub-font;
+        color: #fff;
+        @include media-breakpoint-down(xs) {
+          font-size: 0.8rem;
+        }
       }
     }
   }

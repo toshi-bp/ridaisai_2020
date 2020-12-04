@@ -3,159 +3,154 @@
   <!-- こちらで作成する場合でもそうでなくてもTabを利用して日時毎に表示できるようにしたい -->
   <div class="time-table">
     <!-- <TheContainer> -->
-      <div>
-        <TheSection>
-          <button
-            v-for="day in days"
-            :key="day.id"
-            class="time-table__button"
-            @click="dayTab = day.id"
-          >
-            {{ day.day }}
-          </button>
-          <div
-            v-show="dayTab === 1"
-            class="time-table__body"
-          >
-            <h1 class="time-table__body__title">
-              21日(土)
-            </h1>
-            <div class="time-table__saturday">
-              <div class="time-table__title">
-                <div class="time-table__title__child">
-                  薬学<span class="time-table__title__child__sub">ステージ</span>
-                </div>
-                <div class="time-table__title__child__2">
-                  理工<span class="time-table__title__child__2__sub">ステージ</span>
-                </div>
+    <div>
+      <TheSection>
+        <button
+          v-for="day in days"
+          :key="day.id"
+          class="time-table__button"
+          @click="dayTab = day.id"
+        >
+          {{ day.day }}
+        </button>
+        <div
+          v-show="dayTab === 1"
+          class="time-table__body"
+        >
+          <h1 class="time-table__body__title">
+            21日(土)
+          </h1>
+          <div class="time-table__saturday">
+            <div class="time-table__title">
+              <div class="time-table__title__child">
+                薬学<span class="time-table__title__child__sub">ステージ</span>
               </div>
-              <div class="time-table__box">
-                <div
-                  v-for="time in times"
-                    :key="time.id"
-                  class="time-table__time"
-                >
-                  <div
-                    class="time-table__time__child"
-                  >
-                    {{ time.time }}
-                  </div>
-                </div>
-                <div class="time-table__body">
-                  <div
-                    v-for="Saturday1311 in Saturday1311"
-                    :key="Saturday1311.kikaku_id"
-                    class="time-table__body__inside"
-                  >
-                    <TimeTableBox
-                      :title="Saturday1311.title"
-                      :name="Saturday1311.name"
-                      :startTime="Saturday1311.startTime"
-                      :endTime="Saturday1311.endTime"
-                      :start_h="Saturday1311.start_h"
-                      :start_m="Saturday1311.start_m"
-                      :minutes="Saturday1311.minutes"
-                      :url="`/kikaku/${Saturday1311.kikaku_id}/`"
-                      class="time-table__body__box"
-                    >
-                    </TimeTableBox>
-                  </div>
-                  <div
-                    v-for="SaturdayLB in SaturdayLB"
-                    :key="SaturdayLB.kikaku_id"
-                    class="time-table__body__inside"
-                  >
-                    <TimeTableBox
-                      :title="SaturdayLB.title"
-                      :name="SaturdayLB.name"
-                      :startTime="SaturdayLB.startTime"
-                      :endTime="SaturdayLB.endTime"
-                      :start_h="SaturdayLB.start_h"
-                      :start_m="SaturdayLB.start_m"
-                      :minutes="SaturdayLB.minutes"
-                      :url="`/kikaku/${SaturdayLB.kikaku_id}/`"
-                      class="time-table__body__box2"
-                    >
-                    </TimeTableBox>
-                  </div>
-                </div>
+              <div class="time-table__title__child__2">
+                理工<span class="time-table__title__child__2__sub">ステージ</span>
               </div>
             </div>
-          </div>
-          <div
-            v-show="dayTab === 2"
-            class="time-table__body"
-          >
-            <h1 class="time-table__body__title">
-              22日(日)
-            </h1>
-            <div class="time-table__saturday">
-              <div class="time-table__title">
-                <div class="time-table__title__child">
-                  薬学<span class="time-table__title__child__sub">ステージ</span>
-                </div>
-                <div class="time-table__title__child__2">
-                  理工<span class="time-table__title__child__sub">ステージ</span>
-                </div>
-              </div>
-              <div class="time-table__box">
+            <div class="time-table__box">
+              <div
+                v-for="time in times"
+                :key="time.id"
+                class="time-table__time"
+              >
                 <div
-                  v-for="time in times"
-                  :key="time.id"
-                  class="time-table__time"
+                  class="time-table__time__child"
                 >
-                  <div
-                    class="time-table__time__child"
-                  >
-                    {{ time.time }}
-                  </div>
-                  <div />
-                </div>
-                <div class="time-table__body">
-                  <div
-                    v-for="Sunday1311 in Sunday1311"
-                    :key="Sunday1311.kikaku_id"
-                    class="time-table__body__inside"
-                  >
-                    <TimeTableBox
-                      :title="Sunday1311.title"
-                      :name="Sunday1311.name"
-                      :start-time="Sunday1311.startTime"
-                      :end-time="Sunday1311.endTime"
-                      :start_h="Sunday1311.start_h"
-                      :start_m="Sunday1311.start_m"
-                      :minutes="Sunday1311.minutes"
-                      :url="`/kikaku/${Sunday1311.kikaku_id}/`"
-                      class="time-table__body__box"
-                    >
-                    </TimeTableBox>
-                  </div>
-                  <div
-                    v-for="SundayLB in SundayLB"
-                    :key="SundayLB.kikaku_id"
-                    class="time-table__body__inside"
-                  >
-                    <TimeTableBox
-                      :title="SundayLB.title"
-                      :name="SundayLB.name"
-                      :start-time="SundayLB.startTime"
-                      :end-time="SundayLB.endTime"
-                      :start_h="SundayLB.start_h"
-                      :start_m="SundayLB.start_m"
-                      :minutes="SundayLB.minutes"
-                      :url="`/kikaku/${SundayLB.kikaku_id}/`"
-                      class="time-table__body__box2"
-                    >
-                    </TimeTableBox>
-                  </div>
+                  {{ time.time }}
                 </div>
               </div>
               <div class="time-table__body">
+                <div
+                  v-for="Saturday1311 in Saturday1311"
+                  :key="Saturday1311.kikaku_id"
+                  class="time-table__body__inside"
+                >
+                  <TimeTableBox
+                    :title="Saturday1311.title"
+                    :name="Saturday1311.name"
+                    :start-time="Saturday1311.startTime"
+                    :end-time="Saturday1311.endTime"
+                    :start_h="Saturday1311.start_h"
+                    :start_m="Saturday1311.start_m"
+                    :minutes="Saturday1311.minutes"
+                    :url="`/kikaku/${Saturday1311.kikaku_id}/`"
+                    class="time-table__body__box"
+                  />
+                </div>
+                <div
+                  v-for="SaturdayLB in SaturdayLB"
+                  :key="SaturdayLB.kikaku_id"
+                  class="time-table__body__inside"
+                >
+                  <TimeTableBox
+                    :title="SaturdayLB.title"
+                    :name="SaturdayLB.name"
+                    :start-time="SaturdayLB.startTime"
+                    :end-time="SaturdayLB.endTime"
+                    :start_h="SaturdayLB.start_h"
+                    :start_m="SaturdayLB.start_m"
+                    :minutes="SaturdayLB.minutes"
+                    :url="`/kikaku/${SaturdayLB.kikaku_id}/`"
+                    class="time-table__body__box2"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </TheSection>
-      </div>
+        </div>
+        <div
+          v-show="dayTab === 2"
+          class="time-table__body"
+        >
+          <h1 class="time-table__body__title">
+            22日(日)
+          </h1>
+          <div class="time-table__saturday">
+            <div class="time-table__title">
+              <div class="time-table__title__child">
+                薬学<span class="time-table__title__child__sub">ステージ</span>
+              </div>
+              <div class="time-table__title__child__2">
+                理工<span class="time-table__title__child__sub">ステージ</span>
+              </div>
+            </div>
+            <div class="time-table__box">
+              <div
+                v-for="time in times"
+                :key="time.id"
+                class="time-table__time"
+              >
+                <div
+                  class="time-table__time__child"
+                >
+                  {{ time.time }}
+                </div>
+                <div />
+              </div>
+              <div class="time-table__body">
+                <div
+                  v-for="Sunday1311 in Sunday1311"
+                  :key="Sunday1311.kikaku_id"
+                  class="time-table__body__inside"
+                >
+                  <TimeTableBox
+                    :title="Sunday1311.title"
+                    :name="Sunday1311.name"
+                    :start-time="Sunday1311.startTime"
+                    :end-time="Sunday1311.endTime"
+                    :start_h="Sunday1311.start_h"
+                    :start_m="Sunday1311.start_m"
+                    :minutes="Sunday1311.minutes"
+                    :url="`/kikaku/${Sunday1311.kikaku_id}/`"
+                    class="time-table__body__box"
+                  />
+                </div>
+                <div
+                  v-for="SundayLB in SundayLB"
+                  :key="SundayLB.kikaku_id"
+                  class="time-table__body__inside"
+                >
+                  <TimeTableBox
+                    :title="SundayLB.title"
+                    :name="SundayLB.name"
+                    :start-time="SundayLB.startTime"
+                    :end-time="SundayLB.endTime"
+                    :start_h="SundayLB.start_h"
+                    :start_m="SundayLB.start_m"
+                    :minutes="SundayLB.minutes"
+                    :url="`/kikaku/${SundayLB.kikaku_id}/`"
+                    class="time-table__body__box2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="time-table__body" />
+          </div>
+        </div>
+      </TheSection>
+    </div>
     <!-- </TheContainer> -->
   </div>
 </template>

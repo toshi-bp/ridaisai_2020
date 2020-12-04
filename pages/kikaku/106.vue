@@ -25,10 +25,10 @@
             </p>
             <div class="kikaku-info__body">
               <LinkToContents
-                :liveLB="true"
+                :live-l-b="true"
                 day="Sunday"
-                startTime="15:00"
-                endTime="16:30"
+                start-time="15:00"
+                end-time="16:30"
               />
             </div>
             <div class="kikaku-info__youtube">

@@ -25,7 +25,7 @@
             </p>
             <div class="kikaku-info__pdf">
               <a href="kikaku/105/2020理大祭ドラマ_パンフレット.pdf">ドラマパンフレット</a>
-               <div class="kikaku-info__pdf__body-pc">
+              <div class="kikaku-info__pdf__body-pc">
                 <iframe
                   src="kikaku/105/2020理大祭ドラマ_パンフレット.pdf"
                   width="100%"
@@ -44,8 +44,8 @@
               <LinkToContents
                 :live1311="true"
                 day="Saturday"
-                startTime="15:45"
-                endTime="16:45"
+                start-time="15:45"
+                end-time="16:45"
               />
             </div>
           </TheSection>

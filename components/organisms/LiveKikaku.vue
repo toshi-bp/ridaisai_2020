@@ -57,14 +57,14 @@
             <LinkToContents
               :live1311="true"
               day="Sunday"
-              startTime="10:45"
-              endTime="18:30"
+              start-time="10:45"
+              end-time="18:30"
               class="live__link__contents__child"
             >
               薬学ステージのLive配信にアクセス！
             </LinkToContents>
             <LinkToContents
-              :liveLB="true"
+              :live-l-b="true"
               day="Sunday"
               start-time="12:00"
               end-time="17:15"

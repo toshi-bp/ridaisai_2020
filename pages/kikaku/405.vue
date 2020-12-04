@@ -23,8 +23,8 @@
             <p class="kikaku-info__description">{{ KikakuList.description }}</p> -->
             <div>
               <MarkdownPreview
-                :markdownHtml="PaperCraft1"
-              ></MarkdownPreview>
+                :markdown-html="PaperCraft1"
+              />
               <div class="kikaku-info__youtube">
                 <youtube
                   ref="youtube"
@@ -34,8 +34,8 @@
                 />
               </div>
               <MarkdownPreview
-                :markdownHtml="PaperCraft2"
-              ></MarkdownPreview>
+                :markdown-html="PaperCraft2"
+              />
               <div class="kikaku-info__youtube">
                 <youtube
                   ref="youtube"
@@ -47,18 +47,20 @@
               <p>また、実際に作成した飛行船は野田キャンパス・講義棟前に展示していますので、ステージに出演したサークル・団体の皆様はぜひ立ち寄って記念撮影をしたら青春の思い出になること間違いなし！</p>
             </div>
             <div class="kikaku-info__button">
-            <LinkButton2
-              href="https://twitter.com/intent/tweet?text=%23%E9%87%8E%E7%94%B0%E7%90%86%E5%A4%A7%E7%A5%AD%E9%A3%9B%E8%A1%8C%E8%88%B92020%0A%40noda_ridaisai"
-              target="_blank"
-            >
-              <fa :icon="['fab', 'twitter']" fixed-width />Twitterに投稿する
-            </LinkButton2>
+              <LinkButton2
+                href="https://twitter.com/intent/tweet?text=%23%E9%87%8E%E7%94%B0%E7%90%86%E5%A4%A7%E7%A5%AD%E9%A3%9B%E8%A1%8C%E8%88%B92020%0A%40noda_ridaisai"
+                target="_blank"
+              >
+                <fa :icon="['fab', 'twitter']" fixed-width />Twitterに投稿する
+              </LinkButton2>
             </div>
           </TheSection>
         </TheContainer>
       </div>
       <div class="kikaku-info__button">
-        <LinkButton to="/">topページに戻る</LinkButton>
+        <LinkButton to="/">
+          topページに戻る
+        </LinkButton>
       </div>
     </div>
   </div>
@@ -79,12 +81,6 @@ import makeHead from '~/utils/makeHead.js'
 import LinkButton2 from '~/components/atoms/LinkButton2'
 
 export default {
-  data () {
-    return {
-      videoId1: 'WTeUiDiXuC0',
-      videoId2: 'cCimybxVMiI'
-    }
-  },
   components: {
     KikakuInfoHeader,
     // KikakuInfoBody,
@@ -98,6 +94,12 @@ export default {
     id: {
       type: Number,
       default: 405
+    }
+  },
+  data () {
+    return {
+      videoId1: 'WTeUiDiXuC0',
+      videoId2: 'cCimybxVMiI'
     }
   },
   computed: {

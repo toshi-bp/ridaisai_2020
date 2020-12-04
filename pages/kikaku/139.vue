@@ -20,7 +20,9 @@
         <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <p class="kikaku-info__description">
+              {{ KikakuList.description }}
+            </p>
             <div class="kikaku-info__youtube">
               <youtube
                 ref="youtube"
@@ -33,7 +35,7 @@
               :link="true"
               url="https://note.com/solt_sauna/m/m7b3993240b70"
             >
-              C4's 理大祭展示会場<br />
+              C4's 理大祭展示会場<br>
               コンテンツはこちら
             </LinkToContents>
           </TheSection>
@@ -62,11 +64,6 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
-  data () {
-    return {
-      videoId: 'rrIk2dkPuI0'
-    }
-  },
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
@@ -78,6 +75,11 @@ export default {
     id: {
       type: Number,
       default: 139
+    }
+  },
+  data () {
+    return {
+      videoId: 'rrIk2dkPuI0'
     }
   },
   computed: {

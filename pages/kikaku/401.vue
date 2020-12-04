@@ -26,8 +26,8 @@
               :key="Student.id"
             >
               <MarkdownPreview
-                :markdownHtml="Student.Student"
-              ></MarkdownPreview>
+                :markdown-html="Student.Student"
+              />
               <div
                 class="kikaku-info__youtube"
               >
@@ -43,7 +43,9 @@
         </TheContainer>
       </div>
       <div class="kikaku-info__button">
-        <LinkButton to="/">topページに戻る</LinkButton>
+        <LinkButton to="/">
+          topページに戻る
+        </LinkButton>
       </div>
     </div>
   </div>
@@ -67,6 +69,20 @@ import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
 
 export default {
+  components: {
+    KikakuInfoHeader,
+    // KikakuInfoBody,
+    TheSection,
+    TheContainer,
+    MarkdownPreview,
+    LinkButton
+  },
+  props: {
+    id: {
+      type: Number,
+      default: 401
+    }
+  },
   data () {
     return {
       Students: [
@@ -101,20 +117,6 @@ export default {
           videoId: 'suky0n4Zd2c'
         }
       ]
-    }
-  },
-  components: {
-    KikakuInfoHeader,
-    // KikakuInfoBody,
-    TheSection,
-    TheContainer,
-    MarkdownPreview,
-    LinkButton
-  },
-  props: {
-    id: {
-      type: Number,
-      default: 401
     }
   },
   computed: {
