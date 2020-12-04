@@ -75,7 +75,7 @@ export default {
   height: 70vh;
   $header-height: 5rem;
   @include media-breakpoint-down(sm) {
-    height: calc(70vh);
+    height: calc(60vh);
   }
   &__header{
     display: flex;
@@ -198,7 +198,7 @@ export default {
     align-items: center;
     flex-direction: column;
     @include media-breakpoint-down(sm) {
-      height: calc(30vh - 3rem);
+      height: calc(40vh - 3rem);
     }
     &__text {
       font-size: 1.5rem ;
