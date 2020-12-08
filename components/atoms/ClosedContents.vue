@@ -18,13 +18,14 @@ export default {
 <style lang="scss" scoped>
 .close {
   background-color: $theme-color;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   display: block;
   margin-bottom: 1rem;
   box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.3);
   transition: 0.15s ease all;
   border-radius: 5px;
   &__text {
+    color: #fff;
     text-align: center;
     font-family: $sub-font;
     font-size: 1.2rem;
