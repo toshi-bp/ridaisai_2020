@@ -171,6 +171,7 @@ export default {
   }
   &__description {
     white-space: pre-line;
+    margin-top: -1.5rem;
   }
 }
 </style>
