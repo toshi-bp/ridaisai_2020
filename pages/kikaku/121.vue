@@ -23,7 +23,8 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <h4>コンテンツのダウンロード(zipファイルでのダウンロードとなります。)</h4>
+            <ClosedContents></ClosedContents>
+            <!-- <h4>コンテンツのダウンロード(zipファイルでのダウンロードとなります。)</h4>
             <TheRow>
               <TheColumn
                 v-for="game in games"
@@ -44,7 +45,7 @@
                   </div>
                 </div>
               </TheColumn>
-            </TheRow>
+            </TheRow> -->
           </TheSection>
         </TheContainer>
 
@@ -65,9 +66,10 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import DownLoadButton from '~/components/atoms/DownLoadButton'
-import TheRow from '~/components/atoms/TheRow'
-import TheColumn from '~/components/atoms/TheColumn'
+// import DownLoadButton from '~/components/atoms/DownLoadButton'
+// import TheRow from '~/components/atoms/TheRow'
+// import TheColumn from '~/components/atoms/TheColumn'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -78,9 +80,10 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    DownLoadButton,
-    TheRow,
-    TheColumn
+    ClosedContents
+    // DownLoadButton,
+    // TheRow,
+    // TheColumn
   },
   props: {
     id: {

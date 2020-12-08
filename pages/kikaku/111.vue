@@ -40,7 +40,7 @@
                 />
               </div>
             </div> -->
-            <CloseContents></CloseContents>
+            <ClosedContents></ClosedContents>
           </TheSection>
         </TheContainer>
 
@@ -61,7 +61,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import CloseContents from '~/components/atoms/ClosedContents'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -72,7 +72,7 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    CloseContents
+    ClosedContents
   },
   props: {
     id: {
