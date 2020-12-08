@@ -125,6 +125,7 @@ export default {
   background-size: repeat;
   &__description {
     white-space: pre-line;
+    margin-top: -1.5rem;
   }
   &__youtube {
     margin-bottom: 1.5rem;

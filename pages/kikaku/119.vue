@@ -220,6 +220,7 @@ export default {
   &__description {
     margin-bottom: 1rem;
     white-space: pre-line;
+    margin-top: -1.5rem;
   }
   &__title {
     font-size: 1.4rem;
