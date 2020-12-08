@@ -23,7 +23,7 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div class="kikaku-info__pdf">
+            <!-- <div class="kikaku-info__pdf">
               <a href="kikaku/105/2020理大祭ドラマ_パンフレット.pdf">ドラマパンフレット</a>
               <div class="kikaku-info__pdf__body-pc">
                 <iframe
@@ -39,7 +39,7 @@
                   height="100%"
                 />
               </div>
-            </div>
+            </div> -->
             <div class="kikaku-info__link">
               <LinkToContents
                 :live1311="true"

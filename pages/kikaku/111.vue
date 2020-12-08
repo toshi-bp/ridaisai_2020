@@ -23,7 +23,7 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div class="kikaku-info__pdf">
+            <!-- <div class="kikaku-info__pdf">
               <a href="kikaku/111/鉄研.pdf" class="kikaku-info__pdf__link">鉄研.pdf</a>
               <div class="kikaku-info__pdf__body-pc">
                 <iframe
@@ -39,8 +39,8 @@
                   height="100%"
                 />
               </div>
-            </div>
-            <!-- <CloseContents></CloseContents> -->
+            </div> -->
+            <CloseContents></CloseContents>
           </TheSection>
         </TheContainer>
 
@@ -61,7 +61,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-// import CloseContents from '~/components/atoms/ClosedContents'
+import CloseContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -71,8 +71,8 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
-    // CloseContents
+    TheContainer,
+    CloseContents
   },
   props: {
     id: {
