@@ -46,12 +46,15 @@
               <p class="kikaku-info__youtube__text">
                 宿命は2019年夏の高校野球「熱闘甲子園」のテーマソングだったのでご存じの方も多いかと思います。この曲を聴くととても元気がでるので大好きな曲です。
               </p>
+              <ClosedContens>
+              </ClosedContens>
+              <!--
               <youtube
                 ref="youtube"
                 :video-id="videoId"
                 :fit-parent="true"
                 :resize="true"
-              />
+              />-->
             </div>
             <div class="kikaku-info__youtube">
               <h3 class="kikaku-info__youtube__title">
@@ -63,12 +66,16 @@
               <p class="kikaku-info__youtube__text">
                 ある日友達とこの曲いいよねーって話をしてたら無性に弾きたくなったので弾いてみました！
               </p>
+              <ClosedContens>
+              </ClosedContens>
+              <!--
               <youtube
                 ref="youtube"
                 :video-id="videoId2"
                 :fit-parent="true"
                 :resize="true"
               />
+              -->
             </div>
             <div class="kikaku-info__youtube">
               <h3 class="kikaku-info__youtube__title">
@@ -80,12 +87,16 @@
               <p class="kikaku-info__youtube__text">
                 軽やかで格好良い曲だと思います夜に早歩きくらいのテンポになってしまいました
               </p>
+              <ClosedContens>
+              </ClosedContens>
+              <!--
               <youtube
                 ref="youtube"
                 :video-id="videoId3"
                 :fit-parent="true"
                 :resize="true"
               />
+              -->
             </div>
           </TheSection>
         </TheContainer>
@@ -112,6 +123,7 @@ import LinkToContents from '~/components/atoms/LinkToContents'
 import KikakuList from '~/kikaku/KikakuList.json'
 
 import makeHead from '~/utils/makeHead.js'
+import ClosedContens from '~/components/atoms/ClosedContents'
 
 export default {
   components: {
@@ -119,7 +131,8 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    LinkToContents
+    LinkToContents,
+    ClosedContens
   },
   props: {
     id: {
