@@ -46,8 +46,8 @@
               <p class="kikaku-info__youtube__text">
                 宿命は2019年夏の高校野球「熱闘甲子園」のテーマソングだったのでご存じの方も多いかと思います。この曲を聴くととても元気がでるので大好きな曲です。
               </p>
-              <ClosedContens>
-              </ClosedContens>
+              <ClosedContents>
+              </ClosedContents>
               <!--
               <youtube
                 ref="youtube"
@@ -66,8 +66,8 @@
               <p class="kikaku-info__youtube__text">
                 ある日友達とこの曲いいよねーって話をしてたら無性に弾きたくなったので弾いてみました！
               </p>
-              <ClosedContens>
-              </ClosedContens>
+              <ClosedContents>
+              </ClosedContents>
               <!--
               <youtube
                 ref="youtube"
@@ -87,8 +87,8 @@
               <p class="kikaku-info__youtube__text">
                 軽やかで格好良い曲だと思います夜に早歩きくらいのテンポになってしまいました
               </p>
-              <ClosedContens>
-              </ClosedContens>
+              <ClosedContents>
+              </ClosedContents>
               <!--
               <youtube
                 ref="youtube"
@@ -123,7 +123,7 @@ import LinkToContents from '~/components/atoms/LinkToContents'
 import KikakuList from '~/kikaku/KikakuList.json'
 
 import makeHead from '~/utils/makeHead.js'
-import ClosedContens from '~/components/atoms/ClosedContents'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 export default {
   components: {
@@ -132,7 +132,7 @@ export default {
     TheSection,
     TheContainer,
     LinkToContents,
-    ClosedContens
+    ClosedContents
   },
   props: {
     id: {
