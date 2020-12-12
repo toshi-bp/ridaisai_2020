@@ -32,12 +32,16 @@
               />
             </div>
             <div class="kikaku-info__youtube">
+              <ClosedContents>
+              </ClosedContents>
+              <!--
               <youtube
                 ref="youtube"
                 :video-id="videoId"
                 :fit-parent="true"
                 :resize="true"
               />
+              -->
             </div>
           </TheSection>
         </TheContainer>
@@ -63,6 +67,7 @@ import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 export default {
   components: {
@@ -70,7 +75,8 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    LinkToContents
+    LinkToContents,
+    ClosedContents
   },
   props: {
     id: {
