@@ -25,7 +25,9 @@
             </p>
             <div>
               <h2>Live配信</h2>
+              <!--
               <a href="kikaku/104/ピアノコンサート(Live配信)program.pdf">ピアノコンサート(Live配信)program</a>
+              -->
               <LinkToContents
                 :live1311="true"
                 day="Saturday"
@@ -35,7 +37,9 @@
                 Live配信会場はこちら
               </LinkToContents>
             </div>
+            <!--
             <a href="kikaku/104/ピアノコンサートprogram.pdf">ピアノコンサート(動画)program</a>
+            -->
             <ClosedContents>
             </ClosedContents>
             <!--
