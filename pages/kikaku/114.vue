@@ -23,7 +23,7 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div class="kikaku-info__pdf">
+            <!-- <div class="kikaku-info__pdf">
               <div class="kikaku-info__pdf__body-pc">
                 <a href="kikaku/114/flat.pdf#toolbar=0">スペクトラムと分離公理</a>
                 <iframe
@@ -88,7 +88,8 @@
                   height="100%"
                 />
               </div>
-            </div>
+            </div> -->
+            <ClosedContents></ClosedContents>
           </TheSection>
         </TheContainer>
 
@@ -109,6 +110,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -118,7 +120,8 @@ export default {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    ClosedContents
   },
   props: {
     id: {

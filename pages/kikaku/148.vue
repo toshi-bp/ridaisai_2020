@@ -23,7 +23,7 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div class="kikaku-info__pdf">
+            <!-- <div class="kikaku-info__pdf">
               <div class="kikaku-info__pdf__body-pc">
                 <a href="kikaku/148/一階線形同次連立常微分方程式の解き方.pdf">一階線形同次連立常微分方程式の解き方</a>
                 <iframe
@@ -99,7 +99,8 @@
                   11月21日(土)、11月22日(日) 10:00〜17:00
                 </p>
               </LinkToContents>
-            </div>
+            </div> -->
+            <ClosedContents></ClosedContents>
           </TheSection>
         </TheContainer>
 
@@ -120,7 +121,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import LinkToContents from '~/components/atoms/LinkToContents'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -131,7 +132,7 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    LinkToContents
+    ClosedContents
   },
   props: {
     id: {
