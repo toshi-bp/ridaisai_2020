@@ -17,13 +17,13 @@
         />
 
         <!-- ここにコンテンツを掲載するよ -->
-        <!-- <TheContainer>
+        <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div
+            <!-- <div
               v-for="S in Science"
               :key="S.id"
               class="kikaku-info__contents"
@@ -43,9 +43,9 @@
                   :resize="true"
                 />
               </div>
-            </div>
+            </div> -->
           </TheSection>
-        </TheContainer> -->
+        </TheContainer>
         <ClosedContents>
         </ClosedContents>
       </div>
@@ -61,8 +61,8 @@
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 // // import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
-// import TheSection from '~/components/atoms/TheSection'
-// import TheContainer from '~/components/atoms/TheContainer'
+import TheSection from '~/components/atoms/TheSection'
+import TheContainer from '~/components/atoms/TheContainer'
 // // import MarkdownPreview from '~/components/atoms/MarkdownPreview'
 import LinkButton from '~/components/atoms/LinkButton'
 import ClosedContents from '~/components/atoms/ClosedContents'
@@ -74,8 +74,8 @@ export default {
   components: {
     KikakuInfoHeader,
     // KikakuInfoBody,
-    // TheSection,
-    // TheContainer,
+    TheSection,
+    TheContainer,
     // MarkdownPreview,
     LinkButton,
     ClosedContents

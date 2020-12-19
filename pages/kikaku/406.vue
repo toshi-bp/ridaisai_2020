@@ -17,22 +17,22 @@
         />
 
         <!-- ここにコンテンツを掲載するよ -->
-        <!-- <TheContainer>
+        <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div class="kikaku-info__youtube">
+            <!-- <div class="kikaku-info__youtube">
               <youtube
                 ref="youtube"
                 :video-id="videoId"
                 :fit-parent="true"
                 :resize="true"
               />
-            </div>
+            </div> -->
           </TheSection>
-        </TheContainer> -->
+        </TheContainer>
         <ClosedContents>
         </ClosedContents>
         <div class="kikaku-info__button">
@@ -47,8 +47,8 @@
 
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
-// // import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
-// import TheSection from '~/components/atoms/TheSection'
+// import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
+import TheSection from '~/components/atoms/TheSection'
 // import TheContainer from '~/components/atoms/TheContainer'
 import LinkButton from '~/components/atoms/LinkButton'
 import ClosedContents from '~/components/atoms/ClosedContents'
@@ -60,7 +60,7 @@ export default {
   components: {
     KikakuInfoHeader,
     // KikakuInfoBody,
-    // TheSection,
+    TheSection,
     // TheContainer,
     LinkButton,
     ClosedContents

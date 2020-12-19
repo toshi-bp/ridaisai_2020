@@ -17,13 +17,13 @@
         />
 
         <!-- ここにコンテンツを掲載するよ -->
-        <!-- <TheContainer>
+        <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div>
+            <!-- <div>
               <h4>コンテンツはこちら(画像をクリックすると全画面表示ができます。)↓</h4>
               <TheRow>
                 <TheColumn
@@ -37,9 +37,9 @@
                   />
                 </TheColumn>
               </TheRow>
-            </div>
+            </div> -->
           </TheSection>
-        </TheContainer> -->
+        </TheContainer>
 
         <ClosedContents>
         </ClosedContents>
@@ -59,8 +59,8 @@
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
-// import TheSection from '~/components/atoms/TheSection'
-// import TheContainer from '~/components/atoms/TheContainer'
+import TheSection from '~/components/atoms/TheSection'
+import TheContainer from '~/components/atoms/TheContainer'
 // import ImageFullScreen from '~/components/atoms/ImageFullScreen'
 // import TheRow from '~/components/atoms/TheRow'
 // import TheColumn from '~/components/atoms/TheColumn'
@@ -74,8 +74,8 @@ export default {
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
-    // TheSection,
-    // TheContainer,
+    TheSection,
+    TheContainer,
     // ImageFullScreen,
     // TheRow,
     // TheColumn,
