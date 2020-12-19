@@ -23,6 +23,8 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <ClosedContents>
+            </ClosedContents>
             <!-- <div
               v-for="S in Science"
               :key="S.id"
@@ -46,8 +48,6 @@
             </div> -->
           </TheSection>
         </TheContainer>
-        <ClosedContents>
-        </ClosedContents>
       </div>
       <div class="kikaku-info__button">
         <LinkButton to="/">

@@ -23,6 +23,8 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <ClosedContents>
+            </ClosedContents>
             <!-- <div class="kikaku-info__body">
               <div class="kikaku-info__pdf__pc">
                 <a href="kikaku/112/RIM42 原稿.pdf">RIM42原稿</a>
@@ -49,9 +51,6 @@
             </div> -->
           </TheSection>
         </TheContainer>
-
-        <ClosedContents>
-        </ClosedContents>
 
         <KikakuInfoBody
           :image-url="require(`@/assets/kikaku/${KikakuList.image_filename}`)"

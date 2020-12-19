@@ -23,6 +23,8 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <ClosedContents>
+            </ClosedContents>
             <!-- <div>
               <h4>コンテンツはこちら(画像をクリックすると全画面表示ができます。)↓</h4>
               <TheRow>
@@ -40,9 +42,6 @@
             </div> -->
           </TheSection>
         </TheContainer>
-
-        <ClosedContents>
-        </ClosedContents>
 
         <KikakuInfoBody
           :image-url="require(`@/assets/kikaku/${KikakuList.image_filename}`)"

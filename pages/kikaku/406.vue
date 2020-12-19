@@ -23,6 +23,8 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
+            <ClosedContents>
+            </ClosedContents>
             <!-- <div class="kikaku-info__youtube">
               <youtube
                 ref="youtube"
@@ -33,8 +35,6 @@
             </div> -->
           </TheSection>
         </TheContainer>
-        <ClosedContents>
-        </ClosedContents>
         <div class="kikaku-info__button">
           <LinkButton to="/">
             topページに戻る
@@ -49,7 +49,7 @@
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 // import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
-// import TheContainer from '~/components/atoms/TheContainer'
+import TheContainer from '~/components/atoms/TheContainer'
 import LinkButton from '~/components/atoms/LinkButton'
 import ClosedContents from '~/components/atoms/ClosedContents'
 
@@ -61,7 +61,7 @@ export default {
     KikakuInfoHeader,
     // KikakuInfoBody,
     TheSection,
-    // TheContainer,
+    TheContainer,
     LinkButton,
     ClosedContents
   },

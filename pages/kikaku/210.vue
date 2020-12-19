@@ -17,13 +17,15 @@
         />
 
         <!-- ここにコンテンツを掲載するよ -->
-        <!-- <TheContainer>
+        <TheContainer>
           <TheSection>
             <h3>企画紹介</h3>
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div>
+            <ClosedContents>
+            </ClosedContents>
+            <!-- <div>
               <TheRow>
                 <TheColumn
                   v-for="item in ITC"
@@ -65,12 +67,9 @@
                   :resize="true"
                 />
               </div>
-            </div>
+            </div> -->
           </TheSection>
-        </TheContainer> -->
-
-        <ClosedContents>
-        </ClosedContents>
+        </TheContainer>
 
         <KikakuInfoBody
           :image-url="require(`@/assets/kikaku/${KikakuList.image_filename}`)"
@@ -87,8 +86,8 @@
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
-// import TheSection from '~/components/atoms/TheSection'
-// import TheContainer from '~/components/atoms/TheContainer'
+import TheSection from '~/components/atoms/TheSection'
+import TheContainer from '~/components/atoms/TheContainer'
 // import ImageFullScreen from '~/components/atoms/ImageFullScreen'
 // import TheRow from '~/components/atoms/TheRow'
 // import TheColumn from '~/components/atoms/TheColumn'
@@ -102,8 +101,8 @@ export default {
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
-    // TheSection,
-    // TheContainer,
+    TheSection,
+    TheContainer,
     // ImageFullScreen,
     // TheRow,
     // TheColumn
