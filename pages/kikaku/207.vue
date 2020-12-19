@@ -17,9 +17,9 @@
         />
 
         <!-- ここにコンテンツを掲載するよ -->
-        <TheContainer>
+        <!-- <TheContainer>
           <TheSection>
-            <!-- <h3>企画紹介</h3> -->
+            <h3>企画紹介</h3>
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
@@ -56,7 +56,10 @@
               </div>
             </div>
           </TheSection>
-        </TheContainer>
+        </TheContainer> -->
+
+        <ClosedContents>
+        </ClosedContents>
 
         <KikakuInfoBody
           :image-url="require(`@/assets/kikaku/${KikakuList.image_filename}`)"
@@ -73,11 +76,12 @@
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
-import TheSection from '~/components/atoms/TheSection'
-import TheContainer from '~/components/atoms/TheContainer'
-import ImageFullScreen from '~/components/atoms/ImageFullScreen'
-import TheRow from '~/components/atoms/TheRow'
-import TheColumn from '~/components/atoms/TheColumn'
+// import TheSection from '~/components/atoms/TheSection'
+// import TheContainer from '~/components/atoms/TheContainer'
+// import ImageFullScreen from '~/components/atoms/ImageFullScreen'
+// import TheRow from '~/components/atoms/TheRow'
+// import TheColumn from '~/components/atoms/TheColumn'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import Illust from '~/kikaku/Illust.json'
@@ -87,11 +91,12 @@ export default {
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
-    TheSection,
-    TheContainer,
-    ImageFullScreen,
-    TheRow,
-    TheColumn
+    // TheSection,
+    // TheContainer,
+    // ImageFullScreen,
+    // TheRow,
+    // TheColumn
+    ClosedContents
   },
   props: {
     id: {
