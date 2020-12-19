@@ -19,9 +19,10 @@
         <!-- ここにコンテンツを掲載するよ -->
         <TheContainer>
           <TheSection>
-            <!-- <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p> -->
-            <div>
+            <h3>企画紹介</h3>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <ClosedContents></ClosedContents>
+            <!-- <div>
               <MarkdownPreview
                 :markdown-html="PaperCraft1"
               />
@@ -53,7 +54,7 @@
               >
                 <fa :icon="['fab', 'twitter']" fixed-width />Twitterに投稿する
               </LinkButton2>
-            </div>
+            </div> -->
           </TheSection>
         </TheContainer>
       </div>
@@ -71,14 +72,16 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 // // import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import MarkdownPreview from '~/components/atoms/MarkdownPreview'
+// import MarkdownPreview from '~/components/atoms/MarkdownPreview'
 import LinkButton from '~/components/atoms/LinkButton'
 import PaperCraft1 from '~/assets/markdown/405_1.md'
 import PaperCraft2 from '~/assets/markdown/405_2.md'
 
+import ClosedContents from '~/components/atoms/ClosedContents'
+
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
-import LinkButton2 from '~/components/atoms/LinkButton2'
+// import LinkButton2 from '~/components/atoms/LinkButton2'
 
 export default {
   components: {
@@ -86,9 +89,10 @@ export default {
     // KikakuInfoBody,
     TheSection,
     TheContainer,
-    MarkdownPreview,
+    // MarkdownPreview,
     LinkButton,
-    LinkButton2
+    // LinkButton2,
+    ClosedContents
   },
   props: {
     id: {
@@ -132,7 +136,7 @@ export default {
   background-size: repeat;
   &__description {
     white-space: pre-line;
-    margin-top: -1.5rem;
+    // margin-top: -1.5rem;
   }
   &__button {
     text-align: center;

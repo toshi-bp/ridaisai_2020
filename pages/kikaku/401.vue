@@ -19,9 +19,10 @@
         <!-- ここにコンテンツを掲載するよ -->
         <TheContainer>
           <TheSection>
-            <!-- <h3>企画紹介</h3>
-            <p class="kikaku-info__description">{{ KikakuList.description }}</p> -->
-            <div
+            <h3>企画紹介</h3>
+            <p class="kikaku-info__description">{{ KikakuList.description }}</p>
+            <ClosedContents></ClosedContents>
+            <!-- <div
               v-for="Student in Students"
               :key="Student.id"
             >
@@ -38,7 +39,7 @@
                   :resize="true"
                 />
               </div>
-            </div>
+            </div> -->
           </TheSection>
         </TheContainer>
       </div>
@@ -56,7 +57,7 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 // // import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import MarkdownPreview from '~/components/atoms/MarkdownPreview'
+// import MarkdownPreview from '~/components/atoms/MarkdownPreview'
 import LinkButton from '~/components/atoms/LinkButton'
 import Students1 from '~/assets/markdown/401_1.md'
 import Students2 from '~/assets/markdown/401_2.md'
@@ -67,6 +68,7 @@ import Students6 from '~/assets/markdown/401_6.md'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
+import ClosedContents from '~/components/atoms/ClosedContents.vue'
 
 export default {
   components: {
@@ -74,8 +76,9 @@ export default {
     // KikakuInfoBody,
     TheSection,
     TheContainer,
-    MarkdownPreview,
-    LinkButton
+    // MarkdownPreview,
+    LinkButton,
+    ClosedContents
   },
   props: {
     id: {
@@ -161,7 +164,7 @@ export default {
   background-size: repeat;
   &__description {
     white-space: pre-line;
-    margin-top: -1.5rem;
+    // margin-top: -1rem;
   }
   &__button {
     text-align: center;
