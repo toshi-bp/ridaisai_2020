@@ -20,6 +20,9 @@
           <TheSection>
             <h3>企画紹介</h3>
             <p>{{ KikakuList.description }}</p>
+            <ClosedContents>
+            </ClosedContents>
+            <!--
             <div
               v-for="videos in videoIds"
               :key="videos. id"
@@ -32,6 +35,7 @@
                 :resize="true"
               />
             </div>
+            -->
           </TheSection>
         </TheContainer>
 
@@ -55,13 +59,15 @@ import TheContainer from '~/components/atoms/TheContainer'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 export default {
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
     TheSection,
-    TheContainer
+    TheContainer,
+    ClosedContents
   },
   props: {
     id: {
