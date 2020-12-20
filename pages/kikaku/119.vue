@@ -23,7 +23,8 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div>
+            <ClosedContents></ClosedContents>
+            <!-- <div>
               <h3 class="kikaku-info__title">
                 【デジタル×書道】
               </h3>
@@ -77,8 +78,8 @@
                   </p>
                 </div>
               </div>
-            </div>
-            <div>
+            </div> -->
+            <!-- <div>
               <h3 class="kikaku-info__title">
                 【年賀状デザイン】
               </h3>
@@ -119,7 +120,7 @@
                   />
                 </TheColumn>
               </TheRow>
-            </div>
+            </div> -->
           </TheSection>
         </TheContainer>
 
@@ -140,11 +141,12 @@
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
-import ImageFullScreen from '~/components/atoms/ImageFullScreen'
+// import ImageFullScreen from '~/components/atoms/ImageFullScreen'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import TheColumn from '~/components/atoms/TheColumn'
-import TheRow from '~/components/atoms/TheRow'
+// import TheColumn from '~/components/atoms/TheColumn'
+// import TheRow from '~/components/atoms/TheRow'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import Shodo from '~/kikaku/shodo.json'
@@ -154,11 +156,12 @@ export default {
   components: {
     KikakuInfoHeader,
     KikakuInfoBody,
-    ImageFullScreen,
+    // ImageFullScreen,
     TheSection,
     TheContainer,
-    TheColumn,
-    TheRow
+    // TheColumn,
+    // TheRow,
+    ClosedContents
   },
   props: {
     id: {
