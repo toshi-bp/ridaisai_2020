@@ -25,7 +25,9 @@
             </p>
             <div>
               <h2>Live配信</h2>
+              <!--
               <a href="kikaku/104/ピアノコンサート(Live配信)program.pdf">ピアノコンサート(Live配信)program</a>
+              -->
               <LinkToContents
                 :live1311="true"
                 day="Saturday"
@@ -35,7 +37,12 @@
                 Live配信会場はこちら
               </LinkToContents>
             </div>
+            <!--
             <a href="kikaku/104/ピアノコンサートprogram.pdf">ピアノコンサート(動画)program</a>
+            -->
+            <ClosedContents>
+            </ClosedContents>
+            <!--
             <div class="kikaku-info__youtube">
               <h3 class="kikaku-info__youtube__title">
                 ①宿命/藤原聡<br>
@@ -87,6 +94,7 @@
                 :resize="true"
               />
             </div>
+            -->
           </TheSection>
         </TheContainer>
 
@@ -112,6 +120,7 @@ import LinkToContents from '~/components/atoms/LinkToContents'
 import KikakuList from '~/kikaku/KikakuList.json'
 
 import makeHead from '~/utils/makeHead.js'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 export default {
   components: {
@@ -119,7 +128,8 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    LinkToContents
+    LinkToContents,
+    ClosedContents
   },
   props: {
     id: {

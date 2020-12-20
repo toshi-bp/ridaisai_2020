@@ -26,7 +26,8 @@
             >
               {{ KikakuList.description }}
             </p>
-            <div class="kikaku-info__link">
+            <ClosedContents></ClosedContents>
+            <!-- <div class="kikaku-info__link">
               <LinkToContents
                 :link="true"
                 :url="KikakuList.url"
@@ -34,9 +35,9 @@
                 Webサイトへのアクセスはこちら
               </LinkToContents>
             </div>
-            <div class="kikaku-info__movie">
+            <div class="kikaku-info__movie"> -->
               <!-- parent=https://nodaridaisai.com -->
-              <h4>企画の様子をtwitchで配信しています</h4>
+              <!-- <h4>企画の様子をtwitchで配信しています</h4>
               <iframe
                 src="https://player.twitch.tv/?channel=tus_robot_2020&parent=nodaridaisai.com"
                 frameborder="0"
@@ -45,7 +46,7 @@
                 width="100%"
                 height="100%"
               />
-            </div>
+            </div> -->
           </TheSection>
         </TheContainer>
 
@@ -66,7 +67,8 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import LinkToContents from '~/components/atoms/LinkToContents'
+// import LinkToContents from '~/components/atoms/LinkToContents'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -77,7 +79,8 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    LinkToContents
+    ClosedContents
+    // LinkToContents
   },
   props: {
     id: {
