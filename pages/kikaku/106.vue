@@ -31,7 +31,8 @@
                 end-time="16:30"
               />
             </div>
-            <div class="kikaku-info__youtube">
+            <ClosedContents></ClosedContents>
+            <!-- <div class="kikaku-info__youtube">
               <youtube
                 ref="youtube"
                 :video-id="videoId"
@@ -63,7 +64,7 @@
               >
                 Zoomはこちら
               </LinkToContents>
-            </div>
+            </div> -->
           </TheSection>
         </TheContainer>
 
@@ -86,6 +87,7 @@ import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 import LinkToContents from '~/components/atoms/LinkToContents'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -96,7 +98,8 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    LinkToContents
+    LinkToContents,
+    ClosedContents
   },
   props: {
     id: {

@@ -19,11 +19,14 @@
         <!-- ここにコンテンツを掲載するよ -->
         <TheContainer>
           <TheSection>
-            <h3>企画紹介</h3>
+            <h3 class="kikaku-info__title">企画紹介</h3>
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div class="kikaku-info__youtube">
+            <div class="kikaku-info__close">
+              <ClosedContents></ClosedContents>
+            </div>
+            <!-- <div class="kikaku-info__youtube">
               <youtube
                 ref="youtube"
                 :video-id="videoId"
@@ -37,7 +40,7 @@
             >
               C4's 理大祭展示会場<br>
               コンテンツはこちら
-            </LinkToContents>
+            </LinkToContents> -->
           </TheSection>
         </TheContainer>
 
@@ -58,7 +61,8 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import LinkToContents from '~/components/atoms/LinkToContents'
+// import LinkToContents from '~/components/atoms/LinkToContents'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -69,7 +73,8 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    LinkToContents
+    ClosedContents
+    // LinkToContents
   },
   props: {
     id: {
@@ -110,6 +115,12 @@ export default {
   &__description {
     white-space: pre-line;
     margin-top: -1.5rem;
+  }
+  &__close {
+    margin-top: 2rem;
+  }
+  &__title {
+    line-height: 1rem;
   }
 }
 </style>

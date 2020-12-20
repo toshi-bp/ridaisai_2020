@@ -11,7 +11,8 @@
           <p>理大祭ではYouTubeLiveによる参加団体のパフォーマンスのLive配信を行っています。</p>
           <!-- アーカイブを埋め込む(今更) -->
           <h4 class="live__youtube__text">Live配信のアーカイブはこちら</h4>
-          <div
+          <ClosedContents></ClosedContents>
+          <!-- <div
             v-for="video in videos"
             :key="video.id"
             class="live__youtube"
@@ -24,37 +25,6 @@
               :video-id="video.videoId"
               :fit-parent="true"
               :resize="true"
-            />
-          </div>
-          <!-- ここにライブ配信する動画を埋め込むよ(チャットを載せるか否かは要相談) -->
-          <!-- 埋め込めなくなる可能性が出てきたため一旦動画の部分はコメントアウト -->
-          <!-- <div class="live__movie">
-            公開に際しチャットを埋め込む場合はsrcのurlの部分を変更すること
-            <youtube
-              ref="youtube"
-              :video-id="videoId_1"
-              :fit-parent="true"
-              :resize="true"
-            />
-            <iframe
-              height="400"
-              frameborder="0"
-              :src="`https://www.youtube.com/live_chat?v=${videoId_1}&embed_domain=localhost`"
-              allowfullscreen
-            >
-              チャットの高さについては要調整(特にスマホ版)あとURLも
-            </iframe>
-            <youtube
-              ref="youtube"
-              :video-id="videoId_2"
-              :fit-parent="true"
-              :resize="true"
-            />
-            <iframe
-              height="400"
-              frameborder="0"
-              :src="`https://www.youtube.com/live_chat?v=${videoId_2}&embed_domain=localhost`"
-              allowfullscreen
             />
           </div> -->
         </TheSection>
@@ -78,7 +48,6 @@
               end-time="18:30"
               class="live__link__contents__child"
             >
-              薬学ステージのLive配信にアクセス！
             </LinkToContents>
             <LinkToContents
               :live-l-b="true"
@@ -87,7 +56,6 @@
               end-time="17:15"
               class="live__link__contents__child"
             >
-              理工ステージのLive配信にアクセス！
             </LinkToContents>
           </div>
         </TheSection>
@@ -110,6 +78,7 @@ import SubHeader from '~/components/organisms/SubHeader.vue'
 import LinkButton from '~/components/atoms/LinkButton.vue'
 import TimeTable from '~/components/molecules/TimeTable'
 import LinkToContents from '~/components/atoms/LinkToContents'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 export default {
   components: {
@@ -118,7 +87,8 @@ export default {
     SubHeader,
     LinkButton,
     TimeTable,
-    LinkToContents
+    LinkToContents,
+    ClosedContents
   },
   data () {
     return {
