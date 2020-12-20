@@ -32,6 +32,9 @@
               />
             </div>
             <h4>ダンス動画はこちら</h4>
+            <ClosedContents>
+              </ClosedContents>
+            <!--
             <div
               v-for="videos in videoIds"
               :key="videos. id"
@@ -44,6 +47,7 @@
                 :resize="true"
               />
             </div>
+            -->
           </TheSection>
         </TheContainer>
 
@@ -69,6 +73,7 @@ import LinkToContents from '~/components/atoms/LinkToContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 export default {
   components: {
@@ -76,7 +81,8 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    LinkToContents
+    LinkToContents,
+    ClosedContents
   },
   props: {
     id: {

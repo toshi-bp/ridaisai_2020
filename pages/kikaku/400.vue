@@ -23,7 +23,9 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div
+            <ClosedContents>
+            </ClosedContents>
+            <!-- <div
               v-for="S in Science"
               :key="S.id"
               class="kikaku-info__contents"
@@ -43,7 +45,7 @@
                   :resize="true"
                 />
               </div>
-            </div>
+            </div> -->
           </TheSection>
         </TheContainer>
       </div>
@@ -63,6 +65,7 @@ import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 // // import MarkdownPreview from '~/components/atoms/MarkdownPreview'
 import LinkButton from '~/components/atoms/LinkButton'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -74,7 +77,8 @@ export default {
     TheSection,
     TheContainer,
     // MarkdownPreview,
-    LinkButton
+    LinkButton,
+    ClosedContents
   },
   props: {
     id: {

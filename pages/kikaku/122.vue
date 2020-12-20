@@ -23,7 +23,9 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div>
+            <ClosedContents>
+            </ClosedContents>
+            <!-- <div>
               <h4>コンテンツはこちら(画像をクリックすると全画面表示ができます。)↓</h4>
               <TheRow>
                 <TheColumn
@@ -37,7 +39,7 @@
                   />
                 </TheColumn>
               </TheRow>
-            </div>
+            </div> -->
           </TheSection>
         </TheContainer>
 
@@ -58,9 +60,10 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import ImageFullScreen from '~/components/atoms/ImageFullScreen'
-import TheRow from '~/components/atoms/TheRow'
-import TheColumn from '~/components/atoms/TheColumn'
+// import ImageFullScreen from '~/components/atoms/ImageFullScreen'
+// import TheRow from '~/components/atoms/TheRow'
+// import TheColumn from '~/components/atoms/TheColumn'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import Manga from '~/kikaku/1manga.json'
@@ -72,9 +75,10 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    ImageFullScreen,
-    TheRow,
-    TheColumn
+    // ImageFullScreen,
+    // TheRow,
+    // TheColumn,
+    ClosedContents
   },
   props: {
     id: {

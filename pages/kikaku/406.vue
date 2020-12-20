@@ -23,14 +23,16 @@
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <div class="kikaku-info__youtube">
+            <ClosedContents>
+            </ClosedContents>
+            <!-- <div class="kikaku-info__youtube">
               <youtube
                 ref="youtube"
                 :video-id="videoId"
                 :fit-parent="true"
                 :resize="true"
               />
-            </div>
+            </div> -->
           </TheSection>
         </TheContainer>
         <div class="kikaku-info__button">
@@ -45,10 +47,11 @@
 
 <script>
 import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
-// // import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
+// import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
 import LinkButton from '~/components/atoms/LinkButton'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import makeHead from '~/utils/makeHead.js'
@@ -59,7 +62,8 @@ export default {
     // KikakuInfoBody,
     TheSection,
     TheContainer,
-    LinkButton
+    LinkButton,
+    ClosedContents
   },
   props: {
     id: {
