@@ -19,11 +19,13 @@
         <!-- ここにコンテンツを掲載するよ -->
         <TheContainer>
           <TheSection>
-            <!-- <h3>企画紹介</h3> -->
+            <h3>企画紹介</h3>
             <p class="kikaku-info__description">
               {{ KikakuList.description }}
             </p>
-            <h4>
+            <ClosedContents>
+            </ClosedContents>
+            <!-- <h4>
               コンテンツはこちら(クリックすると全画面表示ができます)
             </h4>
             <TheRow>
@@ -54,7 +56,7 @@
                   height="100%"
                 />
               </div>
-            </div>
+            </div> -->
           </TheSection>
         </TheContainer>
 
@@ -75,9 +77,10 @@ import KikakuInfoHeader from '~/components/molecules/KikakuInfoHeader'
 import KikakuInfoBody from '~/components/molecules/KikakuInfoBody'
 import TheSection from '~/components/atoms/TheSection'
 import TheContainer from '~/components/atoms/TheContainer'
-import ImageFullScreen from '~/components/atoms/ImageFullScreen'
-import TheRow from '~/components/atoms/TheRow'
-import TheColumn from '~/components/atoms/TheColumn'
+// import ImageFullScreen from '~/components/atoms/ImageFullScreen'
+// import TheRow from '~/components/atoms/TheRow'
+// import TheColumn from '~/components/atoms/TheColumn'
+import ClosedContents from '~/components/atoms/ClosedContents'
 
 import KikakuList from '~/kikaku/KikakuList.json'
 import Illust from '~/kikaku/Illust.json'
@@ -89,9 +92,10 @@ export default {
     KikakuInfoBody,
     TheSection,
     TheContainer,
-    ImageFullScreen,
-    TheRow,
-    TheColumn
+    // ImageFullScreen,
+    // TheRow,
+    // TheColumn
+    ClosedContents
   },
   props: {
     id: {
