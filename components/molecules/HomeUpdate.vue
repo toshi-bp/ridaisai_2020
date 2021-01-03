@@ -82,7 +82,7 @@
           <dd class="update__list__content">
             <nuxt-link to="/kikaku/">
               各コンテンツ
-            </nuxt-link>を閉鎖しました。
+            </nuxt-link>の公開を終了しました。
           </dd>
         </dl>
       </div>
