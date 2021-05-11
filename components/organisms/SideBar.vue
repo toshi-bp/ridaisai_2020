@@ -26,12 +26,6 @@
             <span class="side-bar__list__item__text">Live配信</span>
           </nuxt-link>
         </li>
-        <!-- <li class="side-bar__list__item">
-          <a href="https://twitter.com/noda_ridaisai" >
-            <fa :icon="['fab', 'twitter']" fixed-width class="side-bar__list__item__icon" />
-            <span class="side-bar__list__item__text">@noda_ridaisai</span>
-          </a>
-        </li> -->
       </ul>
       <img src="~@/assets/image/symbol_white.svg" class="side-bar__img">
     </div>

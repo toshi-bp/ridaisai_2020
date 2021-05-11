@@ -28,12 +28,6 @@
             オンライン理大祭の歩き方
           </nuxt-link>
         </li>
-        <!-- <li class="global-nav__list__item">
-          <nuxt-link to="/stage/" class="global-nav__list__item__link">
-            <fa icon="star" class="global-nav__list__item__icon" fixed-width />
-            団体紹介ステージ
-          </nuxt-link>
-        </li> -->
         <li class="global-nav__list__item">
           <nuxt-link to="/kikaku/" class="global-nav__list__item__link">
             <fa icon="star" class="global-nav__list__item__icon" fixed-width />

@@ -39,47 +39,6 @@
                     ホーム
                   </nuxt-link>
                 </li>
-                <!-- <li class="footer__list__item">
-                  <nuxt-link
-                    to="/"
-                    target="blank"
-                    class="footer__list__link"
-                  >
-                    実行委員会企画
-                  </nuxt-link>
-                </li>
-                <li class="footer__list__item">
-                  <nuxt-link
-                    to="/"
-                    class="footer__list__link"
-                  >
-                    模擬店・団体企画
-                  </nuxt-link>
-                </li>
-                <li class="footer__list__item">
-                  <nuxt-link
-                    to="/"
-                    class="footer__list__link"
-                  >
-                    ご来場の皆様へ
-                  </nuxt-link>
-                </li>
-                <li class="footer__list__item">
-                  <nuxt-link
-                    to="/"
-                    class="footer__list__link"
-                  >
-                    団体インタビュー
-                  </nuxt-link>
-                </li>
-                <li class="footer__list__item">
-                  <nuxt-link
-                    to="/"
-                    class="footer__list__link"
-                  >
-                    キャンパスマップ
-                  </nuxt-link>
-                </li> -->
                 <li class="footer__list__item">
                   <nuxt-link
                     to="/privacy/"
@@ -96,14 +55,6 @@
                     企画一覧
                   </nuxt-link>
                 </li>
-                <!-- <li class="footer__list__item">
-                  <nuxt-link
-                    to="/"
-                    class="footer__list__link"
-                  >
-                    協賛企業一覧
-                  </nuxt-link>
-                </li> -->
               </ul>
               <ul class="footer__list__ul">
                 <li class="footer__list__item">

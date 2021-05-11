@@ -49,17 +49,6 @@ export default {
     position: relative;
     width: 4rem;
     height: 4rem;
-    // &__rect {
-    //   width: 26.794919243%;// 2-√3 円に外接する正多角形
-    //   height: 100%;
-    //   background-color: $accent-color;
-    //   border: 1px solid $accent-color;
-    //   @for $i from 0 through 5 {
-    //     &:nth-of-type(#{$i + 1}) {
-    //       transform: rotate(30deg * $i);
-    //     }
-    //   }
-    // }
   }
 
   &__title {

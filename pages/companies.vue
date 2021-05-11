@@ -90,11 +90,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.background{
-  // background-color: rgba(#fff,0.9);
-  // background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 100%);
-}
-
 .companies {
   padding-top: $global-header-height;
   &__text {

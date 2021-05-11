@@ -6,20 +6,6 @@
           企画一覧
         </template>
       </SubHeader>
-      <!-- <div class="kikaku__search">
-        <div class="kikaku__search__box">
-          <input
-            type="text"
-            valuename="keyword"
-            placeholder="検索キーワード"
-            class="kikaku__search__text"
-            v-model="keyword"
-          >
-        </div>
-        <button class="kikaku__search__button" @click="Searching">
-          検索
-        </button>
-      </div> -->
       <div>
         <TheSection>
           <p>このページでは理大祭に参加している団体の企画をみることができます。</p>
@@ -117,14 +103,8 @@
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
-                  :label-type="item.type"
-                  :label-text="item.type"
-                  :title="item.kikaku_title"
-                  :name="item.name"
                   :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-                  :live="item.live"
-                  :youtube="item.youtube"
-                  :website="item.website"
+                  :item="item"
                 />
               </TheColumn>
             </TheRow>
@@ -165,14 +145,8 @@
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
-                  :label-type="item.type"
-                  :label-text="item.type"
-                  :title="item.kikaku_title"
-                  :name="item.name"
                   :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-                  :live="item.live"
-                  :youtube="item.youtube"
-                  :website="item.website"
+                  :item = "item"
                 />
               </TheColumn>
             </TheRow>

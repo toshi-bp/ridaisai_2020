@@ -12,21 +12,6 @@
           <!-- アーカイブを埋め込む(今更) -->
           <h4 class="live__youtube__text">Live配信のアーカイブはこちら</h4>
           <ClosedContents></ClosedContents>
-          <!-- <div
-            v-for="video in videos"
-            :key="video.id"
-            class="live__youtube"
-          >
-            <h3 class="live__youtube__title">
-              {{ video.title }}
-            </h3>
-            <youtube
-              ref="youtube"
-              :video-id="video.videoId"
-              :fit-parent="true"
-              :resize="true"
-            />
-          </div> -->
         </TheSection>
       </div>
       <div class="live__time-table">
@@ -34,12 +19,6 @@
       </div>
       <div class="live__link">
         <TheSection>
-          <!-- <LinkToContents
-          :livelink="true"
-            class="live__link__body"
-          >
-            YouTubeLiveへは当日こちらのボタンからアクセスできます。<br />お楽しみに！
-          </LinkToContents> -->
           <div class="live__link__contents">
             <LinkToContents
               :live1311="true"

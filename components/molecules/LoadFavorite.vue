@@ -3,11 +3,9 @@
     <TheRow>
       <TheColumn v-for="item in KikakuList" :key="item.kikaku_id">
         <ItemCard
-          :id="item.kikaku_id"
           :to="`/kikaku/${item.kikaku_id}`"
-          :title="item.kikaku_title"
-          :name="item.name"
-          :image-url="require(`~/assets/kikaku/${item.image_filename}`)"
+          :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
+          :item="item"
         />
       </TheColumn>
     </TheRow>

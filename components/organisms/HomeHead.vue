@@ -19,17 +19,6 @@
             </div>
           </div>
         </TheContainer>
-        <!-- <div class="button__group">
-              <LinkButton2 to="/groups/">
-                参加団体向け情報
-              </LinkButton2>
-            </div>
-            <div class="button__company">
-              <LinkButton2 to="/companies/">
-                企業協賛に関して
-              </LinkButton2>
-            </div> -->
-        <!-- <span class="head__tooltip"><fa :icon="['fas', 'angle-down']" fixed-width />下にスクロール</span> -->
       </div>
       <div class="head__finish">
         <p class="head__finish__text">
