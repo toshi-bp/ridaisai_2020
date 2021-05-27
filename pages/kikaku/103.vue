@@ -2,10 +2,8 @@
   <!-- 東京理科大学野田同好会ジャグリング部DOMINUS SOMNI -->
   <div class="kikaku-info">
     <div
-      v-for="(KikakuList, id) in Kikaku"
-      :key="id"
     >
-      <div KikakuList>
+      <div>
         <KikakuInfoHeader
           :id="KikakuList.kikaku_id"
           :kikaku_name="KikakuList.kikaku_title"
