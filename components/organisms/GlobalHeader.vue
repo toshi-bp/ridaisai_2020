@@ -127,8 +127,5 @@ export default {
     height: calc(#{$global-header-height} + 5rem);
   }
 
-  // @include media-breakpoint-down(xs) {
-  //   height: calc(#{$global-header-height} + 6rem);
-  // }
 }
 </style>

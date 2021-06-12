@@ -77,7 +77,6 @@ export default {
 <style lang="scss" scoped>
 .background{
   background-color: rgba(#fff,0.8);
-  // background-image: linear-gradient(180deg, $theme-color 0%, #ffffff 99%, #c9e7ff 100%);
 }
 
 .groups {

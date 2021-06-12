@@ -11,7 +11,6 @@
                   Live配信で理大祭を楽しむ
                 </template>
               </WelcomeHeader>
-              <!-- <img src="~@/assets/image/symbol.svg" class="welcome__article__image"> -->
               <div class="welcome__article__right">
                 <div class="welcome__article__button">
                   <KikakuLabel
@@ -50,7 +49,6 @@
                   </template>
                 </WelcomeHeader>
               </div>
-              <!-- <img src="~@/assets/image/symbol.svg" class="welcome__article__image"> -->
               <div class="welcome__article__right">
                 <div class="welcome__article__button">
                   <KikakuLabel type="youtube" href="/2020/kikaku/#youtube">
@@ -128,8 +126,6 @@
 </template>
 
 <script>
-// import LinkButton2 from '~/components/atoms/LinkButton2.vue'
-// import LinkButton3 from '~/components/atoms/LinkButton3.vue'
 import TheContainer from '~/components/atoms/TheContainer'
 import Ticket from '~/components/atoms/Ticket'
 import WelcomeHeader from '~/components/organisms/WelcomeHeader'
@@ -145,8 +141,6 @@ export default {
     WelcomeHeader,
     KikakuLabel,
     LinkButton
-    // LinkButton2,
-    // LinkButton3
   },
   head () {
     return makeHead('オンライン理大祭の歩き方', 'オンライン理大祭の回り方について書かれています。まず初めにお読みください')
@@ -161,11 +155,7 @@ export default {
     padding-bottom: 2rem;
     background-image: url('~@/assets/image/footprint.svg');
     background-size: repeat;
-    // background-color: #BCEDF7;
     background-color: rgba(#fff,0.8);
-  }
-  &__container {
-    // background-color: rgba(#fff,0.5);
   }
   &__ticket {
     width: 100%;
@@ -178,7 +168,6 @@ export default {
     &__main {
       margin-bottom: 7rem;
       background-color: rgba(#fff, 0.4);
-      // padding-bottom: 1rem;
       @include media-breakpoint-down(sm) {
         display: flex;
         flex-direction: column;
@@ -212,7 +201,6 @@ export default {
     &__right {
       display: flex;
       flex-direction: row;
-      // margin-left: 1.5rem;
       @include media-breakpoint-down(sm) {
         flex-direction: column-reverse;
         width: 100%;
@@ -239,7 +227,6 @@ export default {
       justify-content: center;
       align-items: center;
       vertical-align: middle;
-      // margin-left: 1rem;
 
       @include media-breakpoint-down(sm) {
         margin-right: 0;
@@ -251,7 +238,6 @@ export default {
   }
 
   &__imgbox {
-    // display: flex;
     width: 100%;
     height: 500px;
     &__item {

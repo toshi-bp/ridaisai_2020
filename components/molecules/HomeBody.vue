@@ -39,14 +39,8 @@
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
-                  :label-type="item.type"
-                  :label-text="item.type"
-                  :title="item.kikaku_title"
-                  :name="item.name"
                   :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-                  :live="item.live"
-                  :youtube="item.youtube"
-                  :website="item.website"
+                  :item="item"
                 />
               </TheColumn>
             </TheRow>
@@ -110,14 +104,7 @@
               >
                 <ItemCard
                   :to="`/kikaku/${item.kikaku_id}/`"
-                  :label-type="item.type"
-                  :label-text="item.type"
-                  :title="item.kikaku_title"
-                  :name="item.name"
-                  :image-url="item.image_filename ? require(`~/assets/kikaku/${item.image_filename}`) : ''"
-                  :live="item.live"
-                  :youtube="item.youtube"
-                  :website="item.website"
+                  :item="item"
                 />
               </TheColumn>
             </TheRow>
@@ -158,16 +145,6 @@ export default {
   },
   computed: {
     KikakuList () {
-      // const max = 0
-      // const min = 35
-      // let FilteredKikaku = []
-      // let random = min
-      // for (let i = 0; i < KikakuList.length; i++) {
-      //   random = Math.floor(Math.random() * (max + 1 - min)) + min
-      //   if (KikakuList.filter(item => item.kikaku_id === random)) {
-      //     FilteredKikaku = KikakuList.filter(item => item.kikaku_id === random)
-      //   }
-      // }
       return KikakuList.slice(0, 6)
     },
     RFCKikaku () {

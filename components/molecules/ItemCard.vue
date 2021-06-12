@@ -3,9 +3,9 @@
     <component
       :is="linkComponentIs"
       :to="to || undefined"
-      :href="href || undefined"
+      :href="item.href || undefined"
       class="item-card__main"
-      :target="linkTarget"
+      :target="item.linkTarget"
     >
       <figure
         class="item-card__img"
@@ -15,36 +15,36 @@
       />
       <div class="item-card__body">
         <ItemCardLabel
-          v-if="labelText"
+          v-if="item.type"
           class="item-card__label"
-          :type="labelType"
+          :type="item.type"
         >
           {{ labelTextChanged }}
         </ItemCardLabel>
         <h3 class="item-card__title">
-          {{ title }}
+          {{ item.kikaku_title }}
         </h3>
         <h3 class="item-card__name">
-          {{ name }}
+          {{ item.name }}
         </h3>
         <div class="item-card__label2">
           <ItemCardLabel2
-            v-if="live"
-            :live="live"
+            v-if="item.live"
+            :live="item.live"
             class="item-card__label2__main"
           >
             Live配信
           </ItemCardLabel2>
           <ItemCardLabel2
-            v-if="youtube"
-            :youtube="youtube"
+            v-if="item.youtube"
+            :youtube="item.youtube"
             class="item-card__label2__main"
           >
             動画
           </ItemCardLabel2>
           <ItemCardLabel2
-            v-if="website"
-            :website="website"
+            v-if="item.website"
+            :website="item.website"
             class="item-card__label2__main"
           >
             Webサイト
@@ -69,53 +69,11 @@ export default {
       type: String,
       default: ''
     },
-    href: {
-      type: String,
-      default: ''
-    },
     imageUrl: {
       type: String,
       default: '~/assets/image/symbol.png'
     },
-    isImageContain: {
-      type: Boolean,
-      default: false
-    },
-    title: {
-      type: String,
-      default: '企画名'
-    },
-    labelText: {
-      type: String,
-      default: ''
-    },
-    labelType: {
-      type: String,
-      default: ''
-    },
-    linkTarget: {
-      type: String,
-      default: ''
-    },
-    target: {
-      type: String,
-      default: ''
-    },
-    name: {
-      type: String,
-      default: '団体名'
-    },
-    live: {
-      type: Boolean,
-      default: false
-    },
-    youtube: {
-      type: Boolean,
-      default: false
-    },
-    website: {
-      type: Boolean,
-      default: false
+    item: {
     }
   },
   computed: {
@@ -123,7 +81,7 @@ export default {
       switch (true) {
         case !!this.to:
           return 'nuxt-link'
-        case !!this.href:
+        case !!this.item.href:
           return 'a'
         default:
           return 'div'
@@ -137,7 +95,7 @@ export default {
         exhibition: '展示系',
         sports: '運動系'
       }
-      return typeDict[this.labelType]
+      return typeDict[this.item.type]
     }
   }
 }
